@@ -1,0 +1,710 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED19A7A52B123F00004375C7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* NotificationManager.swift */; };
+		ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */; };
+		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
+		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
+		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
+		ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* VerifyViewController.swift */; };
+		ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */; };
+		ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9582B07D684005742BA /* AppDelegate.swift */; };
+		ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED73E95C2B07D686005742BA /* Assets.xcassets */; };
+		ED73E9602B07D686005742BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED73E95E2B07D686005742BA /* Main.storyboard */; };
+		ED73E96B2B07D686005742BA /* brantaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E96A2B07D686005742BA /* brantaTests.swift */; };
+		ED73E9752B07D686005742BA /* brantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9742B07D686005742BA /* brantaUITests.swift */; };
+		ED73E9772B07D686005742BA /* brantaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */; };
+		ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9862B0820C9005742BA /* Sparrow.swift */; };
+		ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E98A2B0820F1005742BA /* Wallet.swift */; };
+		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
+		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
+		EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* nostr.swift */; };
+		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
+		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ED73E9672B07D686005742BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED73E94D2B07D684005742BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED73E9542B07D684005742BA;
+			remoteInfo = branta;
+		};
+		ED73E9712B07D686005742BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED73E94D2B07D684005742BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED73E9542B07D684005742BA;
+			remoteInfo = branta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ED19A7A42B123F00004375C7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoin.swift; sourceTree = "<group>"; };
+		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
+		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
+		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
+		ED57437C2B3641AF0001956A /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bip39wordlist.txt; sourceTree = "<group>"; };
+		ED73E9552B07D684005742BA /* Branta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Branta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED73E9582B07D684005742BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED73E95C2B07D686005742BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED73E95F2B07D686005742BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED73E9612B07D686005742BA /* branta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = branta.entitlements; sourceTree = "<group>"; };
+		ED73E9662B07D686005742BA /* BrantaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrantaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED73E96A2B07D686005742BA /* brantaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brantaTests.swift; sourceTree = "<group>"; };
+		ED73E9702B07D686005742BA /* BrantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrantaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED73E9742B07D686005742BA /* brantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brantaUITests.swift; sourceTree = "<group>"; };
+		ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brantaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED73E9862B0820C9005742BA /* Sparrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparrow.swift; sourceTree = "<group>"; };
+		ED73E98A2B0820F1005742BA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
+		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
+		EDC310402B1F7A38005BCBBA /* nostr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nostr.swift; sourceTree = "<group>"; };
+		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
+		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED73E9522B07D684005742BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED73E9632B07D686005742BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED73E96D2B07D686005742BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2C6EF12B0AC59200EC577C /* Addresses */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */,
+				EDC310402B1F7A38005BCBBA /* nostr.swift */,
+			);
+			path = Addresses;
+			sourceTree = "<group>";
+		};
+		ED2C6EF42B0BAF9600EC577C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ED19A7A42B123F00004375C7 /* NotificationManager.swift */,
+				EDFFC2BA2B39CF930052D92D /* HexColor.swift */,
+				EDB5B0C32B3A76D40015515F /* Observers.swift */,
+				ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ED34ACFF2B1800AF0038CAC5 /* Automations */ = {
+			isa = PBXGroup;
+			children = (
+				ED5743772B3517BD0001956A /* Helpers */,
+				ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */,
+				EDD915262B0C3C8000A288FE /* Verify.swift */,
+				ED57437A2B351E990001956A /* Automation.swift */,
+			);
+			path = Automations;
+			sourceTree = "<group>";
+		};
+		ED34AD022B182B1C0038CAC5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED57437C2B3641AF0001956A /* VerifyViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ED5743772B3517BD0001956A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ED2C6EF12B0AC59200EC577C /* Addresses */,
+				ED73E9832B08207E005742BA /* Wallets */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		ED73E94C2B07D684005742BA = {
+			isa = PBXGroup;
+			children = (
+				ED73E9572B07D684005742BA /* branta */,
+				ED73E9692B07D686005742BA /* brantaTests */,
+				ED73E9732B07D686005742BA /* brantaUITests */,
+				ED73E9562B07D684005742BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED73E9562B07D684005742BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED73E9552B07D684005742BA /* Branta.app */,
+				ED73E9662B07D686005742BA /* BrantaTests.xctest */,
+				ED73E9702B07D686005742BA /* BrantaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED73E9572B07D684005742BA /* branta */ = {
+			isa = PBXGroup;
+			children = (
+				ED73E9582B07D684005742BA /* AppDelegate.swift */,
+				ED73E95C2B07D686005742BA /* Assets.xcassets */,
+				ED34ACFF2B1800AF0038CAC5 /* Automations */,
+				ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */,
+				ED73E9612B07D686005742BA /* branta.entitlements */,
+				ED73E95E2B07D686005742BA /* Main.storyboard */,
+				ED2C6EF42B0BAF9600EC577C /* Utils */,
+				ED34AD022B182B1C0038CAC5 /* ViewControllers */,
+			);
+			path = branta;
+			sourceTree = "<group>";
+		};
+		ED73E9692B07D686005742BA /* brantaTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */,
+				ED73E96A2B07D686005742BA /* brantaTests.swift */,
+			);
+			path = brantaTests;
+			sourceTree = "<group>";
+		};
+		ED73E9732B07D686005742BA /* brantaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED73E9742B07D686005742BA /* brantaUITests.swift */,
+				ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */,
+			);
+			path = brantaUITests;
+			sourceTree = "<group>";
+		};
+		ED73E9832B08207E005742BA /* Wallets */ = {
+			isa = PBXGroup;
+			children = (
+				ED73E9862B0820C9005742BA /* Sparrow.swift */,
+				ED73E98A2B0820F1005742BA /* Wallet.swift */,
+			);
+			path = Wallets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED73E9542B07D684005742BA /* Branta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED73E97A2B07D686005742BA /* Build configuration list for PBXNativeTarget "Branta" */;
+			buildPhases = (
+				ED73E9512B07D684005742BA /* Sources */,
+				ED73E9522B07D684005742BA /* Frameworks */,
+				ED73E9532B07D684005742BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Branta;
+			packageProductDependencies = (
+			);
+			productName = branta;
+			productReference = ED73E9552B07D684005742BA /* Branta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED73E9652B07D686005742BA /* BrantaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED73E97D2B07D686005742BA /* Build configuration list for PBXNativeTarget "BrantaTests" */;
+			buildPhases = (
+				ED73E9622B07D686005742BA /* Sources */,
+				ED73E9632B07D686005742BA /* Frameworks */,
+				ED73E9642B07D686005742BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED73E9682B07D686005742BA /* PBXTargetDependency */,
+			);
+			name = BrantaTests;
+			productName = brantaTests;
+			productReference = ED73E9662B07D686005742BA /* BrantaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED73E96F2B07D686005742BA /* BrantaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED73E9802B07D686005742BA /* Build configuration list for PBXNativeTarget "BrantaUITests" */;
+			buildPhases = (
+				ED73E96C2B07D686005742BA /* Sources */,
+				ED73E96D2B07D686005742BA /* Frameworks */,
+				ED73E96E2B07D686005742BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED73E9722B07D686005742BA /* PBXTargetDependency */,
+			);
+			name = BrantaUITests;
+			productName = brantaUITests;
+			productReference = ED73E9702B07D686005742BA /* BrantaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED73E94D2B07D684005742BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					ED73E9542B07D684005742BA = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					ED73E9652B07D686005742BA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = ED73E9542B07D684005742BA;
+					};
+					ED73E96F2B07D686005742BA = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = ED73E9542B07D684005742BA;
+					};
+				};
+			};
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED73E94C2B07D684005742BA;
+			packageReferences = (
+				ED34AD052B1994B80038CAC5 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+			);
+			productRefGroup = ED73E9562B07D684005742BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED73E9542B07D684005742BA /* Branta */,
+				ED73E9652B07D686005742BA /* BrantaTests */,
+				ED73E96F2B07D686005742BA /* BrantaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED73E9532B07D684005742BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */,
+				ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */,
+				ED73E9602B07D686005742BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED73E9642B07D686005742BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED73E96E2B07D686005742BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED73E9512B07D684005742BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */,
+				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
+				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
+				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,
+				EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */,
+				ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */,
+				ED19A7A52B123F00004375C7 /* NotificationManager.swift in Sources */,
+				EDD915272B0C3C8000A288FE /* Verify.swift in Sources */,
+				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
+				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
+				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
+				ED57437B2B351E990001956A /* Automation.swift in Sources */,
+				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED73E9622B07D686005742BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */,
+				ED73E96B2B07D686005742BA /* brantaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED73E96C2B07D686005742BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED73E9772B07D686005742BA /* brantaUITestsLaunchTests.swift in Sources */,
+				ED73E9752B07D686005742BA /* brantaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED73E9682B07D686005742BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED73E9542B07D684005742BA /* Branta */;
+			targetProxy = ED73E9672B07D686005742BA /* PBXContainerItemProxy */;
+		};
+		ED73E9722B07D686005742BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED73E9542B07D684005742BA /* Branta */;
+			targetProxy = ED73E9712B07D686005742BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ED73E95E2B07D686005742BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED73E95F2B07D686005742BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED73E9782B07D686005742BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ED73E9792B07D686005742BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ED73E97B2B07D686005742BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = branta/branta.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 5Q5VTGZNGV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Branta;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ED73E97C2B07D686005742BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = branta/branta.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 5Q5VTGZNGV;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Branta;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ED73E97E2B07D686005742BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Branta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Branta";
+			};
+			name = Debug;
+		};
+		ED73E97F2B07D686005742BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Branta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Branta";
+			};
+			name = Release;
+		};
+		ED73E9812B07D686005742BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = branta;
+			};
+			name = Debug;
+		};
+		ED73E9822B07D686005742BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = branta;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED73E9782B07D686005742BA /* Debug */,
+				ED73E9792B07D686005742BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED73E97A2B07D686005742BA /* Build configuration list for PBXNativeTarget "Branta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED73E97B2B07D686005742BA /* Debug */,
+				ED73E97C2B07D686005742BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED73E97D2B07D686005742BA /* Build configuration list for PBXNativeTarget "BrantaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED73E97E2B07D686005742BA /* Debug */,
+				ED73E97F2B07D686005742BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED73E9802B07D686005742BA /* Build configuration list for PBXNativeTarget "BrantaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED73E9812B07D686005742BA /* Debug */,
+				ED73E9822B07D686005742BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ED34AD052B1994B80038CAC5 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = ED73E94D2B07D684005742BA /* Project object */;
+}
