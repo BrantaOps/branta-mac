@@ -47,12 +47,10 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         )
         
         UNUserNotificationCenter.current().add(request) { error in
-            // Handle any errors that occur when adding the notification request
         }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        // Handle user's interaction with the notification (if needed)
         completionHandler()
     }
 }

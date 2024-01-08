@@ -84,14 +84,12 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         
         if let clickedTextField = sender.view as? NSTextField {
             let row = tableView.row(for: clickedTextField)
-            print("Clicked on textField at row \(row)")
             
             let wallet = tableData[row]
             
             let alert = NSAlert()
             let name = wallet["name"]!.replacingOccurrences(of: ".app", with: "")
             
-            // TODO - this showed nil without closing/opening the VC again.
             let version = wallet["version"]!
             alert.messageText = "\(name) \(version)"
             
@@ -107,19 +105,12 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             for hash in hashes {
                 if hash[nameKey] != nil {
                     let versions = hash[nameKey]!.keys
-                    //print("versions: \(versions)")
-                    //print("version: \(version)")
                     
                     for supportedVersion in versions {
                         let comparisonResult = VerifyViewController.compareVersions(version, supportedVersion)
                         
-                        if comparisonResult == .orderedAscending {
-                            //print("\(version) < \(supportedVersion): \(comparisonResult)")
-                        } else if comparisonResult == .orderedDescending {
-                            //print("\(version) > \(supportedVersion): \(comparisonResult)")
-                        } else if comparisonResult == .orderedSame {
+                        if comparisonResult == .orderedSame {
                             outOfDate = false
-                            //print("\(version) == \(supportedVersion): \(comparisonResult)")
                         }
                     }
                 }
@@ -139,7 +130,6 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
 
             alert.beginSheetModal(for: self.view.window!) { (response) in
                 if response == .alertFirstButtonReturn {
-                    print("OK button clicked")
                 }
             }
         }

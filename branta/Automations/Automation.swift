@@ -6,6 +6,16 @@
 //
 
 class Automation {
+    
+    // API to start ongoing monitors
     class func run() {
+    }
+    
+    // API to toggle automation
+    class func disable() {
+    }
+    
+    // API to present UI to user (for manual .dmg PGP check on install)
+    class func present() {
     }
 }
