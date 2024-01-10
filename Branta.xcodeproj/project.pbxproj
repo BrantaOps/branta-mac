@@ -11,6 +11,9 @@
 		ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
+		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
+		ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C72B4ED62F0094D845 /* Ledger.swift */; };
+		ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C92B4ED7B60094D845 /* Trezor.swift */; };
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
 		ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* VerifyViewController.swift */; };
 		ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */; };
@@ -51,6 +54,9 @@
 		ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoin.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
+		ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockstreamGreen.swift; sourceTree = "<group>"; };
+		ED4FA1C72B4ED62F0094D845 /* Ledger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
+		ED4FA1C92B4ED7B60094D845 /* Trezor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trezor.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
 		ED57437C2B3641AF0001956A /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bip39wordlist.txt; sourceTree = "<group>"; };
@@ -204,6 +210,9 @@
 			children = (
 				ED73E9862B0820C9005742BA /* Sparrow.swift */,
 				ED73E98A2B0820F1005742BA /* Wallet.swift */,
+				ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */,
+				ED4FA1C72B4ED62F0094D845 /* Ledger.swift */,
+				ED4FA1C92B4ED7B60094D845 /* Trezor.swift */,
 			);
 			path = Wallets;
 			sourceTree = "<group>";
@@ -289,7 +298,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -345,6 +354,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */,
+				ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */,
+				ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */,
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
 				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
 				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,
@@ -355,6 +366,7 @@
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
+				ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
 			);
@@ -543,7 +555,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -577,7 +589,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -657,7 +669,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,
