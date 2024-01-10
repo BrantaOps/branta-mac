@@ -832,11 +832,23 @@
                                     <constraint firstAttribute="width" constant="457" id="yKe-07-oGH"/>
                                 </constraints>
                             </customView>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-7S-pcq">
+                                <rect key="frame" x="344" y="4" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="68b-lW-Bkn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="M4r-hz-0UN" kind="popover" popoverAnchorView="Bmh-7S-pcq" popoverBehavior="t" preferredEdge="maxY" id="YSo-f2-0Mf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Bmh-7S-pcq" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="8aq-P8-toY"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="9YZ-m8-hiM"/>
                             <constraint firstItem="IA0-be-bwR" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="Dsu-de-1mR"/>
                             <constraint firstItem="ebA-yH-dzu" firstAttribute="centerX" secondItem="IA0-be-bwR" secondAttribute="centerX" id="O20-NH-9OW"/>
+                            <constraint firstAttribute="bottom" secondItem="Bmh-7S-pcq" secondAttribute="bottom" constant="15" id="hOS-DH-VgO"/>
                             <constraint firstItem="ebA-yH-dzu" firstAttribute="top" secondItem="IA0-be-bwR" secondAttribute="bottom" id="jds-1g-5PF"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="top" secondItem="ebA-yH-dzu" secondAttribute="bottom" constant="8" symbolic="YES" id="npn-XW-OPK"/>
                             <constraint firstItem="IA0-be-bwR" firstAttribute="top" secondItem="tzc-5B-fCa" secondAttribute="top" id="xhS-cq-16w"/>
@@ -848,7 +860,87 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1044.5" y="742.5"/>
+            <point key="canvasLocation" x="75" y="795"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="mJq-rN-ude">
+            <objects>
+                <customObject id="EEW-V6-kgb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController showSeguePresentationStyle="single" id="M4r-hz-0UN" customClass="HelpViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" appearanceType="darkAqua" id="kei-Ce-OKF">
+                        <rect key="frame" x="0.0" y="0.0" width="715" height="439"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mN5-Fi-zTl">
+                                <rect key="frame" x="189" y="364" width="338" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="rxd-A1-jgk"/>
+                                    <constraint firstAttribute="height" constant="75" id="u5N-GO-aKJ"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="mqJ-ea-1Q6"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-lM-4Mk">
+                                <rect key="frame" x="169" y="275" width="379" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="How does Branta verify my wallets?" id="JiV-qn-emf">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-l6-MYJ">
+                                <rect key="frame" x="117" y="190" width="481" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" alignment="center" id="kam-pB-fl9">
+                                    <font key="font" metaFont="system"/>
+                                    <string key="title">Branta runs the SHA-256 algorithm on your wallet, then matches against the PGP verified SHA-256. If the hashes match, its very likely you have an authentic wallet. If they do not match, you should consider reinstalling the wallet from the developers website.</string>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-Th-cnE">
+                                <rect key="frame" x="195" y="84" width="325" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" alignment="center" title="You can learn more about Branta at" id="4Ym-9L-UNn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-Us-hie">
+                                <rect key="frame" x="279" y="53" width="156" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="https://branta.pro" id="0xh-cN-e3E">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.69411764710000001" green="0.56862745100000001" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-a4-qXq">
+                                <rect key="frame" x="242" y="93" width="232" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="How do I learn more?" id="fvQ-ek-gCg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mN5-Fi-zTl" firstAttribute="top" secondItem="kei-Ce-OKF" secondAttribute="top" id="Ke1-wJ-Hu7"/>
+                            <constraint firstItem="mN5-Fi-zTl" firstAttribute="centerX" secondItem="kei-Ce-OKF" secondAttribute="centerX" id="hhk-1H-hDE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="a1" destination="7eA-l6-MYJ" id="ACx-xg-jU3"/>
+                        <outlet property="a2" destination="HwN-Th-cnE" id="s8N-58-Qav"/>
+                        <outlet property="link" destination="MeF-Us-hie" id="Hf6-il-Snr"/>
+                        <outlet property="q1" destination="ANG-lM-4Mk" id="7BG-cA-eRh"/>
+                        <outlet property="q2" destination="jCG-a4-qXq" id="0td-0B-5cY"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="839.5" y="794.5"/>
         </scene>
     </scenes>
     <resources>

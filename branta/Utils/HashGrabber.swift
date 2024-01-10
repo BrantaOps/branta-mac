@@ -29,7 +29,7 @@ class HashGrabber {
     
     static func grab() -> [[String : [String : String]]] {
         if hashes != [] { return hashes }
-        
+            
         if isArm() {
             hashes  = arm_HASHES
         } else if isIntel() {
