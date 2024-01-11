@@ -13,6 +13,9 @@ x86_64 arm64
 */
 
 class BlockstreamGreen: Wallet {
+    override class func name() -> String {
+        return "Blockstream Green.app"
+    }
     
     override class func x86() -> [String:String] {
         return [

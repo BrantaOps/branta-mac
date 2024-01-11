@@ -8,6 +8,10 @@
 
 class Sparrow: Wallet {
     
+    override class func name() -> String {
+        return "Sparrow.app"
+    }
+    
     override class func x86() -> [String:String] {
         return [
             "1.8.1":"a35554c23d8e324f8e4226e15ad0b6d4a71da4f47c5a219b6b1b395472f57422",

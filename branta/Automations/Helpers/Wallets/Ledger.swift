@@ -15,6 +15,10 @@ import Foundation
 */
 
 class Ledger: Wallet {
+    override class func name() -> String {
+        return "Ledger Live.app"
+    }
+    
     override class func x86() -> [String:String] {
         return [
             "2.73.0": "6273aba1261d9b51dba036448bef343707e410357d1120de6e8484e276d02d0d",

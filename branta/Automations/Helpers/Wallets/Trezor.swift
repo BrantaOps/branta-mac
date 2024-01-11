@@ -8,6 +8,10 @@
 import Foundation
 
 class Trezor: Wallet {
+    override class func name() -> String {
+        return "Trezor Suite.app"
+    }
+    
     override class func x86() -> [String:String] {
         return [
             "23.12.3": "8f576e56983a5fd45de75074861f5630254d23fe7c48a78621cc70b82715cb33",

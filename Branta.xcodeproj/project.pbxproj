@@ -15,6 +15,7 @@
 		ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C72B4ED62F0094D845 /* Ledger.swift */; };
 		ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C92B4ED7B60094D845 /* Trezor.swift */; };
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
+		ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */; };
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
 		ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* VerifyViewController.swift */; };
 		ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */; };
@@ -59,6 +60,7 @@
 		ED4FA1C72B4ED62F0094D845 /* Ledger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		ED4FA1C92B4ED7B60094D845 /* Trezor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trezor.swift; sourceTree = "<group>"; };
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wasabi.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
 		ED57437C2B3641AF0001956A /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
 		ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bip39wordlist.txt; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */,
 				ED4FA1C72B4ED62F0094D845 /* Ledger.swift */,
 				ED4FA1C92B4ED7B60094D845 /* Trezor.swift */,
+				ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */,
 			);
 			path = Wallets;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
 				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
 				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,
+				ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */,
 				EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */,
 				ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */,
 				ED19A7A52B123F00004375C7 /* NotificationManager.swift in Sources */,

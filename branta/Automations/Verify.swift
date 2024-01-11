@@ -10,24 +10,29 @@ import CryptoKit
 import Foundation
 
 
-let SPARROW              = "Sparrow.app"
-let TREZOR               = "Trezor Suite.app"
-let LEDGER               = "Ledger Live.app"
-let BLOCKSTREAM_GREEN    = "Blockstream Green.app"
-
 class Verify: Automation {
     static var notificationManager: NotificationManager?
     static var alreadyWarned = [
-        SPARROW: false,
-        LEDGER: false,
-        TREZOR: false,
-        BLOCKSTREAM_GREEN: false
+        Sparrow.name():             false,
+        Ledger.name():              false,
+        Trezor.name():              false,
+        BlockstreamGreen.name():    false,
+        Wasabi.name():              false
     ]
-    static let TARGETS : Set = [SPARROW, TREZOR, LEDGER, BLOCKSTREAM_GREEN]
+    
+    static let TARGETS = [
+        Sparrow.name():             Sparrow.self,
+        Trezor.name():              Trezor.self,
+        Ledger.name():              Ledger.self,
+        BlockstreamGreen.name():    BlockstreamGreen.self,
+        Wasabi.name():              Wasabi.self
+    ]
+    
+    static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]
+    
     static let VERIFY_INTERVAL = 10.0
     static let PATH = "/Applications"
     static let FM = FileManager.default
-    static let USE_SHORT_VERSION_PATH = [BLOCKSTREAM_GREEN]
     private static var observers = [VerifyObserver]()
     static var signatures: Array<[String: String]> = [] {
         didSet {
@@ -130,8 +135,18 @@ class Verify: Automation {
             let items = try FM.contentsOfDirectory(atPath: PATH)
 
             for item in items {
-                if TARGETS.contains(item) {
-                    let fullPath = PATH + "/" + item + "/Contents/MacOS/" + item.dropLast(4)
+                if TARGETS.keys.contains(item) {
+                    
+                    // Some Wallets use custom unix binary entry points
+                    var exePath = ""
+                    if TARGETS[item]!.CFBundleExecutable() != "" {
+                        exePath = TARGETS[item]!.CFBundleExecutable()
+                    }
+                    else {
+                        exePath = String(item.dropLast(4))
+                    }
+                    
+                    let fullPath = PATH + "/" + item + "/Contents/MacOS/" + exePath
                     let hash = sha256(at: fullPath)
                     let version = getAppVersion(atPath: (PATH + "/" + item))
                     

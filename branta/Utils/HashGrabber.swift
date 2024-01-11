@@ -14,17 +14,19 @@ class HashGrabber {
     private static var hashes: [[String : [String : String]]] = []
     
     private static let x86_HASHES = [
-        [ BLOCKSTREAM_GREEN:    BlockstreamGreen.x86() ],
-        [ SPARROW:              Sparrow.x86() ],
-        [ TREZOR:               Trezor.x86() ],
-        [ LEDGER:               Ledger.x86() ]
+        [ BlockstreamGreen.name():      BlockstreamGreen.x86() ],
+        [ Sparrow.name():               Sparrow.x86() ],
+        [ Trezor.name():                Trezor.x86() ],
+        [ Ledger.name():                Ledger.x86() ],
+        [ Wasabi.name():                Wasabi.x86() ]
     ]
     
     private static let arm_HASHES = [
-        [ BLOCKSTREAM_GREEN:    BlockstreamGreen.arm() ],
-        [ SPARROW:              Sparrow.arm() ],
-        [ TREZOR:               Trezor.arm()],
-        [ LEDGER:               Ledger.arm() ]
+        [ BlockstreamGreen.name():      BlockstreamGreen.arm() ],
+        [ Sparrow.name():               Sparrow.arm() ],
+        [ Trezor.name():                Trezor.arm() ],
+        [ Ledger.name():                Ledger.arm() ],
+        [ Wasabi.name():                Wasabi.arm() ]
     ]
     
     static func grab() -> [[String : [String : String]]] {
