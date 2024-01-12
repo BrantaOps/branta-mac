@@ -4,6 +4,8 @@
 
 Branta is FOSS that automatically runs integrity checking on your wallets against PGP verified SHA-256 checksums.
 
+Branta also has a Clipboard Guardian that notifies you of bitcoin-related activity in your clipboard.
+
 ## Wallets
 - ✅ Sparrow 
 - ✅ Ledger
