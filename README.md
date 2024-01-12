@@ -2,6 +2,8 @@
 
 # Branta 
 
+Branta is FOSS that automatically runs integrity checking on your wallets against PGP verified SHA-256 checksums.
+
 ## Wallets
 - ✅ Sparrow 
 - ✅ Ledger
