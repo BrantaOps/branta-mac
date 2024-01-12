@@ -8,5 +8,6 @@
 - ✅ Trezor
 - ✅ Wasabi
 - ✅ Blockstream Green
+- ✅ Whirlpool
 
 ## Clipboard
