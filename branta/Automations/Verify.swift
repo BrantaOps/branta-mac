@@ -17,7 +17,8 @@ class Verify: Automation {
         Ledger.name():              false,
         Trezor.name():              false,
         BlockstreamGreen.name():    false,
-        Wasabi.name():              false
+        Wasabi.name():              false,
+        Whirlpool.name():           false
     ]
     
     static let TARGETS = [
@@ -25,7 +26,8 @@ class Verify: Automation {
         Trezor.name():              Trezor.self,
         Ledger.name():              Ledger.self,
         BlockstreamGreen.name():    BlockstreamGreen.self,
-        Wasabi.name():              Wasabi.self
+        Wasabi.name():              Wasabi.self,
+        Whirlpool.name():           Whirlpool.self
     ]
     
     static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]

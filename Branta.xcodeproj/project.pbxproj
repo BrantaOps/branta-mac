@@ -11,6 +11,7 @@
 		ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
+		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
 		ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C72B4ED62F0094D845 /* Ledger.swift */; };
 		ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C92B4ED7B60094D845 /* Trezor.swift */; };
@@ -61,6 +62,7 @@
 		ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoin.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
+		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
 		ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockstreamGreen.swift; sourceTree = "<group>"; };
 		ED4FA1C72B4ED62F0094D845 /* Ledger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		ED4FA1C92B4ED7B60094D845 /* Trezor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trezor.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 				ED4FA1C72B4ED62F0094D845 /* Ledger.swift */,
 				ED4FA1C92B4ED7B60094D845 /* Trezor.swift */,
 				ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */,
+				ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */,
 			);
 			path = Wallets;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */,
 				ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */,
 				ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */,
+				ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */,
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
 				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
 				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,

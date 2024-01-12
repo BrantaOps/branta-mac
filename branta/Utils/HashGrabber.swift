@@ -18,7 +18,8 @@ class HashGrabber {
         Sparrow.name():               Sparrow.x86(),
         Trezor.name():                Trezor.x86(),
         Ledger.name():                Ledger.x86(),
-        Wasabi.name():                Wasabi.x86()
+        Wasabi.name():                Wasabi.x86(),
+        Whirlpool.name():             Whirlpool.x86()
     ]
     
     private static let arm_HASHES = [
@@ -26,7 +27,8 @@ class HashGrabber {
         Sparrow.name():               Sparrow.arm(),
         Trezor.name():                Trezor.arm(),
         Ledger.name():                Ledger.arm(),
-        Wasabi.name():                Wasabi.arm()
+        Wasabi.name():                Wasabi.arm(),
+        Whirlpool.name():             Whirlpool.arm()
     ]
 
     static func grab() -> [String : [String : String]] {
