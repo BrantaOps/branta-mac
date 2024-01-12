@@ -83,59 +83,52 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     @objc func showDetails(sender: NSClickGestureRecognizer) {
         
         if let clickedTextField = sender.view as? NSTextField {
-            let row = tableView.row(for: clickedTextField)
+            let row             = tableView.row(for: clickedTextField)
+            let wallet          = tableData[row]
+            let alert           = NSAlert()
+            let name            = wallet["name"]!.replacingOccurrences(of: ".app", with: "")
+            let version         = wallet["version"]!
+            let nameKey         = wallet["name"]!
+            let hashes          = HashGrabber.grab()[nameKey]!
+            let versions        = hashes.keys
             
-            let wallet = tableData[row]
-            
-            let alert = NSAlert()
-            let name = wallet["name"]!.replacingOccurrences(of: ".app", with: "")
-            
-            let version = wallet["version"]!
-            alert.messageText = "\(name) \(version)"
-            
-            let verifiedText = "Branta verified the validity of \(name)."
-            let unverifiedText = "Branta could not verify the validity of \(name)."
-            let outofDateText = "An outdated version of \(name) was detected. Branta can verify \(name) once you update the wallet."
-            var outOfDate = true
-
-            
-            let nameKey = wallet["name"]!
-            let hashes = HashGrabber.grab()
-            
-            for hash in hashes {
-                if hash[nameKey] != nil {
-                    let versions = hash[nameKey]!.keys
-                    
-                    for supportedVersion in versions {
-                        let comparisonResult = VerifyViewController.compareVersions(version, supportedVersion)
-                        
-                        if comparisonResult == .orderedSame {
-                            outOfDate = false
-                        }
-                    }
-                }
-            }
-            
-            if outOfDate {
-                alert.informativeText = outofDateText
-            }
-            else if wallet["match"] == "true" {
-                alert.informativeText = verifiedText
-            } else {
-                alert.informativeText = unverifiedText
-            }
-            
+            alert.messageText   = "\(name) \(version)"
             alert.alertStyle = .informational
             alert.addButton(withTitle: "OK")
+            
+            if wallet["match"] == "true" {
+                alert.informativeText = "Branta verified the validity of \(name)."
+            } else if wallet["match"] != "true" && hashes[version] != nil {
+                alert.informativeText = "Branta could not verify the validity of \(name). You should consider reinstalling the wallet from the publishers website."
+            } else {
+                var older = true
+                var newer = true
+                var comparisonResult: ComparisonResult
+            
+                // Pass through. All versions will be older OR newer.
+                for brantaVersion in versions {
+                    comparisonResult = compareVersions(version, brantaVersion)
 
-            alert.beginSheetModal(for: self.view.window!) { (response) in
-                if response == .alertFirstButtonReturn {
+                    if comparisonResult == .orderedAscending { newer = false }
+                    else if comparisonResult == .orderedDescending { older = false }
+                }
+                
+                if newer {
+                    alert.informativeText = "An newer version of \(name) was detected than Branta knows about."
+                }
+                else if older {
+                    alert.informativeText = "An outdated version of \(name) was detected. Branta can verify \(name) once you update the wallet."
+                }
+                else {
+                    alert.informativeText = "An unknown version of \(name) was detected."
                 }
             }
+            
+            alert.beginSheetModal(for: self.view.window!)
         }
     }
     
-    static func compareVersions(_ version1: String, _ version2: String) -> ComparisonResult {
+    func compareVersions(_ version1: String, _ version2: String) -> ComparisonResult {
         let components1 = version1.split(separator: ".").compactMap { Int($0) }
         let components2 = version2.split(separator: ".").compactMap { Int($0) }
 

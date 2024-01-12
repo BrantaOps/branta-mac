@@ -81,23 +81,17 @@ class Verify: Automation {
         let architectureSpecificHashes = HashGrabber.grab()
         var ret: Array<[String: String]> = []
         
-        // TODO - Early exit
+        // Mark users wallets as "match" if we have a sha.
         for wallet in wallets {
-            if let name = wallet["name"] {
-                for hash in architectureSpecificHashes {
-                    if hash[name] != nil {
-                        if let walletVersionPair = hash[name] {
-                            var retItem = wallet
-                            for kv in walletVersionPair {
-                                if kv.value == wallet["hash"] {
-                                    retItem["match"] = "true"
-                                }
-                            }
-                            ret.append(retItem)
-                        }
-                    }
+            let name = wallet["name"]!
+            var retItem = wallet
+
+            for kv in architectureSpecificHashes[name]! {
+                if kv.value == wallet["hash"] {
+                    retItem["match"] = "true"
                 }
             }
+            ret.append(retItem)
         }
                 
         // Second pass

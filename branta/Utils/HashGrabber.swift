@@ -11,26 +11,26 @@ import Foundation
 class HashGrabber {
     
     // Memoized cache for hashes.
-    private static var hashes: [[String : [String : String]]] = []
+    private static var hashes: [String : [String : String]] = [:]
     
     private static let x86_HASHES = [
-        [ BlockstreamGreen.name():      BlockstreamGreen.x86() ],
-        [ Sparrow.name():               Sparrow.x86() ],
-        [ Trezor.name():                Trezor.x86() ],
-        [ Ledger.name():                Ledger.x86() ],
-        [ Wasabi.name():                Wasabi.x86() ]
+        BlockstreamGreen.name():      BlockstreamGreen.x86(),
+        Sparrow.name():               Sparrow.x86(),
+        Trezor.name():                Trezor.x86(),
+        Ledger.name():                Ledger.x86(),
+        Wasabi.name():                Wasabi.x86()
     ]
     
     private static let arm_HASHES = [
-        [ BlockstreamGreen.name():      BlockstreamGreen.arm() ],
-        [ Sparrow.name():               Sparrow.arm() ],
-        [ Trezor.name():                Trezor.arm() ],
-        [ Ledger.name():                Ledger.arm() ],
-        [ Wasabi.name():                Wasabi.arm() ]
+        BlockstreamGreen.name():      BlockstreamGreen.arm(),
+        Sparrow.name():               Sparrow.arm(),
+        Trezor.name():                Trezor.arm(),
+        Ledger.name():                Ledger.arm(),
+        Wasabi.name():                Wasabi.arm()
     ]
-    
-    static func grab() -> [[String : [String : String]]] {
-        if hashes != [] { return hashes }
+
+    static func grab() -> [String : [String : String]] {
+        if hashes != [:] { return hashes }
             
         if isArm() {
             hashes  = arm_HASHES
