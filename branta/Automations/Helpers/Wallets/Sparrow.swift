@@ -8,6 +8,10 @@
 
 class Sparrow: Wallet {
     
+    override class func runtimeName() -> String {
+        return "Sparrow"
+    }
+    
     override class func name() -> String {
         return "Sparrow.app"
     }

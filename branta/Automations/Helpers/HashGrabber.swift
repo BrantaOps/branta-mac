@@ -30,6 +30,11 @@ class HashGrabber {
         Wasabi.name():                Wasabi.arm(),
         Whirlpool.name():             Whirlpool.arm()
     ]
+    
+    static func hashMatches(hash: String, wallet: String) -> Bool {
+        let candidates = hashes[wallet]!.values
+        return candidates.contains(hash)
+    }
 
     static func grab() -> [String : [String : String]] {
         if hashes != [:] { return hashes }

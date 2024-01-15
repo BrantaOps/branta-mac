@@ -32,7 +32,7 @@ class Verify: Automation {
     
     static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]
     
-    static let VERIFY_INTERVAL = 10.0
+    static let VERIFY_INTERVAL = 60.0
     static let PATH = "/Applications"
     static let FM = FileManager.default
     private static var observers = [VerifyObserver]()
@@ -54,6 +54,20 @@ class Verify: Automation {
         setup()
         let wallets = crawlWallets()
         signatures = matchSignatures(wallets: wallets)
+    }
+    
+    
+    static func verify(wallet: String) -> Bool {
+        var exePath = wallet
+        
+        if TARGETS[wallet + ".app"]!.CFBundleExecutable() != "" {
+            exePath = TARGETS[wallet + ".app"]!.CFBundleExecutable()
+        }
+        
+        let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
+        let hash = sha256(at: fullPath)
+
+        return HashGrabber.hashMatches(hash: hash, wallet: "\(wallet).app")
     }
     
     static func addObserver(_ observer: VerifyObserver) {

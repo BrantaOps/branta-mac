@@ -13,12 +13,21 @@ let RED                     = "#944545"
 
 let ACTIVE                  = "Status: Active ✓"
 
+let APPS = [
+    Sparrow.runtimeName(),
+    Trezor.runtimeName(),
+    Ledger.runtimeName(),
+    BlockstreamGreen.runtimeName(),
+    Wasabi.runtimeName(),
+    Whirlpool.runtimeName()
+]
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
-    let automations = [Clipboard.self, Verify.self]
+    let automations = [Clipboard.self, Verify.self, Focus.self]
     var foreground: Bool = true
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {

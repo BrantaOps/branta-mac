@@ -9,8 +9,12 @@
 import Foundation
 
 class Wallet {
-    class func name() -> String {
+    class func runtimeName() -> String {
         return "Implement me"
+    }
+    
+    class func name() -> String {
+        return "Implement me.app"
     }
     
     class func x86() -> [String:String] {

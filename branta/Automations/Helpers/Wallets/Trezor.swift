@@ -8,6 +8,11 @@
 import Foundation
 
 class Trezor: Wallet {
+    
+    override class func runtimeName() -> String {
+        return "Trezor Suite"
+    }
+    
     override class func name() -> String {
         return "Trezor Suite.app"
     }

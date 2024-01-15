@@ -15,6 +15,11 @@ import Foundation
 */
 
 class Ledger: Wallet {
+    
+    override class func runtimeName() -> String {
+        return "Ledger Live"
+    }
+    
     override class func name() -> String {
         return "Ledger Live.app"
     }

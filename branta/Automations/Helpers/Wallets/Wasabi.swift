@@ -13,6 +13,10 @@ import Foundation
  x86_64
  */
 class Wasabi: Wallet {
+    override class func runtimeName() -> String {
+        return "Wasabi Wallet"
+    }
+    
     override class func name() -> String {
         return "Wasabi Wallet.app"
     }
