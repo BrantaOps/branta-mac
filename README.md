@@ -4,12 +4,19 @@
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
+*Branta software for Mac*
 
-Branta is FOSS that automatically runs integrity checking on your wallets against PGP verified SHA-256 checksums.
+## About
+Branta is a one stop shop for all things bitcoin security.
 
-Branta also has a Clipboard Guardian that notifies you of bitcoin-related activity in your clipboard.
+### Learn more
+https://branta.pro
 
-## Wallets
+## Features
+ - [X] Wallet Verification: Automatically verifies supported wallets against PGP verified SHA-256 checksums
+ - [X] Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
+
+#### Supported Wallets
 - ✅ Sparrow 
 - ✅ Ledger
 - ✅ Trezor
@@ -17,4 +24,4 @@ Branta also has a Clipboard Guardian that notifies you of bitcoin-related activi
 - ✅ Blockstream Green
 - ✅ Whirlpool
 
-## Clipboard
+## Build Steps
