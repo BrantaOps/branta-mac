@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Branta/Assets/goldwhitecropped.png">
-  <source media="(prefers-color-scheme: light)" srcset="Branta/Assets/goldblackcropped.jpg">
+  <source media="(prefers-color-scheme: dark)" srcset="goldwhitecropped.png">
+  <source media="(prefers-color-scheme: light)" srcset="goldblackcropped.jpeg">
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
