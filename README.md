@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="goldwhitecropped.png">
-  <source media="(prefers-color-scheme: light)" srcset="goldblackcropped.jpeg">
+  <source media="(prefers-color-scheme: dark)" srcset="branta/Assets.xcassets/goldwhitecropped.imageset/goldwhitecropped.png">
+  <source media="(prefers-color-scheme: light)" srcset="branta/Assets.xcassets/goldblackcropped.imageset/goldblackcropped.jpeg">
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
@@ -17,7 +17,7 @@ https://branta.pro
  - [X] Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
 
 #### Supported Wallets
-- ✅ Sparrow 
+- ✅ Sparrow
 - ✅ Ledger
 - ✅ Trezor
 - ✅ Wasabi
