@@ -4,10 +4,9 @@
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
-*Branta software for Mac*
 
 ## About
-Branta is a one stop shop for all things bitcoin security.
+Free Open Source Anti-Virus for #Bitcoin
 
 ### Learn more
 https://branta.pro
