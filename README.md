@@ -4,16 +4,9 @@
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
-
-## About
-Free Open Source Anti-Virus for #Bitcoin
-
-### Learn more
-https://branta.pro
-
 ## Features
- - [X] Wallet Verification: Automatically verifies supported wallets against PGP verified SHA-256 checksums
- - [X] Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
+ - ✅ Wallet Verification: Automatically verifies supported wallets against PGP verified SHA-256 checksums
+ - ✅ Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
 
 #### Supported Wallets
 - ✅ Sparrow
@@ -22,5 +15,3 @@ https://branta.pro
 - ✅ Wasabi
 - ✅ Blockstream Green
 - ✅ Whirlpool
-
-## Build Steps
