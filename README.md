@@ -7,7 +7,7 @@
 ## Features
  - ✅ Wallet Verification: Automatically verifies supported wallets against PGP verified SHA-256 checksums
  - ✅ Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
- - [ ] Installer Automation - coming soon
+ - - [ ] Installer Automation
 
 #### Supported Wallets
 - ✅ Sparrow
