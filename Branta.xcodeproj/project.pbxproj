@@ -37,6 +37,7 @@
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
 		EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* nostr.swift */; };
+		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
 		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
 		EDC310402B1F7A38005BCBBA /* nostr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nostr.swift; sourceTree = "<group>"; };
+		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 				ED7B16B12B556A650003EFEB /* Focus.swift */,
 				EDD915262B0C3C8000A288FE /* Verify.swift */,
 				ED57437A2B351E990001956A /* Automation.swift */,
+				EDD0117E2B6580760091CAAD /* Installer.swift */,
 			);
 			path = Automations;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
+				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
 				ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
