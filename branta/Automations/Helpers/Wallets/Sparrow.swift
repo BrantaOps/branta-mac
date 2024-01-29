@@ -49,6 +49,29 @@ class Sparrow: Wallet {
             "1.7.9":"4804d0dd0f72dfcf02b05a657aba649c442141dcb3b9c027390f4a60e994cf9f",
         ]
     }
+    
+    override class func installerHashes() -> [String:String] {
+        return [
+            "541b82e83ec928e7b54490211fa5e9d3b315394d895aebeab9a9696ce24c378d": "*Sparrow-1.8.2-aarch64.dmg",
+            "508a5ba212c2393a9d4cd122c2a8aa8b16e593c640bc3e4ac111ee574b2fd82d": "*Sparrow-1.8.2-x86_64.dmg",
+            "1035fc5663e53ce3a7d87a63a1dadc33bb180ceb3154549b251407b09db202b7": "*Sparrow-1.8.2.exe",
+            "8ff8e70886af91c8758509097a1047a05341b29a2407934c49b6885ff71c60c2": "*Sparrow-1.8.2.zip",
+            "afee92405d3013d24add5e3099cea86f5201829b8f5f485f26b753af109619b9": "*sparrow-1.8.2-1.aarch64.rpm",
+            "22b72b62865d8e9d0dcf71dc0907a3945f7a5c859257db4f05ee5b815c4bc56d": "*sparrow-1.8.2-1.x86_64.rpm",
+            "97d43340c6938dbd513c62e3528ae61f57cefe308cd950b0d0cf3f7a3a36993f": "*sparrow-1.8.2-aarch64.tar.gz",
+            "ffb7f86e978ab312dcc169d7c70b33048256dcf3280aecb1cb9392124eac31b9": "*sparrow-1.8.2-x86_64.tar.gz",
+            "e69873062837f90745b384d53afeb590cb0058061da3148cbad35604b3e4b1bd": "*sparrow-server-1.8.2-1.aarch64.rpm",
+            "3fb4900e078427c230dd1372e1b56abdaa71653c5247d6ca4605e9fdda90bffe": "*sparrow-server-1.8.2-1.x86_64.rpm",
+            "6278fe3b8261576bb9e597ac0e1a5305781917a6716dfc8c5ebb8b244c1a8805": "*sparrow-server-1.8.2-aarch64.tar.gz",
+            "0f2025a3fee1057fef763ff1ead471b4468766c0db99e07d8cd1de26e359852d": "*sparrow-server-1.8.2-x86_64.tar.gz",
+            "c538a93d22698a46218859fbf936731484683e188da33a2e35dac053388a5e14": "*sparrow-server_1.8.2-1_amd64.deb",
+            "817469b84741832d4b58b0f6305139cf740ba6b91ca9ff5e65dac75f1fa0221e": "*sparrow-server_1.8.2-1_arm64.deb",
+            "ef461e5b75681e39fde235ee75d0bb23d4cfbeb30c312383f17596115d0a9188": "*sparrow_1.8.2-1_amd64.deb",
+            "f81b259799d3dbf7ac75555b59ac719256fcfacb716c653ca445f21f327add5c": "*sparrow_1.8.2-1_arm64.deb"
+
+
+        ]
+    }
 }
 
 

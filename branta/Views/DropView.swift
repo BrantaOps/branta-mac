@@ -12,8 +12,6 @@ class DropView: NSView {
     let ALLOWED_EXTENSIONS = ["dmg"]
     let LIVE_COLOR = NSColor.darkGray.cgColor
     let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
-    
-    var filePath: String?
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -74,9 +72,20 @@ class DropView: NSView {
               let path = pasteboard[0] as? String
         else { return false }
 
-        self.filePath = path
-        print("FilePath: \(path)")
-
+        let match = Installer.check(path: path)
+        let alert = NSAlert()
+        alert.alertStyle = .informational
+        alert.addButton(withTitle: "OK")
+        if match.0 {
+            alert.messageText   = "Verified \(match.1) ✓"
+            alert.informativeText = "Branta verified \(path) against the authors PGP-verified checksum."
+        }
+        else {
+            alert.messageText   = "Could Not Verify ⚠"
+            alert.informativeText = "The .dmg did not match any checksums known to Branta. Its possible the .dmg is valid and older/newer than Branta knows about."
+        }
+        
+        alert.beginSheetModal(for: window!)
         return true
     }
 }
