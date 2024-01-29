@@ -6,7 +6,7 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "Branta", dependencies: []),
-        .testTarget(name: "BrantaTests", dependencies: []),
+        .target(name: "Branta", dependencies: [], path: "branta/"),
+        .testTarget(name: "BrantaTests", dependencies: [], path: "brantaTests/"),
     ]
 )
