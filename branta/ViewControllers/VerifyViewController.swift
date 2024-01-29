@@ -9,6 +9,7 @@ import Cocoa
 import Foundation
 
 let HEIGHT = 30.0
+let TABLE_FONT = 17.0
 
 class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
@@ -59,7 +60,7 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         textField.bezelStyle = .roundedBezel
         textField.isBezeled = false
         textField.alignment = .center
-        textField.font = NSFont(name: FONT, size: 15.0)
+        textField.font = NSFont(name: FONT, size: TABLE_FONT)
          
         if columnNumber == 0 {
             let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
