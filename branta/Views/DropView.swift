@@ -9,7 +9,17 @@ import Cocoa
 
 class DropView: NSView {
 
-    let ALLOWED_EXTENSIONS = ["dmg"]
+    // Mac users will mostly use .dmg, but branta
+    // can also be used to verify an installer for other platforms.
+    let ALLOWED_EXTENSIONS = [
+        "dmg",
+        "rpm",
+        "tar.gz",
+        "gz",
+        "zip",
+        "deb",
+        "exe"
+    ]
     let LIVE_COLOR = NSColor.darkGray.cgColor
     let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
 
@@ -78,11 +88,11 @@ class DropView: NSView {
         alert.addButton(withTitle: "OK")
         if match.0 {
             alert.messageText   = "Verified \(match.1) ✓"
-            alert.informativeText = "Branta verified \(path) against the authors PGP-verified checksum."
+            alert.informativeText = "Branta matched the authors PGP-verified checksum."
         }
         else {
             alert.messageText   = "Could Not Verify ⚠"
-            alert.informativeText = "The .dmg did not match any checksums known to Branta. Its possible the .dmg is valid and older/newer than Branta knows about."
+            alert.informativeText = "The .dmg did not match any checksums known to Branta."
         }
         
         alert.beginSheetModal(for: window!)

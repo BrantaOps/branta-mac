@@ -67,9 +67,24 @@ class Sparrow: Wallet {
             "c538a93d22698a46218859fbf936731484683e188da33a2e35dac053388a5e14": "*sparrow-server_1.8.2-1_amd64.deb",
             "817469b84741832d4b58b0f6305139cf740ba6b91ca9ff5e65dac75f1fa0221e": "*sparrow-server_1.8.2-1_arm64.deb",
             "ef461e5b75681e39fde235ee75d0bb23d4cfbeb30c312383f17596115d0a9188": "*sparrow_1.8.2-1_amd64.deb",
-            "f81b259799d3dbf7ac75555b59ac719256fcfacb716c653ca445f21f327add5c": "*sparrow_1.8.2-1_arm64.deb"
-
-
+            "f81b259799d3dbf7ac75555b59ac719256fcfacb716c653ca445f21f327add5c": "*sparrow_1.8.2-1_arm64.deb",
+            
+            "b2203fc939ae61068dbd084e256e581b58813019aea8b2c71beb70cfe33ebbe1": "Sparrow-1.8.1-aarch64.dmg",
+            "2789804db778f553f3b743fe87eb2affa171f3a427185aba2d902e07a02a1588": "Sparrow-1.8.1-x86_64.dmg",
+            "97a0b598b2478d10f3a2da55909caac5ca34fdbe6a71f633374270a63959cd4b": "Sparrow-1.8.1.exe",
+            "b9eafe9f49ce7359fb9608508360a575d0433bddf98cfe160e5ad97d7f3212ee": "Sparrow-1.8.1.zip",
+            "221e78ee2e564e676662cfafd415d96ca073b2ce888b0b04279890f1f61f673f": "sparrow-1.8.1-1.aarch64.rpm",
+            "e6de0ce0f9202ad530cab2a4eb5f4621f8046101292638f440030b0aac2b0194": "sparrow-1.8.1-1.x86_64.rpm",
+            "d7f3ed2fd249d5cf003e4a4d0394513e13370d7ae7a97b9a3ff6f733798608c7": "sparrow-1.8.1-aarch64.tar.gz",
+            "76960631c958323c6351b21c499ed5e782352d355f1f100a1fdfbb09aa6b0f85": "sparrow-1.8.1-x86_64.tar.gz",
+            "3ca9398f99fcf4bcf0f44aec29fcbdeebbb0f916a1ecf4fbe6c6287138d56296": "sparrow-server-1.8.1-1.aarch64.rpm",
+            "7d0ed373650bb2bd1f04da03b112394c1396f93e165f5754cda71759f08257c8": "sparrow-server-1.8.1-1.x86_64.rpm",
+            "9afcdea9e1693458ff880aab0d5f9a7abdb342ed2cbe8feb2d38d87791fb20aa": "sparrow-server-1.8.1-aarch64.tar.gz",
+            "73adfd45b8f8de7ca4b06e3cf91d41f11d69c212c73f52c7ec13afd576d9d393": "sparrow-server-1.8.1-x86_64.tar.gz",
+            "d0eb0e51faea8a9dc5d93a5fa53a98f55befab76d52cf9a1892cf7938e33f16b": "sparrow-server_1.8.1-1_amd64.deb",
+            "585028517cea29d243ba106c5ebf5e18ba5d5eacb73a94f3ef750025d01a5939": "sparrow-server_1.8.1-1_arm64.deb",
+            "acdf80e8a27d619c51e57cc4ebd2c581046a757557c2484e8b3211f2f83e6fcf": "sparrow_1.8.1-1_amd64.deb",
+            "9b764b3bb8954dddffe89d94b55310fa4fdcdcfcf46de1b38816919d174d841e": "sparrow_1.8.1-1_arm64.deb"
         ]
     }
 }
