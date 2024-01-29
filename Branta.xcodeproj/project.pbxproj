@@ -38,6 +38,7 @@
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
 		EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* nostr.swift */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
+		EDD011822B67F5890091CAAD /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011812B67F5890091CAAD /* DropView.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
 		EDC310402B1F7A38005BCBBA /* nostr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nostr.swift; sourceTree = "<group>"; };
 		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
+		EDD011812B67F5890091CAAD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -242,6 +244,7 @@
 				ED73E95E2B07D686005742BA /* Main.storyboard */,
 				ED2C6EF42B0BAF9600EC577C /* Utils */,
 				ED34AD022B182B1C0038CAC5 /* ViewControllers */,
+				EDD011802B67F5750091CAAD /* Views */,
 			);
 			path = branta;
 			sourceTree = "<group>";
@@ -277,6 +280,14 @@
 				ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */,
 			);
 			path = Wallets;
+			sourceTree = "<group>";
+		};
+		EDD011802B67F5750091CAAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EDD011812B67F5890091CAAD /* DropView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,6 +441,7 @@
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
+				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
 				ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */,
