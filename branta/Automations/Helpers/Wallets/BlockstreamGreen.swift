@@ -42,4 +42,21 @@ class BlockstreamGreen: Wallet {
             "1.2.4": "66d6c4d677d2295035fd2f0e5ea38d4f04d1f6b71a8930520d3417c88111947f"
         ]
     }
+    
+    override class func installerHashes() -> [String:String] {
+     return [
+        // 1.2.9
+        "6c28ed9f08c2bfdd1a9ccb5da26ab27549d3d95ac791e013c3316264a0b7a2eb":  "BlockstreamGreen_Windows_x86_64.zip",
+        "1b8589bc997016087ba27ef28f2026626834c91af525ca88bd3841bafcbe4c06":  "BlockstreamGreen_MacOS_x86_64.zip",
+        "f7bbc3333012ffd8a3512ede7415169329b4010cfe9f96ae6e1a92268236a52e":  "BlockstreamGreen-x86_64.AppImage",
+        "19e24095367acf1eb94818c4d67ccabc9e86f5e128edbb05f586bd6bae844822":  "BlockstreamGreen_Linux_x86_64.tar.gz",
+        
+        // 1.2.8
+        "47d394ef3beaf96b77f2210e796be0a41c70afb9109b3b069655abeacdc485d0": "BlockstreamGreen_Windows_x86_64.zip",
+        "9bfee4300aefc6f518f181c83e4af21bbdab7ae8b3fd8e334ea3fbe2c4a3b5ee": "BlockstreamGreen_MacOS_x86_64.zip",
+        "52589b48279960057db48e80cdcff9a26966cf76dcf75910cdd72e7e554b49f1": "BlockstreamGreen-x86_64.AppImage",
+        "66c354b0d3bd26fc582815c4dfbe14e2232bb5e964277a2f1604a719c2593cc2": "BlockstreamGreen_Linux_x86_64.tar.gz"
+     ]
+        
+    }
 }

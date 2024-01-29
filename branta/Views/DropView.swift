@@ -18,7 +18,8 @@ class DropView: NSView {
         "gz",
         "zip",
         "deb",
-        "exe"
+        "exe",
+        "AppImage"
     ]
     let LIVE_COLOR = NSColor.darkGray.cgColor
     let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
