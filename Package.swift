@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "Branta",
+    defaultLocalization: "en",
     dependencies: [
     ],
     targets: [
