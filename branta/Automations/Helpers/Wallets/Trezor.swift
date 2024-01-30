@@ -54,4 +54,8 @@ class Trezor: Wallet {
             "23.12.1": "62a4bc443f5f04a6dee0cc8039c725da73596bc6cd3aeeaf9721dfd5f6985022",
         ]
     }
+    
+    override class func installerHashes() -> [String:String] {
+        return [:]
+    }
 }

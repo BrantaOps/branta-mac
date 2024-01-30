@@ -31,9 +31,32 @@ class HashGrabber {
         Whirlpool.name():             Whirlpool.arm()
     ]
     
-    static func hashMatches(hash: String, wallet: String) -> Bool {
-        let candidates = hashes[wallet]!.values
-        return candidates.contains(hash)
+    private static let installer_HASHES = [
+        BlockstreamGreen.runtimeName():     BlockstreamGreen.installerHashes(),
+        Sparrow.runtimeName():              Sparrow.installerHashes(),
+        Trezor.runtimeName():               Trezor.installerHashes(),
+        Ledger.runtimeName():               Ledger.installerHashes(),
+        Wasabi.runtimeName():               Wasabi.installerHashes(),
+        Whirlpool.runtimeName():            Whirlpool.installerHashes()
+    ]
+    
+    static func installerHashMatches(hash: String, wallet: String) -> Bool {
+        if installer_HASHES[wallet] != nil {
+            let candidates = installer_HASHES[wallet]!.keys
+            return candidates.contains(hash)
+        } else {
+            return false
+        }
+    }
+    
+    
+    static func runtimeHashMatches(hash: String, wallet: String) -> Bool {
+        if hashes[wallet] != nil {
+            let candidates = hashes[wallet]!.values
+            return candidates.contains(hash)
+        } else {
+            return false
+        }
     }
 
     static func grab() -> [String : [String : String]] {

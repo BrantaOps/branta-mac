@@ -67,7 +67,7 @@ class Verify: Automation {
         let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
         let hash = sha256(at: fullPath)
 
-        return HashGrabber.hashMatches(hash: hash, wallet: "\(wallet).app")
+        return HashGrabber.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
     }
     
     static func addObserver(_ observer: VerifyObserver) {

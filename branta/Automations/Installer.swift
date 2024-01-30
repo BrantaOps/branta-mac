@@ -5,21 +5,15 @@
 //  Created by Keith Gardner on 1/27/24.
 //
 
-
 class Installer: Automation {
-    
-    // API to start ongoing monitors
-    override class func run() {
-        // No op, this is manually kicked off
-    }
-    
-    // API to toggle automation
-    override class func disable() {
-        // Not implemented
-    }
-    
-    // API to present UI to user (for manual .dmg PGP check on install)
-    override class func present() {
-        
+    class func check(path: String) -> (Bool, String) {
+        let hash = Verify.sha256(at: path)
+        for app in APPS {
+            let match = HashGrabber.installerHashMatches(hash: hash, wallet: app)
+            if match {
+                return (true, app)
+            }
+        }
+        return (false, "")
     }
 }

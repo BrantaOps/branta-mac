@@ -10,6 +10,7 @@ import Cocoa
 let FONT                    = "Avenir"
 let GOLD                    = "#B1914A"
 let RED                     = "#944545"
+let GRAY                    = "#333130"
 
 let ACTIVE                  = "Status: Active ✓"
 
