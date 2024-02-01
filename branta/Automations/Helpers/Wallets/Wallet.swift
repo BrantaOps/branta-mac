@@ -9,18 +9,23 @@
 import Foundation
 
 class Wallet {
+    
+    // Name in motion
     class func runtimeName() -> String {
         return "Implement me"
     }
     
+    // Name at Rest
     class func name() -> String {
         return "Implement me.app"
     }
     
+    // Version:SHA256 for Intel Executables
     class func x86() -> [String:String] {
         return [:]
     }
     
+    // Version:SHA256 for Apple Silicon Executables
     class func arm() -> [String:String] {
         return [:]
     }
@@ -29,7 +34,13 @@ class Wallet {
         return ""
     }
     
+    // (SHA256 or SHA512):Installer File
     class func installerHashes() -> [String:String] {
         return [:]
+    }
+    
+    // Flag for Certain wallets that use SHA512 in manifest
+    class func installerUses512() -> Bool {
+        return false
     }
 }
