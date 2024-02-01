@@ -17,6 +17,10 @@
 - ✅ Wasabi
 - ✅ Blockstream Green
 - ✅ Whirlpool
+- - [ ] Armory
+- - [ ] Specter
+- - [ ] Electrum
+- - [ ] Bitcoin Core
 
 
 ## Feature Requests & Bug Reporting
