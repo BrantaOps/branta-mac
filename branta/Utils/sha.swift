@@ -20,3 +20,16 @@ func sha256(at filePath: String) -> String {
         return ""
     }
 }
+
+func sha512(at filePath: String) -> String {
+    do {
+        let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+        let hashed = SHA512.hash(data: data)
+        return hashed.compactMap { String(format: "%02x", $0) }.joined()
+    } catch {
+        // TODO - need handling
+        print("sha256() Error reading file: \(error)")
+        return ""
+    }
+}
+
