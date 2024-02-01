@@ -29,10 +29,6 @@ class Wallet {
         return ""
     }
     
-    class func pgp() {
-        
-    }
-    
     class func installerHashes() -> [String:String] {
         return [:]
     }
