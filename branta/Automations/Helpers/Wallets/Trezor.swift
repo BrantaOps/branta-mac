@@ -56,6 +56,18 @@ class Trezor: Wallet {
     }
     
     override class func installerHashes() -> [String:String] {
-        return [:]
+        return [
+            "Im/IAqbtSye5SyCE1ffrxV2kaYuOvuw/u3Gm/Nc+mt3oqgglHfV83XrOYPs0zgi+HeE2NAVDXXU/t5bGVMX7YQ==": "Trezor-Suite-24.1.2-win-x64.exe",
+            "MyzTysyWlCRZOYBFAvJXjwW8v5hnbDxXjyG0Tf8d+Ii1a5TjnWw9Q+bnt5rkO6zlEA3ftkZPO5XnpyspvYPPWw==": "Trezor-Suite-24.1.2-mac-x64.zip",
+            "Ueche+SCzgLGPU+kvNkVSlz/d9tX5ZU4wn8HXNOnxXFOHRYueFa4y+T6LsO3IMGFD8yQbxFJTBhZRa+yEpWLxQ==": "Trezor-Suite-24.1.2-mac-arm64.zip",
+            "R188nhklYdnU498O6wKkQjwtDG/BAzfYQqdWRcD0i+MfMTb0o4Ba1haopucqqTayQlCmPqmSqbVA8io07WCRgA==": "Trezor-Suite-24.1.2-mac-x64.dmg",
+            "WsVY05OoY0hshOV2Xsar3ooBAZoVDEKXy2YTWyUDS+DnbZsu2zy2szNEqESrVPPRbdRH1T0OF3A1ypTuOJsbtQ==": "Trezor-Suite-24.1.2-mac-arm64.dmg",
+            "/D3mwyF00YWgDVq0GNDyegc8mLF63cxCOe/vnpGyLz9/Oj5aBl3oG32cj+c8e11+eHYigkKb72nFz5zBoPx8Bw==": "Trezor-Suite-24.1.2-linux-arm64.AppImage",
+            "ehIIOksVzKLGYs6GNZ8w5XvellFRb9sHVORS7MOXmwbbikjgkNX/nlfjwmUKOysxI4PwPzIbqtuX2GYyC9lXHw==": "Trezor-Suite-24.1.2-linux-x86_64.AppImage"
+            
+        ]
     }
+    
+    
+    // TODO - This is SHA512 then base64 encoded...
 }
