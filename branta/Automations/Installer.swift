@@ -7,7 +7,7 @@
 
 class Installer: Automation {
     class func check(path: String) -> (Bool, String) {
-        let hash = Verify.sha256(at: path)
+        let hash = sha256(at: path)
         for app in APPS {
             let match = HashGrabber.installerHashMatches(hash: hash, wallet: app)
             if match {

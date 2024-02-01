@@ -43,6 +43,7 @@
 		EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* nostr.swift */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
 		EDD011822B67F5890091CAAD /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011812B67F5890091CAAD /* DropView.swift */; };
+		EDD011842B6C56F00091CAAD /* sha.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011832B6C56F00091CAAD /* sha.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		EDC310402B1F7A38005BCBBA /* nostr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nostr.swift; sourceTree = "<group>"; };
 		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		EDD011812B67F5890091CAAD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		EDD011832B6C56F00091CAAD /* sha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sha.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 				ED19A7A42B123F00004375C7 /* NotificationManager.swift */,
 				EDFFC2BA2B39CF930052D92D /* HexColor.swift */,
 				EDB5B0C32B3A76D40015515F /* Observers.swift */,
+				EDD011832B6C56F00091CAAD /* sha.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
 				EDAA86292B69489600503E37 /* Armory.swift in Sources */,
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
+				EDD011842B6C56F00091CAAD /* sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,

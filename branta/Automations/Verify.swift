@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import CryptoKit
 import Foundation
 
 
@@ -182,17 +181,5 @@ class Verify: Automation {
         }
         
         return version
-    }
-    
-    static func sha256(at filePath: String) -> String {
-        do {
-            let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
-            let hashed = SHA256.hash(data: data)
-            return hashed.compactMap { String(format: "%02x", $0) }.joined()
-        } catch {
-            // TODO - need handling
-            print("sha256() Error reading file: \(error)")
-            return ""
-        }
     }
 }
