@@ -12,11 +12,8 @@ class Focus: Automation {
     
     private static var currentApp = ""
     private static var alreadyAlerted = ""
-    private static var notificationManager: NotificationManager?
     
     override class func run() {
-        setup()
-        
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { _ in
             verify()
         }
@@ -30,22 +27,16 @@ class Focus: Automation {
             alertFor(app: currentApp)
         }
     }
-    
-    static func setup() {
-        if notificationManager == nil {
-            notificationManager = NotificationManager()
-            notificationManager?.requestAuthorization()
-        }
-    }
-    
     static func alertFor(app: String) {
         if app != alreadyAlerted {
             let verified = Verify.verify(wallet: app)
+            let appDelegate = NSApp.delegate as? AppDelegate
+
             
             if verified {
-                notificationManager?.showNotification(title: "\(app) Verified.", body: "Safe to proceed.")
+                appDelegate?.notificationManager?.showNotification(title: "\(app) Verified.", body: "Safe to proceed.")
             } else {
-                notificationManager?.showNotification(title: "\(app) Unverified.", body: "Your wallet may be compromised. Check Branta for details.")
+                appDelegate?.notificationManager?.showNotification(title: "\(app) Unverified.", body: "Your wallet may be compromised. Check Branta for details.")
             }
             
             alreadyAlerted = app

@@ -11,7 +11,6 @@ import Foundation
 
 
 class Verify: Automation {
-    static var notificationManager: NotificationManager?
     static var alreadyWarned = [
         Sparrow.name():             false,
         Ledger.name():              false,
@@ -43,15 +42,12 @@ class Verify: Automation {
     }
 
     override class func run() {
-        setup()
-        
         Timer.scheduledTimer(withTimeInterval: VERIFY_INTERVAL, repeats: true) { _ in
             verify()
         }
     }
     
     static func verify() {
-        setup()
         let wallets = crawlWallets()
         signatures = matchSignatures(wallets: wallets)
     }
@@ -85,14 +81,7 @@ class Verify: Automation {
     }
     
     private
-    
-    static func setup() {
-        if notificationManager == nil {   
-            notificationManager = NotificationManager()
-            notificationManager?.requestAuthorization()
-        }
-    }
-    
+
     static func matchSignatures(wallets: Array<[String: String]>) -> Array<[String: String]> {
         let architectureSpecificHashes = HashGrabber.grab()
         var ret: Array<[String: String]> = []
@@ -124,7 +113,7 @@ class Verify: Automation {
                     // We can let the user decide how noisy Branta is.
                     let appDelegate = NSApp.delegate as? AppDelegate
                     if alreadyWarned[app] == false && !appDelegate!.foreground {
-                        notificationManager?.showNotification(title: "Could not verify \(name)", body: "")
+                        appDelegate?.notificationManager?.showNotification(title: "Could not verify \(name)", body: "")
                         alreadyWarned[app] = true
                     }
                 }

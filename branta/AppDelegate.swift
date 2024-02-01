@@ -30,6 +30,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var mainWindowController: NSWindowController?
     let automations = [Clipboard.self, Verify.self, Focus.self]
     var foreground: Bool = true
+    var notificationManager: NotificationManager?
+
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         start()
@@ -104,6 +106,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func start() {
         setupMenu(status: ACTIVE)
+        if notificationManager == nil {
+            notificationManager = NotificationManager()
+            notificationManager?.requestAuthorization()
+        }
         
         for automation in automations {
             automation.run()
