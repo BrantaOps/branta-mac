@@ -40,10 +40,10 @@ class HashGrabber {
         Whirlpool.runtimeName():            Whirlpool.installerHashes()
     ]
     
-    static func installerHashMatches(hash: String, wallet: String) -> Bool {
+    static func installerHashMatches(hash256: String, hash512: String, wallet: String) -> Bool {
         if installer_HASHES[wallet] != nil {
             let candidates = installer_HASHES[wallet]!.keys
-            return candidates.contains(hash)
+            return candidates.contains(hash256) || candidates.contains(hash512)
         } else {
             return false
         }

@@ -46,7 +46,6 @@ class Ledger: Wallet {
         ]
     }
     
-    // SHA512... TODO
     override class func installerHashes() -> [String:String] {
         return [
             // 2.75.0
@@ -59,7 +58,11 @@ class Ledger: Wallet {
         
             
         ]
-        
+    }
+    
+    
+    override class func installerUses512() -> Bool {
+        return true
     }
     
 }
