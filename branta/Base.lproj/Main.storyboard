@@ -970,6 +970,33 @@
             </objects>
             <point key="canvasLocation" x="839.5" y="794.5"/>
         </scene>
+        <!--Preference View Controller-->
+        <scene sceneID="8rM-ej-CfU">
+            <objects>
+                <customObject id="Zth-CM-Aq7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="pref" showSeguePresentationStyle="single" id="u9i-7b-3R3" customClass="PreferenceViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" appearanceType="darkAqua" id="Act-sp-HVM">
+                        <rect key="frame" x="0.0" y="0.0" width="953" height="650"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToP-t6-a0X">
+                                <rect key="frame" x="308" y="575" width="338" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="fAc-fv-fbM"/>
+                                    <constraint firstAttribute="width" constant="338" id="hhb-4D-KCR"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="PuU-fv-DVF"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ToP-t6-a0X" firstAttribute="centerX" secondItem="Act-sp-HVM" secondAttribute="centerX" id="Ffl-xG-fWY"/>
+                            <constraint firstItem="ToP-t6-a0X" firstAttribute="top" secondItem="Act-sp-HVM" secondAttribute="top" id="XgU-nY-l20"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="958.5" y="1440"/>
+        </scene>
     </scenes>
     <resources>
         <image name="goldwhitecropped" width="2048" height="373"/>

@@ -58,6 +58,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openAboutWindow()
     }
     
+    @objc func didTapPreferences() {
+        openPreferencesWindow()
+    }
+    
     func applicationDidBecomeActive(_ notification: Notification) {
         foreground = true
     }
@@ -90,6 +94,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    func openPreferencesWindow() {
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateController(withIdentifier: "pref") as! NSViewController
+        let window = NSWindow(contentViewController: viewController)
+
+        window.makeKeyAndOrderFront(nil)
+        window.center()
+    }
+    
     func setupMenu(status:String) {
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         let statusItem = self.statusItem!
@@ -104,7 +117,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: KEY_STATUS)
         menu.addItem(authItem)
         
-        let prefItem = NSMenuItem(title: "Preferences", action: nil, keyEquivalent: KEY_PREFERENCES)
+        let prefItem = NSMenuItem(title: "Preferences", action: #selector(didTapPreferences), keyEquivalent: KEY_PREFERENCES)
         menu.addItem(prefItem)
         
         menu.addItem(NSMenuItem.separator())
