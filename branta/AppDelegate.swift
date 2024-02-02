@@ -28,9 +28,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
-    let automations = [Clipboard.self, Verify.self, Focus.self]
     var foreground: Bool = true
     var notificationManager: NotificationManager?
+    
+    let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
+    let KEY_ABOUT           = "A"
+    let KEY_STATUS          = "S"
+    let KEY_PREFERENCES     = "P"
+    let KEY_QUIT            = "Q"
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -93,14 +98,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let menu = NSMenu()
         
-        let aboutItem = NSMenuItem(title: "About", action: #selector(didTapAbout), keyEquivalent: "A")
+        let aboutItem = NSMenuItem(title: "About", action: #selector(didTapAbout), keyEquivalent: KEY_ABOUT)
         menu.addItem(aboutItem)
         
-        let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: "S")
+        let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: KEY_STATUS)
         menu.addItem(authItem)
         
+        let prefItem = NSMenuItem(title: "Preferences", action: nil, keyEquivalent: KEY_PREFERENCES)
+        menu.addItem(prefItem)
+        
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "Q"))
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: KEY_QUIT))
         statusItem.menu = menu
     }
     
@@ -111,7 +119,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             notificationManager?.requestAuthorization()
         }
         
-        for automation in automations {
+        for automation in AUTOMATIONS {
             automation.run()
         }
     }
