@@ -10,6 +10,8 @@
 		ED19A7A52B123F00004375C7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* NotificationManager.swift */; };
 		ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
+		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
+		ED3BE2CB2B6E9ECF00CEC8FE /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
@@ -71,6 +73,8 @@
 		ED19A7A42B123F00004375C7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoin.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
+		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
 		ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockstreamGreen.swift; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 				EDB5B0C32B3A76D40015515F /* Observers.swift */,
 				EDD011832B6C56F00091CAAD /* Sha.swift */,
 				EDD011852B6D749D0091CAAD /* Preference.swift */,
+				ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */,
+				ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -392,7 +398,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -465,10 +471,12 @@
 				EDD915272B0C3C8000A288FE /* Verify.swift in Sources */,
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
+				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,
 				EDAA86292B69489600503E37 /* Armory.swift in Sources */,
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
 				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
+				ED3BE2CB2B6E9ECF00CEC8FE /* CustomSwitch.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				EDD011862B6D749D0091CAAD /* Preference.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
@@ -781,7 +789,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,

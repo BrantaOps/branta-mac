@@ -10,7 +10,8 @@ import Foundation
 
 class PreferenceViewController: NSViewController {
 
-
+    @IBOutlet weak var clipboardNotifyBTCAddress: NSSwitch!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

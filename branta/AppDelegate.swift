@@ -94,15 +94,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func openPreferencesWindow() {
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateController(withIdentifier: "pref") as! NSViewController
-        let window = NSWindow(contentViewController: viewController)
-
-        window.makeKeyAndOrderFront(nil)
-        window.center()
-    }
-    
     func setupMenu(status:String) {
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         let statusItem = self.statusItem!

@@ -11,6 +11,8 @@ import Foundation
 let HEIGHT = 30.0
 let TABLE_FONT = 17.0
 
+
+// TODO - this should probably be renamed "Main" or "home"
 class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
@@ -26,6 +28,16 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        //TODO - technically this should be app delegate
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
+            if event.modifierFlags.contains(.command), event.keyCode == 43 {
+                print("Command-Comma pressed")
+                openPreferencesWindow()
+            }
+            return event
+        }
+        
     }
     
     override func viewDidAppear() {
