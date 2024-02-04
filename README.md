@@ -9,6 +9,9 @@
  - ✅ Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
  - ✅ Focus Automation: Verify wallets upon launch
  - - [ ] Installer Automation
+  
+  <img width="873" alt="Screen Shot 2024-02-04 at 10 55 43 AM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/75644c8e-591e-4871-a48c-161a4f9ae209">
+
 
 #### Supported Wallets
 - ✅ Sparrow
@@ -29,7 +32,9 @@
 
 ## External dependencies
 
-Branta uses no external dependencies; Branta-Mac is purely native Swift. Third Parties are security holes.
+Zero network calls, zero dependencies. 
+
+Branta uses no external dependencies; Branta-Mac is purely native Swift.
 
 ## Building
 - XCode 14
