@@ -31,10 +31,7 @@ class PreferenceViewController: NSViewController {
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
-        if let selectedItem = sender.selectedItem {
-            // TODO 
-            Preferences.set(key: "", value: selectedItem.title)
-        }
+        Preferences.set(key: SCAN_CADENCE, value: sender.selectedItem!.title)
     }
     
     @IBAction func setNotifyForBTCAddress(_ sender: Any) {
