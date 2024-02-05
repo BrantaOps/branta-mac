@@ -7,23 +7,33 @@
 
 import Foundation
 
+let NOTIFY_FOR_BTC_ADDRESS = "notifyForBTCAddress"
+let NOTIFY_FOR_SEED = "notifyForSeed"
+let NOTIFY_FOR_XPUB = "notifyForXPub"
+let NOTIFY_FOR_XPRV = "notifyForXPrv"
+let NOTIFY_FOR_NPUB = "notifyForNPub"
+let NOTIFY_FOR_NSEC = "notifyForNSec"
+let SCAN_CADENCE = "scanCadence"
+let NOTIFY_UPON_LAUNCH = "notifyUponLaunch"
+let NOTIFY_UPON_STATUS_CHANGE = "notifyUponStatusChange"
+
 class Preferences {
     private static let KEY = "Branta_Prefs"
     private static let DEFAULT_SCAN_CADENCE = 60.0
-    
+
     // TODO - defaults, but read and overwrite from storage on launch
     private static var prefHash : [String:Any] = [
         // Clipboard
-        "notifyForBTCAddress": true,
-        "notifyForSeed": true,
-        "notifyForXPub": true,
-        "notifyForXPrv": true,
-        "notifyForNPub": true,
-        "notifyForNSec": true,
+        NOTIFY_FOR_BTC_ADDRESS: true,
+        NOTIFY_FOR_SEED: true,
+        NOTIFY_FOR_XPUB: true,
+        NOTIFY_FOR_XPRV: true,
+        NOTIFY_FOR_NPUB: true,
+        NOTIFY_FOR_NSEC: true,
         // Wallet
-        "runEvery": DEFAULT_SCAN_CADENCE,
-        "notifyUponLaunch": true,
-        "notifyUponStatusChange": true
+        SCAN_CADENCE: DEFAULT_SCAN_CADENCE,
+        NOTIFY_UPON_LAUNCH: true,
+        NOTIFY_UPON_STATUS_CHANGE: true
     ]
     
     // TOP LEVEL READ / WRITE
@@ -45,6 +55,7 @@ class Preferences {
     
     static func set(key: String, value: Any) {
         // TODO.... filter keys
+        print("Preferences.swift setting \(key):\(value)")
         prefHash[key] = value
     }
     
