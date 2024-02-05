@@ -1088,27 +1088,51 @@
                                     </textField>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="414" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForBTCAddress:" target="u9i-7b-3R3" id="Sx2-jp-GTO"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="379" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForSeed:" target="u9i-7b-3R3" id="e0H-Xn-6FV"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="344" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForXPub:" target="u9i-7b-3R3" id="9E8-K5-cH5"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="307" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForXPrv:" target="u9i-7b-3R3" id="Hws-QN-Eym"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="272" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForNPub:" target="u9i-7b-3R3" id="tXk-2L-gA2"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="237" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForNSec:" target="u9i-7b-3R3" id="iuc-u1-Rhn"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="109" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyUponLaunch:" target="u9i-7b-3R3" id="yWz-G4-nQA"/>
+                                        </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
                                         <rect key="frame" x="845" y="73" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyUponStatusChange:" target="u9i-7b-3R3" id="Ksv-n9-VuF"/>
+                                        </connections>
                                     </switch>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-JF-wnR">
                                         <rect key="frame" x="850" y="143" width="39" height="25"/>
@@ -1188,8 +1212,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="clipboardNotifyBTCAddress" destination="N5F-kY-kRe" id="EId-6w-wzu"/>
-                        <outlet property="runEverySeconds" destination="xV9-JF-wnR" id="Q6G-x5-AsC"/>
+                        <outlet property="cadenceSelector" destination="xV9-JF-wnR" id="kGj-Hr-F2B"/>
                     </connections>
                 </viewController>
             </objects>
