@@ -35,20 +35,32 @@ class Preferences {
         NOTIFY_UPON_LAUNCH: true,
         NOTIFY_UPON_STATUS_CHANGE: true
     ]
-    
-    // TOP LEVEL READ / WRITE
-    
+        
     static func saveToDefaults() {
         UserDefaults.standard.set(toJSON(), forKey: KEY)
     }
     
-    static func readFromDefaults() -> String {
+    static func readFromDefaults() -> [String: Any] {
         if let v = UserDefaults.standard.string(forKey: KEY) {
-            return v
+            guard let jsonData = v.data(using: .utf8) else {
+                print("Failed to convert JSON string to Data")
+                return [:]
+            }
+
+            do {
+                if let dict = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+                    return dict
+                } else {
+                    print("Failed to convert JSON to Dictionary")
+                }
+            } catch {
+                print("Error parsing JSON: \(error)")
+            }
         } else {
             print("No string found for key \(KEY) in UserDefaults.")
-            return ""
         }
+        return [:]
+
     }
     
     // SETTERS

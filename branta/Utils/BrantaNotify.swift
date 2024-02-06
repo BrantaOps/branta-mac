@@ -1,5 +1,5 @@
 //
-//  NotificationManager.swift
+//  BrantaNotify.swift
 //  branta
 //
 //  Created by Keith Gardner on 11/25/23.
@@ -9,7 +9,7 @@ import Foundation
 import UserNotifications
 
 
-class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
+class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
     
     func requestAuthorization() {
         let center = UNUserNotificationCenter.current()
@@ -17,7 +17,14 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
-    func showNotification(title: String, body: String, actionButtonTitle: String? = nil) {
+    func showNotification(title: String, body: String, actionButtonTitle: String? = nil, key: String? = nil) {
+        
+        // Filter here
+        let pref = Preferences.readFromDefaults()
+        if key != nil && pref[key!] != nil {
+            
+        }
+        
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
@@ -49,7 +56,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         UNUserNotificationCenter.current().add(request) { error in
         }
     }
-    
+        
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
     }

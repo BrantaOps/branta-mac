@@ -29,7 +29,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
     var foreground: Bool = true
-    var notificationManager: NotificationManager?
+    var notificationManager: BrantaNotify?
     
     let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
     let KEY_ABOUT           = "A"
@@ -119,7 +119,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func start() {
         setupMenu(status: ACTIVE)
         if notificationManager == nil {
-            notificationManager = NotificationManager()
+            notificationManager = BrantaNotify()
             notificationManager?.requestAuthorization()
         }
         

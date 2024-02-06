@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -719,7 +719,7 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="z1O-aa-xvv"/>
                             </imageView>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-yH-dzu">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ebA-yH-dzu">
                                 <rect key="frame" x="309" y="611" width="144" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Verifying Wallets..." id="kUl-5S-YdW">
                                     <font key="font" size="17" name="Avenir-Book"/>
@@ -759,7 +759,7 @@
                                                                     <rect key="frame" x="8" y="0.0" width="360" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
                                                                             <rect key="frame" x="0.0" y="7" width="360" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="blah blah blah" id="Jay-Mb-UVI">
@@ -791,7 +791,7 @@
                                                                     <rect key="frame" x="385" y="0.0" width="367" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJU-2V-KUW">
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJU-2V-KUW">
                                                                             <rect key="frame" x="0.0" y="7" width="367" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="i5L-cG-S4z">
@@ -847,7 +847,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="zbK-gp-Ps7" customClass="DropView" customModule="Branta" customModuleProvider="target">
                                 <rect key="frame" x="19" y="45" width="723" height="278"/>
                                 <subviews>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-zn-yx3">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-zn-yx3">
                                         <rect key="frame" x="190" y="80" width="344" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="340" id="BOi-ZY-qM0"/>
@@ -907,7 +907,7 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="mqJ-ea-1Q6"/>
                             </imageView>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-lM-4Mk">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-lM-4Mk">
                                 <rect key="frame" x="169" y="275" width="379" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="How does Branta verify my wallets?" id="JiV-qn-emf">
@@ -916,7 +916,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-l6-MYJ">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-l6-MYJ">
                                 <rect key="frame" x="117" y="190" width="481" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" alignment="center" id="kam-pB-fl9">
@@ -926,7 +926,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-Th-cnE">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-Th-cnE">
                                 <rect key="frame" x="195" y="84" width="325" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" alignment="center" title="You can learn more about Branta at" id="4Ym-9L-UNn">
@@ -935,7 +935,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-Us-hie">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MeF-Us-hie">
                                 <rect key="frame" x="279" y="53" width="156" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" selectable="YES" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="center" title="https://branta.pro" id="0xh-cN-e3E">
@@ -944,7 +944,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-a4-qXq">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-a4-qXq">
                                 <rect key="frame" x="242" y="93" width="232" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="How do I learn more?" id="fvQ-ek-gCg">
@@ -990,7 +990,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-0C-gBa">
                                 <rect key="frame" x="15" y="15" width="923" height="560"/>
                                 <subviews>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-aj-4cl">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-aj-4cl">
                                         <rect key="frame" x="36" y="510" width="70" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Settings" id="wy2-TT-f0D">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
@@ -998,7 +998,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
                                         <rect key="frame" x="36" y="452" width="160" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Clipboard Guardian" id="8wh-v7-xyP">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
@@ -1006,7 +1006,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
                                         <rect key="frame" x="36" y="417" width="191" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Bitcoin Addresses" id="0j4-Za-GCk">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1014,7 +1014,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
                                         <rect key="frame" x="36" y="382" width="155" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Seed Phrase" id="cNC-Pb-fk6">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1022,7 +1022,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
                                         <rect key="frame" x="36" y="347" width="210" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Extended Public Key" id="Wq5-Eq-RZd">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1030,7 +1030,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
                                         <rect key="frame" x="36" y="310" width="147" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Private Key" id="8NY-Fe-mCW">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1038,7 +1038,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
                                         <rect key="frame" x="36" y="275" width="196" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for NOSTR Public Key" id="FFw-O2-bTy">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1046,7 +1046,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
                                         <rect key="frame" x="36" y="240" width="201" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for NOSTR Private Key" id="kLP-uR-FAa">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1054,7 +1054,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
                                         <rect key="frame" x="36" y="182" width="150" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Wallet Verification" id="3j8-jx-rMW">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
@@ -1062,7 +1062,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
                                         <rect key="frame" x="36" y="147" width="70" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Run every" id="9gz-jq-Tbn">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1070,7 +1070,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
                                         <rect key="frame" x="36" y="112" width="250" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Launching Wallet" id="xOB-Dm-6pr">
                                             <font key="font" size="15" name="Avenir-Book"/>
@@ -1078,7 +1078,7 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
                                         <rect key="frame" x="36" y="77" width="233" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Status Change" id="hk9-gG-KE2">
                                             <font key="font" size="15" name="Avenir-Book"/>
