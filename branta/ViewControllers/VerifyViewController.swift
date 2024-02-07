@@ -33,7 +33,7 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
             if event.modifierFlags.contains(.command), event.keyCode == 43 {
                 print("Command-Comma pressed")
-                openPreferencesWindow()
+                openSettingsWindow()
             }
             return event
         }

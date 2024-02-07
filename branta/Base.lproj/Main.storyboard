@@ -700,7 +700,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="51" y="249"/>
         </scene>
         <!--Verify View Controller-->
         <scene sceneID="MwH-ag-oUp">
@@ -970,11 +970,11 @@
             </objects>
             <point key="canvasLocation" x="839.5" y="794.5"/>
         </scene>
-        <!--Preference View Controller-->
+        <!--Settings-->
         <scene sceneID="8rM-ej-CfU">
             <objects>
                 <customObject id="Zth-CM-Aq7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="pref" showSeguePresentationStyle="single" id="u9i-7b-3R3" customClass="PreferenceViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" storyboardIdentifier="pref" showSeguePresentationStyle="single" id="u9i-7b-3R3" customClass="SettingsViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="darkAqua" id="Act-sp-HVM">
                         <rect key="frame" x="0.0" y="0.0" width="953" height="650"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1216,7 +1216,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="958.5" y="1440"/>
+            <point key="canvasLocation" x="881" y="180"/>
         </scene>
     </scenes>
     <resources>

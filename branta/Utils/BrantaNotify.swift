@@ -20,7 +20,7 @@ class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
     func showNotification(title: String, body: String, actionButtonTitle: String? = nil, key: String? = nil) {
         
         // Filter here
-        let pref = Preferences.readFromDefaults()
+        let pref = Settings.readFromDefaults()
         if key != nil && pref[key!] != nil {
             
         }

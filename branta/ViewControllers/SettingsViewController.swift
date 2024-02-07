@@ -1,5 +1,5 @@
 //
-//  PreferenceViewController.swift
+//  SettingsViewController.swift
 //  Branta
 //
 //  Created by Keith Gardner on 2/2/24.
@@ -8,7 +8,7 @@
 import Cocoa
 import Foundation
 
-class PreferenceViewController: NSViewController {
+class SettingsViewController: NSViewController {
     
     let DEFAULT_CADENCE = 4
     let CADENCE_OPTIONS = [
@@ -31,7 +31,7 @@ class PreferenceViewController: NSViewController {
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
-        Preferences.set(key: SCAN_CADENCE, value: sender.selectedItem!.title)
+        Settings.set(key: SCAN_CADENCE, value: sender.selectedItem!.title)
     }
     
     @IBAction func setNotifyForBTCAddress(_ sender: Any) {
@@ -70,9 +70,9 @@ class PreferenceViewController: NSViewController {
     
     func setFor(s: NSSwitch, key: String) {
         if s.state == .on {
-            Preferences.set(key: key, value: true)
+            Settings.set(key: key, value: true)
         } else {
-            Preferences.set(key: key, value: false)
+            Settings.set(key: key, value: false)
         }
     }
     

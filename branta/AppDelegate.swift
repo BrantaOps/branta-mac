@@ -27,14 +27,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
-    var preferencesWindow: NSWindow?
+    var settingsWindow: NSWindow?
     var foreground: Bool = true
     var notificationManager: BrantaNotify?
     
     let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
     let KEY_ABOUT           = "A"
-    let KEY_STATUS          = "S"
-    let KEY_PREFERENCES     = "P"
+    let KEY_SETTINGS        = "S"
     let KEY_QUIT            = "Q"
 
     
@@ -58,8 +57,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openAboutWindow()
     }
     
-    @objc func didTapPreferences() {
-        openPreferencesWindow()
+    @objc func didTapSettings() {
+        openSettingsWindow()
     }
     
     func applicationDidBecomeActive(_ notification: Notification) {
@@ -83,11 +82,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let aboutItem = NSMenuItem(title: "About", action: #selector(didTapAbout), keyEquivalent: KEY_ABOUT)
         menu.addItem(aboutItem)
         
-        let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: KEY_STATUS)
+        let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: "")
         menu.addItem(authItem)
         
-        let prefItem = NSMenuItem(title: "Preferences", action: #selector(didTapPreferences), keyEquivalent: KEY_PREFERENCES)
-        menu.addItem(prefItem)
+        let settingsItem = NSMenuItem(title: "Settings", action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
+        menu.addItem(settingsItem)
         
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: KEY_QUIT))

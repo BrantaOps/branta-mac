@@ -1,5 +1,5 @@
 //
-//  Preferences.swift
+//  Settings.swift
 //  Branta
 //
 //  Created by Keith Gardner on 2/2/24.
@@ -17,7 +17,7 @@ let SCAN_CADENCE = "scanCadence"
 let NOTIFY_UPON_LAUNCH = "notifyUponLaunch"
 let NOTIFY_UPON_STATUS_CHANGE = "notifyUponStatusChange"
 
-class Preferences {
+class Settings {
     private static let KEY = "Branta_Prefs"
     private static let DEFAULT_SCAN_CADENCE = 60.0
 

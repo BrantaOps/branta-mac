@@ -8,12 +8,12 @@
 import Cocoa
 import Foundation
 
-func openPreferencesWindow() {
+func openSettingsWindow() {
     let appDelegate = NSApp.delegate as? AppDelegate
     
-    if appDelegate?.preferencesWindow != nil {
-        appDelegate?.preferencesWindow?.makeKeyAndOrderFront(nil)
-        appDelegate?.preferencesWindow?.center()
+    if appDelegate?.settingsWindow != nil {
+        appDelegate?.settingsWindow?.makeKeyAndOrderFront(nil)
+        appDelegate?.settingsWindow?.center()
         return
     }
     
@@ -21,7 +21,7 @@ func openPreferencesWindow() {
     let viewController = storyboard.instantiateController(withIdentifier: "pref") as! NSViewController
     let window = NSWindow(contentViewController: viewController)
     
-    appDelegate?.preferencesWindow = window
+    appDelegate?.settingsWindow = window
 
     window.makeKeyAndOrderFront(nil)
     window.center()
