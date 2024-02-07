@@ -26,6 +26,9 @@ class Focus: Automation {
         if APPS.contains(currentApp) {
             alertFor(app: currentApp)
         }
+        else {
+            alreadyAlerted = ""
+        }
     }
     static func alertFor(app: String) {
         if app != alreadyAlerted {
