@@ -21,7 +21,6 @@ class Settings {
     private static let KEY = "Branta_Prefs"
     private static let DEFAULT_SCAN_CADENCE = 60.0
 
-    // TODO - defaults, but read and overwrite from storage on launch
     private static var prefHash : [String:Any] = [
         // Clipboard
         NOTIFY_FOR_BTC_ADDRESS: true,
@@ -45,6 +44,7 @@ class Settings {
 
             do {
                 if let dict = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any] {
+                    prefHash = dict // Set in-memory values from persistant storage
                     return dict
                 } else {
                     print("Failed to convert JSON to Dictionary")
@@ -70,6 +70,7 @@ class Settings {
     
     static func saveToDefaults() {
         UserDefaults.standard.set(toJSON(), forKey: KEY)
+        UserDefaults.standard.synchronize()
     }
     
     static func toJSON() -> String {

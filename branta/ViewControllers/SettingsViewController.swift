@@ -23,11 +23,26 @@ class SettingsViewController: NSViewController {
     ]
     
     @IBOutlet weak var cadenceSelector: NSPopUpButton!
+        
+    @IBOutlet weak var notifyForBTCAddressOutlet: NSSwitch!
+    @IBOutlet weak var notifyForSeedOutlet: NSSwitch!
+    @IBOutlet weak var notifyForXPubOutlet: NSSwitch!
+    @IBOutlet weak var notifyForXPrvOutlet: NSSwitch!
+    @IBOutlet weak var notifyForNPubOutlet: NSSwitch!
+    @IBOutlet weak var notifyForNSecOutlet: NSSwitch!
+    @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
+    @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
         configureCadence()
         configureSwitches()
+        print(Settings.readFromDefaults())
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
@@ -77,7 +92,27 @@ class SettingsViewController: NSViewController {
     }
     
     func configureSwitches() {
-        // TODO - startup
+        let settings = Settings.readFromDefaults()
+        
+        for setting in settings {
+            if setting.key == NOTIFY_FOR_BTC_ADDRESS {
+                notifyForBTCAddressOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_FOR_SEED {
+                notifyForSeedOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_FOR_XPUB {
+                notifyForXPubOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_FOR_XPRV {
+                notifyForXPrvOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_FOR_NPUB {
+                notifyForNPubOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_FOR_NSEC {
+                notifyForNSecOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_UPON_LAUNCH {
+                notifyUponLaunchOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == NOTIFY_UPON_STATUS_CHANGE {
+                notifyUponStatusChangeOutlet.state = setting.value as! Bool == true ? .on : .off
+            }
+        }
     }
     
     func configureCadence() {

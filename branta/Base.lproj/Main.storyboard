@@ -1213,6 +1213,14 @@
                     </view>
                     <connections>
                         <outlet property="cadenceSelector" destination="xV9-JF-wnR" id="kGj-Hr-F2B"/>
+                        <outlet property="notifyForBTCAddressOutlet" destination="N5F-kY-kRe" id="GIl-vc-1am"/>
+                        <outlet property="notifyForNPubOutlet" destination="xvm-7k-eFa" id="eoC-bu-JW0"/>
+                        <outlet property="notifyForNSecOutlet" destination="axO-Yq-AKu" id="OsP-J0-9m2"/>
+                        <outlet property="notifyForSeedOutlet" destination="yAP-Ez-rfw" id="YFd-b6-bZ1"/>
+                        <outlet property="notifyForXPrvOutlet" destination="fj2-Xa-f2q" id="PGV-1G-Rl9"/>
+                        <outlet property="notifyForXPubOutlet" destination="bq5-ux-PVg" id="xQX-lf-qFH"/>
+                        <outlet property="notifyUponLaunchOutlet" destination="rXG-2E-ttD" id="wZx-gW-Cqj"/>
+                        <outlet property="notifyUponStatusChangeOutlet" destination="dDY-UW-CaB" id="gQy-6O-SlS"/>
                     </connections>
                 </viewController>
             </objects>
