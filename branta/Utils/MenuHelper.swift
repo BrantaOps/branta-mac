@@ -17,6 +17,24 @@ func openPreferencesWindow() {
     window.center()
 }
 
-// TODO - pull out all the menu launchers here
+func openAboutWindow() {
+    let appDelegate = NSApp.delegate as? AppDelegate
+    
+    if let window = appDelegate?.mainWindowController?.window {
+        if !window.isVisible {
+            window.makeKeyAndOrderFront(nil)
+            NSApp.activate(ignoringOtherApps: true)
+        }
+    } else {
+        if let existingWindow = NSApp.mainWindow, existingWindow.isVisible {
+            existingWindow.makeKeyAndOrderFront(nil)
+            NSApp.activate(ignoringOtherApps: true)
+        } else {
+            appDelegate?.mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+                .instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("MainWindowController"))
+                as? NSWindowController
 
-
+            appDelegate?.mainWindowController?.showWindow(nil)
+        }
+    }
+}

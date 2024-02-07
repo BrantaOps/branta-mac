@@ -11,7 +11,6 @@ let FONT                    = "Avenir"
 let GOLD                    = "#B1914A"
 let RED                     = "#944545"
 let GRAY                    = "#333130"
-
 let ACTIVE                  = "Status: Active ✓"
 
 let APPS = [
@@ -71,28 +70,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private
-
-    func openAboutWindow() {
-        if let window = mainWindowController?.window {
-            if !window.isVisible {
-                window.makeKeyAndOrderFront(nil)
-                NSApp.activate(ignoringOtherApps: true)
-            }
-        } else {
-            if let existingWindow = NSApp.mainWindow, existingWindow.isVisible {
-                // If the main window is already visible, make it key and order it front
-                existingWindow.makeKeyAndOrderFront(nil)
-                NSApp.activate(ignoringOtherApps: true)
-            } else {
-                // If the main window is not yet created or nil, you can create and show it
-                mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-                    .instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("MainWindowController"))
-                    as? NSWindowController
-
-                mainWindowController?.showWindow(nil)
-            }
-        }
-    }
     
     func setupMenu(status:String) {
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
