@@ -27,6 +27,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
+    var preferencesWindow: NSWindow?
     var foreground: Bool = true
     var notificationManager: BrantaNotify?
     

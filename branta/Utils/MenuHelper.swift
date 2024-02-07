@@ -9,9 +9,19 @@ import Cocoa
 import Foundation
 
 func openPreferencesWindow() {
+    let appDelegate = NSApp.delegate as? AppDelegate
+    
+    if appDelegate?.preferencesWindow != nil {
+        appDelegate?.preferencesWindow?.makeKeyAndOrderFront(nil)
+        appDelegate?.preferencesWindow?.center()
+        return
+    }
+    
     let storyboard = NSStoryboard(name: "Main", bundle: nil)
     let viewController = storyboard.instantiateController(withIdentifier: "pref") as! NSViewController
     let window = NSWindow(contentViewController: viewController)
+    
+    appDelegate?.preferencesWindow = window
 
     window.makeKeyAndOrderFront(nil)
     window.center()
