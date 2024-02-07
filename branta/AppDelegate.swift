@@ -12,6 +12,7 @@ let GOLD                    = "#B1914A"
 let RED                     = "#944545"
 let GRAY                    = "#333130"
 let ACTIVE                  = "Status: Active ✓"
+let KEYCODE_COMMA           = 43
 
 let APPS = [
     Sparrow.runtimeName(),
@@ -102,6 +103,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         for automation in AUTOMATIONS {
             automation.run()
+        }
+        
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
+            if event.modifierFlags.contains(.command), event.keyCode == KEYCODE_COMMA {
+                openSettingsWindow()
+            }
+            return event
         }
     }
 }

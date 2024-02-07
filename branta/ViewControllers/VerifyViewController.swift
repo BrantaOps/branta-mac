@@ -28,16 +28,6 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-        //TODO - technically this should be app delegate
-        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
-            if event.modifierFlags.contains(.command), event.keyCode == 43 {
-                print("Command-Comma pressed")
-                openSettingsWindow()
-            }
-            return event
-        }
-        
     }
     
     override func viewDidAppear() {
