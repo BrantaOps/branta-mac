@@ -30,7 +30,7 @@ class Verify: Automation {
     
     static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]
     
-    static let VERIFY_INTERVAL = 60.0
+    static let VERIFY_INTERVAL = 15.0
     static let PATH = "/Applications"
     static let FM = FileManager.default
     private static var observers = [VerifyObserver]()
