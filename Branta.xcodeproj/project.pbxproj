@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED19A7A52B123F00004375C7 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* NotificationManager.swift */; };
+		ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* BrantaNotify.swift */; };
 		ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
+		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
+		ED3BE2CB2B6E9ECF00CEC8FE /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
@@ -43,7 +45,9 @@
 		EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* nostr.swift */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
 		EDD011822B67F5890091CAAD /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011812B67F5890091CAAD /* DropView.swift */; };
-		EDD011842B6C56F00091CAAD /* sha.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011832B6C56F00091CAAD /* sha.swift */; };
+		EDD011842B6C56F00091CAAD /* Sha.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011832B6C56F00091CAAD /* Sha.swift */; };
+		EDD011862B6D749D0091CAAD /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011852B6D749D0091CAAD /* Preference.swift */; };
+		EDD011882B6D80040091CAAD /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011872B6D80040091CAAD /* PreferenceViewController.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
 /* End PBXBuildFile section */
@@ -66,9 +70,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ED19A7A42B123F00004375C7 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		ED19A7A42B123F00004375C7 /* BrantaNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaNotify.swift; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoin.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
+		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
 		ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockstreamGreen.swift; sourceTree = "<group>"; };
@@ -106,7 +112,9 @@
 		EDC310402B1F7A38005BCBBA /* nostr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nostr.swift; sourceTree = "<group>"; };
 		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		EDD011812B67F5890091CAAD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
-		EDD011832B6C56F00091CAAD /* sha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sha.swift; sourceTree = "<group>"; };
+		EDD011832B6C56F00091CAAD /* Sha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha.swift; sourceTree = "<group>"; };
+		EDD011852B6D749D0091CAAD /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
+		EDD011872B6D80040091CAAD /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,10 +156,13 @@
 		ED2C6EF42B0BAF9600EC577C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				ED19A7A42B123F00004375C7 /* NotificationManager.swift */,
+				ED19A7A42B123F00004375C7 /* BrantaNotify.swift */,
 				EDFFC2BA2B39CF930052D92D /* HexColor.swift */,
 				EDB5B0C32B3A76D40015515F /* Observers.swift */,
-				EDD011832B6C56F00091CAAD /* sha.swift */,
+				EDD011832B6C56F00091CAAD /* Sha.swift */,
+				EDD011852B6D749D0091CAAD /* Preference.swift */,
+				ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */,
+				ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -174,6 +185,7 @@
 			children = (
 				ED57437C2B3641AF0001956A /* VerifyViewController.swift */,
 				ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */,
+				EDD011872B6D80040091CAAD /* PreferenceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -444,6 +456,7 @@
 				ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */,
 				ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */,
 				ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */,
+				EDD011882B6D80040091CAAD /* PreferenceViewController.swift in Sources */,
 				ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */,
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
 				EDAA86252B69484F00503E37 /* Electrum.swift in Sources */,
@@ -453,16 +466,19 @@
 				ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */,
 				EDC310412B1F7A38005BCBBA /* nostr.swift in Sources */,
 				ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */,
-				ED19A7A52B123F00004375C7 /* NotificationManager.swift in Sources */,
+				ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */,
 				EDAA86232B69478F00503E37 /* BitcoinCore.swift in Sources */,
 				EDD915272B0C3C8000A288FE /* Verify.swift in Sources */,
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
+				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,
 				EDAA86292B69489600503E37 /* Armory.swift in Sources */,
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
-				EDD011842B6C56F00091CAAD /* sha.swift in Sources */,
+				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
+				ED3BE2CB2B6E9ECF00CEC8FE /* CustomSwitch.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
+				EDD011862B6D749D0091CAAD /* Preference.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
 				ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,

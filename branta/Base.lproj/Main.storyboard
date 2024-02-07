@@ -970,6 +970,254 @@
             </objects>
             <point key="canvasLocation" x="839.5" y="794.5"/>
         </scene>
+        <!--Preference View Controller-->
+        <scene sceneID="8rM-ej-CfU">
+            <objects>
+                <customObject id="Zth-CM-Aq7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="pref" showSeguePresentationStyle="single" id="u9i-7b-3R3" customClass="PreferenceViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" appearanceType="darkAqua" id="Act-sp-HVM">
+                        <rect key="frame" x="0.0" y="0.0" width="953" height="650"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToP-t6-a0X">
+                                <rect key="frame" x="308" y="575" width="338" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="fAc-fv-fbM"/>
+                                    <constraint firstAttribute="width" constant="338" id="hhb-4D-KCR"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="PuU-fv-DVF"/>
+                            </imageView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-0C-gBa">
+                                <rect key="frame" x="15" y="15" width="923" height="560"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HtV-aj-4cl">
+                                        <rect key="frame" x="36" y="510" width="70" height="23"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Settings" id="wy2-TT-f0D">
+                                            <font key="font" size="17" name="Avenir-Heavy"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
+                                        <rect key="frame" x="36" y="452" width="160" height="23"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Clipboard Guardian" id="8wh-v7-xyP">
+                                            <font key="font" size="17" name="Avenir-Heavy"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
+                                        <rect key="frame" x="36" y="417" width="191" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Bitcoin Addresses" id="0j4-Za-GCk">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
+                                        <rect key="frame" x="36" y="382" width="155" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Seed Phrase" id="cNC-Pb-fk6">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
+                                        <rect key="frame" x="36" y="347" width="210" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Extended Public Key" id="Wq5-Eq-RZd">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
+                                        <rect key="frame" x="36" y="310" width="147" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for Private Key" id="8NY-Fe-mCW">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
+                                        <rect key="frame" x="36" y="275" width="196" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for NOSTR Public Key" id="FFw-O2-bTy">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
+                                        <rect key="frame" x="36" y="240" width="201" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify for NOSTR Private Key" id="kLP-uR-FAa">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
+                                        <rect key="frame" x="36" y="182" width="150" height="23"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Wallet Verification" id="3j8-jx-rMW">
+                                            <font key="font" size="17" name="Avenir-Heavy"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
+                                        <rect key="frame" x="36" y="147" width="70" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Run every" id="9gz-jq-Tbn">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
+                                        <rect key="frame" x="36" y="112" width="250" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Launching Wallet" id="xOB-Dm-6pr">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
+                                        <rect key="frame" x="36" y="77" width="233" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Status Change" id="hk9-gG-KE2">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="414" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForBTCAddress:" target="u9i-7b-3R3" id="Sx2-jp-GTO"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="379" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForSeed:" target="u9i-7b-3R3" id="e0H-Xn-6FV"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="344" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForXPub:" target="u9i-7b-3R3" id="9E8-K5-cH5"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="307" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForXPrv:" target="u9i-7b-3R3" id="Hws-QN-Eym"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="272" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForNPub:" target="u9i-7b-3R3" id="tXk-2L-gA2"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="237" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyForNSec:" target="u9i-7b-3R3" id="iuc-u1-Rhn"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="109" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyUponLaunch:" target="u9i-7b-3R3" id="yWz-G4-nQA"/>
+                                        </connections>
+                                    </switch>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                        <rect key="frame" x="845" y="73" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setNotifyUponStatusChange:" target="u9i-7b-3R3" id="Ksv-n9-VuF"/>
+                                        </connections>
+                                    </switch>
+                                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-JF-wnR">
+                                        <rect key="frame" x="850" y="143" width="39" height="25"/>
+                                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="oQs-hc-Zcm">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="ueb-QO-Kgn"/>
+                                        </popUpButtonCell>
+                                    </popUpButton>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yAP-Ez-rfw" firstAttribute="centerX" secondItem="N5F-kY-kRe" secondAttribute="centerX" id="3J9-WW-otz"/>
+                                    <constraint firstItem="SME-vv-0Ca" firstAttribute="leading" secondItem="J6E-kH-n70" secondAttribute="leading" id="3bC-w6-IZh"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ptA-92-eZt" secondAttribute="trailing" constant="20" symbolic="YES" id="4TA-KW-j1E"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HT5-Gz-LSQ" secondAttribute="trailing" constant="20" symbolic="YES" id="5Lm-b6-aT9"/>
+                                    <constraint firstItem="2KU-bm-So7" firstAttribute="leading" secondItem="HbO-1Z-NaM" secondAttribute="leading" id="6AN-ii-eAj"/>
+                                    <constraint firstItem="SME-vv-0Ca" firstAttribute="top" secondItem="J6E-kH-n70" secondAttribute="bottom" constant="15" id="8Wh-fh-IlE"/>
+                                    <constraint firstItem="GMP-f8-Zul" firstAttribute="leading" secondItem="6B2-wv-5n3" secondAttribute="leading" id="8gD-wo-5Bz"/>
+                                    <constraint firstItem="7hV-pY-YW0" firstAttribute="top" secondItem="Ggi-ae-6Wd" secondAttribute="bottom" constant="17" id="927-OA-KCT"/>
+                                    <constraint firstItem="fj2-Xa-f2q" firstAttribute="centerX" secondItem="bq5-ux-PVg" secondAttribute="centerX" id="BGx-lZ-EMH"/>
+                                    <constraint firstItem="HbO-1Z-NaM" firstAttribute="top" secondItem="7hV-pY-YW0" secondAttribute="bottom" constant="15" id="CGo-vW-cJY"/>
+                                    <constraint firstItem="xV9-JF-wnR" firstAttribute="trailing" secondItem="axO-Yq-AKu" secondAttribute="trailing" id="E0h-Al-vrG"/>
+                                    <constraint firstItem="fj2-Xa-f2q" firstAttribute="centerY" secondItem="7hV-pY-YW0" secondAttribute="centerY" id="EA9-vQ-rpU"/>
+                                    <constraint firstItem="bq5-ux-PVg" firstAttribute="centerY" secondItem="Ggi-ae-6Wd" secondAttribute="centerY" id="FAf-Oc-3w1"/>
+                                    <constraint firstItem="yAP-Ez-rfw" firstAttribute="centerY" secondItem="SME-vv-0Ca" secondAttribute="centerY" id="FuX-Ag-7xh"/>
+                                    <constraint firstItem="uhi-g9-GpC" firstAttribute="top" secondItem="ptA-92-eZt" secondAttribute="bottom" constant="15" id="Gke-vF-Y4o"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ggi-ae-6Wd" secondAttribute="trailing" constant="20" symbolic="YES" id="HTN-J1-4A5"/>
+                                    <constraint firstItem="HtV-aj-4cl" firstAttribute="top" secondItem="IlJ-0C-gBa" secondAttribute="top" constant="27" id="Iv7-Qd-M1C"/>
+                                    <constraint firstItem="ptA-92-eZt" firstAttribute="top" secondItem="2KU-bm-So7" secondAttribute="bottom" constant="35" id="Iym-K8-I8a"/>
+                                    <constraint firstItem="HtV-aj-4cl" firstAttribute="leading" secondItem="IlJ-0C-gBa" secondAttribute="leading" constant="38" id="O98-9r-85N"/>
+                                    <constraint firstItem="axO-Yq-AKu" firstAttribute="centerY" secondItem="2KU-bm-So7" secondAttribute="centerY" id="OKF-3W-Pnh"/>
+                                    <constraint firstItem="ptA-92-eZt" firstAttribute="leading" secondItem="2KU-bm-So7" secondAttribute="leading" id="OWk-20-K7h"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J6E-kH-n70" secondAttribute="trailing" constant="20" symbolic="YES" id="QPf-Ca-zaA"/>
+                                    <constraint firstItem="6B2-wv-5n3" firstAttribute="leading" secondItem="uhi-g9-GpC" secondAttribute="leading" id="Qn2-np-zcT"/>
+                                    <constraint firstAttribute="trailing" secondItem="N5F-kY-kRe" secondAttribute="trailing" constant="38" id="Rkw-3L-mzT"/>
+                                    <constraint firstItem="J6E-kH-n70" firstAttribute="top" secondItem="HT5-Gz-LSQ" secondAttribute="bottom" constant="15" id="Rsg-Ix-vhY"/>
+                                    <constraint firstItem="Ggi-ae-6Wd" firstAttribute="top" secondItem="SME-vv-0Ca" secondAttribute="bottom" constant="15" id="Sb9-PT-UH1"/>
+                                    <constraint firstItem="bq5-ux-PVg" firstAttribute="centerX" secondItem="yAP-Ez-rfw" secondAttribute="centerX" id="Tx1-Tr-S5G"/>
+                                    <constraint firstItem="HT5-Gz-LSQ" firstAttribute="top" secondItem="HtV-aj-4cl" secondAttribute="bottom" constant="35" id="W8f-BW-qMf"/>
+                                    <constraint firstItem="dDY-UW-CaB" firstAttribute="top" secondItem="GMP-f8-Zul" secondAttribute="bottom" constant="-20" id="Ya8-jF-vGk"/>
+                                    <constraint firstItem="2KU-bm-So7" firstAttribute="top" secondItem="HbO-1Z-NaM" secondAttribute="bottom" constant="15" id="aWy-Tj-3ZN"/>
+                                    <constraint firstItem="rXG-2E-ttD" firstAttribute="centerX" secondItem="axO-Yq-AKu" secondAttribute="centerX" id="cb7-4d-N5K"/>
+                                    <constraint firstItem="rXG-2E-ttD" firstAttribute="centerY" secondItem="6B2-wv-5n3" secondAttribute="centerY" id="cfI-fd-LqP"/>
+                                    <constraint firstItem="dDY-UW-CaB" firstAttribute="centerX" secondItem="rXG-2E-ttD" secondAttribute="centerX" id="dRv-4K-W11"/>
+                                    <constraint firstItem="J6E-kH-n70" firstAttribute="leading" secondItem="HT5-Gz-LSQ" secondAttribute="leading" id="eP0-dP-c6t"/>
+                                    <constraint firstItem="HT5-Gz-LSQ" firstAttribute="leading" secondItem="HtV-aj-4cl" secondAttribute="leading" id="h69-Nw-XEK"/>
+                                    <constraint firstItem="HbO-1Z-NaM" firstAttribute="leading" secondItem="7hV-pY-YW0" secondAttribute="leading" id="hXY-Ym-N3d"/>
+                                    <constraint firstItem="6B2-wv-5n3" firstAttribute="top" secondItem="uhi-g9-GpC" secondAttribute="bottom" constant="15" id="iok-Sr-b9u"/>
+                                    <constraint firstItem="N5F-kY-kRe" firstAttribute="centerY" secondItem="J6E-kH-n70" secondAttribute="centerY" id="ip2-qU-Fco"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HtV-aj-4cl" secondAttribute="trailing" constant="20" symbolic="YES" id="k1f-gn-jrt"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SME-vv-0Ca" secondAttribute="trailing" constant="20" symbolic="YES" id="lMg-tb-JQB"/>
+                                    <constraint firstItem="axO-Yq-AKu" firstAttribute="centerX" secondItem="xvm-7k-eFa" secondAttribute="centerX" id="nd5-qi-iXa"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GMP-f8-Zul" secondAttribute="trailing" constant="20" symbolic="YES" id="pc3-Ul-8cg"/>
+                                    <constraint firstItem="xvm-7k-eFa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HbO-1Z-NaM" secondAttribute="trailing" constant="8" symbolic="YES" id="pvO-Ek-pgi"/>
+                                    <constraint firstItem="xV9-JF-wnR" firstAttribute="centerY" secondItem="uhi-g9-GpC" secondAttribute="centerY" id="qVA-yr-cuQ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uhi-g9-GpC" secondAttribute="trailing" constant="20" symbolic="YES" id="qZs-Lm-hlc"/>
+                                    <constraint firstItem="rXG-2E-ttD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6B2-wv-5n3" secondAttribute="trailing" constant="8" symbolic="YES" id="rw4-wo-fCf"/>
+                                    <constraint firstItem="xvm-7k-eFa" firstAttribute="centerX" secondItem="fj2-Xa-f2q" secondAttribute="centerX" id="sJw-QC-YPg"/>
+                                    <constraint firstItem="GMP-f8-Zul" firstAttribute="top" secondItem="6B2-wv-5n3" secondAttribute="bottom" constant="15" id="sWj-Dp-SHO"/>
+                                    <constraint firstItem="Ggi-ae-6Wd" firstAttribute="leading" secondItem="SME-vv-0Ca" secondAttribute="leading" id="t7C-v8-Yau"/>
+                                    <constraint firstItem="uhi-g9-GpC" firstAttribute="leading" secondItem="ptA-92-eZt" secondAttribute="leading" id="u6Y-uM-2Mg"/>
+                                    <constraint firstItem="axO-Yq-AKu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2KU-bm-So7" secondAttribute="trailing" constant="8" symbolic="YES" id="uQk-uf-bKc"/>
+                                    <constraint firstItem="7hV-pY-YW0" firstAttribute="leading" secondItem="Ggi-ae-6Wd" secondAttribute="leading" id="uyI-iu-ZZZ"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7hV-pY-YW0" secondAttribute="trailing" constant="20" symbolic="YES" id="vGI-D9-qXQ"/>
+                                    <constraint firstItem="xvm-7k-eFa" firstAttribute="centerY" secondItem="HbO-1Z-NaM" secondAttribute="centerY" id="zis-pC-yE4"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="IlJ-0C-gBa" firstAttribute="leading" secondItem="Act-sp-HVM" secondAttribute="leading" constant="15" id="8ad-ji-yJL"/>
+                            <constraint firstItem="ToP-t6-a0X" firstAttribute="centerX" secondItem="Act-sp-HVM" secondAttribute="centerX" id="Ffl-xG-fWY"/>
+                            <constraint firstItem="ToP-t6-a0X" firstAttribute="top" secondItem="Act-sp-HVM" secondAttribute="top" id="XgU-nY-l20"/>
+                            <constraint firstAttribute="bottom" secondItem="IlJ-0C-gBa" secondAttribute="bottom" constant="15" id="gIp-eU-2Qz"/>
+                            <constraint firstAttribute="trailing" secondItem="IlJ-0C-gBa" secondAttribute="trailing" constant="15" id="heh-gB-M0W"/>
+                            <constraint firstItem="IlJ-0C-gBa" firstAttribute="centerX" secondItem="Act-sp-HVM" secondAttribute="centerX" id="o8B-1z-6kV"/>
+                            <constraint firstItem="IlJ-0C-gBa" firstAttribute="top" secondItem="ToP-t6-a0X" secondAttribute="bottom" id="yYj-Vj-lyT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cadenceSelector" destination="xV9-JF-wnR" id="kGj-Hr-F2B"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="958.5" y="1440"/>
+        </scene>
     </scenes>
     <resources>
         <image name="goldwhitecropped" width="2048" height="373"/>

@@ -11,7 +11,6 @@ let FONT                    = "Avenir"
 let GOLD                    = "#B1914A"
 let RED                     = "#944545"
 let GRAY                    = "#333130"
-
 let ACTIVE                  = "Status: Active ✓"
 
 let APPS = [
@@ -28,9 +27,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
-    let automations = [Clipboard.self, Verify.self, Focus.self]
+    var preferencesWindow: NSWindow?
     var foreground: Bool = true
-    var notificationManager: NotificationManager?
+    var notificationManager: BrantaNotify?
+    
+    let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
+    let KEY_ABOUT           = "A"
+    let KEY_STATUS          = "S"
+    let KEY_PREFERENCES     = "P"
+    let KEY_QUIT            = "Q"
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -53,6 +58,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openAboutWindow()
     }
     
+    @objc func didTapPreferences() {
+        openPreferencesWindow()
+    }
+    
     func applicationDidBecomeActive(_ notification: Notification) {
         foreground = true
     }
@@ -62,28 +71,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private
-
-    func openAboutWindow() {
-        if let window = mainWindowController?.window {
-            if !window.isVisible {
-                window.makeKeyAndOrderFront(nil)
-                NSApp.activate(ignoringOtherApps: true)
-            }
-        } else {
-            if let existingWindow = NSApp.mainWindow, existingWindow.isVisible {
-                // If the main window is already visible, make it key and order it front
-                existingWindow.makeKeyAndOrderFront(nil)
-                NSApp.activate(ignoringOtherApps: true)
-            } else {
-                // If the main window is not yet created or nil, you can create and show it
-                mainWindowController = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
-                    .instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("MainWindowController"))
-                    as? NSWindowController
-
-                mainWindowController?.showWindow(nil)
-            }
-        }
-    }
     
     func setupMenu(status:String) {
         self.statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
@@ -93,25 +80,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let menu = NSMenu()
         
-        let aboutItem = NSMenuItem(title: "About", action: #selector(didTapAbout), keyEquivalent: "A")
+        let aboutItem = NSMenuItem(title: "About", action: #selector(didTapAbout), keyEquivalent: KEY_ABOUT)
         menu.addItem(aboutItem)
         
-        let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: "S")
+        let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: KEY_STATUS)
         menu.addItem(authItem)
         
+        let prefItem = NSMenuItem(title: "Preferences", action: #selector(didTapPreferences), keyEquivalent: KEY_PREFERENCES)
+        menu.addItem(prefItem)
+        
         menu.addItem(NSMenuItem.separator())
-        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "Q"))
+        menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: KEY_QUIT))
         statusItem.menu = menu
     }
     
     func start() {
         setupMenu(status: ACTIVE)
         if notificationManager == nil {
-            notificationManager = NotificationManager()
+            notificationManager = BrantaNotify()
             notificationManager?.requestAuthorization()
         }
         
-        for automation in automations {
+        for automation in AUTOMATIONS {
             automation.run()
         }
     }
