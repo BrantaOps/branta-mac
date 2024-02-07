@@ -1086,49 +1086,49 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe">
                                         <rect key="frame" x="621" y="348" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForBTCAddress:" target="u9i-7b-3R3" id="Sx2-jp-GTO"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw">
                                         <rect key="frame" x="621" y="313" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForSeed:" target="u9i-7b-3R3" id="e0H-Xn-6FV"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg">
                                         <rect key="frame" x="621" y="278" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPub:" target="u9i-7b-3R3" id="9E8-K5-cH5"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q">
                                         <rect key="frame" x="621" y="241" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPrv:" target="u9i-7b-3R3" id="Hws-QN-Eym"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa">
                                         <rect key="frame" x="621" y="206" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNPub:" target="u9i-7b-3R3" id="tXk-2L-gA2"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu">
                                         <rect key="frame" x="621" y="171" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNSec:" target="u9i-7b-3R3" id="iuc-u1-Rhn"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD">
                                         <rect key="frame" x="621" y="43" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponLaunch:" target="u9i-7b-3R3" id="yWz-G4-nQA"/>
                                         </connections>
                                     </switch>
-                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB" customClass="CustomSwitch" customModule="Branta" customModuleProvider="target">
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB">
                                         <rect key="frame" x="621" y="7" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponStatusChange:" target="u9i-7b-3R3" id="Ksv-n9-VuF"/>

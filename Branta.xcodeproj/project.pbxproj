@@ -11,7 +11,6 @@
 		ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
-		ED3BE2CB2B6E9ECF00CEC8FE /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
@@ -74,7 +73,6 @@
 		ED2C6EF22B0AC5AA00EC577C /* bitcoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bitcoin.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
-		ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
 		ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockstreamGreen.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				EDD011832B6C56F00091CAAD /* Sha.swift */,
 				EDD011852B6D749D0091CAAD /* Settings.swift */,
 				ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */,
-				ED3BE2CA2B6E9ECF00CEC8FE /* CustomSwitch.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -476,7 +473,6 @@
 				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
 				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
-				ED3BE2CB2B6E9ECF00CEC8FE /* CustomSwitch.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				EDD011862B6D749D0091CAAD /* Settings.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* bitcoin.swift in Sources */,
