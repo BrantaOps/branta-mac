@@ -17,43 +17,44 @@ class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
-    func showNotification(title: String, body: String, actionButtonTitle: String? = nil, key: String? = nil) {
-        
-        // Filter here
+    func showNotification(title: String, body: String, actionButtonTitle: String? = nil, key: String) {
         let pref = Settings.readFromDefaults()
-        if key != nil && pref[key!] != nil {
+        let v = pref[key]
+        
+        if v != nil && (v as? Bool) == true {
+            print("alerting for \(key)")
+            let content = UNMutableNotificationContent()
+            content.title = title
+            content.body = body
             
-        }
-        
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.body = body
-        
-        if let actionButtonTitle = actionButtonTitle {
-            let actionButton = UNNotificationAction(
-                identifier: "action",
-                title: actionButtonTitle,
-                options: []
+            if let actionButtonTitle = actionButtonTitle {
+                let actionButton = UNNotificationAction(
+                    identifier: "action",
+                    title: actionButtonTitle,
+                    options: []
+                )
+                
+                let category = UNNotificationCategory(
+                    identifier: "category",
+                    actions: [actionButton],
+                    intentIdentifiers: [],
+                    options: []
+                )
+                
+                UNUserNotificationCenter.current().setNotificationCategories([category])
+                content.categoryIdentifier = "category"
+            }
+            
+            let request = UNNotificationRequest(
+                identifier: UUID().uuidString,
+                content: content,
+                trigger: nil
             )
             
-            let category = UNNotificationCategory(
-                identifier: "category",
-                actions: [actionButton],
-                intentIdentifiers: [],
-                options: []
-            )
-            
-            UNUserNotificationCenter.current().setNotificationCategories([category])
-            content.categoryIdentifier = "category"
+            UNUserNotificationCenter.current().add(request)
         }
-        
-        let request = UNNotificationRequest(
-            identifier: UUID().uuidString,
-            content: content,
-            trigger: nil
-        )
-        
-        UNUserNotificationCenter.current().add(request) { error in
+        else {
+            print("not alerting for \(key)")
         }
     }
         

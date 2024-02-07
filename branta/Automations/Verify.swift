@@ -112,7 +112,11 @@ class Verify: Automation {
                     // We can let the user decide how noisy Branta is.
                     let appDelegate = NSApp.delegate as? AppDelegate
                     if alreadyWarned[app] == false && !appDelegate!.foreground {
-                        appDelegate?.notificationManager?.showNotification(title: "Could not verify \(name)", body: "")
+                        appDelegate?.notificationManager?.showNotification(
+                            title: "Could not verify \(name)",
+                            body: "",
+                            key: NOTIFY_UPON_STATUS_CHANGE
+                        )
                         alreadyWarned[app] = true
                     }
                 }

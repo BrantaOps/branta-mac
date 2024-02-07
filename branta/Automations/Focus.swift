@@ -37,9 +37,17 @@ class Focus: Automation {
 
             
             if verified {
-                appDelegate?.notificationManager?.showNotification(title: "\(app) Verified.", body: "Safe to proceed.")
+                appDelegate?.notificationManager?.showNotification(
+                    title: "\(app) Verified.",
+                    body: "Safe to proceed.",
+                    key: NOTIFY_UPON_LAUNCH
+                )
             } else {
-                appDelegate?.notificationManager?.showNotification(title: "\(app) Unverified.", body: "Your wallet may be compromised. Check Branta for details.")
+                appDelegate?.notificationManager?.showNotification(
+                    title: "\(app) Unverified.",
+                    body: "Your wallet may be compromised. Check Branta for details.",
+                    key: NOTIFY_UPON_LAUNCH
+                )
             }
             
             alreadyAlerted = app

@@ -68,25 +68,41 @@ class Clipboard: Automation {
     
     static func checkForXPUBInClipBoard(content: String) {
         if BitcoinAddress.isValidXPUB(str: content) {
-            appDelegate?.notificationManager?.showNotification(title: "Bitcoin Extended Public Key in Clipboard.", body: "Sharing your XPUB can lead to loss of privacy.")
+            appDelegate?.notificationManager?.showNotification(
+                title: "Bitcoin Extended Public Key in Clipboard.",
+                body: "Sharing your XPUB can lead to loss of privacy.",
+                key: NOTIFY_FOR_XPUB
+            )
         }
     }
     
     static func checkForXPRVInClipBoard(content: String) {
         if BitcoinAddress.isValidXPRV(str: content) {
-            appDelegate?.notificationManager?.showNotification(title: "Bitcoin Private Key in Clipboard.", body: "Never share your private key with others.")
+            appDelegate?.notificationManager?.showNotification(
+                title: "Bitcoin Private Key in Clipboard.",
+                body: "Never share your private key with others.",
+                key: NOTIFY_FOR_XPRV
+            )
         }
     }
     
     static func checkForNPUBInClipBoard(content: String) {
         if NostrAddress.isValidNPUB(str: content) {
-            appDelegate?.notificationManager?.showNotification(title: "New Nostr Public Key in Clipboard.", body: "")
+            appDelegate?.notificationManager?.showNotification(
+                title: "New Nostr Public Key in Clipboard.",
+                body: "",
+                key: NOTIFY_FOR_NPUB
+            )
         }
     }
     
     static func checkForNSECInClipBoard(content: String) {
         if NostrAddress.isValidNSEC(str: content) {
-            appDelegate?.notificationManager?.showNotification(title: "New Nostr Private Key in Clipboard.", body: "Never share your private key with others.")
+            appDelegate?.notificationManager?.showNotification(
+                title: "New Nostr Private Key in Clipboard.",
+                body: "Never share your private key with others.",
+                key: NOTIFY_FOR_NSEC
+            )
         }
     }
     
@@ -120,7 +136,11 @@ class Clipboard: Automation {
         }
         
         if (userSeedWords.isSubset(of: bip39WordSet!)) {
-            appDelegate?.notificationManager?.showNotification(title: "Seed Phrase in clipboard detected.", body: "Never share your seed phrase with anyone. Your seed phrase IS your money.")
+            appDelegate?.notificationManager?.showNotification(
+                title: "Seed Phrase in clipboard detected.",
+                body: "Never share your seed phrase with anyone. Your seed phrase IS your money.",
+                key: NOTIFY_FOR_SEED
+            )
         }
     }
     static func checkForAddressesInClipBoard(content:String) {
@@ -128,7 +148,11 @@ class Clipboard: Automation {
         let ret = self.validateAddress(content: content)
         
         if ret.valid {
-            appDelegate?.notificationManager?.showNotification(title: "New Address in Clipboard.", body: ret.msg)
+            appDelegate?.notificationManager?.showNotification(
+                title: "New Address in Clipboard.",
+                body: ret.msg,
+                key: NOTIFY_FOR_BTC_ADDRESS
+            )
         }
     }
     

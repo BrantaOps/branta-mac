@@ -35,10 +35,6 @@ class Settings {
         NOTIFY_UPON_LAUNCH: true,
         NOTIFY_UPON_STATUS_CHANGE: true
     ]
-        
-    static func saveToDefaults() {
-        UserDefaults.standard.set(toJSON(), forKey: KEY)
-    }
     
     static func readFromDefaults() -> [String: Any] {
         if let v = UserDefaults.standard.string(forKey: KEY) {
@@ -58,20 +54,23 @@ class Settings {
             }
         } else {
             print("No string found for key \(KEY) in UserDefaults.")
+            return prefHash
         }
         return [:]
 
     }
     
-    // SETTERS
-    
     static func set(key: String, value: Any) {
-        // TODO.... filter keys
         print("Preferences.swift setting \(key):\(value)")
         prefHash[key] = value
+        saveToDefaults()
     }
     
     private
+    
+    static func saveToDefaults() {
+        UserDefaults.standard.set(toJSON(), forKey: KEY)
+    }
     
     static func toJSON() -> String {
         do {
