@@ -18,7 +18,7 @@ let NOTIFY_UPON_STATUS_CHANGE   = "notifyUponStatusChange"
 
 let SCAN_CADENCE                = "scanCadence"
 let SCAN_CADENCE_WORDING        = "scanCadenceWording"
-let DEFAULT_SCAN_CADENCE        = 0
+let DEFAULT_SCAN_CADENCE        = 0.0
 
 class Settings {
     private static let KEY = "Branta_Prefs"
