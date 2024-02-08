@@ -9,8 +9,6 @@ import Cocoa
 import Foundation
 
 class SettingsViewController: NSViewController {
-    
-    let DEFAULT_CADENCE = 4
     let CADENCE_OPTIONS = [
         "1 Second",
         "5 Seconds",
@@ -46,7 +44,7 @@ class SettingsViewController: NSViewController {
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
-        Settings.set(key: SCAN_CADENCE, value: sender.selectedItem!.title)
+        Settings.set(key: SCAN_CADENCE, value: sender.indexOfSelectedItem)
     }
     
     @IBAction func setNotifyForBTCAddress(_ sender: Any) {
@@ -116,12 +114,15 @@ class SettingsViewController: NSViewController {
     }
     
     func configureCadence() {
+        let settings = Settings.readFromDefaults()
+        let cadence = settings[SCAN_CADENCE] as! Int
+
         for cadence in CADENCE_OPTIONS {
             cadenceSelector.addItem(withTitle: cadence)
         }
         
-        // TODO - startup
-        cadenceSelector.selectItem(at: DEFAULT_CADENCE)
+        // TODO - engine hooks, cold start
+        cadenceSelector.selectItem(at: cadence)
         cadenceSelector.target = self
         cadenceSelector.action = #selector(setCadence)
     }

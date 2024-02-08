@@ -7,19 +7,20 @@
 
 import Foundation
 
-let NOTIFY_FOR_BTC_ADDRESS = "notifyForBTCAddress"
-let NOTIFY_FOR_SEED = "notifyForSeed"
-let NOTIFY_FOR_XPUB = "notifyForXPub"
-let NOTIFY_FOR_XPRV = "notifyForXPrv"
-let NOTIFY_FOR_NPUB = "notifyForNPub"
-let NOTIFY_FOR_NSEC = "notifyForNSec"
-let SCAN_CADENCE = "scanCadence"
-let NOTIFY_UPON_LAUNCH = "notifyUponLaunch"
-let NOTIFY_UPON_STATUS_CHANGE = "notifyUponStatusChange"
+let NOTIFY_FOR_BTC_ADDRESS      = "notifyForBTCAddress"
+let NOTIFY_FOR_SEED             = "notifyForSeed"
+let NOTIFY_FOR_XPUB             = "notifyForXPub"
+let NOTIFY_FOR_XPRV             = "notifyForXPrv"
+let NOTIFY_FOR_NPUB             = "notifyForNPub"
+let NOTIFY_FOR_NSEC             = "notifyForNSec"
+let NOTIFY_UPON_LAUNCH          = "notifyUponLaunch"
+let NOTIFY_UPON_STATUS_CHANGE   = "notifyUponStatusChange"
+
+let SCAN_CADENCE                = "scanCadence"
+let DEFAULT_SCAN_CADENCE        = 0
 
 class Settings {
     private static let KEY = "Branta_Prefs"
-    private static let DEFAULT_SCAN_CADENCE = 60.0
 
     private static var prefHash : [String:Any] = [
         // Clipboard
