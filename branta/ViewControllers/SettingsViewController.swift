@@ -8,17 +8,18 @@
 import Cocoa
 import Foundation
 
+let CADENCE_OPTIONS: [(String, Int)] = [
+    ("1 Second", 1),
+    ("5 Seconds", 5),
+    ("10 Seconds", 10),
+    ("30 Seconds", 30),
+    ("60 Seconds", 60),
+    ("5 Minutes", 300),
+    ("10 Minutes", 600),
+    ("30 Minutes", 1800)
+]
+
 class SettingsViewController: NSViewController {
-    let CADENCE_OPTIONS = [
-        "1 Second",
-        "5 Seconds",
-        "10 Seconds",
-        "30 Seconds",
-        "60 Seconds",
-        "5 Minutes",
-        "10 Minutes",
-        "30 Minutes"
-    ]
     
     @IBOutlet weak var cadenceSelector: NSPopUpButton!
         
@@ -44,7 +45,8 @@ class SettingsViewController: NSViewController {
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
-        Settings.set(key: SCAN_CADENCE, value: sender.indexOfSelectedItem)
+        Settings.set(key: SCAN_CADENCE_WORDING, value: CADENCE_OPTIONS[sender.indexOfSelectedItem].0)
+        Settings.set(key: SCAN_CADENCE,         value: CADENCE_OPTIONS[sender.indexOfSelectedItem].1)
     }
     
     @IBAction func setNotifyForBTCAddress(_ sender: Any) {
@@ -115,14 +117,17 @@ class SettingsViewController: NSViewController {
     
     func configureCadence() {
         let settings = Settings.readFromDefaults()
-        let cadence = settings[SCAN_CADENCE] as! Int
 
         for cadence in CADENCE_OPTIONS {
-            cadenceSelector.addItem(withTitle: cadence)
+            cadenceSelector.addItem(withTitle: cadence.0)
         }
         
         // TODO - engine hooks, cold start
-        cadenceSelector.selectItem(at: cadence)
+        let cadenceStr = settings[SCAN_CADENCE_WORDING] as! String
+        if let index = CADENCE_OPTIONS.firstIndex(where: { $0.0 == cadenceStr }) {
+            cadenceSelector.selectItem(at: index)
+        }
+        
         cadenceSelector.target = self
         cadenceSelector.action = #selector(setCadence)
     }

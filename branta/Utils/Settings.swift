@@ -17,6 +17,7 @@ let NOTIFY_UPON_LAUNCH          = "notifyUponLaunch"
 let NOTIFY_UPON_STATUS_CHANGE   = "notifyUponStatusChange"
 
 let SCAN_CADENCE                = "scanCadence"
+let SCAN_CADENCE_WORDING        = "scanCadenceWording"
 let DEFAULT_SCAN_CADENCE        = 0
 
 class Settings {
@@ -32,6 +33,7 @@ class Settings {
         NOTIFY_FOR_NSEC: true,
         // Wallet
         SCAN_CADENCE: DEFAULT_SCAN_CADENCE,
+        SCAN_CADENCE_WORDING: "1 Second",
         NOTIFY_UPON_LAUNCH: true,
         NOTIFY_UPON_STATUS_CHANGE: true
     ]
