@@ -20,10 +20,6 @@
 - ✅ Wasabi
 - ✅ Blockstream Green
 - ✅ Whirlpool
-- - [ ] Armory
-- - [ ] Specter
-- - [ ] Electrum
-- - [ ] Bitcoin Core
 
 ## Known Limitations
 
