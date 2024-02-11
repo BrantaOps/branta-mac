@@ -7,21 +7,24 @@
 
 import Foundation
 
-let NOTIFY_FOR_BTC_ADDRESS      = "notifyForBTCAddress"
-let NOTIFY_FOR_SEED             = "notifyForSeed"
-let NOTIFY_FOR_XPUB             = "notifyForXPub"
-let NOTIFY_FOR_XPRV             = "notifyForXPrv"
-let NOTIFY_FOR_NPUB             = "notifyForNPub"
-let NOTIFY_FOR_NSEC             = "notifyForNSec"
-let NOTIFY_UPON_LAUNCH          = "notifyUponLaunch"
-let NOTIFY_UPON_STATUS_CHANGE   = "notifyUponStatusChange"
+let NOTIFY_FOR_BTC_ADDRESS          = "notifyForBTCAddress"
+let NOTIFY_FOR_SEED                 = "notifyForSeed"
+let NOTIFY_FOR_XPUB                 = "notifyForXPub"
+let NOTIFY_FOR_XPRV                 = "notifyForXPrv"
+let NOTIFY_FOR_NPUB                 = "notifyForNPub"
+let NOTIFY_FOR_NSEC                 = "notifyForNSec"
+let NOTIFY_UPON_LAUNCH              = "notifyUponLaunch"
+let NOTIFY_UPON_STATUS_CHANGE       = "notifyUponStatusChange"
 
-let SCAN_CADENCE                = "scanCadence"
-let SCAN_CADENCE_WORDING        = "scanCadenceWording"
-let DEFAULT_SCAN_CADENCE        = 0.0
+let SCAN_CADENCE                    = "scanCadence"
+let SCAN_CADENCE_WORDING            = "scanCadenceWording"
+
+let DEFAULT_SCAN_CADENCE            = 30.0
+let DEFAULT_SCAN_CADENCE_WORDING    = "30 Seconds"
+
+let PREFS_KEY = "Branta_Prefs"
 
 class Settings {
-    private static let KEY = "Branta_Prefs"
 
     private static var prefHash : [String:Any] = [
         // Clipboard
@@ -33,13 +36,13 @@ class Settings {
         NOTIFY_FOR_NSEC: true,
         // Wallet
         SCAN_CADENCE: DEFAULT_SCAN_CADENCE,
-        SCAN_CADENCE_WORDING: "1 Second",
+        SCAN_CADENCE_WORDING: DEFAULT_SCAN_CADENCE_WORDING,
         NOTIFY_UPON_LAUNCH: true,
         NOTIFY_UPON_STATUS_CHANGE: true
     ]
     
     static func readFromDefaults() -> [String: Any] {
-        if let v = UserDefaults.standard.string(forKey: KEY) {
+        if let v = UserDefaults.standard.string(forKey: PREFS_KEY) {
             guard let jsonData = v.data(using: .utf8) else {
                 print("Failed to convert JSON string to Data")
                 return [:]
@@ -56,7 +59,7 @@ class Settings {
                 print("Error parsing JSON: \(error)")
             }
         } else {
-            print("No string found for key \(KEY) in UserDefaults.")
+            print("No string found for key \(PREFS_KEY) in UserDefaults.")
             return prefHash
         }
         return [:]
@@ -72,7 +75,7 @@ class Settings {
     private
     
     static func saveToDefaults() {
-        UserDefaults.standard.set(toJSON(), forKey: KEY)
+        UserDefaults.standard.set(toJSON(), forKey: PREFS_KEY)
         UserDefaults.standard.synchronize()
     }
     
