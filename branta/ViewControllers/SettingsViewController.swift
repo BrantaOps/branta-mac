@@ -32,9 +32,9 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
 
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear() {
+        super.viewWillAppear()
+        self.view.window?.appearance = NSAppearance(named: .darkAqua)
     }
     
     override func viewDidAppear() {
