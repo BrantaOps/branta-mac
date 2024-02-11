@@ -21,6 +21,14 @@
 - ✅ Blockstream Green
 - ✅ Whirlpool
 
+## Installing
+
+- Visit https://www.branta.pro/download to download the Branta.dmg.zip
+- Double click the .dmg
+- In the window that opens, drag the Branta Icon to Applications
+- Double click Branta (Allow to open under Security & Privacy)
+- Allow Notifcations
+
 ## Known Limitations
 
 - Spoof Wallets likely install to custom paths. Branta needs to have more flexible path scanning to catch these.
