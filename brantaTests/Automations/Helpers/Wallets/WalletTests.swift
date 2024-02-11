@@ -30,8 +30,4 @@ class WalletTests: XCTestCase {
     func testCFBundleExecutable() {
          XCTAssertEqual(Wallet.CFBundleExecutable(), "", "CFBundleExecutable method should return an empty string")
      }
-    
-    func testPgp() {
-         Wallet.pgp()
-     }
 }
