@@ -38,14 +38,14 @@ class Verify: Automation {
         }
     }
 
+    // TODO - update cadence without restart
     override class func run() {
-        // TODO - update cadence without restart
-        // TODO - default case
-        
         let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
-        
-        print("run verify at \(cadence)")
+
         Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
+            //let currentDate = Date()
+            //let secondsSinceEpoch = currentDate.timeIntervalSince1970
+            //print("running verify():\(secondsSinceEpoch)")
             verify()
         }
     }
