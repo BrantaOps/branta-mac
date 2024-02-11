@@ -5,10 +5,14 @@
 </picture>
 
 ## Features
- - ✅ Wallet Verification: Automatically verifies supported wallets against PGP verified SHA-256 checksums
- - ✅ Clipboard Guardian: Get notified of bitcoin-related activity on your clipboard
- - ✅ Focus Automation: Verify Wallets upon launch & Notify User
- - ✅ Drag & Drop PGP Verification for installers (Sparrow, Blockstream)
+ - ✅ Wallet Verification
+   - Automatically verifies supported wallets against PGP verified SHA-256 checksums
+ - ✅ Clipboard Guardian
+   - Get notified of bitcoin-related activity on your clipboard
+ - ✅ Focus Automation
+   - Verify Wallets upon launch & Notify User
+ - ✅ Drag & Drop PGP Verification for Installers
+   - Skip importing authors PGP keys & running SHA256 manually before install (Sparrow, Blockstream)
   
   <img width="873" alt="Screen Shot 2024-02-04 at 10 55 43 AM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/75644c8e-591e-4871-a48c-161a4f9ae209">
 
@@ -28,9 +32,9 @@
 - In the window that opens, drag the Branta Icon to Applications
 - Double click Branta (Allow to open under Security & Privacy)
 - Allow Notifcations
-<img width="500" alt="Screen Shot 2024-02-10 at 10 01 44 PM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/2d678f46-ffd5-4362-8f59-302b740c5b20">
+<img width="400" alt="Screen Shot 2024-02-10 at 10 01 44 PM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/2d678f46-ffd5-4362-8f59-302b740c5b20">
 
-<img width="500" alt="Screen Shot 2024-02-10 at 10 02 31 PM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/c15f30cb-cbc7-4814-a095-07d122fbb7f7">
+<img width="400" alt="Screen Shot 2024-02-10 at 10 02 31 PM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/c15f30cb-cbc7-4814-a095-07d122fbb7f7">
 
 
 ## Known Limitations
