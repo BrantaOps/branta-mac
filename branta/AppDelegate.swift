@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        //wipeDefaults() // For dev use
         start()
     }
     
@@ -110,6 +111,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 openSettingsWindow()
             }
             return event
+        }
+    }
+    
+    func wipeDefaults() {
+        if let bundleIdentifier = Bundle.main.bundleIdentifier {
+            dumpBrantaPrefs()
+            UserDefaults.standard.removePersistentDomain(forName: bundleIdentifier)
+            print("Erased UserDefaults.")
+        }
+    }
+    
+    func dumpBrantaPrefs() {
+        let defaultsDictionary = UserDefaults.standard.dictionaryRepresentation()
+        
+        for (key, value) in defaultsDictionary {
+            if (key == PREFS_KEY) {
+                print("UserDefaults:\(key): \(value)")
+            }
         }
     }
 }
