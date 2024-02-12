@@ -38,9 +38,4 @@ class Wallet {
     class func installerHashes() -> [String:String] {
         return [:]
     }
-    
-    // Flag for Certain wallets that use SHA512 in manifest
-    class func installerUses512() -> Bool {
-        return false
-    }
 }
