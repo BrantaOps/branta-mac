@@ -33,3 +33,13 @@ func sha512(at filePath: String) -> String {
     }
 }
 
+func sha512(at filePath: String) -> Data {
+    do {
+        let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
+        let hashed = SHA512.hash(data: data)
+        return Data(hashed)
+    } catch {
+        print("sha512() Error reading file: \(error)")
+        return Data()
+    }
+}

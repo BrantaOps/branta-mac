@@ -55,6 +55,8 @@ class Trezor: Wallet {
         ]
     }
     
+
+    // SHA 512 then Base64 Encoded Binary
     override class func installerHashes() -> [String:String] {
         return [
             "Im/IAqbtSye5SyCE1ffrxV2kaYuOvuw/u3Gm/Nc+mt3oqgglHfV83XrOYPs0zgi+HeE2NAVDXXU/t5bGVMX7YQ==": "Trezor-Suite-24.1.2-win-x64.exe",
@@ -67,7 +69,4 @@ class Trezor: Wallet {
             
         ]
     }
-    
-    
-    // TODO - This is SHA512 then base64 encoded...
 }
