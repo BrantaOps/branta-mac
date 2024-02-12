@@ -63,7 +63,7 @@ class DropView: NSView {
 
         let suffix = URL(fileURLWithPath: path).pathExtension
         for ext in ALLOWED_EXTENSIONS {
-            if ext.lowercased() == suffix {
+            if ext.lowercased() == suffix.lowercased() {
                 return true
             }
         }
