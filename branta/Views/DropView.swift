@@ -93,7 +93,7 @@ class DropView: NSView {
         }
         else {
             alert.messageText   = "Could Not Verify ⚠"
-            alert.informativeText = "The .dmg did not match any checksums known to Branta."
+            alert.informativeText = "The file did not match any checksums known to Branta."
         }
         
         alert.beginSheetModal(for: window!)

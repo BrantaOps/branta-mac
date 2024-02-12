@@ -50,6 +50,7 @@ class Sparrow: Wallet {
         ]
     }
     
+    // Standard SHA 256 from manifest
     override class func installerHashes() -> [String:String] {
         return [
             "541b82e83ec928e7b54490211fa5e9d3b315394d895aebeab9a9696ce24c378d": "*Sparrow-1.8.2-aarch64.dmg",
