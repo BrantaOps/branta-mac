@@ -19,6 +19,7 @@ class Trezor: Wallet {
     
     override class func x86() -> [String:String] {
         return [
+            "24.1.2": "d2cb1862914b81f9d51a25b25723d357293b2d51448ee9ebc92ad90a00de6ee9",
             "23.12.3": "8f576e56983a5fd45de75074861f5630254d23fe7c48a78621cc70b82715cb33",
             "23.12.2": "738afbb6682bd222992d8faf80f1e5a99953ffc44b3888217c794a9c2cea9f06",
             "23.12.1": "6300d1213e0f176d705a12e550e01656e6cf274949f6c7ef567923bbde61698b",
@@ -49,6 +50,7 @@ class Trezor: Wallet {
     
     override class func arm() -> [String:String] {
         return [
+            "24.1.2": "2f65e18f6e2f486a7f19ee6bf035b0bf9648a51946ff8c0595f2fc5b511dfc53",
             "23.12.3": "cfc16e69b6bc1915e477a4d0b1f7726d95beb53468464f0093f48f33da809c6b",
             "23.12.2": "47dd2dd24dd54666f26794c8eac8b2a37656cd737a0c47738081adc6b5c630fd",
             "23.12.1": "62a4bc443f5f04a6dee0cc8039c725da73596bc6cd3aeeaf9721dfd5f6985022",
