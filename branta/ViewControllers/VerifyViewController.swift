@@ -1,5 +1,5 @@
 //
-//  VerifyViewController.swift
+//  BrantaViewController.swift
 //  branta
 //
 //  Created by Keith Gardner on 12/22/23.
@@ -12,8 +12,7 @@ let HEIGHT = 30.0
 let TABLE_FONT = 17.0
 
 
-// TODO - this should probably be renamed "Main" or "home"
-class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
+class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
