@@ -38,4 +38,8 @@ class Wallet {
     class func installerHashes() -> [String:String] {
         return [:]
     }
+    
+    class func singleBinary() -> Bool {
+        return false
+    }
 }

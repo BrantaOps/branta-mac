@@ -71,4 +71,8 @@ class BlockstreamGreen: Wallet {
             "073ec6a37e26d63c693afdce7aa047d3d1c966519c490b8b4fb45190303faa70": "BlockstreamGreen_Linux_x86_64.tar.gz"
         ]
     }
+    
+    override class func singleBinary() -> Bool {
+        return true
+    }
 }
