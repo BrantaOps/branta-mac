@@ -10,6 +10,7 @@
 		ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* BrantaNotify.swift */; };
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
+		ED3170952B826494003D77D4 /* VersionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3170942B826494003D77D4 /* VersionComp.swift */; };
 		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
@@ -68,6 +69,7 @@
 		ED19A7A42B123F00004375C7 /* BrantaNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaNotify.swift; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
+		ED3170942B826494003D77D4 /* VersionComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionComp.swift; sourceTree = "<group>"; };
 		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				EDD011832B6C56F00091CAAD /* Sha.swift */,
 				EDD011852B6D749D0091CAAD /* Settings.swift */,
 				ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */,
+				ED3170942B826494003D77D4 /* VersionComp.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */,
+				ED3170952B826494003D77D4 /* VersionComp.swift in Sources */,
 				ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */,
 				ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */,
 				EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */,
