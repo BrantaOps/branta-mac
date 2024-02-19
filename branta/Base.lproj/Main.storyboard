@@ -702,11 +702,11 @@
             </objects>
             <point key="canvasLocation" x="51" y="249"/>
         </scene>
-        <!--Verify View Controller-->
+        <!--Branta View Controller-->
         <scene sceneID="MwH-ag-oUp">
             <objects>
                 <customObject id="vqF-cs-KhB" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController showSeguePresentationStyle="single" id="Il1-c8-cba" customClass="VerifyViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController showSeguePresentationStyle="single" id="Il1-c8-cba" customClass="BrantaViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="darkAqua" id="tzc-5B-fCa">
                         <rect key="frame" x="0.0" y="0.0" width="761" height="709"/>
                         <autoresizingMask key="autoresizingMask"/>

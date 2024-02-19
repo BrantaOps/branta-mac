@@ -1,5 +1,5 @@
 //
-//  VerifyViewController.swift
+//  BrantaViewController.swift
 //  branta
 //
 //  Created by Keith Gardner on 12/22/23.
@@ -11,9 +11,7 @@ import Foundation
 let HEIGHT = 30.0
 let TABLE_FONT = 17.0
 
-
-// TODO - this should probably be renamed "Main" or "home"
-class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
+class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
@@ -129,22 +127,6 @@ class VerifyViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             
             alert.beginSheetModal(for: self.view.window!)
         }
-    }
-    
-    func compareVersions(_ version1: String, _ version2: String) -> ComparisonResult {
-        let components1 = version1.split(separator: ".").compactMap { Int($0) }
-        let components2 = version2.split(separator: ".").compactMap { Int($0) }
-
-        for (comp1, comp2) in zip(components1, components2) {
-            if comp1 < comp2 {
-                return .orderedAscending
-            } else if comp1 > comp2 {
-                return .orderedDescending
-            }
-        }
-
-        // If all components are equal so far, compare the number of components
-        return components1.count < components2.count ? .orderedAscending : .orderedSame
     }
 
     func verifyDidChange(newResults: Array<[String: String]>) {
