@@ -11,7 +11,6 @@ import Foundation
 let HEIGHT = 30.0
 let TABLE_FONT = 17.0
 
-
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!

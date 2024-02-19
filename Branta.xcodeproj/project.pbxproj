@@ -20,7 +20,7 @@
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
 		ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */; };
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
-		ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* VerifyViewController.swift */; };
+		ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* BrantaViewController.swift */; };
 		ED643CD32B5168BF00FEBE36 /* VerifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */; };
 		ED643CD52B519C3D00FEBE36 /* VerifyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD42B519C3D00FEBE36 /* VerifyViewControllerTests.swift */; };
 		ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */; };
@@ -79,7 +79,7 @@
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wasabi.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
-		ED57437C2B3641AF0001956A /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		ED57437C2B3641AF0001956A /* BrantaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewController.swift; sourceTree = "<group>"; };
 		ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTests.swift; sourceTree = "<group>"; };
 		ED643CD42B519C3D00FEBE36 /* VerifyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewControllerTests.swift; sourceTree = "<group>"; };
 		ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationTests.swift; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 		ED34AD022B182B1C0038CAC5 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED57437C2B3641AF0001956A /* VerifyViewController.swift */,
+				ED57437C2B3641AF0001956A /* BrantaViewController.swift */,
 				ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */,
 				EDD011872B6D80040091CAAD /* SettingsViewController.swift */,
 			);
@@ -458,7 +458,7 @@
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
 				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,
-				ED57437D2B3641AF0001956A /* VerifyViewController.swift in Sources */,
+				ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */,
 				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
