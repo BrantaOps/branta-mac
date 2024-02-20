@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import Countly
 
 let FONT                    = "Avenir"
 let GOLD                    = "#B1914A"
@@ -96,6 +97,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func start() {
+        let config: CountlyConfig = CountlyConfig()
+        config.appKey = "ccc4eb59a850e5f3bdf640b8d36284c3bce03f12"
+        config.host = "https://branta-0dc12e4ffb389.flex.countly.com"
+        Countly.sharedInstance().start(with: config)
+                
         setupMenu(status: ACTIVE)
         if notificationManager == nil {
             notificationManager = BrantaNotify()
