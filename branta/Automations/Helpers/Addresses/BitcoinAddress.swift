@@ -8,7 +8,7 @@ class BitcoinAddress {
         let preSegWit = bitcoinAddressRegex.firstMatch(in: str, options: [], range: range) != nil
         
         // Check segWit
-        let segWitAddressRegex = try! NSRegularExpression(pattern: "^bc1[0-9a-zA-Z]{25,39}$", options: .caseInsensitive)
+        let segWitAddressRegex = try! NSRegularExpression(pattern: "^bc1[0-9a-zA-Z]{25,65}$", options: .caseInsensitive)
         range = NSRange(location: 0, length: str.utf16.count)
         let segWit = segWitAddressRegex.firstMatch(in: str, options: [], range: range) != nil
         
