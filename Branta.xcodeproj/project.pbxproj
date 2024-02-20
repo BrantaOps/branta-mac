@@ -22,7 +22,7 @@
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
 		ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* BrantaViewController.swift */; };
 		ED643CD32B5168BF00FEBE36 /* VerifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */; };
-		ED643CD52B519C3D00FEBE36 /* VerifyViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD42B519C3D00FEBE36 /* VerifyViewControllerTests.swift */; };
+		ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */; };
 		ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */; };
 		ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CDC2B519F6600FEBE36 /* WalletTests.swift */; };
 		ED643CDF2B51A00600FEBE36 /* WasabiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CDE2B51A00600FEBE36 /* WasabiTests.swift */; };
@@ -82,7 +82,7 @@
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
 		ED57437C2B3641AF0001956A /* BrantaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewController.swift; sourceTree = "<group>"; };
 		ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTests.swift; sourceTree = "<group>"; };
-		ED643CD42B519C3D00FEBE36 /* VerifyViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewControllerTests.swift; sourceTree = "<group>"; };
+		ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewControllerTests.swift; sourceTree = "<group>"; };
 		ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationTests.swift; sourceTree = "<group>"; };
 		ED643CDC2B519F6600FEBE36 /* WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTests.swift; sourceTree = "<group>"; };
 		ED643CDE2B51A00600FEBE36 /* WasabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasabiTests.swift; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		ED643CD62B519EDF00FEBE36 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED643CD42B519C3D00FEBE36 /* VerifyViewControllerTests.swift */,
+				ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 			files = (
 				ED643CD32B5168BF00FEBE36 /* VerifyTests.swift in Sources */,
 				ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */,
-				ED643CD52B519C3D00FEBE36 /* VerifyViewControllerTests.swift in Sources */,
+				ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */,
 				EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */,
 				ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */,
 				ED73E96B2B07D686005742BA /* brantaTests.swift in Sources */,
@@ -663,7 +663,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -697,7 +697,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.7.0;
+				MARKETING_VERSION = 1.8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
