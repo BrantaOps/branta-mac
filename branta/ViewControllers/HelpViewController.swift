@@ -17,7 +17,6 @@ class HelpViewController: NSViewController {
     @IBOutlet weak var q2: NSTextField!
     @IBOutlet weak var a2: NSTextField!
     
-    @IBOutlet weak var link: NSTextField!
 
     
     override func viewDidLoad() {
@@ -30,6 +29,5 @@ class HelpViewController: NSViewController {
         a1.font = NSFont(name: FONT, size: 15.0)
         q2.font = boldFont
         a2.font = NSFont(name: FONT, size: 15.0)
-        link.font = NSFont(name: FONT, size: 15.0)
     }
 }
