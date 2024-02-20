@@ -41,4 +41,19 @@ class Wasabi: Wallet {
     override class func CFBundleExecutable() -> String {
         return "wassabee"
     }
+    
+    // Standard SHA 256 from manifest
+    override class func installerHashes() -> [String:String] {
+        return [
+            "8c53b938d616cd6d4d2c621418fe011782352e95a795a80defdc77c45fb0dc77": "Wasabi-2.0.5-arm64.dmg",
+            "5a3ab59f78a155ffeddda2af7a03897cf3ed9f27027dbce5ad3a80bffa6d16ef": "Wasabi-2.0.5-linux-x64.zip",
+            "b3c4dc96657a8862a9ad4b485a1d301773325d8d71c91a13c57713941be3e982": "Wasabi-2.0.5-macOS-arm64.zip",
+            "e7e6de0d4304011e98ad9482404d6dd34e28e4ead3abf48763dcec877a8422cd": "Wasabi-2.0.5-macOS-x64.zip",
+            "a2aff94ff2493f91b492298583836104cb03b294ad653ebc1691b9936d73350a": "Wasabi-2.0.5-win7-x64.zip",
+            "ac6b3a9095e4a7d3c2407117760cfcf8b0d829fcdd67eee225a90dde784dc776": "Wasabi-2.0.5.deb",
+            "67dcaf2a5d6c3e890b04812ea0a92cc3129e2c1f52879aea5487251984c62953": "Wasabi-2.0.5.dmg",
+            "ab1a35ed0294340b363fd7d84568bcea8407cb35a45b5c1da8c4f811dfa963bc": "Wasabi-2.0.5.msi",
+            "d40817f8a970fc8b114415763353a42c61380cfaaaea15f687bd9137369dd833": "Wasabi-2.0.5.tar.gz"
+        ]
+    }
 }
