@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "countly-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Countly/countly-sdk-ios.git",
+      "state" : {
+        "revision" : "e85b2ae20e6c76facf553d5630044b85f006c99a",
+        "version" : "24.1.0"
+      }
+    },
+    {
       "identity" : "sentry-cocoa",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/getsentry/sentry-cocoa.git",

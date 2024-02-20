@@ -39,6 +39,7 @@
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
 		EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* NostrAddress.swift */; };
+		EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */ = {isa = PBXBuildFile; productRef = EDC31E0A2B84DBE4005F0C43 /* Countly */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
 		EDD011822B67F5890091CAAD /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011812B67F5890091CAAD /* DropView.swift */; };
 		EDD011842B6C56F00091CAAD /* Sha.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011832B6C56F00091CAAD /* Sha.swift */; };
@@ -116,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +324,7 @@
 			);
 			name = Branta;
 			packageProductDependencies = (
+				EDC31E0A2B84DBE4005F0C43 /* Countly */,
 			);
 			productName = branta;
 			productReference = ED73E9552B07D684005742BA /* Branta.app */;
@@ -397,6 +400,7 @@
 			mainGroup = ED73E94C2B07D684005742BA;
 			packageReferences = (
 				ED34AD052B1994B80038CAC5 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */,
 			);
 			productRefGroup = ED73E9562B07D684005742BA /* Products */;
 			projectDirPath = "";
@@ -820,7 +824,23 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Countly/countly-sdk-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EDC31E0A2B84DBE4005F0C43 /* Countly */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */;
+			productName = Countly;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ED73E94D2B07D684005742BA /* Project object */;
 }
