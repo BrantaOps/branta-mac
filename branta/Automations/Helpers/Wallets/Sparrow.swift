@@ -19,6 +19,7 @@ class Sparrow: Wallet {
     override class func x86() -> [String:String] {
         return [
             "1.8.2":"c82536ca87e8e40184be6cec4f64bea60666573428c41f6d004342445733b41f",
+            "1.8.2": "",
             "1.8.1":"a35554c23d8e324f8e4226e15ad0b6d4a71da4f47c5a219b6b1b395472f57422",
             "1.8.0":"cd4ed0b38d94d6a9fb32effa0ee1700eed4cfc6306fd3c29cd87637b7a40519e",
             "1.7.9":"ba0c91af54e327a3acb9f3afc61aed19f2321c73e5a6a7733292727201d3a9c6",
@@ -125,36 +126,3 @@ class Sparrow: Wallet {
         ]
     }
 }
-
-
-
-/*
- Sparrow links out to many libs. We could hash all of these as well.
- $ ls -lh *.dylib
- -rw-r--r--@ 1 keithgardner  admin   632K Nov 22 03:53 libawt.dylib
- -rw-r--r--@ 1 keithgardner  admin   1.1M Nov 22 03:53 libawt_lwawt.dylib
- -rw-r--r--@ 1 keithgardner  admin   1.6M Nov 22 03:53 libfontmanager.dylib
- -rw-r--r--@ 1 keithgardner  admin   664K Nov 22 03:53 libfreetype.dylib
- -rw-r--r--@ 1 keithgardner  admin    37K Nov 22 03:53 libj2pcsc.dylib
- -rw-r--r--@ 1 keithgardner  admin    95K Nov 22 03:53 libj2pkcs11.dylib
- -rw-r--r--@ 1 keithgardner  admin   171K Nov 22 03:53 libjava.dylib
- -rw-r--r--@ 1 keithgardner  admin   247K Nov 22 03:53 libjavajpeg.dylib
- -rw-r--r--@ 1 keithgardner  admin    27K Nov 22 03:53 libjawt.dylib
- -rw-r--r--@ 1 keithgardner  admin    47K Nov 22 03:53 libjimage.dylib
- -rw-r--r--@ 1 keithgardner  admin    83K Nov 22 03:53 libjli.dylib
- -rw-r--r--@ 1 keithgardner  admin    28K Nov 22 03:53 libjsig.dylib
- -rw-r--r--@ 1 keithgardner  admin   104K Nov 22 03:53 libjsound.dylib
- -rw-r--r--@ 1 keithgardner  admin   426K Nov 22 03:53 liblcms.dylib
- -rw-r--r--@ 1 keithgardner  admin    38K Nov 22 03:53 libmanagement.dylib
- -rw-r--r--@ 1 keithgardner  admin   620K Nov 22 03:53 libmlib_image.dylib
- -rw-r--r--@ 1 keithgardner  admin    77K Nov 22 03:53 libnet.dylib
- -rw-r--r--@ 1 keithgardner  admin    83K Nov 22 03:53 libnio.dylib
- -rw-r--r--@ 1 keithgardner  admin    39K Nov 22 03:53 libosx.dylib
- -rw-r--r--@ 1 keithgardner  admin   148K Nov 22 03:53 libosxapp.dylib
- -rw-r--r--@ 1 keithgardner  admin    40K Nov 22 03:53 libosxsecurity.dylib
- -rw-r--r--@ 1 keithgardner  admin    58K Nov 22 03:53 libosxui.dylib
- -rw-r--r--@ 1 keithgardner  admin    44K Nov 22 03:53 libprefs.dylib
- -rw-r--r--@ 1 keithgardner  admin   376K Nov 22 03:53 libsplashscreen.dylib
- -rw-r--r--@ 1 keithgardner  admin    71K Nov 22 03:53 libverify.dylib
- -rw-r--r--@ 1 keithgardner  admin    53K Nov 22 03:53 libzip.dylib
- */

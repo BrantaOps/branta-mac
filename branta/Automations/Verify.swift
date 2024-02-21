@@ -52,6 +52,7 @@ class Verify: Automation {
     
     static func verify() {
         let wallets = crawlWallets()
+        print("wallets: \(wallets)")
         signatures = matchSignatures(wallets: wallets)
     }
     
@@ -63,7 +64,10 @@ class Verify: Automation {
             exePath = TARGETS[wallet + ".app"]!.CFBundleExecutable()
         }
         
+        
         let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
+        
+        print("fullPath: \(fullPath)")
         let hash = sha256(at: fullPath)
 
         return HashGrabber.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
@@ -153,15 +157,21 @@ class Verify: Automation {
                     }
                     
                     let fullPath = PATH + "/" + item + "/Contents/MacOS/" + exePath
-                    let hash = sha256(at: fullPath)
+                    let fullPathHash = sha256(at: fullPath)
+                    
+                    let entryPoint = PATH + "/" + item
+                    let entryPointHash = sha256ForDirectory(atPath: entryPoint)
+
+                    
                     let version = getAppVersion(atPath: (PATH + "/" + item))
                     
                     ret.append([
                         "name": item,
                         "path": fullPath,
-                        "hash": hash,
+                        "hash": fullPathHash,
                         "match": "false",
-                        "version": version
+                        "version": version,
+                        "entryPointHash": entryPointHash != nil ? entryPointHash! : ""
                     ])
                 }
             }
