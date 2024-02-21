@@ -41,6 +41,7 @@
 
 - Spoof Wallets likely install to custom paths. Branta needs to have more flexible path scanning to catch these.
 - Ongoing wallet support - Branta doesn't know about new releases unless we manually input them.
+- "Do not disturb" turns off notifications. This disrupts the alert flow.
 
 
 ## Building
