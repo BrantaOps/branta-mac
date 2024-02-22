@@ -12,6 +12,7 @@
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED3170952B826494003D77D4 /* VersionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3170942B826494003D77D4 /* VersionComp.swift */; };
 		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
+		ED46BB052B87C49800F8FA00 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = ED46BB042B87C49800F8FA00 /* Sparkle */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
@@ -120,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */,
+				ED46BB052B87C49800F8FA00 /* Sparkle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +330,7 @@
 			name = Branta;
 			packageProductDependencies = (
 				EDC31E0A2B84DBE4005F0C43 /* Countly */,
+				ED46BB042B87C49800F8FA00 /* Sparkle */,
 			);
 			productName = branta;
 			productReference = ED73E9552B07D684005742BA /* Branta.app */;
@@ -404,6 +407,7 @@
 			packageReferences = (
 				ED34AD052B1994B80038CAC5 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */,
+				ED46BB032B87C49800F8FA00 /* XCRemoteSwiftPackageReference "Sparkle" */,
 			);
 			productRefGroup = ED73E9562B07D684005742BA /* Products */;
 			projectDirPath = "";
@@ -830,6 +834,14 @@
 				minimumVersion = 8.0.0;
 			};
 		};
+		ED46BB032B87C49800F8FA00 /* XCRemoteSwiftPackageReference "Sparkle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparkle-project/Sparkle";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Countly/countly-sdk-ios.git";
@@ -841,6 +853,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ED46BB042B87C49800F8FA00 /* Sparkle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED46BB032B87C49800F8FA00 /* XCRemoteSwiftPackageReference "Sparkle" */;
+			productName = Sparkle;
+		};
 		EDC31E0A2B84DBE4005F0C43 /* Countly */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */;
