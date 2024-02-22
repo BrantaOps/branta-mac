@@ -21,28 +21,35 @@ func sha256(at filePath: String) -> String {
     }
 }
 
+// 1. Traverse file dir and hash entire set
+// 2. Combine hashes
+// 3. SHA256 the combined hashes
 func sha256ForDirectory(atPath path: String) -> String? {
     var concatenatedHashes = ""
-
     let fileManager = FileManager.default
-
     guard let enumerator = fileManager.enumerator(atPath: path) else {
         return nil
     }
 
-    for case let fileURL as URL in enumerator {
+    for e in enumerator {
         do {
-            let resourceValues = try fileURL.resourceValues(forKeys: [.isRegularFileKey])
-            if resourceValues.isRegularFile ?? false {
-                let hash = sha256(at: fileURL.path)
-                concatenatedHashes += hash
+            if let item = e as? String {
+                let fullPath = path + "/" + item
+
+                let isDirectory = (enumerator.fileAttributes?[.type] as? FileAttributeType) == .typeDirectory
+                let isSymLink = (enumerator.fileAttributes?[.type] as? FileAttributeType) == .typeSymbolicLink
+                
+                if !isDirectory && !isSymLink {
+                    print("Hashed: \(fullPath)")
+                    let hash = sha256(at: fullPath)
+                    concatenatedHashes += hash
+                }
             }
         } catch {
-            print("Error accessing file: \(fileURL.path), error: \(error)")
+            print("Error accessing file: \(e), error: \(error)")
         }
     }
 
-    // Hash the concatenated hashes
     if let data = concatenatedHashes.data(using: .utf8) {
         let hashed = SHA256.hash(data: data)
         return hashed.compactMap { String(format: "%02x", $0) }.joined()

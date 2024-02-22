@@ -18,8 +18,7 @@ class Sparrow: Wallet {
     
     override class func x86() -> [String:String] {
         return [
-            "1.8.2":"c82536ca87e8e40184be6cec4f64bea60666573428c41f6d004342445733b41f",
-            "1.8.2": "",
+            "1.8.2":"d963628ea41c2c3338fdd91aba22ac34d287f7fe0f717b2d0343f85c72f6439d", // Full hash
             "1.8.1":"a35554c23d8e324f8e4226e15ad0b6d4a71da4f47c5a219b6b1b395472f57422",
             "1.8.0":"cd4ed0b38d94d6a9fb32effa0ee1700eed4cfc6306fd3c29cd87637b7a40519e",
             "1.7.9":"ba0c91af54e327a3acb9f3afc61aed19f2321c73e5a6a7733292727201d3a9c6",

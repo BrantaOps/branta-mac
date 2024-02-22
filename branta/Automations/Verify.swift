@@ -52,7 +52,6 @@ class Verify: Automation {
     
     static func verify() {
         let wallets = crawlWallets()
-        print("wallets: \(wallets)")
         signatures = matchSignatures(wallets: wallets)
     }
     
@@ -64,10 +63,7 @@ class Verify: Automation {
             exePath = TARGETS[wallet + ".app"]!.CFBundleExecutable()
         }
         
-        
         let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
-        
-        print("fullPath: \(fullPath)")
         let hash = sha256(at: fullPath)
 
         return HashGrabber.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
@@ -156,23 +152,24 @@ class Verify: Automation {
                         exePath = String(item.dropLast(4))
                     }
                     
-                    let fullPath = PATH + "/" + item + "/Contents/MacOS/" + exePath
-                    let fullPathHash = sha256(at: fullPath)
+                    let pathToExe = PATH + "/" + item + "/Contents/MacOS/" + exePath
+                    let exeHash = sha256(at: pathToExe)
                     
-                    let entryPoint = PATH + "/" + item
-                    let entryPointHash = sha256ForDirectory(atPath: entryPoint)
+                    let dir = PATH + "/" + item
+                    let dirHash = sha256ForDirectory(atPath: dir)
 
                     
                     let version = getAppVersion(atPath: (PATH + "/" + item))
                     
-                    ret.append([
+                    let r = [
                         "name": item,
-                        "path": fullPath,
-                        "hash": fullPathHash,
+                        "path": pathToExe,
+                        "hash": exeHash,
                         "match": "false",
                         "version": version,
-                        "entryPointHash": entryPointHash != nil ? entryPointHash! : ""
-                    ])
+                        "dirHash": dirHash != nil ? dirHash! : ""
+                    ]
+                    ret.append(r)
                 }
             }
             return ret
