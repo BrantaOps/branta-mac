@@ -118,6 +118,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             return event
         }
+        
+        let pref = Settings.readFromDefaults()
+        let showInDock = pref[SHOW_IN_DOCK] as? Bool
+        
+        if showInDock != nil && showInDock! {
+            NSApp.setActivationPolicy(.regular)
+        } else {
+            NSApp.setActivationPolicy(.accessory)
+        }
     }
     
     func wipeDefaults() {
