@@ -25,6 +25,9 @@ class DropView: NSView {
     ]
     let LIVE_COLOR = NSColor.darkGray.cgColor
     let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
+    
+    let minimumHeight: CGFloat = 100
+    let minimumWidth: CGFloat = 200
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -33,6 +36,14 @@ class DropView: NSView {
         self.layer?.backgroundColor = IDLE_COLOR
 
         registerForDraggedTypes([NSPasteboard.PasteboardType.URL, NSPasteboard.PasteboardType.fileURL])
+    }
+    
+    
+    override var intrinsicContentSize: NSSize {
+        var size = super.intrinsicContentSize
+        size.width = max(size.width, minimumWidth)
+        size.height = max(size.height, minimumHeight)
+        return size
     }
 
     override func draw(_ dirtyRect: NSRect) {

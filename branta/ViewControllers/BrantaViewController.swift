@@ -77,6 +77,13 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
+        } else if columnNumber == 2 {            
+            let currentTime         = Date()
+            let dateFormatter       = DateFormatter()
+            dateFormatter.timeStyle = .medium
+            let formattedTime       = dateFormatter.string(from: currentTime)
+            
+            textField.stringValue = formattedTime
         }
         return textField
     }
@@ -129,11 +136,18 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         }
     }
 
+    // Lets hide this... adds noise to homescreen
     func verifyDidChange(newResults: Array<[String: String]>) {
+        if newResults.count == 0 {
+            walletsDetected.isHidden = false
+            walletsDetected.stringValue = "0 Wallets Detected."
+        }
         if newResults.count == 1 {
+            walletsDetected.isHidden = true
             walletsDetected.stringValue = "1 Wallet Detected."
         }
         else {
+            walletsDetected.isHidden = true
             walletsDetected.stringValue = "\(newResults.count) Wallets Detected."
         }
         tableData = newResults
