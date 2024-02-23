@@ -14,8 +14,6 @@ let TABLE_FONT = 17.0
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var dropView: DropView!
-    
     
     var tableData: Array<[String: String]> = []
     
@@ -27,7 +25,7 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        tableView.dataSource = self        
+        tableView.dataSource = self
     }
     
     override func viewDidAppear() {
@@ -141,11 +139,18 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         }
     }
 
+    // Lets hide this... adds noise to homescreen
     func verifyDidChange(newResults: Array<[String: String]>) {
+        if newResults.count == 0 {
+            walletsDetected.isHidden = false
+            walletsDetected.stringValue = "0 Wallets Detected."
+        }
         if newResults.count == 1 {
+            walletsDetected.isHidden = true
             walletsDetected.stringValue = "1 Wallet Detected."
         }
         else {
+            walletsDetected.isHidden = true
             walletsDetected.stringValue = "\(newResults.count) Wallets Detected."
         }
         tableData = newResults

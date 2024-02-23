@@ -915,7 +915,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dropView" destination="zbK-gp-Ps7" id="qAd-hv-L2n"/>
                         <outlet property="tableView" destination="f7n-2h-iou" id="AZn-N9-JPK"/>
                         <outlet property="walletsDetected" destination="ebA-yH-dzu" id="f4S-oD-DHf"/>
                     </connections>
