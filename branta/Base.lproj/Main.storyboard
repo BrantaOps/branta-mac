@@ -737,14 +737,14 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <tableView appearanceType="darkAqua" verticalHuggingPriority="750" allowsExpansionToolTips="YES" tableStyle="plain" selectionHighlightStyle="none" alternatingRowBackgroundColors="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="30" rowSizeStyle="automatic" headerView="doB-w8-eVF" viewBased="YES" id="f7n-2h-iou">
-                                                    <rect key="frame" x="0.0" y="0.0" width="761" height="207"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="810" height="207"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <size key="intercellSpacing" width="17" height="0.0"/>
                                                     <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.0" editable="NO" width="360" minWidth="40" maxWidth="1000" id="1u0-2u-1Kr">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center">
+                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.0" editable="NO" width="253" minWidth="40" maxWidth="1000" id="1u0-2u-1Kr">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Wallet">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -756,11 +756,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="8Dp-CS-tBS">
-                                                                    <rect key="frame" x="8" y="0.0" width="360" height="30"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="253" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
-                                                                            <rect key="frame" x="0.0" y="7" width="360" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="253" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="blah blah blah" id="Jay-Mb-UVI">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -775,8 +775,8 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.1" width="367" minWidth="40" maxWidth="1000" id="LZl-05-DLb">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center">
+                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.1" width="253" minWidth="40" maxWidth="1000" id="LZl-05-DLb">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Status">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                             </tableHeaderCell>
@@ -788,11 +788,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="fj6-TM-5zd">
-                                                                    <rect key="frame" x="385" y="0.0" width="367" height="30"/>
+                                                                    <rect key="frame" x="278" y="0.0" width="253" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJU-2V-KUW">
-                                                                            <rect key="frame" x="0.0" y="7" width="367" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="253" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="i5L-cG-S4z">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -807,13 +807,45 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
+                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.2" width="253" minWidth="40" maxWidth="1000" id="VeT-ca-4dz">
+                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Last Scanned">
+                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                            </tableHeaderCell>
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" refusesFirstResponder="YES" title="Text Cell" id="Lk4-Qe-bXc">
+                                                                <font key="font" metaFont="system"/>
+                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            </textFieldCell>
+                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                            <prototypeCellViews>
+                                                                <tableCellView id="oE5-nP-ilZ">
+                                                                    <rect key="frame" x="548" y="0.0" width="253" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
+                                                                            <rect key="frame" x="0.0" y="7" width="253" height="16"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="Zg4-TZ-M1M">
+                                                                                <font key="font" usesAppearanceFont="YES"/>
+                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                            </textFieldCell>
+                                                                        </textField>
+                                                                    </subviews>
+                                                                    <connections>
+                                                                        <outlet property="textField" destination="hm2-XT-qi8" id="d0z-Qf-XCQ"/>
+                                                                    </connections>
+                                                                </tableCellView>
+                                                            </prototypeCellViews>
+                                                        </tableColumn>
                                                     </tableColumns>
                                                 </tableView>
                                             </subviews>
                                             <nil key="backgroundColor"/>
                                         </clipView>
-                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="1BG-6u-5MP">
-                                            <rect key="frame" x="1" y="233" width="713" height="16"/>
+                                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="1BG-6u-5MP">
+                                            <rect key="frame" x="0.0" y="219" width="761" height="16"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="Q7l-0S-uK3">
@@ -821,7 +853,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <tableHeaderView key="headerView" wantsLayer="YES" id="doB-w8-eVF">
-                                            <rect key="frame" x="0.0" y="0.0" width="761" height="28"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="810" height="28"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableHeaderView>
                                     </scrollView>
@@ -883,6 +915,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dropView" destination="zbK-gp-Ps7" id="qAd-hv-L2n"/>
                         <outlet property="tableView" destination="f7n-2h-iou" id="AZn-N9-JPK"/>
                         <outlet property="walletsDetected" destination="ebA-yH-dzu" id="f4S-oD-DHf"/>
                     </connections>

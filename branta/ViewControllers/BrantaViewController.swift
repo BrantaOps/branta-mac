@@ -14,6 +14,8 @@ let TABLE_FONT = 17.0
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var dropView: DropView!
+    
     
     var tableData: Array<[String: String]> = []
     
@@ -25,7 +27,7 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
-        tableView.dataSource = self
+        tableView.dataSource = self        
     }
     
     override func viewDidAppear() {
@@ -77,6 +79,16 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
+        } else if columnNumber == 2 {
+            let currentTime = Date()
+
+            let dateFormatter = DateFormatter()
+            dateFormatter.timeStyle = .medium
+
+            let formattedTime = dateFormatter.string(from: currentTime)
+//            print("Current time is: \(formattedTime)")
+            
+            textField.stringValue = formattedTime
         }
         return textField
     }
