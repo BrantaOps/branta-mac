@@ -152,17 +152,22 @@ class Verify: Automation {
                         exePath = String(item.dropLast(4))
                     }
                     
-                    let fullPath = PATH + "/" + item + "/Contents/MacOS/" + exePath
-                    let hash = sha256(at: fullPath)
-                    let version = getAppVersion(atPath: (PATH + "/" + item))
+                    let dir         = PATH + "/" + item
+                    let pathToExe   = dir + "/Contents/MacOS/" + exePath
+                    let exeHash     = sha256(at: pathToExe)
+                    let dirHash     = sha256ForDirectory(atPath: dir)
+                    let version     = getAppVersion(atPath: (dir))
                     
-                    ret.append([
+                    let r = [
                         "name": item,
-                        "path": fullPath,
-                        "hash": hash,
+                        "path": pathToExe,
+                        "hash": exeHash,
                         "match": "false",
-                        "version": version
-                    ])
+                        "version": version,
+                        "dirHash": dirHash != nil ? dirHash! : "" // TODO - hook here
+                    ]
+                    
+                    ret.append(r)
                 }
             }
             return ret
