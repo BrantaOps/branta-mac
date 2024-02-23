@@ -77,14 +77,11 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
-        } else if columnNumber == 2 {
-            let currentTime = Date()
-
-            let dateFormatter = DateFormatter()
+        } else if columnNumber == 2 {            
+            let currentTime         = Date()
+            let dateFormatter       = DateFormatter()
             dateFormatter.timeStyle = .medium
-
-            let formattedTime = dateFormatter.string(from: currentTime)
-//            print("Current time is: \(formattedTime)")
+            let formattedTime       = dateFormatter.string(from: currentTime)
             
             textField.stringValue = formattedTime
         }
