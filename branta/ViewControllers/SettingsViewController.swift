@@ -22,7 +22,7 @@ let CADENCE_OPTIONS: [(String, Int)] = [
 class SettingsViewController: NSViewController {
     
     @IBOutlet weak var cadenceSelector: NSPopUpButton!
-        
+    
     @IBOutlet weak var notifyForBTCAddressOutlet: NSSwitch!
     @IBOutlet weak var notifyForSeedOutlet: NSSwitch!
     @IBOutlet weak var notifyForXPubOutlet: NSSwitch!
@@ -31,7 +31,7 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyForNSecOutlet: NSSwitch!
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
-
+    
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
@@ -42,6 +42,12 @@ class SettingsViewController: NSViewController {
         configureCadence()
         configureSwitches()
         print(Settings.readFromDefaults())
+        
+        if let window = view.window {
+            window.minSize = NSSize(width: 400, height: 320)
+            window.titlebarAppearsTransparent = true
+            window.title = ""
+        }
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
@@ -117,7 +123,7 @@ class SettingsViewController: NSViewController {
     
     func configureCadence() {
         let settings = Settings.readFromDefaults()
-
+        
         for cadence in CADENCE_OPTIONS {
             cadenceSelector.addItem(withTitle: cadence.0)
         }
