@@ -97,6 +97,7 @@ class SettingsViewController: NSViewController {
             NSApp.setActivationPolicy(.accessory)
         }
         
+        NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
     private
