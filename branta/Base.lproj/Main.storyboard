@@ -999,11 +999,11 @@
                 <customObject id="Zth-CM-Aq7" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <viewController title="Settings" storyboardIdentifier="pref" showSeguePresentationStyle="single" id="u9i-7b-3R3" customClass="SettingsViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" appearanceType="darkAqua" id="Act-sp-HVM">
-                        <rect key="frame" x="0.0" y="0.0" width="729" height="584"/>
+                        <rect key="frame" x="0.0" y="0.0" width="777" height="694"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ToP-t6-a0X">
-                                <rect key="frame" x="196" y="509" width="338" height="75"/>
+                                <rect key="frame" x="220" y="619" width="338" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="fAc-fv-fbM"/>
                                     <constraint firstAttribute="width" constant="338" id="hhb-4D-KCR"/>
@@ -1011,10 +1011,10 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="PuU-fv-DVF"/>
                             </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-0C-gBa" customClass="SettingsView" customModule="Branta" customModuleProvider="target">
-                                <rect key="frame" x="15" y="15" width="699" height="494"/>
+                                <rect key="frame" x="15" y="15" width="747" height="604"/>
                                 <subviews>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
-                                        <rect key="frame" x="36" y="446" width="189" height="23"/>
+                                        <rect key="frame" x="36" y="556" width="189" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Clipboard Notifications" id="8wh-v7-xyP">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1022,7 +1022,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
-                                        <rect key="frame" x="36" y="411" width="124" height="20"/>
+                                        <rect key="frame" x="36" y="521" width="124" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Bitcoin Addresses" id="0j4-Za-GCk">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1030,7 +1030,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
-                                        <rect key="frame" x="36" y="376" width="87" height="20"/>
+                                        <rect key="frame" x="36" y="486" width="87" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Seed Phrase" id="cNC-Pb-fk6">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1038,7 +1038,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
-                                        <rect key="frame" x="36" y="341" width="143" height="20"/>
+                                        <rect key="frame" x="36" y="451" width="143" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Extended Public Key" id="Wq5-Eq-RZd">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1046,7 +1046,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
-                                        <rect key="frame" x="36" y="304" width="79" height="20"/>
+                                        <rect key="frame" x="36" y="414" width="79" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Private Key" id="8NY-Fe-mCW">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1054,7 +1054,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
-                                        <rect key="frame" x="36" y="269" width="128" height="20"/>
+                                        <rect key="frame" x="36" y="379" width="128" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="NOSTR Public Key" id="FFw-O2-bTy">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1062,7 +1062,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
-                                        <rect key="frame" x="36" y="234" width="133" height="20"/>
+                                        <rect key="frame" x="36" y="344" width="133" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="NOSTR Private Key" id="kLP-uR-FAa">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1070,7 +1070,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
-                                        <rect key="frame" x="36" y="176" width="150" height="23"/>
+                                        <rect key="frame" x="36" y="286" width="150" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Wallet Verification" id="3j8-jx-rMW">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1078,7 +1078,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
-                                        <rect key="frame" x="36" y="141" width="100" height="20"/>
+                                        <rect key="frame" x="36" y="251" width="100" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Scan Cadence" id="9gz-jq-Tbn">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1086,7 +1086,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
-                                        <rect key="frame" x="36" y="106" width="250" height="20"/>
+                                        <rect key="frame" x="36" y="216" width="250" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Launching Wallet" id="xOB-Dm-6pr">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1094,7 +1094,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
-                                        <rect key="frame" x="36" y="71" width="233" height="20"/>
+                                        <rect key="frame" x="36" y="181" width="233" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Status Change" id="hk9-gG-KE2">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1102,71 +1102,95 @@
                                         </textFieldCell>
                                     </textField>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe">
-                                        <rect key="frame" x="621" y="408" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="518" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForBTCAddress:" target="u9i-7b-3R3" id="Sx2-jp-GTO"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw">
-                                        <rect key="frame" x="621" y="373" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="483" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForSeed:" target="u9i-7b-3R3" id="e0H-Xn-6FV"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg">
-                                        <rect key="frame" x="621" y="338" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="448" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPub:" target="u9i-7b-3R3" id="9E8-K5-cH5"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q">
-                                        <rect key="frame" x="621" y="301" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="411" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPrv:" target="u9i-7b-3R3" id="Hws-QN-Eym"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa">
-                                        <rect key="frame" x="621" y="266" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="376" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNPub:" target="u9i-7b-3R3" id="tXk-2L-gA2"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu">
-                                        <rect key="frame" x="621" y="231" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="341" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNSec:" target="u9i-7b-3R3" id="iuc-u1-Rhn"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD">
-                                        <rect key="frame" x="621" y="103" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="213" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponLaunch:" target="u9i-7b-3R3" id="yWz-G4-nQA"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB">
-                                        <rect key="frame" x="621" y="67" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="177" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponStatusChange:" target="u9i-7b-3R3" id="Ksv-n9-VuF"/>
                                         </connections>
                                     </switch>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-JF-wnR">
-                                        <rect key="frame" x="626" y="137" width="39" height="25"/>
+                                        <rect key="frame" x="674" y="247" width="39" height="25"/>
                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="oQs-hc-Zcm">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="ueb-QO-Kgn"/>
                                         </popUpButtonCell>
                                     </popUpButton>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-sB-xXw">
+                                        <rect key="frame" x="36" y="123" width="83" height="23"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Dock Icon" id="fCd-qG-nM8">
+                                            <font key="font" size="17" name="Avenir-Heavy"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-Bx-scV">
+                                        <rect key="frame" x="36" y="88" width="169" height="20"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Show Branta in the Dock" id="myP-IY-Hbq">
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="e2E-aN-7KR">
+                                        <rect key="frame" x="669" y="85" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="setShowInDock:" target="u9i-7b-3R3" id="eFN-9g-wk6"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yAP-Ez-rfw" firstAttribute="centerX" secondItem="N5F-kY-kRe" secondAttribute="centerX" id="3J9-WW-otz"/>
                                     <constraint firstItem="SME-vv-0Ca" firstAttribute="leading" secondItem="J6E-kH-n70" secondAttribute="leading" id="3bC-w6-IZh"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ptA-92-eZt" secondAttribute="trailing" constant="20" symbolic="YES" id="4TA-KW-j1E"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HT5-Gz-LSQ" secondAttribute="trailing" constant="20" symbolic="YES" id="5Lm-b6-aT9"/>
+                                    <constraint firstItem="IXb-Bx-scV" firstAttribute="top" secondItem="NlF-sB-xXw" secondAttribute="bottom" constant="15" id="64H-yz-yy0"/>
                                     <constraint firstItem="2KU-bm-So7" firstAttribute="leading" secondItem="HbO-1Z-NaM" secondAttribute="leading" id="6AN-ii-eAj"/>
                                     <constraint firstItem="SME-vv-0Ca" firstAttribute="top" secondItem="J6E-kH-n70" secondAttribute="bottom" constant="15" id="8Wh-fh-IlE"/>
                                     <constraint firstItem="GMP-f8-Zul" firstAttribute="leading" secondItem="6B2-wv-5n3" secondAttribute="leading" id="8gD-wo-5Bz"/>
                                     <constraint firstItem="7hV-pY-YW0" firstAttribute="top" secondItem="Ggi-ae-6Wd" secondAttribute="bottom" constant="17" id="927-OA-KCT"/>
+                                    <constraint firstItem="e2E-aN-7KR" firstAttribute="centerX" secondItem="dDY-UW-CaB" secondAttribute="centerX" id="AGB-ZO-k8e"/>
                                     <constraint firstItem="HT5-Gz-LSQ" firstAttribute="leading" secondItem="IlJ-0C-gBa" secondAttribute="leading" constant="38" id="AfL-IB-1DJ"/>
                                     <constraint firstItem="fj2-Xa-f2q" firstAttribute="centerX" secondItem="bq5-ux-PVg" secondAttribute="centerX" id="BGx-lZ-EMH"/>
                                     <constraint firstItem="HbO-1Z-NaM" firstAttribute="top" secondItem="7hV-pY-YW0" secondAttribute="bottom" constant="15" id="CGo-vW-cJY"/>
@@ -1179,12 +1203,15 @@
                                     <constraint firstItem="ptA-92-eZt" firstAttribute="top" secondItem="2KU-bm-So7" secondAttribute="bottom" constant="35" id="Iym-K8-I8a"/>
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="centerY" secondItem="2KU-bm-So7" secondAttribute="centerY" id="OKF-3W-Pnh"/>
                                     <constraint firstItem="ptA-92-eZt" firstAttribute="leading" secondItem="2KU-bm-So7" secondAttribute="leading" id="OWk-20-K7h"/>
+                                    <constraint firstItem="e2E-aN-7KR" firstAttribute="centerY" secondItem="IXb-Bx-scV" secondAttribute="centerY" id="Obo-0U-1VV"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J6E-kH-n70" secondAttribute="trailing" constant="20" symbolic="YES" id="QPf-Ca-zaA"/>
                                     <constraint firstItem="6B2-wv-5n3" firstAttribute="leading" secondItem="uhi-g9-GpC" secondAttribute="leading" id="Qn2-np-zcT"/>
                                     <constraint firstAttribute="trailing" secondItem="N5F-kY-kRe" secondAttribute="trailing" constant="38" id="Rkw-3L-mzT"/>
                                     <constraint firstItem="J6E-kH-n70" firstAttribute="top" secondItem="HT5-Gz-LSQ" secondAttribute="bottom" constant="15" id="Rsg-Ix-vhY"/>
+                                    <constraint firstItem="IXb-Bx-scV" firstAttribute="leading" secondItem="NlF-sB-xXw" secondAttribute="leading" id="SCp-IM-Okc"/>
                                     <constraint firstItem="Ggi-ae-6Wd" firstAttribute="top" secondItem="SME-vv-0Ca" secondAttribute="bottom" constant="15" id="Sb9-PT-UH1"/>
                                     <constraint firstItem="bq5-ux-PVg" firstAttribute="centerX" secondItem="yAP-Ez-rfw" secondAttribute="centerX" id="Tx1-Tr-S5G"/>
+                                    <constraint firstItem="NlF-sB-xXw" firstAttribute="leading" secondItem="GMP-f8-Zul" secondAttribute="leading" id="U6m-v1-InV"/>
                                     <constraint firstItem="dDY-UW-CaB" firstAttribute="top" secondItem="GMP-f8-Zul" secondAttribute="bottom" constant="-20" id="Ya8-jF-vGk"/>
                                     <constraint firstItem="2KU-bm-So7" firstAttribute="top" secondItem="HbO-1Z-NaM" secondAttribute="bottom" constant="15" id="aWy-Tj-3ZN"/>
                                     <constraint firstItem="rXG-2E-ttD" firstAttribute="centerX" secondItem="axO-Yq-AKu" secondAttribute="centerX" id="cb7-4d-N5K"/>
@@ -1209,6 +1236,7 @@
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2KU-bm-So7" secondAttribute="trailing" constant="8" symbolic="YES" id="uQk-uf-bKc"/>
                                     <constraint firstItem="7hV-pY-YW0" firstAttribute="leading" secondItem="Ggi-ae-6Wd" secondAttribute="leading" id="uyI-iu-ZZZ"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7hV-pY-YW0" secondAttribute="trailing" constant="20" symbolic="YES" id="vGI-D9-qXQ"/>
+                                    <constraint firstItem="NlF-sB-xXw" firstAttribute="top" secondItem="GMP-f8-Zul" secondAttribute="bottom" constant="35" id="wTh-TC-iOq"/>
                                     <constraint firstItem="xvm-7k-eFa" firstAttribute="centerY" secondItem="HbO-1Z-NaM" secondAttribute="centerY" id="zis-pC-yE4"/>
                                 </constraints>
                             </customView>
@@ -1233,10 +1261,11 @@
                         <outlet property="notifyForXPubOutlet" destination="bq5-ux-PVg" id="xQX-lf-qFH"/>
                         <outlet property="notifyUponLaunchOutlet" destination="rXG-2E-ttD" id="wZx-gW-Cqj"/>
                         <outlet property="notifyUponStatusChangeOutlet" destination="dDY-UW-CaB" id="gQy-6O-SlS"/>
+                        <outlet property="showInDockOutlet" destination="e2E-aN-7KR" id="Ko9-XO-8Zl"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="847" y="184"/>
+            <point key="canvasLocation" x="822.5" y="129"/>
         </scene>
     </scenes>
     <resources>

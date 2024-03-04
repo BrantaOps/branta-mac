@@ -22,6 +22,9 @@ let SCAN_CADENCE_WORDING            = "scanCadenceWording"
 let DEFAULT_SCAN_CADENCE            = 30.0
 let DEFAULT_SCAN_CADENCE_WORDING    = "30 Seconds"
 
+let SHOW_IN_DOCK                    = "showInDock"
+
+
 let PREFS_KEY = "Branta_Prefs"
 
 class Settings {
@@ -38,7 +41,9 @@ class Settings {
         SCAN_CADENCE: DEFAULT_SCAN_CADENCE,
         SCAN_CADENCE_WORDING: DEFAULT_SCAN_CADENCE_WORDING,
         NOTIFY_UPON_LAUNCH: true,
-        NOTIFY_UPON_STATUS_CHANGE: true
+        NOTIFY_UPON_STATUS_CHANGE: true,
+        SHOW_IN_DOCK: false
+        
     ]
     
     static func readFromDefaults() -> [String: Any] {

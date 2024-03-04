@@ -11,7 +11,7 @@ import Cocoa
 
 class SettingsView: NSView {
     
-    let minimumHeight: CGFloat = 450
+    let minimumHeight: CGFloat = 550
     let minimumWidth: CGFloat = 500
 
     override var intrinsicContentSize: NSSize {

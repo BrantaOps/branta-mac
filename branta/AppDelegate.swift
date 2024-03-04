@@ -29,9 +29,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
-    var settingsWindow: NSWindow?
+    var settingsWindow: NSWindow? // TODO - delete
     var foreground: Bool = true
     var notificationManager: BrantaNotify?
+    
+    
+    
+    
     
     let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
     let KEY_ABOUT           = "A"
@@ -117,6 +121,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 openSettingsWindow()
             }
             return event
+        }
+        
+        let pref = Settings.readFromDefaults()
+        let showInDock = pref[SHOW_IN_DOCK] as? Bool
+        
+        if showInDock != nil && showInDock! {
+            NSApp.setActivationPolicy(.regular)
+        } else {
+            NSApp.setActivationPolicy(.accessory)
         }
     }
     
