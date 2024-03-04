@@ -31,6 +31,7 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyForNSecOutlet: NSSwitch!
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
+    @IBOutlet weak var showInDockOutlet: NSSwitch!
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -87,6 +88,17 @@ class SettingsViewController: NSViewController {
         setFor(s: sender as! NSSwitch, key: NOTIFY_UPON_STATUS_CHANGE)
     }
     
+    @IBAction func setShowInDock(_ sender: Any) {
+        setFor(s: sender as! NSSwitch, key: SHOW_IN_DOCK)
+        
+        if (sender as! NSSwitch).state == .on {
+            NSApp.setActivationPolicy(.regular)
+        } else {
+            NSApp.setActivationPolicy(.accessory)
+        }
+        
+    }
+    
     private
     
     func setFor(s: NSSwitch, key: String) {
@@ -117,7 +129,11 @@ class SettingsViewController: NSViewController {
                 notifyUponLaunchOutlet.state = setting.value as! Bool == true ? .on : .off
             } else if setting.key == NOTIFY_UPON_STATUS_CHANGE {
                 notifyUponStatusChangeOutlet.state = setting.value as! Bool == true ? .on : .off
+            } else if setting.key == SHOW_IN_DOCK {
+                print("settings \(SHOW_IN_DOCK) to \(setting.value)")
+                showInDockOutlet.state = setting.value as! Bool == true ? .on : .off
             }
+            
         }
     }
     
