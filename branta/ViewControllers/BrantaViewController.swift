@@ -122,7 +122,7 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
                 }
                 
                 if newer {
-                    alert.informativeText = "An newer version of \(name) was detected than Branta knows about."
+                    alert.informativeText = "A newer version of \(name) was detected than Branta knows about."
                 }
                 else if older {
                     alert.informativeText = "An outdated version of \(name) was detected. Branta can verify \(name) once you update the wallet."
