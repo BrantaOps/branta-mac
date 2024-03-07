@@ -55,6 +55,24 @@ class Sparrow: Wallet {
     // Standard SHA 256 from manifest
     override class func installerHashes() -> [String:String] {
         return [
+            "83af936cc1e25f0c3e2b3cc7c41cb566604a1c7019cf91d944c4419414502a40": "*Sparrow-1.8.3-aarch64.dmg",
+            "5f1eaca64fcacf068af46fc2098ae34e8fcb26a4095965c8014df915c62dafe0": "*Sparrow-1.8.3-x86_64.dmg",
+            "415c551cbd29da2661e75873b8c5e10bea8fa931525094fd04bb33a3f6477c74": "*Sparrow-1.8.3.exe",
+            "fea8d9002db1c75659f1cd738af76f51834af18124d175a0f3a7c0aaa972e3c8": "*Sparrow-1.8.3.zip",
+            "33d8e337940b374c8bf4164173e93f84ddbe392a8b0e303e35da4b05e6573b7a": "*sparrow-1.8.3-1.aarch64.rpm",
+            "aa0d151581c8d5e8a9f8828babba2ff7a178f5f67b9564d904043b1077512527": "*sparrow-1.8.3-1.x86_64.rpm",
+            "42d29a6782f38cebbc332d9241da712d57fa2a36ffeab97bf6d752907029c27d": "*sparrow-1.8.3-aarch64.tar.gz",
+            "50458c741822e11964020ad25971ac55125db4432c1e17230d1ab150bb8a6bbe": "*sparrow-1.8.3-x86_64.tar.gz",
+            "68bf0bbc32690cbd194c0da8fab449d45e02ba546dc6f678ea67a9546e25a71b": "*sparrow-server-1.8.3-1.aarch64.rpm",
+            "c28bf5718d8a82eb1ecb79504c406c39f90dc61081015d13802ebc4295306196": "*sparrow-server-1.8.3-1.x86_64.rpm",
+            "432af3b1226f183295cc651b44d14384c0ffde887d3626451b1950a9ed9dda76": "*sparrow-server-1.8.3-aarch64.tar.gz",
+            "88ba868d66b83e2151d691c7dfb11d6d169e55d0deaad2b754c641793d496b59": "*sparrow-server-1.8.3-x86_64.tar.gz",
+            "1e7bd6e6b41d7a38ae73d387a25a5ddfa5733e091e428260cb9925fce546fc4f": "*sparrow-server_1.8.3-1_amd64.deb",
+            "1bcebbb88a0713822f09cf10d1dc9d51aedc1c14ffacd505010e35cd284cf967": "*sparrow-server_1.8.3-1_arm64.deb",
+            "bca91ac82737956ad6b2b28e32e26aa2e2aed8ab5f4a894561021efddcc8f33f": "*sparrow_1.8.3-1_amd64.deb",
+            "9cc7c736cfd9aaba48099b5214d2daf7076fd231dcf70410af8a9e2afe8e7fe8": "*sparrow_1.8.3-1_arm64.deb",
+            
+            
             "541b82e83ec928e7b54490211fa5e9d3b315394d895aebeab9a9696ce24c378d": "*Sparrow-1.8.2-aarch64.dmg",
             "508a5ba212c2393a9d4cd122c2a8aa8b16e593c640bc3e4ac111ee574b2fd82d": "*Sparrow-1.8.2-x86_64.dmg",
             "1035fc5663e53ce3a7d87a63a1dadc33bb180ceb3154549b251407b09db202b7": "*Sparrow-1.8.2.exe",
