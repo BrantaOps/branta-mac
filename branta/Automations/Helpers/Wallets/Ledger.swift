@@ -26,6 +26,7 @@ class Ledger: Wallet {
     
     override class func x86() -> [String:String] {
         return [
+            "2.77.2": "fce734f4355cbfdf65523b56b6809ea0f3ae639af52a193e3b779e6ee57e535f",
             "2.73.0": "6273aba1261d9b51dba036448bef343707e410357d1120de6e8484e276d02d0d",
             "2.71.1": "9e09610feffb4223aa36184d1bd50ec9e58b262b83ef19db3eca385cea9f7a0c",
             "2.71.0": "9284b8a84c55a616da1745edbaa185bc7168784e31ead3421847ca6c9b4c34ea",
