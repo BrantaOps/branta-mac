@@ -18,6 +18,8 @@ class Sparrow: Wallet {
     
     override class func x86() -> [String:String] {
         return [
+            "1.8.4":"ecced5bd2cef9e861c2ec2f0c9c997edb67542bf980e8e8ba4f4eab6d941f393",
+            "1.8.3":"0c3d33dcee976d7726d048d0fb8916429768c10740d3bdd4f113fa7eee7cf09b",
             "1.8.2":"c82536ca87e8e40184be6cec4f64bea60666573428c41f6d004342445733b41f",
             "1.8.1":"a35554c23d8e324f8e4226e15ad0b6d4a71da4f47c5a219b6b1b395472f57422",
             "1.8.0":"cd4ed0b38d94d6a9fb32effa0ee1700eed4cfc6306fd3c29cd87637b7a40519e",
@@ -45,6 +47,8 @@ class Sparrow: Wallet {
     
     override class func arm() -> [String:String] {
         return [
+            "1.8.4":"c45b0ff26a69df91adc1368e6f24265a2a066973e0fa026e6416feda551aac54",
+            "1.8.3":"f374a2e7064a39bebbc2702e746e186fdb3849f2ba224fbe8c5824806f8d745c",
             "1.8.2":"11a261ee06509071e181892c0d531b4aa94a35269bb56fc8ad2d8427c1ec2dc5",
             "1.8.1":"c40b1533969a467f9ee7ce86c09d75ae0218127dc74c0554059df22ce5b23f87",
             "1.8.0":"50197b7d0952c211997f7f7633fd9e7ee427da1dfb0c443585eb413bad607c29",
@@ -55,6 +59,42 @@ class Sparrow: Wallet {
     // Standard SHA 256 from manifest
     override class func installerHashes() -> [String:String] {
         return [
+            
+            "76187ef7b52e22a6b45840fd493c7aea6affce42ee6ae6b9399cc99f65e632cb": "*Sparrow-1.8.4-aarch64.dmg",
+            "e13a325b66b722d64c563b06b92ac0559e7b9e7927c46b48ab19df1e99317937": "*Sparrow-1.8.4-x86_64.dmg",
+            "60c3ac1fe44957baca902d1f4297cbd35a154ffa740dafe271ef553c1c3bb692": "*Sparrow-1.8.4.exe",
+            "4464689617842288078df66afbb6dfa994e900b091c6c39a90c0680259a1906b": "*Sparrow-1.8.4.zip",
+            "0b8cb74ad81c8c7f29b1cb7816a866b9f03bac154e87a7bfb17e9046dcdf2b1f": "*sparrow-1.8.4-1.aarch64.rpm",
+            "a39be262a6437003216759d20c2c9e5a1e3cf22d8156f490810f263662226d9c": "*sparrow-1.8.4-1.x86_64.rpm",
+            "6b050131368f639c33e52a88eb6fb03678acc009f8e464eccfbe353e3cac8156": "*sparrow-1.8.4-aarch64.tar.gz",
+            "a8ed2e84455747df5cff7870790423e9e20e06662bd5e232be8e5f9d3841df70": "*sparrow-1.8.4-x86_64.tar.gz",
+            "456d7f8fce2409f07a3f1850ff2b4343e4d74b45939d780ec6e4586f8f63c3b2": "*sparrow-server-1.8.4-1.aarch64.rpm",
+            "8a933394289db6a7a511924ccd23586d7a8e5e6b33206742ecc7d89bbce7af7a": "*sparrow-server-1.8.4-1.x86_64.rpm",
+            "e41ee194decef351ac1fe43faf36d5c4afe20146e80ba551e4cd19e9642d49a7": "*sparrow-server-1.8.4-aarch64.tar.gz",
+            "e627ed0ba6a2a135c135901dff65f68034d03aa206b1a955a9505b3e36efc760": "*sparrow-server-1.8.4-x86_64.tar.gz",
+            "633f8cf81cd3719490f94ce8bebb7e9f30c4a5c73605f1283fa2db41905f5dd1": "*sparrow-server_1.8.4-1_amd64.deb",
+            "bf79e57e165da48c789668e6a60e6da4e655c4c01edc05a0eb4a7f8917e0f311": "*sparrow-server_1.8.4-1_arm64.deb",
+            "61d6508b41d1b7f233b7d619025acac6dc1816c9871ddf4b3cdb963050427897": "*sparrow_1.8.4-1_amd64.deb",
+            "f9a80b54f0e0dc49660df929138910338fa4b9caa8377351e649e6597f83199b": "*sparrow_1.8.4-1_arm64.deb",
+            
+            "83af936cc1e25f0c3e2b3cc7c41cb566604a1c7019cf91d944c4419414502a40": "*Sparrow-1.8.3-aarch64.dmg",
+            "5f1eaca64fcacf068af46fc2098ae34e8fcb26a4095965c8014df915c62dafe0": "*Sparrow-1.8.3-x86_64.dmg",
+            "415c551cbd29da2661e75873b8c5e10bea8fa931525094fd04bb33a3f6477c74": "*Sparrow-1.8.3.exe",
+            "fea8d9002db1c75659f1cd738af76f51834af18124d175a0f3a7c0aaa972e3c8": "*Sparrow-1.8.3.zip",
+            "33d8e337940b374c8bf4164173e93f84ddbe392a8b0e303e35da4b05e6573b7a": "*sparrow-1.8.3-1.aarch64.rpm",
+            "aa0d151581c8d5e8a9f8828babba2ff7a178f5f67b9564d904043b1077512527": "*sparrow-1.8.3-1.x86_64.rpm",
+            "42d29a6782f38cebbc332d9241da712d57fa2a36ffeab97bf6d752907029c27d": "*sparrow-1.8.3-aarch64.tar.gz",
+            "50458c741822e11964020ad25971ac55125db4432c1e17230d1ab150bb8a6bbe": "*sparrow-1.8.3-x86_64.tar.gz",
+            "68bf0bbc32690cbd194c0da8fab449d45e02ba546dc6f678ea67a9546e25a71b": "*sparrow-server-1.8.3-1.aarch64.rpm",
+            "c28bf5718d8a82eb1ecb79504c406c39f90dc61081015d13802ebc4295306196": "*sparrow-server-1.8.3-1.x86_64.rpm",
+            "432af3b1226f183295cc651b44d14384c0ffde887d3626451b1950a9ed9dda76": "*sparrow-server-1.8.3-aarch64.tar.gz",
+            "88ba868d66b83e2151d691c7dfb11d6d169e55d0deaad2b754c641793d496b59": "*sparrow-server-1.8.3-x86_64.tar.gz",
+            "1e7bd6e6b41d7a38ae73d387a25a5ddfa5733e091e428260cb9925fce546fc4f": "*sparrow-server_1.8.3-1_amd64.deb",
+            "1bcebbb88a0713822f09cf10d1dc9d51aedc1c14ffacd505010e35cd284cf967": "*sparrow-server_1.8.3-1_arm64.deb",
+            "bca91ac82737956ad6b2b28e32e26aa2e2aed8ab5f4a894561021efddcc8f33f": "*sparrow_1.8.3-1_amd64.deb",
+            "9cc7c736cfd9aaba48099b5214d2daf7076fd231dcf70410af8a9e2afe8e7fe8": "*sparrow_1.8.3-1_arm64.deb",
+            
+            
             "541b82e83ec928e7b54490211fa5e9d3b315394d895aebeab9a9696ce24c378d": "*Sparrow-1.8.2-aarch64.dmg",
             "508a5ba212c2393a9d4cd122c2a8aa8b16e593c640bc3e4ac111ee574b2fd82d": "*Sparrow-1.8.2-x86_64.dmg",
             "1035fc5663e53ce3a7d87a63a1dadc33bb180ceb3154549b251407b09db202b7": "*Sparrow-1.8.2.exe",
@@ -125,36 +165,3 @@ class Sparrow: Wallet {
         ]
     }
 }
-
-
-
-/*
- Sparrow links out to many libs. We could hash all of these as well.
- $ ls -lh *.dylib
- -rw-r--r--@ 1 keithgardner  admin   632K Nov 22 03:53 libawt.dylib
- -rw-r--r--@ 1 keithgardner  admin   1.1M Nov 22 03:53 libawt_lwawt.dylib
- -rw-r--r--@ 1 keithgardner  admin   1.6M Nov 22 03:53 libfontmanager.dylib
- -rw-r--r--@ 1 keithgardner  admin   664K Nov 22 03:53 libfreetype.dylib
- -rw-r--r--@ 1 keithgardner  admin    37K Nov 22 03:53 libj2pcsc.dylib
- -rw-r--r--@ 1 keithgardner  admin    95K Nov 22 03:53 libj2pkcs11.dylib
- -rw-r--r--@ 1 keithgardner  admin   171K Nov 22 03:53 libjava.dylib
- -rw-r--r--@ 1 keithgardner  admin   247K Nov 22 03:53 libjavajpeg.dylib
- -rw-r--r--@ 1 keithgardner  admin    27K Nov 22 03:53 libjawt.dylib
- -rw-r--r--@ 1 keithgardner  admin    47K Nov 22 03:53 libjimage.dylib
- -rw-r--r--@ 1 keithgardner  admin    83K Nov 22 03:53 libjli.dylib
- -rw-r--r--@ 1 keithgardner  admin    28K Nov 22 03:53 libjsig.dylib
- -rw-r--r--@ 1 keithgardner  admin   104K Nov 22 03:53 libjsound.dylib
- -rw-r--r--@ 1 keithgardner  admin   426K Nov 22 03:53 liblcms.dylib
- -rw-r--r--@ 1 keithgardner  admin    38K Nov 22 03:53 libmanagement.dylib
- -rw-r--r--@ 1 keithgardner  admin   620K Nov 22 03:53 libmlib_image.dylib
- -rw-r--r--@ 1 keithgardner  admin    77K Nov 22 03:53 libnet.dylib
- -rw-r--r--@ 1 keithgardner  admin    83K Nov 22 03:53 libnio.dylib
- -rw-r--r--@ 1 keithgardner  admin    39K Nov 22 03:53 libosx.dylib
- -rw-r--r--@ 1 keithgardner  admin   148K Nov 22 03:53 libosxapp.dylib
- -rw-r--r--@ 1 keithgardner  admin    40K Nov 22 03:53 libosxsecurity.dylib
- -rw-r--r--@ 1 keithgardner  admin    58K Nov 22 03:53 libosxui.dylib
- -rw-r--r--@ 1 keithgardner  admin    44K Nov 22 03:53 libprefs.dylib
- -rw-r--r--@ 1 keithgardner  admin   376K Nov 22 03:53 libsplashscreen.dylib
- -rw-r--r--@ 1 keithgardner  admin    71K Nov 22 03:53 libverify.dylib
- -rw-r--r--@ 1 keithgardner  admin    53K Nov 22 03:53 libzip.dylib
- */
