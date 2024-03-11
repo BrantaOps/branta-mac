@@ -41,6 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let KEY_ABOUT           = "A"
     let KEY_SETTINGS        = "S"
     let KEY_QUIT            = "Q"
+    let KEY_UPDATE          = "U"
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -66,6 +67,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func didTapSettings() {
         openSettingsWindow()
+    }
+    
+    @objc func getUpdate() {
+        
     }
     
     func applicationDidBecomeActive(_ notification: Notification) {
@@ -94,6 +99,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let settingsItem = NSMenuItem(title: "Settings", action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
         menu.addItem(settingsItem)
+        
+        Updater.checkForUpdates { updatesAvailable in
+            if updatesAvailable {
+                let updateItem = NSMenuItem(title: "Update Available", action: #selector(self.getUpdate), keyEquivalent: self.KEY_UPDATE)
+                menu.addItem(updateItem)
+            }
+        }
         
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: KEY_QUIT))
