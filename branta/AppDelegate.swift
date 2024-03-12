@@ -41,6 +41,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let KEY_ABOUT           = "A"
     let KEY_SETTINGS        = "S"
     let KEY_QUIT            = "Q"
+    let KEY_UPDATE          = "U"
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -66,6 +67,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func didTapSettings() {
         openSettingsWindow()
+    }
+    
+    @objc func getUpdate(_ sender: NSMenuItem) {
+        if let tag = sender.representedObject {
+            print("Fetching tag: \(tag)")
+            let github = "https://github.com/BrantaOps/branta-mac/releases/download/\(tag)/Branta-\(tag).dmg.zip"
+            if let url = URL(string: github) {
+                NSWorkspace.shared.open(url)
+            }
+        }
     }
     
     func applicationDidBecomeActive(_ notification: Notification) {
@@ -95,16 +106,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let settingsItem = NSMenuItem(title: "Settings", action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
         menu.addItem(settingsItem)
         
+        Updater.checkForUpdates { updatesAvailable, tag in
+            if updatesAvailable {
+                let updateItem = NSMenuItem(title: "Update Available", action: #selector(self.getUpdate(_:)), keyEquivalent: self.KEY_UPDATE)
+                updateItem.representedObject = tag
+                menu.addItem(updateItem)
+            } else {
+                // TODO. For now, let the user know branta is up to date.
+                // But we should mention something about the manifest/runtime hashes later.
+                let updateItem = NSMenuItem(title: "Latest Version", action: nil, keyEquivalent: "")
+                menu.addItem(updateItem)
+            }
+        }
+        
         menu.addItem(NSMenuItem.separator())
         menu.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: KEY_QUIT))
         statusItem.menu = menu
     }
     
     func start() {
-        let config: CountlyConfig = CountlyConfig()
-        config.appKey = "ccc4eb59a850e5f3bdf640b8d36284c3bce03f12"
-        config.host = "https://branta-0dc12e4ffb389.flex.countly.com"
-        Countly.sharedInstance().start(with: config)
+        startCountly()
                 
         setupMenu(status: ACTIVE)
         if notificationManager == nil {
@@ -131,6 +152,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             NSApp.setActivationPolicy(.accessory)
         }
+    }
+    
+    func startCountly() {
+        let config: CountlyConfig = CountlyConfig()
+        config.appKey = "ccc4eb59a850e5f3bdf640b8d36284c3bce03f12"
+        config.host = "https://branta-0dc12e4ffb389.flex.countly.com"
+        Countly.sharedInstance().start(with: config)
     }
     
     func wipeDefaults() {

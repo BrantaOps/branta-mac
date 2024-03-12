@@ -36,6 +36,7 @@
 		ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9862B0820C9005742BA /* Sparrow.swift */; };
 		ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E98A2B0820F1005742BA /* Wallet.swift */; };
 		ED7B16B22B556A650003EFEB /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Focus.swift */; };
+		ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97B84D2B9F46A3007DD2F5 /* Updater.swift */; };
 		ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */; };
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
@@ -101,6 +102,7 @@
 		ED73E9862B0820C9005742BA /* Sparrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparrow.swift; sourceTree = "<group>"; };
 		ED73E98A2B0820F1005742BA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		ED7B16B12B556A650003EFEB /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
+		ED97B84D2B9F46A3007DD2F5 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
 		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				EDD011852B6D749D0091CAAD /* Settings.swift */,
 				ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */,
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
+				ED97B84D2B9F46A3007DD2F5 /* Updater.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -402,7 +405,6 @@
 			);
 			mainGroup = ED73E94C2B07D684005742BA;
 			packageReferences = (
-				ED34AD052B1994B80038CAC5 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */,
 			);
 			productRefGroup = ED73E9562B07D684005742BA /* Products */;
@@ -466,6 +468,7 @@
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
 				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,
 				ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */,
+				ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */,
 				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
@@ -653,7 +656,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = 5Q5VTGZNGV;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -688,7 +691,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=macosx*]" = 5Q5VTGZNGV;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -822,14 +825,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ED34AD052B1994B80038CAC5 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
 		EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Countly/countly-sdk-ios.git";
