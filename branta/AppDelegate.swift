@@ -111,6 +111,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 let updateItem = NSMenuItem(title: "Update Available", action: #selector(self.getUpdate(_:)), keyEquivalent: self.KEY_UPDATE)
                 updateItem.representedObject = tag
                 menu.addItem(updateItem)
+            } else {
+                // TODO. For now, let the user know branta is up to date.
+                // But we should mention something about the manifest/runtime hashes later.
+                let updateItem = NSMenuItem(title: "Latest Version", action: nil, keyEquivalent: "")
+                menu.addItem(updateItem)
             }
         }
         
