@@ -11,19 +11,21 @@ let FETCH_URL = "https://api.github.com/repos/brantaops/branta-mac/releases/late
 
 class Updater {
     
-    static func checkForUpdates(completion: @escaping (Bool) -> Void) {
+    static func checkForUpdates(completion: @escaping (Bool, String) -> Void) {
         latestVersion { latestVersion in
             if let latestVersion = latestVersion {
-                print("latestVersion \(latestVersion)")
-                print("currentVersion() \(currentVersion())")
-                if compareVersions(latestVersion, currentVersion()) == .orderedAscending {
-                    print("returning true")
-                    completion(true)
-                    return
+                
+                let order = compareVersions(latestVersion, currentVersion())
+                if order == .orderedAscending {
+                    completion(false, latestVersion)
+                } else if order == .orderedDescending {
+                    completion(true, latestVersion)
+                } else if order == .orderedSame {
+                    completion(false, latestVersion)
                 }
+                return
             }
-            print("returning false")
-            completion(false)
+            completion(false, "")
         }
     }
     

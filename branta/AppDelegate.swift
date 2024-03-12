@@ -69,8 +69,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openSettingsWindow()
     }
     
-    @objc func getUpdate() {
-        
+    @objc func getUpdate(_ sender: NSMenuItem) {
+        if let tag = sender.representedObject {
+            print("Fetching tag: \(tag)")
+            let github = "https://github.com/BrantaOps/branta-mac/releases/download/\(tag)/Branta-\(tag).dmg.zip"
+            if let url = URL(string: github) {
+                NSWorkspace.shared.open(url)
+            }
+        }
     }
     
     func applicationDidBecomeActive(_ notification: Notification) {
@@ -100,9 +106,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let settingsItem = NSMenuItem(title: "Settings", action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
         menu.addItem(settingsItem)
         
-        Updater.checkForUpdates { updatesAvailable in
+        Updater.checkForUpdates { updatesAvailable, tag in
             if updatesAvailable {
-                let updateItem = NSMenuItem(title: "Update Available", action: #selector(self.getUpdate), keyEquivalent: self.KEY_UPDATE)
+                let updateItem = NSMenuItem(title: "Update Available", action: #selector(self.getUpdate(_:)), keyEquivalent: self.KEY_UPDATE)
+                updateItem.representedObject = tag
                 menu.addItem(updateItem)
             }
         }
