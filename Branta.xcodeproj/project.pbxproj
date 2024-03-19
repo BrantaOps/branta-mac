@@ -41,6 +41,7 @@
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
 		EDB9F70D2BA9B7E300F0C005 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */; };
+		EDB9F70F2BA9D91600F0C005 /* TrafficMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */; };
 		EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* NostrAddress.swift */; };
 		EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */ = {isa = PBXBuildFile; productRef = EDC31E0A2B84DBE4005F0C43 /* Countly */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
@@ -108,6 +109,7 @@
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
 		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
 		EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
+		EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficMonitor.swift; sourceTree = "<group>"; };
 		EDC310402B1F7A38005BCBBA /* NostrAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrAddress.swift; sourceTree = "<group>"; };
 		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		EDD011812B67F5890091CAAD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
@@ -171,12 +173,13 @@
 		ED34ACFF2B1800AF0038CAC5 /* Automations */ = {
 			isa = PBXGroup;
 			children = (
-				ED5743772B3517BD0001956A /* Helpers */,
+				ED57437A2B351E990001956A /* Automation.swift */,
 				ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */,
 				ED7B16B12B556A650003EFEB /* Focus.swift */,
-				EDD915262B0C3C8000A288FE /* Verify.swift */,
-				ED57437A2B351E990001956A /* Automation.swift */,
+				ED5743772B3517BD0001956A /* Helpers */,
 				EDD0117E2B6580760091CAAD /* Installer.swift */,
+				EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */,
+				EDD915262B0C3C8000A288FE /* Verify.swift */,
 			);
 			path = Automations;
 			sourceTree = "<group>";
@@ -186,8 +189,8 @@
 			children = (
 				ED57437C2B3641AF0001956A /* BrantaViewController.swift */,
 				ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */,
-				EDD011872B6D80040091CAAD /* SettingsViewController.swift */,
 				EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */,
+				EDD011872B6D80040091CAAD /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */,
 				ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */,
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
+				EDB9F70F2BA9D91600F0C005 /* TrafficMonitor.swift in Sources */,
 				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
 				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,
 				ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */,

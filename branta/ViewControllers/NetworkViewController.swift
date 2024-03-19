@@ -8,6 +8,8 @@
 import Cocoa
 import Foundation
 
+
+// Design - should be one VC per application we'd like to watch
 class NetworkViewController: NSViewController, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var tableView: NSTableView!
     
@@ -16,6 +18,10 @@ class NetworkViewController: NSViewController, NSTableViewDelegate, NSTableViewD
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
+
+        // TODO - param for Application
+        let monitor = TrafficMonitor()
+        monitor.startMonitoring()
     }
     
     override func viewDidLoad() {
@@ -31,7 +37,7 @@ class NetworkViewController: NSViewController, NSTableViewDelegate, NSTableViewD
             window.minSize = NSSize(width: 400, height: 320)
             window.titlebarAppearsTransparent = true
             window.title = ""
-         }
+        }
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
@@ -56,7 +62,7 @@ class NetworkViewController: NSViewController, NSTableViewDelegate, NSTableViewD
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
-         
+
         return textField
     }
 }
