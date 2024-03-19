@@ -84,8 +84,23 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             let formattedTime       = dateFormatter.string(from: currentTime)
             
             textField.stringValue = formattedTime
+        } else if columnNumber == 3 {
+            textField.stringValue = "View"
+            textField.font = NSFont(name: FONT, size: 20.0)
+            let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
+            textField.addGestureRecognizer(clickGesture)
         }
         return textField
+    }
+    
+    @objc func viewNetwork(sender: NSClickGestureRecognizer) {
+        if let clickedTextField = sender.view as? NSTextField {
+             let storyboard = NSStoryboard(name: "Main", bundle: nil)
+             guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NSViewController else {
+                 fatalError("Unable to instantiate new view controller")
+             }
+             presentAsModalWindow(newViewController)
+        }
     }
     
     @objc func showDetails(sender: NSClickGestureRecognizer) {

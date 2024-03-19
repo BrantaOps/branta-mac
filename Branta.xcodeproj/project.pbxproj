@@ -40,6 +40,7 @@
 		ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */; };
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
+		EDB9F70D2BA9B7E300F0C005 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */; };
 		EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* NostrAddress.swift */; };
 		EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */ = {isa = PBXBuildFile; productRef = EDC31E0A2B84DBE4005F0C43 /* Countly */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
@@ -106,6 +107,7 @@
 		ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
 		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
+		EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		EDC310402B1F7A38005BCBBA /* NostrAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrAddress.swift; sourceTree = "<group>"; };
 		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		EDD011812B67F5890091CAAD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				ED57437C2B3641AF0001956A /* BrantaViewController.swift */,
 				ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */,
 				EDD011872B6D80040091CAAD /* SettingsViewController.swift */,
+				EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */,
 				ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */,
 				ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */,
+				EDB9F70D2BA9B7E300F0C005 /* NetworkViewController.swift in Sources */,
 				EDD915272B0C3C8000A288FE /* Verify.swift in Sources */,
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
