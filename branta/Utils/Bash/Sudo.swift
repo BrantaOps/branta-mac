@@ -1,5 +1,5 @@
 //
-//  pw.swift
+//  SudoUtil.swift
 //  Branta
 //
 //  Created by Keith Gardner on 3/25/24.
@@ -25,7 +25,7 @@ class SudoUtil {
             
             let response = alert.runModal()
             
-            if response == .alertFirstButtonReturn { // OK button pressed
+            if response == .alertFirstButtonReturn {
                 guard let password = passwordField.stringValue.data(using: .utf8) else {
                     print("Error: Unable to convert password to data")
                     completion(nil)

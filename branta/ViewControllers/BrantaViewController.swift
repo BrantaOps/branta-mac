@@ -16,6 +16,14 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     @IBOutlet weak var tableView: NSTableView!
     
     var tableData: Array<[String: String]> = []
+
+    let COLUMNS = [
+        "WALLET_NAME": 0,
+        "STATUS": 1,
+        "RUNNING": 2,
+        "LAST_SCANNED": 3,
+        "NETWORK_ACTIVITY": 4,
+    ]
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -61,19 +69,11 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
-        
-//        let columns = [
-//            0: "WALLET_NAME",
-//            1: "STATUS",
-//            2: "RUNNING",
-//            3: "LAST SCANNED",
-//            4: "NETWORK ACTIVITY",
-//        ]
          
-        if columnNumber == 0 {
+        if columnNumber == COLUMNS["WALLET_NAME"] {
             let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
             textField.stringValue = name
-        } else if columnNumber == 1 {
+        } else if columnNumber == COLUMNS["STATUS"] {
             if tableData[row]["match"] == "true" {
                 textField.stringValue = "✓"
                 textField.textColor = NSColor(hex: GOLD)
@@ -85,16 +85,17 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
-        } else if columnNumber == 2 {
+        } else if columnNumber == COLUMNS["RUNNING"] {
+            // TODO
             textField.stringValue = "No"
-        } else if columnNumber == 3 {
+        } else if columnNumber == COLUMNS["LAST_SCANNED"] {
             let currentTime         = Date()
             let dateFormatter       = DateFormatter()
             dateFormatter.timeStyle = .medium
             let formattedTime       = dateFormatter.string(from: currentTime)
             
             textField.stringValue = formattedTime
-        } else if columnNumber == 4 {
+        } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
             textField.stringValue = "View"
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
