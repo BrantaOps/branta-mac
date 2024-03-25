@@ -61,6 +61,14 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
+        
+//        let columns = [
+//            0: "WALLET_NAME",
+//            1: "STATUS",
+//            2: "RUNNING",
+//            3: "LAST SCANNED",
+//            4: "NETWORK ACTIVITY",
+//        ]
          
         if columnNumber == 0 {
             let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
@@ -77,14 +85,16 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
-        } else if columnNumber == 2 {            
+        } else if columnNumber == 2 {
+            textField.stringValue = "No"
+        } else if columnNumber == 3 {
             let currentTime         = Date()
             let dateFormatter       = DateFormatter()
             dateFormatter.timeStyle = .medium
             let formattedTime       = dateFormatter.string(from: currentTime)
             
             textField.stringValue = formattedTime
-        } else if columnNumber == 3 {
+        } else if columnNumber == 4 {
             textField.stringValue = "View"
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
