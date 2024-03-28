@@ -7,14 +7,16 @@
 
 import Foundation
 
-// Add another sudo param - make this a general UTIL, take it out of TM
 class Command {
-    class func runCommand(_ command: String) -> String? {
+    class func runCommand(_ command: String, runAsSU: Bool=true) -> String? {
         let task = Process()
         task.launchPath = "/bin/sh"
-        //        task.arguments = ["-c", command] // Non-sudo
-        task.arguments = ["-c", "echo \(String(data: SudoUtil.pw!, encoding: .utf8)!) | sudo -S \(command)"] // with sudo
-        
+
+        if runAsSU {
+            task.arguments = ["-c", "echo \(String(data: SudoUtil.pw!, encoding: .utf8)!) | sudo -S \(command)"]
+        } else {
+            task.arguments = ["-c", command]
+        }
         
         let pipe = Pipe()
         task.standardOutput = pipe

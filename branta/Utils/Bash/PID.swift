@@ -10,7 +10,6 @@ import Foundation
 
 class PIDUtil {
     class func collectPIDs(appName: String) -> (Int, Array<Int>) {
-        print("Running PIDUtil#collectPIDs")
         var pids: [Int] = []
         var parentPID = -1
         
@@ -18,23 +17,19 @@ class PIDUtil {
         for app in runningApps {
             if app.localizedName == appName {
                 parentPID = Int(app.processIdentifier)
-                print("Set parentPID \(parentPID)")
                 pids.append(parentPID)
                 
                 
                 let childPIDs = getChildPIDs(ofParentPID: pid_t(parentPID))
-                print("Child PIDs:", childPIDs)
                 for pid in childPIDs {
                     pids.append(Int(pid))
                 }
             }
         }
-        print("PIDUtil#pids = \(pids)")
         return (parentPID, pids)
     }
     
     class func getChildPIDs(ofParentPID parentPID: pid_t) -> [pid_t] {
-        print("Running PIDUtil#getChildPIDs")
         let task = Process()
         task.launchPath = "/bin/sh"
         task.arguments = ["-c", "ps -o pid,ppid -ax | awk '{ if ($2 == \(parentPID)) print $1 }'"]

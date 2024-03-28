@@ -116,8 +116,6 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             let row = tableView.row(for: clickedTextField)
             let runtimeName = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
 
-
-            let segueIdentifier = "network"
             let storyboard = NSStoryboard(name: "Main", bundle: nil)
             guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
                 fatalError("Unable to instantiate new view controller")
