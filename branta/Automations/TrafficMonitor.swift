@@ -25,9 +25,12 @@ class TrafficMonitor: Automation {
     var parentPID: Int = -1
     var pids: Array<Int> = []
     var ips: Array<Int> = []
-
-    let walletName = "Ledger Live"
+    var walletName:String?
     
+    init(walletName: String) {
+        self.walletName = walletName
+        super.init()
+    }
     
     override func runDataFeed() {
         
@@ -49,21 +52,28 @@ class TrafficMonitor: Automation {
         print("running execute")
         // I think its a race to get to here
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            print("Running TrafficMonitor#execute")
-            (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName)
+            print("TrafficMonitor#execute: pids=\(self.pids), ips=\(self.ips)")
+            
+            
+            (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
             self.getIPs() // TODO - move to Util
             // TODO - Force Table repaint
+            
+            
         }
     }
     
     func parseOutput(_ output: String) -> [Connection] {
+        print("Running TrafficMonitor#parseOutput on \(output)")
+
         var connections = [Connection]()
         
         let lines = output.components(separatedBy: "\n")
+        
         for line in lines {
             let components = line.components(separatedBy: .whitespaces)
-            print("foo: components \(components)")
-            if components != nil {
+
+            if components.count > 8 {
                 let command         = components[0]
                 let pid             = components[1]
                 let user            = components[2]
@@ -86,9 +96,11 @@ class TrafficMonitor: Automation {
 
     func getIPs() {
         for pid in pids {
+            print("Running TrafficMonitor#getIPs on \(pids)")
+            
             if let output = Command.runCommand("sudo lsof -i -a -p \(pid) -n") {
                 let connections = parseOutput(output)
-                print("------------Dump for \(pid):")
+                print("TrafficMonitor#getIPs dump for \(pid):")
                 for connection in connections {
                     // FIRST LOOP is the columns
                     print("Command: \(connection.command)")

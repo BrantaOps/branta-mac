@@ -69,9 +69,9 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
+        let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
          
         if columnNumber == COLUMNS["WALLET_NAME"] {
-            let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
             textField.stringValue = name
         } else if columnNumber == COLUMNS["STATUS"] {
             if tableData[row]["match"] == "true" {
@@ -86,13 +86,11 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["RUNNING"] {
-            let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
-            
             // TODO - this should be a button, showing how many processes are running
             // click into it, and show PID and each PIDs children PID based on OS API
             
             // TODO - Repaint on 1 second cadence. Cache other columns.
-            var pids = PIDUtil.collectPIDs(appName: name)
+            let pids = PIDUtil.collectPIDs(appName: name)
             textField.stringValue = String(pids.0)
             
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
@@ -116,7 +114,8 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     @objc func viewNetwork(sender: NSClickGestureRecognizer) {
         if let clickedTextField = sender.view as? NSTextField {
             let row = tableView.row(for: clickedTextField)
-            let runtimeName = tableData[row]["name"]
+            let runtimeName = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
+
 
             let segueIdentifier = "network"
             let storyboard = NSStoryboard(name: "Main", bundle: nil)

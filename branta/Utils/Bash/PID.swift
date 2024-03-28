@@ -10,7 +10,7 @@ import Foundation
 
 class PIDUtil {
     class func collectPIDs(appName: String) -> (Int, Array<Int>) {
-        print("Running TrafficMonitor#collectPIDs")
+        print("Running PIDUtil#collectPIDs")
         var pids: [Int] = []
         var parentPID = -1
         
@@ -29,12 +29,12 @@ class PIDUtil {
                 }
             }
         }
-        print("TrafficMonitor#pids = \(pids)")
+        print("PIDUtil#pids = \(pids)")
         return (parentPID, pids)
     }
     
     class func getChildPIDs(ofParentPID parentPID: pid_t) -> [pid_t] {
-        print("Running TrafficMonitor#getChildPIDs")
+        print("Running PIDUtil#getChildPIDs")
         let task = Process()
         task.launchPath = "/bin/sh"
         task.arguments = ["-c", "ps -o pid,ppid -ax | awk '{ if ($2 == \(parentPID)) print $1 }'"]

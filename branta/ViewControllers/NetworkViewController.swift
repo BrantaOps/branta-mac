@@ -24,12 +24,13 @@ class NetworkViewController: NSViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
+        
         walletName.stringValue = walletRuntime!
         
-//        let tm = TrafficMonitor()
-//        tableView.delegate = tm
-//        tableView.dataSource = tm
-//        tm.runDataFeed()
+        let tm = TrafficMonitor(walletName: walletRuntime!)
+        tableView.delegate = tm
+        tableView.dataSource = tm
+        tm.runDataFeed()
     }
     
     override func viewDidAppear() {
