@@ -8,8 +8,8 @@
 import Cocoa
 import Foundation
 
-let HEIGHT = 30.0
-let TABLE_FONT = 17.0
+let HEIGHT      = 30.0
+let TABLE_FONT  = 17.0
 
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
@@ -18,11 +18,11 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     var tableData: Array<[String: String]> = []
 
     let COLUMNS = [
-        "WALLET_NAME": 0,
-        "STATUS": 1,
-        "RUNNING": 2,
-        "LAST_SCANNED": 3,
-        "NETWORK_ACTIVITY": 4,
+        "WALLET_NAME"           : 0,
+        "STATUS"                : 1,
+        "RUNNING"               : 2,
+        "LAST_SCANNED"          : 3,
+        "NETWORK_ACTIVITY"      : 4,
     ]
     
     override func viewWillAppear() {
@@ -32,8 +32,8 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate      = self
+        tableView.dataSource    = self
     }
     
     override func viewDidAppear() {
@@ -86,9 +86,18 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["RUNNING"] {
-            // TODO
-            textField.stringValue = "No"
+            let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
+            
+            // TODO - this should be a button, showing how many processes are running
+            // click into it, and show PID and each PIDs children PID based on OS API
+            
+            // TODO - Repaint on 1 second cadence. Cache other columns.
+            var pids = PIDUtil.collectPIDs(appName: name)
+            textField.stringValue = String(pids.0)
+            
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
+            
+            // TODO - this needs to pull from upstream of table paint.
             let currentTime         = Date()
             let dateFormatter       = DateFormatter()
             dateFormatter.timeStyle = .medium
@@ -106,11 +115,19 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     
     @objc func viewNetwork(sender: NSClickGestureRecognizer) {
         if let clickedTextField = sender.view as? NSTextField {
-             let storyboard = NSStoryboard(name: "Main", bundle: nil)
-             guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NSViewController else {
-                 fatalError("Unable to instantiate new view controller")
-             }
-             presentAsModalWindow(newViewController)
+            let row = tableView.row(for: clickedTextField)
+            let runtimeName = tableData[row]["name"]
+
+            let segueIdentifier = "network"
+            let storyboard = NSStoryboard(name: "Main", bundle: nil)
+            guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
+                fatalError("Unable to instantiate new view controller")
+            }
+            
+            newViewController.walletRuntime = runtimeName
+            
+            let newWindowController = NSWindowController(window: NSWindow(contentViewController: newViewController))
+            newWindowController.showWindow(nil)
         }
     }
     

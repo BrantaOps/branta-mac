@@ -17,15 +17,19 @@ import Foundation
 
 class NetworkViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var walletName: NSTextField!
+    
+    var walletRuntime: String?
         
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
-
-        let tm = TrafficMonitor()
-        tableView.delegate = tm
-        tableView.dataSource = tm
-        tm.runDataFeed()
+        walletName.stringValue = walletRuntime!
+        
+//        let tm = TrafficMonitor()
+//        tableView.delegate = tm
+//        tableView.dataSource = tm
+//        tm.runDataFeed()
     }
     
     override func viewDidAppear() {

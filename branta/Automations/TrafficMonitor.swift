@@ -47,6 +47,7 @@ class TrafficMonitor: Automation {
     
     func execute() {
         print("running execute")
+        // I think its a race to get to here
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             print("Running TrafficMonitor#execute")
             (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName)
@@ -61,17 +62,22 @@ class TrafficMonitor: Automation {
         let lines = output.components(separatedBy: "\n")
         for line in lines {
             let components = line.components(separatedBy: .whitespaces)
-            let command         = components[0]
-            let pid             = components[1]
-            let user            = components[2]
-            let fileDescriptor  = components[3]
-            let type            = components[4]
-            let device          = components[5]
-            let sizeOffset      = components[6]
-            let node            = components[7]
-            let name            = components[8]
-            let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
-            connections.append(connection)
+            print("foo: components \(components)")
+            if components != nil {
+                let command         = components[0]
+                let pid             = components[1]
+                let user            = components[2]
+                let fileDescriptor  = components[3]
+                let type            = components[4]
+                let device          = components[5]
+                let sizeOffset      = components[6]
+                let node            = components[7]
+                let name            = components[8]
+                
+                let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
+                connections.append(connection)
+            }
+
         }
         
         return connections
@@ -104,7 +110,7 @@ class TrafficMonitor: Automation {
 extension TrafficMonitor: NSTableViewDelegate, NSTableViewDataSource {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        guard let columnNumber = tableView.tableColumns.firstIndex(of: tableColumn!) else {
+        guard tableView.tableColumns.firstIndex(of: tableColumn!) != nil else {
             return nil
         }
         
