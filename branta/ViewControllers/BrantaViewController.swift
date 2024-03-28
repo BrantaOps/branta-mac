@@ -8,14 +8,22 @@
 import Cocoa
 import Foundation
 
-let HEIGHT = 30.0
-let TABLE_FONT = 17.0
+let HEIGHT      = 30.0
+let TABLE_FONT  = 17.0
 
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
     var tableData: Array<[String: String]> = []
+
+    let COLUMNS = [
+        "WALLET_NAME"           : 0,
+        "STATUS"                : 1,
+        "RUNNING"               : 2,
+        "LAST_SCANNED"          : 3,
+        "NETWORK_ACTIVITY"      : 4,
+    ]
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -24,8 +32,8 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate      = self
+        tableView.dataSource    = self
     }
     
     override func viewDidAppear() {
@@ -61,11 +69,11 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
+        let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
          
-        if columnNumber == 0 {
-            let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
+        if columnNumber == COLUMNS["WALLET_NAME"] {
             textField.stringValue = name
-        } else if columnNumber == 1 {
+        } else if columnNumber == COLUMNS["STATUS"] {
             if tableData[row]["match"] == "true" {
                 textField.stringValue = "✓"
                 textField.textColor = NSColor(hex: GOLD)
@@ -77,15 +85,47 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font = NSFont(name: FONT, size: 20.0)
             let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
-        } else if columnNumber == 2 {            
+        } else if columnNumber == COLUMNS["RUNNING"] {
+            // TODO - this should be a button, showing how many processes are running
+            // click into it, and show PID and each PIDs children PID based on OS API
+            
+            // TODO - Repaint on 1 second cadence. Cache other columns.
+            let pids = PIDUtil.collectPIDs(appName: name)
+            textField.stringValue = String(pids.0)
+            
+        } else if columnNumber == COLUMNS["LAST_SCANNED"] {
+            
+            // TODO - this needs to pull from upstream of table paint.
             let currentTime         = Date()
             let dateFormatter       = DateFormatter()
             dateFormatter.timeStyle = .medium
             let formattedTime       = dateFormatter.string(from: currentTime)
             
             textField.stringValue = formattedTime
+        } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
+            textField.stringValue = "View"
+            textField.font = NSFont(name: FONT, size: 20.0)
+            let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
+            textField.addGestureRecognizer(clickGesture)
         }
         return textField
+    }
+    
+    @objc func viewNetwork(sender: NSClickGestureRecognizer) {
+        if let clickedTextField = sender.view as? NSTextField {
+            let row = tableView.row(for: clickedTextField)
+            let runtimeName = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
+
+            let storyboard = NSStoryboard(name: "Main", bundle: nil)
+            guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
+                fatalError("Unable to instantiate new view controller")
+            }
+            
+            newViewController.walletRuntime = runtimeName
+            
+            let newWindowController = NSWindowController(window: NSWindow(contentViewController: newViewController))
+            newWindowController.showWindow(nil)
+        }
     }
     
     @objc func showDetails(sender: NSClickGestureRecognizer) {
