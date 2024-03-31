@@ -807,39 +807,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                         </tableColumn>
-                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.1" width="71" minWidth="40" maxWidth="1000" id="jD4-1J-XI3">
-                                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Running?">
-                                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
-                                                            </tableHeaderCell>
-                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" refusesFirstResponder="YES" title="Text Cell" id="T7C-Ls-gnY">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                                            <prototypeCellViews>
-                                                                <tableCellView id="6Ep-xT-DkG">
-                                                                    <rect key="frame" x="295" y="0.0" width="71" height="30"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cG6-FJ-ipl">
-                                                                            <rect key="frame" x="0.0" y="7" width="71" height="16"/>
-                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="UhS-wp-UHn">
-                                                                                <font key="font" usesAppearanceFont="YES"/>
-                                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                            </textFieldCell>
-                                                                        </textField>
-                                                                    </subviews>
-                                                                    <connections>
-                                                                        <outlet property="textField" destination="cG6-FJ-ipl" id="Q7y-wR-FIc"/>
-                                                                    </connections>
-                                                                </tableCellView>
-                                                            </prototypeCellViews>
-                                                        </tableColumn>
-                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.2" width="202.5" minWidth="40" maxWidth="1000" id="VeT-ca-4dz">
+                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.2" width="287.5" minWidth="40" maxWidth="1000" id="VeT-ca-4dz">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="center" title="Last Scanned">
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -852,11 +820,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="383" y="0.0" width="203" height="30"/>
+                                                                    <rect key="frame" x="295" y="0.0" width="287.5" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
-                                                                            <rect key="frame" x="0.0" y="7" width="203" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="287" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="Zg4-TZ-M1M">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -884,7 +852,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="603" y="0.0" width="150" height="30"/>
+                                                                    <rect key="frame" x="599.5" y="0.0" width="149.5" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -1378,11 +1346,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="6ez-Zm-3U6">
-                                                                    <rect key="frame" x="8" y="0.0" width="365" height="58"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="364" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
-                                                                            <rect key="frame" x="0.0" y="21" width="365" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="364" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
                                                                                 <font key="font" usesAppearanceFont="YES"/>

@@ -15,6 +15,8 @@
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED3170952B826494003D77D4 /* VersionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3170942B826494003D77D4 /* VersionComp.swift */; };
 		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
+		ED4535BC2BB60A9C00536491 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BB2BB60A9C00536491 /* String.swift */; };
+		ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */; };
 		ED4E9F512B3DB64B0000F751 /* HashGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1C62B4ED2E80094D845 /* BlockstreamGreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */; };
@@ -82,6 +84,8 @@
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED3170942B826494003D77D4 /* VersionComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionComp.swift; sourceTree = "<group>"; };
 		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
+		ED4535BB2BB60A9C00536491 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* HashGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashGrabber.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
 		ED4FA1C52B4ED2E80094D845 /* BlockstreamGreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockstreamGreen.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 				EDD011832B6C56F00091CAAD /* Sha.swift */,
 				ED97B84D2B9F46A3007DD2F5 /* Updater.swift */,
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
+				ED4535BB2BB60A9C00536491 /* String.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 		ED73E9692B07D686005742BA /* brantaTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */,
 				ED643CD72B519EE900FEBE36 /* Automations */,
 				ED643CD62B519EDF00FEBE36 /* ViewControllers */,
 				ED73E96A2B07D686005742BA /* brantaTests.swift */,
@@ -505,6 +511,7 @@
 				ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */,
 				ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
+				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
 				ED7B16B22B556A650003EFEB /* Focus.swift in Sources */,
 			);
@@ -518,6 +525,7 @@
 				ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */,
 				ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */,
 				EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */,
+				ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */,
 				ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */,
 				ED73E96B2B07D686005742BA /* brantaTests.swift in Sources */,
 				ED643CDF2B51A00600FEBE36 /* WasabiTests.swift in Sources */,
@@ -748,13 +756,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Branta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Branta";
@@ -766,13 +778,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Branta.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Branta";
@@ -783,8 +799,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaUITests;
@@ -799,8 +817,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaUITests;

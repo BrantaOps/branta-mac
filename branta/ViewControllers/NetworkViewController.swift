@@ -15,11 +15,21 @@ import Foundation
 // 2. IPs that touch each PID in or out
 // TrafficMonitor acts as delegate
 
-class NetworkViewController: NSViewController {
+class NetworkViewController: NSViewController, DataFeedObserver {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var walletName: NSTextField!
     
     var walletRuntime: String?
+    
+    func dataFeedExecutionDidFinish(success: Bool) {
+        if success {
+            // Data feed executed successfully
+        } else {
+            if let window = view.window {
+                window.close()
+            }
+        }
+    }
         
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -27,9 +37,10 @@ class NetworkViewController: NSViewController {
         
         walletName.stringValue = walletRuntime!
         
-        let tm = TrafficMonitor(walletName: walletRuntime!)
+        let tm = TrafficMonitor(tableView: tableView, walletName: walletRuntime!)
         tableView.delegate = tm
         tableView.dataSource = tm
+        tm.observer = self
         tm.runDataFeed()
     }
     

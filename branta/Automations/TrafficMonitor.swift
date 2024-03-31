@@ -22,13 +22,26 @@ struct Connection {
 
 class TrafficMonitor: Automation {
     
+    var tableView: NSTableView
+
+    
     var parentPID: Int = -1
     var pids: Array<Int> = []
-    var ips: Array<Int> = []
+    var connections: Array<Connection> = []
     var walletName:String?
+    weak var observer: DataFeedObserver?
+
     
-    init(walletName: String) {
+    let CADENCE = 3.0
+    
+    let COLUMNS = [
+        "PID": 0,
+        "IP": 1,
+    ]
+    
+    init(tableView: NSTableView, walletName: String) {
         self.walletName = walletName
+        self.tableView = tableView
         super.init()
     }
     
@@ -36,11 +49,15 @@ class TrafficMonitor: Automation {
         
         if SudoUtil.pw != nil {
             self.execute()
+            observer?.dataFeedExecutionDidFinish(success: true)
         } else {
             SudoUtil.getPW { password in
-                if password != nil {
+                if password == nil {
+                    self.observer?.dataFeedExecutionDidFinish(success: false)
+                }
+                else {
                     self.execute()
-                    print("after execute call")
+                    self.observer?.dataFeedExecutionDidFinish(success: true)
                 }
             }
         }
@@ -49,31 +66,39 @@ class TrafficMonitor: Automation {
     private
     
     func execute() {
-        print("running execute")
-        // I think its a race to get to here
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-            print("TrafficMonitor#execute: pids=\(self.pids), ips=\(self.ips)")
+        Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
+//            print("TrafficMonitor#execute: pids=\(self.pids), connections=\(self.connections)")
             
             
             (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
-            self.getIPs() // TODO - move to Util
-            // TODO - Force Table repaint
+            self.getConnections()
             
-            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
-    func parseOutput(_ output: String) -> [Connection] {
-        print("Running TrafficMonitor#parseOutput on \(output)")
+    // Parse output of each PID. Not every PID talks over the network.
+    func parseOutput(_ output: String) {
+        if output == "" {
+            return
+        }
+//        print("Running TrafficMonitor#parseOutput on output: \(output)")
 
-        var connections = [Connection]()
+//        var connections = [Connection]()
         
         let lines = output.components(separatedBy: "\n")
         
         for line in lines {
-            let components = line.components(separatedBy: .whitespaces)
+//            print("Running TrafficMonitor#parseOutput on line: \(line)")
 
-            if components.count > 8 {
+            let processedLine = line.removeExtraSpaces()
+            let components = processedLine.components(separatedBy: .whitespaces)
+//            print("Running TrafficMonitor#parseOutput on components: \(components)")
+
+            // Skip table heading
+            if components.count > 8 && components[0] != "COMMAND" {
                 let command         = components[0]
                 let pid             = components[1]
                 let user            = components[2]
@@ -85,62 +110,71 @@ class TrafficMonitor: Automation {
                 let name            = components[8]
                 
                 let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
-                connections.append(connection)
+                
+                print("Running TrafficMonitor#parseOutput appending: \(connection)")
+                if !(connections.contains(where: {
+//                    $0.command == connection.command &&
+//                    $0.pid == connection.pid &&
+//                    $0.user == connection.user &&
+//                    $0.fileDescriptor == connection.fileDescriptor &&
+//                    $0.type == connection.type &&
+//                    $0.device == connection.device &&
+//                    $0.sizeOffset == connection.sizeOffset &&
+//                    $0.node == connection.node &&
+                    $0.name == connection.name
+                 })) {
+                    connections.append(connection)
+                }
+                
             }
 
         }
         
-        return connections
+//        return connections
     }
     
 
-    func getIPs() {
+    func getConnections() {
         for pid in pids {
-            print("Running TrafficMonitor#getIPs on \(pids)")
-            
+//            print("Running TrafficMonitor#getIPs on \(pids)")
             if let output = Command.runCommand("sudo lsof -i -a -p \(pid) -n") {
-                let connections = parseOutput(output)
-                print("TrafficMonitor#getIPs dump for \(pid):")
-                for connection in connections {
-                    // FIRST LOOP is the columns
-                    print("Command: \(connection.command)")
-                    print("PID: \(connection.pid)")
-                    print("User: \(connection.user)")
-                    print("File Descriptor: \(connection.fileDescriptor)")
-                    print("Type: \(connection.type)")
-                    print("Device: \(connection.device)")
-                    print("Size/Offset: \(connection.sizeOffset)")
-                    print("Node: \(connection.node)")
-                    print("Name: \(connection.name)")
-                    print("-------------------------")
-                }
+                parseOutput(output)
             }
         }
     }
 }
 
 extension TrafficMonitor: NSTableViewDelegate, NSTableViewDataSource {
+
     
+    //
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        guard tableView.tableColumns.firstIndex(of: tableColumn!) != nil else {
+        guard let columnNumber = tableView.tableColumns.firstIndex(of: tableColumn!) else {
             return nil
         }
         
         // Force rewrite of the table. Don't care about cache.
         let textField = NSTextField()
-        textField.stringValue = "foo"
         textField.identifier = NSUserInterfaceItemIdentifier("TextCell")
         textField.isEditable = false
         textField.bezelStyle = .roundedBezel
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
-
+         
+        if columnNumber == COLUMNS["PID"] {
+            textField.stringValue = connections[row].pid
+        } else if columnNumber == COLUMNS["IP"] {
+            textField.stringValue = connections[row].name
+        } else {
+            print("columnNumber == else")
+        }
         return textField
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return ips.count
+        print("returning numberOfRows \(connections.count), ")
+        return connections.count
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {

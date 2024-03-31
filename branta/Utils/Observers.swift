@@ -11,3 +11,7 @@ import Foundation
 protocol VerifyObserver: AnyObject {
     func verifyDidChange(newResults: Array<[String: String]>)
 }
+
+protocol DataFeedObserver: AnyObject {
+    func dataFeedExecutionDidFinish(success: Bool)
+}
