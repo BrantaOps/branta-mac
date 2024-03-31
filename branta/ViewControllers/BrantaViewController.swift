@@ -74,15 +74,15 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.stringValue = name
         } else if columnNumber == COLUMNS["STATUS"] {
             if tableData[row]["match"] == "true" {
-                textField.stringValue = "✓"
-                textField.textColor = NSColor(hex: GOLD)
+                textField.stringValue   = "✓"
+                textField.textColor     = NSColor(hex: GOLD)
             }
             else {
-                textField.stringValue = "⚠"
-                textField.textColor = NSColor(hex: RED)
+                textField.stringValue   = "⚠"
+                textField.textColor     = NSColor(hex: RED)
             }
-            textField.font = NSFont(name: FONT, size: 20.0)
-            let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
+            textField.font              = NSFont(name: FONT, size: 20.0)
+            let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
 //        } else if columnNumber == COLUMNS["RUNNING"] {
 //            // TODO - this should be a button, showing how many processes are running
@@ -98,18 +98,15 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
 //            }
 //
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
-            
-            // TODO - this needs to pull from upstream of table paint.
             let currentTime         = Date()
             let dateFormatter       = DateFormatter()
             dateFormatter.timeStyle = .medium
             let formattedTime       = dateFormatter.string(from: currentTime)
-            
-            textField.stringValue = formattedTime
+            textField.stringValue   = formattedTime
         } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
-            textField.stringValue = "View"
-            textField.font = NSFont(name: FONT, size: 20.0)
-            let clickGesture = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
+            textField.stringValue   = "View"
+            textField.font          = NSFont(name: FONT, size: 20.0)
+            let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
             textField.addGestureRecognizer(clickGesture)
         }
         return textField

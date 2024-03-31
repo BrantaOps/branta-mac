@@ -49,6 +49,7 @@
 		EDB9F70F2BA9D91600F0C005 /* TrafficMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */; };
 		EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC310402B1F7A38005BCBBA /* NostrAddress.swift */; };
 		EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */ = {isa = PBXBuildFile; productRef = EDC31E0A2B84DBE4005F0C43 /* Countly */; };
+		EDC6CA762BB8E4D1009C9342 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC6CA752BB8E4D1009C9342 /* Connection.swift */; };
 		EDD0117F2B6580760091CAAD /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD0117E2B6580760091CAAD /* Installer.swift */; };
 		EDD011822B67F5890091CAAD /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011812B67F5890091CAAD /* DropView.swift */; };
 		EDD011842B6C56F00091CAAD /* Sha.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011832B6C56F00091CAAD /* Sha.swift */; };
@@ -121,6 +122,7 @@
 		EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficMonitor.swift; sourceTree = "<group>"; };
 		EDC310402B1F7A38005BCBBA /* NostrAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NostrAddress.swift; sourceTree = "<group>"; };
+		EDC6CA752BB8E4D1009C9342 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		EDD0117E2B6580760091CAAD /* Installer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
 		EDD011812B67F5890091CAAD /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
 		EDD011832B6C56F00091CAAD /* Sha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				ED97B84D2B9F46A3007DD2F5 /* Updater.swift */,
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
 				ED4535BB2BB60A9C00536491 /* String.swift */,
+				EDC6CA752BB8E4D1009C9342 /* Connection.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				ED04D6E72BB1A52F00E5DE59 /* PID.swift in Sources */,
 				ED04D6EA2BB1A8AB00E5DE59 /* Command.swift in Sources */,
 				EDD915272B0C3C8000A288FE /* Verify.swift in Sources */,
+				EDC6CA762BB8E4D1009C9342 /* Connection.swift in Sources */,
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */,
 				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,

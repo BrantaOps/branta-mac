@@ -8,30 +8,16 @@
 import Cocoa
 import Foundation
 
-struct Connection {
-    var command: String
-    var pid: String
-    var user: String
-    var fileDescriptor: String
-    var type: String
-    var device: String
-    var sizeOffset: String
-    var node: String
-    var name: String
-}
-
 class TrafficMonitor: Automation {
     
     var tableView: NSTableView
-
-    
-    var parentPID: Int = -1
-    var pids: Array<Int> = []
-    var connections: Array<Connection> = []
+    var parentPID: Int                  = -1
+    var pids: Array<Int>                = []
+    var connections: Array<Connection>  = []
     var walletName:String?
     weak var observer: DataFeedObserver?
 
-    
+    // TODO - this should be a user preference.
     let CADENCE = 3.0
     
     let COLUMNS = [
@@ -46,7 +32,6 @@ class TrafficMonitor: Automation {
     }
     
     override func runDataFeed() {
-        
         if SudoUtil.pw != nil {
             self.execute()
             observer?.dataFeedExecutionDidFinish(success: true)
@@ -66,13 +51,14 @@ class TrafficMonitor: Automation {
     private
     
     func execute() {
+        (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
+        self.getConnections()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
-//            print("TrafficMonitor#execute: pids=\(self.pids), connections=\(self.connections)")
-            
-            
             (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
             self.getConnections()
-            
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
@@ -84,20 +70,13 @@ class TrafficMonitor: Automation {
         if output == "" {
             return
         }
-//        print("Running TrafficMonitor#parseOutput on output: \(output)")
-
-//        var connections = [Connection]()
         
         let lines = output.components(separatedBy: "\n")
         
         for line in lines {
-//            print("Running TrafficMonitor#parseOutput on line: \(line)")
-
             let processedLine = line.removeExtraSpaces()
             let components = processedLine.components(separatedBy: .whitespaces)
-//            print("Running TrafficMonitor#parseOutput on components: \(components)")
 
-            // Skip table heading
             if components.count > 8 && components[0] != "COMMAND" {
                 let command         = components[0]
                 let pid             = components[1]
@@ -113,14 +92,6 @@ class TrafficMonitor: Automation {
                 
                 print("Running TrafficMonitor#parseOutput appending: \(connection)")
                 if !(connections.contains(where: {
-//                    $0.command == connection.command &&
-//                    $0.pid == connection.pid &&
-//                    $0.user == connection.user &&
-//                    $0.fileDescriptor == connection.fileDescriptor &&
-//                    $0.type == connection.type &&
-//                    $0.device == connection.device &&
-//                    $0.sizeOffset == connection.sizeOffset &&
-//                    $0.node == connection.node &&
                     $0.name == connection.name
                  })) {
                     connections.append(connection)
@@ -129,14 +100,10 @@ class TrafficMonitor: Automation {
             }
 
         }
-        
-//        return connections
     }
-    
 
     func getConnections() {
         for pid in pids {
-//            print("Running TrafficMonitor#getIPs on \(pids)")
             if let output = Command.runCommand("sudo lsof -i -a -p \(pid) -n") {
                 parseOutput(output)
             }
@@ -145,9 +112,7 @@ class TrafficMonitor: Automation {
 }
 
 extension TrafficMonitor: NSTableViewDelegate, NSTableViewDataSource {
-
     
-    //
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         guard let columnNumber = tableView.tableColumns.firstIndex(of: tableColumn!) else {
             return nil
@@ -165,6 +130,7 @@ extension TrafficMonitor: NSTableViewDelegate, NSTableViewDataSource {
         if columnNumber == COLUMNS["PID"] {
             textField.stringValue = connections[row].pid
         } else if columnNumber == COLUMNS["IP"] {
+            textField.isEditable = true
             textField.stringValue = connections[row].name
         } else {
             print("columnNumber == else")
