@@ -5,7 +5,7 @@
 //  Created by Keith Gardner on 3/30/24.
 //
 
-struct Connection {
+struct Connection: Equatable {
     var command: String
     var pid: String
     var user: String

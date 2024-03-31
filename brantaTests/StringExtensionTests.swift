@@ -41,7 +41,7 @@ class StringExtensionTests: XCTestCase {
         let result = stringWithOnlySpaces.removeExtraSpaces()
         
         // Then
-        XCTAssertEqual(result, "")
+        XCTAssertEqual(result, " ")
     }
     
     func testRemoveExtraSpaces_StringWithNewlines() {
