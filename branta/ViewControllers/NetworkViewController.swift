@@ -22,9 +22,8 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     var walletRuntime: String?
     
     func dataFeedExecutionDidFinish(success: Bool) {
-        if success {
-            // Data feed executed successfully
-        } else {
+        // TODO - get whether pw was accepted or not.
+        if !success {
             if let window = view.window {
                 window.close()
             }

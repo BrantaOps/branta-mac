@@ -84,19 +84,6 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             textField.font              = NSFont(name: FONT, size: 20.0)
             let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
-//        } else if columnNumber == COLUMNS["RUNNING"] {
-//            // TODO - this should be a button, showing how many processes are running
-//            // click into it, and show PID and each PIDs children PID based on OS API
-//
-//            // TODO - Repaint on 1 second cadence. Cache other columns.
-//            let pids = PIDUtil.collectPIDs(appName: name)
-//            let parent = String(pids.0)
-//            if parent == "-1" {
-//                textField.stringValue = ""
-//            } else {
-//                textField.stringValue = String(pids.0)
-//            }
-//
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
             let currentTime         = Date()
             let dateFormatter       = DateFormatter()

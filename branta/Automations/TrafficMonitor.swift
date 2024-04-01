@@ -86,7 +86,13 @@ class TrafficMonitor: Automation {
                 let device          = components[5]
                 let sizeOffset      = components[6]
                 let node            = components[7]
-                let name            = components[8]
+                let nameParts       = components[8].components(separatedBy: "->")
+                var name            = "invalid IP format"
+                if nameParts.count == 2 {
+                    let ipAddress   = nameParts[1].components(separatedBy: ":").first ?? ""
+                    name            = ipAddress
+                }
+
                 
                 let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
                 
