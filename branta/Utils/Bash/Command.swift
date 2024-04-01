@@ -12,7 +12,7 @@ class Command {
         let task = Process()
         task.launchPath = "/bin/sh"
 
-        if runAsSU {
+        if runAsSU && SudoUtil.pw != nil {
             task.arguments = ["-c", "echo \(String(data: SudoUtil.pw!, encoding: .utf8)!) | sudo -S \(command)"]
         } else {
             task.arguments = ["-c", command]

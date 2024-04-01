@@ -90,7 +90,6 @@ class TrafficMonitor: Automation {
                 
                 let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
                 
-                print("Running TrafficMonitor#parseOutput appending: \(connection)")
                 if !(connections.contains(where: {
                     $0.name == connection.name
                  })) {
@@ -132,14 +131,11 @@ extension TrafficMonitor: NSTableViewDelegate, NSTableViewDataSource {
         } else if columnNumber == COLUMNS["IP"] {
             textField.isEditable = true
             textField.stringValue = connections[row].name
-        } else {
-            print("columnNumber == else")
         }
         return textField
     }
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        print("returning numberOfRows \(connections.count), ")
         return connections.count
     }
     

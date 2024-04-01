@@ -57,6 +57,7 @@
 		EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011872B6D80040091CAAD /* SettingsViewController.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDEAE53F2BB8F162002D7EE1 /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */; };
+		EDEAE5412BB8F2E7002D7EE1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */; };
 		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,6 +132,7 @@
 		EDD011872B6D80040091CAAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTests.swift; sourceTree = "<group>"; };
+		EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
 		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -312,6 +314,7 @@
 				ED643CD62B519EDF00FEBE36 /* ViewControllers */,
 				ED73E96A2B07D686005742BA /* brantaTests.swift */,
 				EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */,
+				EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */,
 			);
 			path = brantaTests;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED643CD32B5168BF00FEBE36 /* VerifyTests.swift in Sources */,
+				EDEAE5412BB8F2E7002D7EE1 /* CommandTests.swift in Sources */,
 				ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */,
 				EDEAE53F2BB8F162002D7EE1 /* ConnectionTests.swift in Sources */,
 				ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */,
