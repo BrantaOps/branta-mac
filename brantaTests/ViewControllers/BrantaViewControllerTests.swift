@@ -13,7 +13,7 @@ import XCTest
 @testable import Branta
 
 class BrantaViewControllerTests: XCTestCase {
-    
+
     func testDelegates() {
         let brantaViewController = BrantaViewController()
         XCTAssertTrue(brantaViewController is NSViewController, "BrantaViewController should conform to NSViewController")
@@ -21,7 +21,7 @@ class BrantaViewControllerTests: XCTestCase {
         XCTAssertTrue(brantaViewController is NSTableViewDelegate, "BrantaViewController should conform to NSTableViewDelegate")
         XCTAssertTrue(brantaViewController is NSTableViewDataSource, "BrantaViewController should conform to NSTableViewDataSource")
     }
-    
+
     func testCompareVersions() {
         let brantaViewController = BrantaViewController()
 

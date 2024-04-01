@@ -11,6 +11,8 @@ import Foundation
 class Wallet {
     
     // Name in motion
+    // (Grep all PIDs by this string to find child PIDS)
+    // (If there are exceptions to this, subclass)
     class func runtimeName() -> String {
         return "Implement me"
     }
