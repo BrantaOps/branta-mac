@@ -11,14 +11,15 @@ import Foundation
 class TrafficMonitor: Automation {
     
     var tableView: NSTableView
-    var parentPID: Int                  = -1
+    var parentPID: Int?
     var pids: Array<Int>                = []
     var connections: Array<Connection>  = []
     var walletName:String?
     weak var observer: DataFeedObserver?
+    private var timer: Timer?
 
     // TODO - this should be a user preference.
-    let CADENCE = 3.0
+    let CADENCE = 5.0
     
     let COLUMNS = [
         "PID": 0,
@@ -47,19 +48,25 @@ class TrafficMonitor: Automation {
             }
         }
     }
+    
+    func stopDataFeed() {
+        timer?.invalidate()
+        timer = nil
+    }
 
     private
     
     func execute() {
-        Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
+
             DispatchQueue.main.async {
                 // Get parentPID if not cached
-                if self.parentPID == -1 {
+                if self.parentPID == nil {
                     self.parentPID = PIDUtil.getParentPID(appName: self.walletName!)
                 }
                 
                 // Get any children PIDs
-                self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID)
+                self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
                 
                 // Get IPs from all PIDS combined
                 self.getConnections()
@@ -69,6 +76,7 @@ class TrafficMonitor: Automation {
                 self.observer?.dataFeedCount(count: self.connections.count)
             }
         }
+        timer?.fire() // Optionally fire immediately
     }
     
     // Parse output of each PID. Not every PID talks over the network.
@@ -93,18 +101,28 @@ class TrafficMonitor: Automation {
                 let sizeOffset      = components[6]
                 let node            = components[7]
                 let nameParts       = components[8].components(separatedBy: "->")
-                var name            = "invalid IP format"
+                var name            = ""
                 if nameParts.count == 2 {
                     let ipAddress   = nameParts[1].components(separatedBy: ":").first ?? ""
                     name            = ipAddress
+                } else {
+                    name = components[8]
                 }
-
-                
-                let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
                 
                 if !(connections.contains(where: {
-                    $0.name == connection.name
+                    $0.name == name
                  })) {
+                    let connection = Connection(
+                        command: command,
+                        pid: pid,
+                        user: user,
+                        fileDescriptor: fileDescriptor,
+                        type: type,
+                        device: device,
+                        sizeOffset: sizeOffset,
+                        node: node,
+                        name: name
+                    )
                     connections.append(connection)
                 }
                 

@@ -8,7 +8,8 @@
 import Foundation
 
 class Command {
-    class func runCommand(_ command: String, runAsSU: Bool=true) -> String? {
+    class func runCommand(_ command: String, runAsSU: Bool=true) -> String? {        
+        print("\(Date().timeIntervalSince1970) +++ \(command)")
         let task = Process()
         task.launchPath = "/bin/sh"
 

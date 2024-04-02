@@ -20,6 +20,8 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     @IBOutlet weak var walletName: NSTextField!
     
     var walletRuntime: String?
+    var tm: TrafficMonitor?
+
     
     func dataFeedExecutionDidFinish(success: Bool) {
         // TODO - get whether pw was accepted or not. - if sudo is wrong, exit this window and abort thread
@@ -31,8 +33,7 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     }
     
     func dataFeedCount(count: Int) {
-        let v = "\(walletRuntime!): \(count) Outbound Connections"
-        walletName.stringValue = v
+        walletName.stringValue = "\(walletRuntime!): \(count) Connections"
     }
         
     override func viewWillAppear() {
@@ -41,15 +42,17 @@ class NetworkViewController: NSViewController, DataFeedObserver {
         
         walletName.stringValue = walletRuntime!
         walletName.font = NSFont(name: FONT, size: 19.0)
-
         
-        let tm = TrafficMonitor(tableView: tableView, walletName: walletRuntime!)
+        tm = TrafficMonitor(tableView: tableView, walletName: walletRuntime!)
         tableView.delegate = tm
         tableView.dataSource = tm
-        tm.observer = self
-        tm.runDataFeed()
-        
-//        walletName.stringValue = "\(walletRuntime!): \(tm.connections.count) Outbound Connections"
+        tm?.observer = self
+        tm?.runDataFeed()
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        tm?.stopDataFeed()
     }
     
     override func viewDidAppear() {
