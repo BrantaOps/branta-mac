@@ -22,7 +22,7 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     var walletRuntime: String?
     
     func dataFeedExecutionDidFinish(success: Bool) {
-        // TODO - get whether pw was accepted or not.
+        // TODO - get whether pw was accepted or not. - if sudo is wrong, exit this window and abort thread
         if !success {
             if let window = view.window {
                 window.close()

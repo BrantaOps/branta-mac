@@ -51,15 +51,20 @@ class TrafficMonitor: Automation {
     private
     
     func execute() {
-        (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
-        self.getConnections()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
         Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
-            (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
-            self.getConnections()
             DispatchQueue.main.async {
+                // Get parentPID if not cached
+                if self.parentPID == -1 {
+                    self.parentPID = PIDUtil.getParentPID(appName: self.walletName!)
+                }
+                
+                // Get any children PIDs
+                self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID)
+                
+                // Get IPs from all PIDS combined
+                self.getConnections()
+                
+                
                 self.tableView.reloadData()
                 self.observer?.dataFeedCount(count: self.connections.count)
             }
