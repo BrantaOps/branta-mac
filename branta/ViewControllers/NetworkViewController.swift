@@ -29,18 +29,27 @@ class NetworkViewController: NSViewController, DataFeedObserver {
             }
         }
     }
+    
+    func dataFeedCount(count: Int) {
+        let v = "\(walletRuntime!): \(count) Outbound Connections"
+        walletName.stringValue = v
+    }
         
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
         
         walletName.stringValue = walletRuntime!
+        walletName.font = NSFont(name: FONT, size: 19.0)
+
         
         let tm = TrafficMonitor(tableView: tableView, walletName: walletRuntime!)
         tableView.delegate = tm
         tableView.dataSource = tm
         tm.observer = self
         tm.runDataFeed()
+        
+//        walletName.stringValue = "\(walletRuntime!): \(tm.connections.count) Outbound Connections"
     }
     
     override func viewDidAppear() {

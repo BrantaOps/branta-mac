@@ -61,6 +61,7 @@ class TrafficMonitor: Automation {
             self.getConnections()
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.observer?.dataFeedCount(count: self.connections.count)
             }
         }
     }

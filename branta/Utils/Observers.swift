@@ -14,4 +14,5 @@ protocol VerifyObserver: AnyObject {
 
 protocol DataFeedObserver: AnyObject {
     func dataFeedExecutionDidFinish(success: Bool)
+    func dataFeedCount(count: Int)
 }
