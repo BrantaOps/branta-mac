@@ -7,30 +7,47 @@
 
 import Foundation
 
-class Command {
-    class func runCommand(_ command: String, runAsSU: Bool=true) -> String? {        
-        print("\(Date().timeIntervalSince1970) +++ \(command)")
-        let task = Process()
-        task.launchPath = "/bin/sh"
+let WRONG_PASSWORD          = "Incorrect Password"
 
-        if runAsSU && SudoUtil.pw != nil {
-            task.arguments = ["-c", "echo \(String(data: SudoUtil.pw!, encoding: .utf8)!) | sudo -S \(command)"]
+class Command {
+    
+    static let PW_FEEDBACK  = "Sorry, try again."
+    static let BASH         = "/bin/sh"
+    
+    class func runCommand(_ command: String, runAsSU: Bool=true) -> String? {
+        let task            = Process()
+        task.launchPath     = BASH
+
+        if runAsSU {
+            if SudoUtil.isAuthenticated || command == TEST_FOR_SUDO {
+                task.arguments = ["-c", "echo \(String(describing: SudoUtil.password)) | sudo -S \(command)"]
+            } else {
+                print("Command#runCommand must have sudo auth before running as SU.")
+                return WRONG_PASSWORD
+            }
         } else {
-            task.arguments = ["-c", command]
+            task.arguments  = ["-c", command]
         }
         
-        let pipe = Pipe()
+        let pipe            = Pipe()
         task.standardOutput = pipe
+        let errorPipe       = Pipe()
+        task.standardError  = errorPipe
         
         task.launch()
         
-        let data = pipe.fileHandleForReading.readDataToEndOfFile()
+        let outputData      = pipe.fileHandleForReading.readDataToEndOfFile()
+        let errorData       = errorPipe.fileHandleForReading.readDataToEndOfFile()
         task.waitUntilExit()
+
+        let errorString     = String(data: errorData, encoding: .utf8)
+        let outputString    = String(data: outputData, encoding: .utf8)
         
-        guard let outputString = String(data: data, encoding: .utf8) else {
-            return nil
+        if errorString != nil && (errorString!.contains(PW_FEEDBACK)) {
+            return WRONG_PASSWORD
         }
         
+        print(outputString)
         return outputString
     }
 }

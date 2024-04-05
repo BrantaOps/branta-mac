@@ -8,13 +8,6 @@
 import Cocoa
 import Foundation
 
-
-// One NetworkViewController per wallet
-// In each NetworkViewController instance, track:
-// 1. PIDS
-// 2. IPs that touch each PID in or out
-// TrafficMonitor acts as delegate
-
 class NetworkViewController: NSViewController, DataFeedObserver {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var walletName: NSTextField!
@@ -23,9 +16,8 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     var tm: TrafficMonitor?
 
     
-    func dataFeedExecutionDidFinish(success: Bool) {
-        // TODO - get whether pw was accepted or not. - if sudo is wrong, exit this window and abort thread
-        if !success {
+    func dataFeedExecutionStarted(started: Bool) {
+        if !started {
             if let window = view.window {
                 window.close()
             }

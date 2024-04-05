@@ -18,9 +18,7 @@ class TrafficMonitor: Automation {
     weak var observer: DataFeedObserver?
     private var timer: Timer?
 
-    // TODO - this should be a user preference.
-    let CADENCE = 5.0
-    
+    let CADENCE = 2.0
     let COLUMNS = [
         "PID": 0,
         "IP": 1,
@@ -33,17 +31,16 @@ class TrafficMonitor: Automation {
     }
     
     override func runDataFeed() {
-        if SudoUtil.pw != nil {
+        if SudoUtil.isAuthenticated {
             self.execute()
-            observer?.dataFeedExecutionDidFinish(success: true)
+            observer?.dataFeedExecutionStarted(started: true)
         } else {
-            SudoUtil.getPW { password in
-                if password == nil {
-                    self.observer?.dataFeedExecutionDidFinish(success: false)
-                }
-                else {
+            SudoUtil.getPassword { gotCorrectPassword in
+                if gotCorrectPassword == true {
                     self.execute()
-                    self.observer?.dataFeedExecutionDidFinish(success: true)
+                    self.observer?.dataFeedExecutionStarted(started: true)
+                } else {
+                    self.observer?.dataFeedExecutionStarted(started: false)
                 }
             }
         }
@@ -65,18 +62,20 @@ class TrafficMonitor: Automation {
                     self.parentPID = PIDUtil.getParentPID(appName: self.walletName!)
                 }
                 
-                // Get any children PIDs
-                self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
-                
-                // Get IPs from all PIDS combined
-                self.getConnections()
-                
-                
-                self.tableView.reloadData()
-                self.observer?.dataFeedCount(count: self.connections.count)
+                // If process is running, get the pids + ips
+                if self.parentPID != -1 {
+                    // Get any children PIDs
+                    self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
+                    
+                    // Get IPs from all PIDS combined
+                    self.getConnections()
+                    
+                    self.tableView.reloadData()
+                    self.observer?.dataFeedCount(count: self.connections.count)
+                }
             }
         }
-        timer?.fire() // Optionally fire immediately
+        timer?.fire()
     }
     
     // Parse output of each PID. Not every PID talks over the network.
@@ -125,9 +124,7 @@ class TrafficMonitor: Automation {
                     )
                     connections.append(connection)
                 }
-                
             }
-
         }
     }
 

@@ -13,6 +13,6 @@ protocol VerifyObserver: AnyObject {
 }
 
 protocol DataFeedObserver: AnyObject {
-    func dataFeedExecutionDidFinish(success: Bool)
+    func dataFeedExecutionStarted(started: Bool)
     func dataFeedCount(count: Int)
 }
