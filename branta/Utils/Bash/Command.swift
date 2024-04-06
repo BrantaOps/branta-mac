@@ -20,7 +20,7 @@ class Command {
 
         if runAsSU {
             if SudoUtil.isAuthenticated || command == TEST_FOR_SUDO {
-                task.arguments = ["-c", "echo \(String(describing: SudoUtil.password)) | sudo -S \(command)"]
+                task.arguments = ["-c", "echo \(SudoUtil.password!) | sudo -S \(command)"]
             } else {
                 print("Command#runCommand must have sudo auth before running as SU.")
                 return WRONG_PASSWORD
@@ -47,7 +47,6 @@ class Command {
             return WRONG_PASSWORD
         }
         
-        print(outputString)
         return outputString
     }
 }

@@ -15,6 +15,9 @@ class Automation: NSObject {
     func runDataFeed() {
     }
     
+    func stopDataFeed() {
+    }
+    
     // API to start ongoing monitors
     class func run() {
     }

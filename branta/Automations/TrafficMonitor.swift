@@ -46,32 +46,33 @@ class TrafficMonitor: Automation {
         }
     }
     
-    func stopDataFeed() {
+    override func stopDataFeed() {
         timer?.invalidate()
         timer = nil
     }
 
     private
     
+    func foundProcess() -> Bool {
+        return self.parentPID != nil && self.parentPID != -1
+    }
+    
+    func findProcess() {
+        self.parentPID = PIDUtil.getParentPID(appName: self.walletName!)
+    }
+    
     func execute() {
         timer = Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
 
             DispatchQueue.main.async {
-                // Get parentPID if not cached
-                if self.parentPID == nil {
-                    self.parentPID = PIDUtil.getParentPID(appName: self.walletName!)
-                }
-                
-                // If process is running, get the pids + ips
-                if self.parentPID != -1 {
-                    // Get any children PIDs
+                if self.foundProcess() {
                     self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
-                    
-                    // Get IPs from all PIDS combined
                     self.getConnections()
-                    
                     self.tableView.reloadData()
                     self.observer?.dataFeedCount(count: self.connections.count)
+                }
+                else {
+                    self.findProcess()
                 }
             }
         }

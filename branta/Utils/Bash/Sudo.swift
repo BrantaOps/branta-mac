@@ -29,11 +29,17 @@ class SudoUtil {
             let response = alert.runModal()
             
             if response == .alertFirstButtonReturn {
+                // User entered a password. Assign the value & check for correctness.
+                self.password = passwordField.stringValue
+                
                 if let output = Command.runCommand(TEST_FOR_SUDO) {
+                    // We tried the password and it was wrong - clear field.
                     if output == WRONG_PASSWORD {
+                        self.password = nil
                         completion(false)
                     } else {
-                        self.password = passwordField.stringValue
+                        // We tried the password and it was correct - auth & complete.
+                        self.isAuthenticated = true
                         completion(true)
                     }
                 }
