@@ -36,7 +36,7 @@ class TrafficMonitor: Automation {
             observer?.dataFeedExecutionStarted(started: true)
         } else {
             SudoUtil.getPassword { gotCorrectPassword in
-                if gotCorrectPassword == true {
+                if gotCorrectPassword {
                     self.execute()
                     self.observer?.dataFeedExecutionStarted(started: true)
                 } else {
