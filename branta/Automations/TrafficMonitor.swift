@@ -62,16 +62,22 @@ class TrafficMonitor: Automation {
     }
     
     func execute() {
-        timer = Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
+        let timerQueue = DispatchQueue(label: "branta.timerQueue")
 
-            DispatchQueue.main.async {
+        // Run monitor on timer
+        timer = Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
+            // Processing should be done NOT on main thread
+            timerQueue.async {
                 if self.foundProcess() {
                     self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
                     self.getConnections()
-                    self.tableView.reloadData()
-                    self.observer?.dataFeedCount(count: self.connections.count)
-                }
-                else {
+                    
+                    // Dispatch UI updates back to main thread
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        self.observer?.dataFeedCount(count: self.connections.count)
+                    }
+                } else {
                     self.findProcess()
                 }
             }
