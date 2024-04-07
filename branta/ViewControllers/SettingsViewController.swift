@@ -8,17 +8,6 @@
 import Cocoa
 import Foundation
 
-let CADENCE_OPTIONS: [(String, Int)] = [
-    ("1 Second", 1),
-    ("5 Seconds", 5),
-    ("10 Seconds", 10),
-    ("30 Seconds", 30),
-    ("60 Seconds", 60),
-    ("5 Minutes", 300),
-    ("10 Minutes", 600),
-    ("30 Minutes", 1800)
-]
-
 class SettingsViewController: NSViewController {
     
     @IBOutlet weak var cadenceSelector: NSPopUpButton!

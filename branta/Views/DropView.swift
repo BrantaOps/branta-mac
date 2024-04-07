@@ -9,9 +9,7 @@ import Cocoa
 
 class DropView: NSView {
 
-    // Mac users will mostly use .dmg, but branta
-    // can also be used to verify an installer for other platforms.
-    let ALLOWED_EXTENSIONS = [
+    private let ALLOWED_EXTENSIONS = [
         "dmg",
         "rpm",
         "tar.gz",
@@ -23,11 +21,11 @@ class DropView: NSView {
         "msi",
         "snap"
     ]
-    let LIVE_COLOR = NSColor.darkGray.cgColor
-    let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
+    private let LIVE_COLOR = NSColor.darkGray.cgColor
+    private let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
     
-    let minimumHeight: CGFloat = 100
-    let minimumWidth: CGFloat = 200
+    private let minimumHeight: CGFloat = 100
+    private let minimumWidth: CGFloat = 200
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)

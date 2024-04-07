@@ -14,7 +14,6 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     
     var walletRuntime: String?
     var tm: TrafficMonitor?
-
     
     func dataFeedExecutionStarted(started: Bool) {
         if !started {

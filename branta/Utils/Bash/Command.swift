@@ -7,12 +7,10 @@
 
 import Foundation
 
-let WRONG_PASSWORD          = "Incorrect Password"
-
 class Command {
     
-    static let PW_FEEDBACK  = "Sorry, try again."
-    static let BASH         = "/bin/sh"
+    private static let PW_FEEDBACK  = "Sorry, try again."
+    private static let BASH         = "/bin/sh"
     
     class func runCommand(_ command: String, runAsSU: Bool=true) -> String? {
         let task            = Process()

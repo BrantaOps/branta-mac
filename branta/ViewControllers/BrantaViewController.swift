@@ -8,16 +8,13 @@
 import Cocoa
 import Foundation
 
-let HEIGHT      = 30.0
-let TABLE_FONT  = 17.0
-
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
-    var tableData: Array<[String: String]> = []
+    private var tableData: Array<[String: String]> = []
 
-    let COLUMNS = [
+    private let COLUMNS = [
         "WALLET_NAME"           : 0,
         "STATUS"                : 1,
         "LAST_SCANNED"          : 2,
@@ -192,3 +189,4 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
         }
     }
 }
+

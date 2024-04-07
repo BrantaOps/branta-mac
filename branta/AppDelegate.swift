@@ -8,22 +8,6 @@
 import Cocoa
 import Countly
 
-let FONT                    = "Avenir"
-let GOLD                    = "#B1914A"
-let RED                     = "#944545"
-let GRAY                    = "#333130"
-let ACTIVE                  = "Status: Active ✓"
-let KEYCODE_COMMA           = 43
-
-let APPS = [
-    Sparrow.runtimeName(),
-    Trezor.runtimeName(),
-    Ledger.runtimeName(),
-    BlockstreamGreen.runtimeName(),
-    Wasabi.runtimeName(),
-    Whirlpool.runtimeName()
-]
-
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
@@ -34,16 +18,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var notificationManager: BrantaNotify?
     var openedNetworkWindows: [String: NSWindowController] = [:]
     
-    
-    
-    
-    
     private let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
     private let KEY_ABOUT           = "A"
     private let KEY_SETTINGS        = "S"
     private let KEY_QUIT            = "Q"
     private let KEY_UPDATE          = "U"
-
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         //wipeDefaults() // For dev use
