@@ -30,7 +30,7 @@ class SettingsViewController: NSViewController {
         super.viewDidAppear()
         configureCadence()
         configureSwitches()
-        print(Settings.readFromDefaults())
+        BrantaLogger.log(s: Settings.readFromDefaults())
         
         if let window = view.window {
             window.minSize = NSSize(width: 400, height: 320)
@@ -119,7 +119,7 @@ class SettingsViewController: NSViewController {
             } else if setting.key == NOTIFY_UPON_STATUS_CHANGE {
                 notifyUponStatusChangeOutlet.state = setting.value as! Bool == true ? .on : .off
             } else if setting.key == SHOW_IN_DOCK {
-                print("settings \(SHOW_IN_DOCK) to \(setting.value)")
+                BrantaLogger.log(s: "settings \(SHOW_IN_DOCK) to \(setting.value)")
                 showInDockOutlet.state = setting.value as! Bool == true ? .on : .off
             }
             

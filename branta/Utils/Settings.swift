@@ -29,7 +29,7 @@ class Settings {
     static func readFromDefaults() -> [String: Any] {
         if let v = UserDefaults.standard.string(forKey: PREFS_KEY) {
             guard let jsonData = v.data(using: .utf8) else {
-                print("Failed to convert JSON string to Data")
+                BrantaLogger.log(s: "Failed to convert JSON string to Data")
                 return [:]
             }
 
@@ -38,13 +38,13 @@ class Settings {
                     prefHash = dict // Set in-memory values from persistant storage
                     return dict
                 } else {
-                    print("Failed to convert JSON to Dictionary")
+                    BrantaLogger.log(s: "Failed to convert JSON to Dictionary")
                 }
             } catch {
-                print("Error parsing JSON: \(error)")
+                BrantaLogger.log(s: "Error parsing JSON: \(error)")
             }
         } else {
-            print("No string found for key \(PREFS_KEY) in UserDefaults.")
+            BrantaLogger.log(s: "No string found for key \(PREFS_KEY) in UserDefaults.")
             return prefHash
         }
         return [:]
@@ -52,7 +52,7 @@ class Settings {
     }
     
     static func set(key: String, value: Any) {
-        print("Preferences.swift setting \(key):\(value)")
+        BrantaLogger.log(s: "Preferences.swift setting \(key):\(value)")
         prefHash[key] = value
         saveToDefaults()
     }
@@ -71,7 +71,7 @@ class Settings {
                 return str
             }
         } catch {
-            print("Error converting prefHash to JSON: \(error)")
+            BrantaLogger.log(s: "Error converting prefHash to JSON: \(error)")
         }
         
         return ""

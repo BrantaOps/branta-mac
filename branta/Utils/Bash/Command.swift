@@ -20,7 +20,7 @@ class Command {
             if SudoUtil.isAuthenticated || command == TEST_FOR_SUDO {
                 task.arguments = ["-c", "echo \(SudoUtil.password!) | sudo -S \(command)"]
             } else {
-                print("Command#runCommand must have sudo auth before running as SU.")
+                BrantaLogger.log(s: "Command#runCommand must have sudo auth before running as SU.")
                 return WRONG_PASSWORD
             }
         } else {
