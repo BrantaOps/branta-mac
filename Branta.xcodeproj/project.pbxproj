@@ -15,6 +15,7 @@
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED3170952B826494003D77D4 /* VersionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3170942B826494003D77D4 /* VersionComp.swift */; };
+		ED3A961A2BC2F15C00262E72 /* UpdaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A96192BC2F15C00262E72 /* UpdaterTests.swift */; };
 		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
 		ED4535BC2BB60A9C00536491 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BB2BB60A9C00536491 /* String.swift */; };
 		ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */; };
@@ -89,6 +90,7 @@
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED3170942B826494003D77D4 /* VersionComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionComp.swift; sourceTree = "<group>"; };
+		ED3A96192BC2F15C00262E72 /* UpdaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterTests.swift; sourceTree = "<group>"; };
 		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
 		ED4535BB2BB60A9C00536491 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				ED1D573C2BC2DDE30001DAD2 /* Bash */,
 				EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */,
 				ED1D573D2BC2DE2A0001DAD2 /* Extensions */,
+				ED3A96192BC2F15C00262E72 /* UpdaterTests.swift */,
 				ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */,
 			);
 			path = Utils;
@@ -579,6 +582,7 @@
 				EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */,
 				ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */,
 				ED1D573F2BC2DE710001DAD2 /* VersionCompTests.swift in Sources */,
+				ED3A961A2BC2F15C00262E72 /* UpdaterTests.swift in Sources */,
 				ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */,
 				ED643CDF2B51A00600FEBE36 /* WasabiTests.swift in Sources */,
 			);
