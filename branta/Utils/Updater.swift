@@ -32,6 +32,7 @@ class Updater {
         }
     }
         
+    private
     
     static func latestVersion(completion: @escaping (String?) -> Void) {
         guard let releasesURL = URL(string: FETCH_URL) else {
