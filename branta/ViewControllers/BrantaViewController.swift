@@ -101,18 +101,26 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
     
     @objc func viewNetwork(sender: NSClickGestureRecognizer) {
         if let clickedTextField = sender.view as? NSTextField {
+            let appDelegate = NSApp.delegate as? AppDelegate
             let row = tableView.row(for: clickedTextField)
             let runtimeName = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
-
-            let storyboard = NSStoryboard(name: "Main", bundle: nil)
-            guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
-                fatalError("Unable to instantiate new view controller")
+            
+            if let existingWindowController = appDelegate?.openedNetworkWindows[runtimeName] {
+                existingWindowController.window?.makeKeyAndOrderFront(nil)
+            } else {
+                let storyboard = NSStoryboard(name: "Main", bundle: nil)
+                guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
+                    fatalError("Unable to instantiate new view controller")
+                }
+                
+                newViewController.walletRuntime = runtimeName
+                
+                let newWindowController = NSWindowController(window: NSWindow(contentViewController: newViewController))
+                newWindowController.showWindow(nil)
+                
+                appDelegate?.openedNetworkWindows[runtimeName] = newWindowController
             }
-            
-            newViewController.walletRuntime = runtimeName
-            
-            let newWindowController = NSWindowController(window: NSWindow(contentViewController: newViewController))
-            newWindowController.showWindow(nil)
+
         }
     }
     

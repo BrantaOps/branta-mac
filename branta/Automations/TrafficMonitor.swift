@@ -11,15 +11,14 @@ import Foundation
 class TrafficMonitor: Automation {
     
     var tableView: NSTableView
-    var parentPID: Int                  = -1
+    var parentPID: Int?
     var pids: Array<Int>                = []
     var connections: Array<Connection>  = []
     var walletName:String?
     weak var observer: DataFeedObserver?
+    private var timer: Timer?
 
-    // TODO - this should be a user preference.
-    let CADENCE = 3.0
-    
+    let CADENCE = 2.0
     let COLUMNS = [
         "PID": 0,
         "IP": 1,
@@ -32,37 +31,58 @@ class TrafficMonitor: Automation {
     }
     
     override func runDataFeed() {
-        if SudoUtil.pw != nil {
+        if SudoUtil.isAuthenticated {
             self.execute()
-            observer?.dataFeedExecutionDidFinish(success: true)
+            observer?.dataFeedExecutionStarted(started: true)
         } else {
-            SudoUtil.getPW { password in
-                if password == nil {
-                    self.observer?.dataFeedExecutionDidFinish(success: false)
-                }
-                else {
+            SudoUtil.getPassword { gotCorrectPassword in
+                if gotCorrectPassword {
                     self.execute()
-                    self.observer?.dataFeedExecutionDidFinish(success: true)
+                    self.observer?.dataFeedExecutionStarted(started: true)
+                } else {
+                    self.observer?.dataFeedExecutionStarted(started: false)
                 }
             }
         }
     }
+    
+    override func stopDataFeed() {
+        timer?.invalidate()
+        timer = nil
+    }
 
     private
     
+    func foundProcess() -> Bool {
+        return self.parentPID != nil && self.parentPID != -1
+    }
+    
+    func findProcess() {
+        self.parentPID = PIDUtil.getParentPID(appName: self.walletName!)
+    }
+    
     func execute() {
-        (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
-        self.getConnections()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-        Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
-            (self.parentPID, self.pids) = PIDUtil.collectPIDs(appName: self.walletName!)
-            self.getConnections()
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+        let timerQueue = DispatchQueue(label: "branta.timerQueue")
+
+        // Run monitor on timer
+        timer = Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
+            // Processing should be done NOT on main thread
+            timerQueue.async {
+                if self.foundProcess() {
+                    self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
+                    self.getConnections()
+                    
+                    // Dispatch UI updates back to main thread
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        self.observer?.dataFeedCount(count: self.connections.count)
+                    }
+                } else {
+                    self.findProcess()
+                }
             }
         }
+        timer?.fire()
     }
     
     // Parse output of each PID. Not every PID talks over the network.
@@ -87,23 +107,31 @@ class TrafficMonitor: Automation {
                 let sizeOffset      = components[6]
                 let node            = components[7]
                 let nameParts       = components[8].components(separatedBy: "->")
-                var name            = "invalid IP format"
+                var name            = ""
                 if nameParts.count == 2 {
                     let ipAddress   = nameParts[1].components(separatedBy: ":").first ?? ""
                     name            = ipAddress
+                } else {
+                    name = components[8]
                 }
-
-                
-                let connection = Connection(command: command, pid: pid, user: user, fileDescriptor: fileDescriptor, type: type, device: device, sizeOffset: sizeOffset, node: node, name: name)
                 
                 if !(connections.contains(where: {
-                    $0.name == connection.name
+                    $0.name == name
                  })) {
+                    let connection = Connection(
+                        command: command,
+                        pid: pid,
+                        user: user,
+                        fileDescriptor: fileDescriptor,
+                        type: type,
+                        device: device,
+                        sizeOffset: sizeOffset,
+                        node: node,
+                        name: name
+                    )
                     connections.append(connection)
                 }
-                
             }
-
         }
     }
 

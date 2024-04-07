@@ -9,27 +9,18 @@ import Cocoa
 import Foundation
 
 class PIDUtil {
-    class func collectPIDs(appName: String) -> (Int, Array<Int>) {
-        var pids: [Int] = []
-        var parentPID = -1
-        
+    
+    class func getParentPID(appName: String) -> Int {
         let runningApps = NSWorkspace.shared.runningApplications
         for app in runningApps {
             if app.localizedName == appName {
-                parentPID = Int(app.processIdentifier)
-                pids.append(parentPID)
-                
-                
-                let childPIDs = getChildPIDs(ofParentPID: pid_t(parentPID))
-                for pid in childPIDs {
-                    pids.append(Int(pid))
-                }
+                return Int(app.processIdentifier)
             }
         }
-        return (parentPID, pids)
+        return -1
     }
     
-    class func getChildPIDs(ofParentPID parentPID: pid_t) -> [pid_t] {
+    class func getChildPIDs(parentPID: Int) -> [Int] {
         let task = Process()
         task.launchPath = "/bin/sh"
         task.arguments = ["-c", "ps -o pid,ppid -ax | awk '{ if ($2 == \(parentPID)) print $1 }'"]
@@ -46,7 +37,8 @@ class PIDUtil {
             return []
         }
         
-        let childPIDs = outputString.split(separator: "\n").compactMap { pid_t($0) }
+        var childPIDs = outputString.split(separator: "\n").compactMap { Int($0) }
+        childPIDs.append(parentPID)
         return childPIDs
     }
 }
