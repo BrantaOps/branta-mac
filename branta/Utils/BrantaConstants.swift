@@ -10,6 +10,37 @@ import Foundation
 let HEIGHT      = 30.0
 let TABLE_FONT  = 17.0
 
+let TEST_FOR_SUDO = "echo 'test for sudo.'"
+
+let FETCH_URL = "https://api.github.com/repos/brantaops/branta-mac/releases/latest"
+
+
+let NOTIFY_FOR_BTC_ADDRESS          = "notifyForBTCAddress"
+let NOTIFY_FOR_SEED                 = "notifyForSeed"
+let NOTIFY_FOR_XPUB                 = "notifyForXPub"
+let NOTIFY_FOR_XPRV                 = "notifyForXPrv"
+let NOTIFY_FOR_NPUB                 = "notifyForNPub"
+let NOTIFY_FOR_NSEC                 = "notifyForNSec"
+let NOTIFY_UPON_LAUNCH              = "notifyUponLaunch"
+let NOTIFY_UPON_STATUS_CHANGE       = "notifyUponStatusChange"
+
+let SCAN_CADENCE                    = "scanCadence"
+let SCAN_CADENCE_WORDING            = "scanCadenceWording"
+
+let DEFAULT_SCAN_CADENCE            = 30.0
+let DEFAULT_SCAN_CADENCE_WORDING    = "30 Seconds"
+
+let SHOW_IN_DOCK                    = "showInDock"
+
+
+let PREFS_KEY = "Branta_Prefs"
+
+
+let CLIPBOARD_INTERVAL  = 1.0 // Seconds
+
+let SEED_WORDS_MIN = 10
+let SEED_WORDS_MAX = 26
+
 let WRONG_PASSWORD          = "Incorrect Password"
 let CADENCE_OPTIONS: [(String, Int)] = [
     ("1 Second", 1),

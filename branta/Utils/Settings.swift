@@ -7,26 +7,6 @@
 
 import Foundation
 
-let NOTIFY_FOR_BTC_ADDRESS          = "notifyForBTCAddress"
-let NOTIFY_FOR_SEED                 = "notifyForSeed"
-let NOTIFY_FOR_XPUB                 = "notifyForXPub"
-let NOTIFY_FOR_XPRV                 = "notifyForXPrv"
-let NOTIFY_FOR_NPUB                 = "notifyForNPub"
-let NOTIFY_FOR_NSEC                 = "notifyForNSec"
-let NOTIFY_UPON_LAUNCH              = "notifyUponLaunch"
-let NOTIFY_UPON_STATUS_CHANGE       = "notifyUponStatusChange"
-
-let SCAN_CADENCE                    = "scanCadence"
-let SCAN_CADENCE_WORDING            = "scanCadenceWording"
-
-let DEFAULT_SCAN_CADENCE            = 30.0
-let DEFAULT_SCAN_CADENCE_WORDING    = "30 Seconds"
-
-let SHOW_IN_DOCK                    = "showInDock"
-
-
-let PREFS_KEY = "Branta_Prefs"
-
 class Settings {
 
     private static var prefHash : [String:Any] = [

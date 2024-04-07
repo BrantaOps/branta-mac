@@ -8,7 +8,6 @@
 import CryptoKit
 import Foundation
 
-
 func sha256(at filePath: String) -> String {
     do {
         let data = try Data(contentsOf: URL(fileURLWithPath: filePath))

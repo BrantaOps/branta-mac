@@ -6,8 +6,6 @@
 //
 
 import Cocoa
-import Foundation
-
 
 class HelpViewController: NSViewController {
     
@@ -16,8 +14,6 @@ class HelpViewController: NSViewController {
     
     @IBOutlet weak var q2: NSTextField!
     @IBOutlet weak var a2: NSTextField!
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

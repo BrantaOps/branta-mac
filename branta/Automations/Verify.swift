@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import Foundation
 
 class Verify: Automation {
     private static var alreadyWarned = [

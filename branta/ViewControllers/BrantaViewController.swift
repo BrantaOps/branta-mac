@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import Foundation
 
 class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
     @IBOutlet weak var walletsDetected: NSTextField!

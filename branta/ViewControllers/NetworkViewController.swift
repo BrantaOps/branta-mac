@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import Foundation
 
 class NetworkViewController: NSViewController, DataFeedObserver {
     @IBOutlet weak var tableView: NSTableView!

@@ -6,9 +6,6 @@
 //
 
 import Cocoa
-import Foundation
-
-let TEST_FOR_SUDO = "echo 'test for sudo.'"
 
 class SudoUtil {
     static var isAuthenticated: Bool = false

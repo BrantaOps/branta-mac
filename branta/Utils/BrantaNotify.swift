@@ -8,7 +8,6 @@
 import Foundation
 import UserNotifications
 
-
 class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
     
     func requestAuthorization() {

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 func compareVersions(_ version1: String, _ version2: String) -> ComparisonResult {
     let components1 = version1.split(separator: ".").compactMap { Int($0) }
     let components2 = version2.split(separator: ".").compactMap { Int($0) }
