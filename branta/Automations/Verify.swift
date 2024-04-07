@@ -58,7 +58,7 @@ class Verify: Automation {
         }
         
         let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
-        let hash = sha256(at: fullPath)
+        let hash = Sha.sha256(at: fullPath)
 
         return HashGrabber.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
     }
@@ -147,7 +147,7 @@ class Verify: Automation {
                     }
                     
                     let fullPath = PATH + "/" + item + "/Contents/MacOS/" + exePath
-                    let hash = sha256(at: fullPath)
+                    let hash = Sha.sha256(at: fullPath)
                     let version = getAppVersion(atPath: (PATH + "/" + item))
                     
                     ret.append([
