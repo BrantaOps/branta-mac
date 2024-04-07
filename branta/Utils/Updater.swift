@@ -13,15 +13,20 @@ class Updater {
         latestVersion { latestVersion in
             if let latestVersion = latestVersion {
                 
-                let order = compareVersions(latestVersion, currentVersion())
-                if order == .orderedAscending {
-                    completion(false, latestVersion)
-                } else if order == .orderedDescending {
-                    completion(true, latestVersion)
-                } else if order == .orderedSame {
-                    completion(false, latestVersion)
+                do {
+                    let order = try compareVersions(latestVersion, currentVersion())
+                    if order == .orderedAscending {
+                        completion(false, latestVersion)
+                    } else if order == .orderedDescending {
+                        completion(true, latestVersion)
+                    } else if order == .orderedSame {
+                        completion(false, latestVersion)
+                    }
+                    return
+                } catch {
+                    BrantaLogger.log(s: "Updater#checkForUpdates error: \(error)")
                 }
-                return
+
             }
             completion(false, "")
         }

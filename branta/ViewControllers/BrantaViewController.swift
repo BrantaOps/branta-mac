@@ -96,10 +96,13 @@ class BrantaViewController: NSViewController {
             
                 // Pass through. All versions will be older OR newer.
                 for brantaVersion in versions {
-                    comparisonResult = compareVersions(version, brantaVersion)
-
-                    if comparisonResult == .orderedAscending { newer = false }
-                    else if comparisonResult == .orderedDescending { older = false }
+                    do {
+                        comparisonResult = try compareVersions(version, brantaVersion)
+                        if comparisonResult == .orderedAscending { newer = false }
+                        else if comparisonResult == .orderedDescending { older = false }
+                    } catch {
+                        BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
+                    }
                 }
                 
                 if newer {
