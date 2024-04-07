@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var settingsWindow: NSWindow?
     var foreground: Bool = true
     var notificationManager: BrantaNotify?
+    var openedNetworkWindows: [String: NSWindowController] = [:]
     
     
     

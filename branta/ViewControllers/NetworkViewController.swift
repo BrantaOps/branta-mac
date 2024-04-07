@@ -45,6 +45,8 @@ class NetworkViewController: NSViewController, DataFeedObserver {
     override func viewWillDisappear() {
         super.viewWillDisappear()
         tm?.stopDataFeed()
+        let appDelegate = NSApp.delegate as? AppDelegate
+        appDelegate?.openedNetworkWindows[walletRuntime!] = nil
     }
     
     override func viewDidAppear() {
