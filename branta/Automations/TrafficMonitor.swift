@@ -10,16 +10,16 @@ import Foundation
 
 class TrafficMonitor: Automation {
     
-    var tableView: NSTableView
-    var parentPID: Int?
-    var pids: Array<Int>                = []
-    var connections: Array<Connection>  = []
-    var walletName:String?
+    private var tableView: NSTableView
+    private var parentPID: Int?
+    private var pids: Array<Int>                = []
+    private var connections: Array<Connection>  = []
+    private var walletName:String?
     weak var observer: DataFeedObserver?
     private var timer: Timer?
 
-    let CADENCE = 2.0
-    let COLUMNS = [
+    private let CADENCE = 2.0
+    private let COLUMNS = [
         "PID": 0,
         "IP": 1,
     ]

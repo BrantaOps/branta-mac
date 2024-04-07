@@ -27,7 +27,7 @@ let APPS = [
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var statusItem: NSStatusItem?
+    private var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
     var settingsWindow: NSWindow?
     var foreground: Bool = true
@@ -38,11 +38,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     
-    let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
-    let KEY_ABOUT           = "A"
-    let KEY_SETTINGS        = "S"
-    let KEY_QUIT            = "Q"
-    let KEY_UPDATE          = "U"
+    private let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
+    private let KEY_ABOUT           = "A"
+    private let KEY_SETTINGS        = "S"
+    private let KEY_QUIT            = "Q"
+    private let KEY_UPDATE          = "U"
 
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -60,6 +60,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
         return true
+    }
+    
+    func applicationDidBecomeActive(_ notification: Notification) {
+        foreground = true
+    }
+
+    func applicationDidResignActive(_ notification: Notification) {
+        foreground = false
     }
 
     @objc func didTapAbout() {
@@ -79,15 +87,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
-    
-    func applicationDidBecomeActive(_ notification: Notification) {
-        foreground = true
-    }
 
-    func applicationDidResignActive(_ notification: Notification) {
-        foreground = false
-    }
-    
     private
     
     func setupMenu(status:String) {
