@@ -72,7 +72,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func getUpdate(_ sender: NSMenuItem) {
         if let tag = sender.representedObject {
-            print("Fetching tag: \(tag)")
+            BrantaLogger.log(s: "Fetching tag: \(tag)")
             let github = "https://github.com/BrantaOps/branta-mac/releases/download/\(tag)/Branta-\(tag).dmg.zip"
             if let url = URL(string: github) {
                 NSWorkspace.shared.open(url)
@@ -166,7 +166,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let bundleIdentifier = Bundle.main.bundleIdentifier {
             dumpBrantaPrefs()
             UserDefaults.standard.removePersistentDomain(forName: bundleIdentifier)
-            print("Erased UserDefaults.")
+            BrantaLogger.log(s: "Erased UserDefaults.")
         }
     }
     
@@ -175,7 +175,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         for (key, value) in defaultsDictionary {
             if (key == PREFS_KEY) {
-                print("UserDefaults:\(key): \(value)")
+                BrantaLogger.log(s: "UserDefaults:\(key): \(value)")
             }
         }
     }
