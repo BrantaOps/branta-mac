@@ -820,11 +820,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="297" y="0.0" width="289" height="30"/>
+                                                                    <rect key="frame" x="297" y="0.0" width="288" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
-                                                                            <rect key="frame" x="0.0" y="7" width="289" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="288" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="Zg4-TZ-M1M">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -852,11 +852,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="603" y="0.0" width="149" height="30"/>
+                                                                    <rect key="frame" x="602.5" y="0.0" width="150" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
-                                                                            <rect key="frame" x="0.0" y="7" width="149" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="150" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="lQa-CN-seB">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -1346,11 +1346,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="6ez-Zm-3U6">
-                                                                    <rect key="frame" x="8" y="0.0" width="365" height="58"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="364" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
-                                                                            <rect key="frame" x="0.0" y="21" width="365" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="364" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -1378,11 +1378,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="X02-cg-kP0">
-                                                                    <rect key="frame" x="390" y="0.0" width="362" height="58"/>
+                                                                    <rect key="frame" x="389.5" y="0.0" width="363" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">
-                                                                            <rect key="frame" x="0.0" y="21" width="362" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="363" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="vps-93-95-231-89.1984.is" id="oTk-fV-Ctm">
                                                                                 <font key="font" usesAppearanceFont="YES"/>

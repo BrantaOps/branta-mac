@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // Dock Icon Handler
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if !flag {
-            openAboutWindow()
+            MenuHelper.openAboutWindow()
         }
         return true
     }
@@ -50,11 +50,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @objc func didTapAbout() {
-        openAboutWindow()
+        MenuHelper.openAboutWindow()
     }
     
     @objc func didTapSettings() {
-        openSettingsWindow()
+        MenuHelper.openSettingsWindow()
     }
     
     @objc func getUpdate(_ sender: NSMenuItem) {
@@ -119,7 +119,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) { (event) -> NSEvent? in
             if event.modifierFlags.contains(.command), event.keyCode == KEYCODE_COMMA {
-                openSettingsWindow()
+                MenuHelper.openSettingsWindow()
             }
             return event
         }
