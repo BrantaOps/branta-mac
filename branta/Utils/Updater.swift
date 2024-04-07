@@ -14,7 +14,7 @@ class Updater {
             if let latestVersion = latestVersion {
                 
                 do {
-                    let order = try compareVersions(latestVersion, currentVersion())
+                    let order = try VersionComp.compare(latestVersion, currentVersion())
                     if order == .orderedAscending {
                         completion(false, latestVersion)
                     } else if order == .orderedDescending {
@@ -31,7 +31,7 @@ class Updater {
             completion(false, "")
         }
     }
-    
+        
     
     static func latestVersion(completion: @escaping (String?) -> Void) {
         guard let releasesURL = URL(string: FETCH_URL) else {
