@@ -8,7 +8,6 @@
 import Foundation
 import UserNotifications
 
-
 class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
     
     func requestAuthorization() {
@@ -22,7 +21,7 @@ class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
         let v = pref[key]
         
         if v != nil && (v as? Bool) == true {
-            print("alerting for \(key)")
+            BrantaLogger.log(s: "alerting for \(key)")
             let content = UNMutableNotificationContent()
             content.title = title
             content.body = body
@@ -54,7 +53,7 @@ class BrantaNotify: NSObject, UNUserNotificationCenterDelegate {
             UNUserNotificationCenter.current().add(request)
         }
         else {
-            print("not alerting for \(key)")
+            BrantaLogger.log(s: "not alerting for \(key)")
         }
     }
         

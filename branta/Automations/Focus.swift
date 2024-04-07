@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import Foundation
 
 class Focus: Automation {
     

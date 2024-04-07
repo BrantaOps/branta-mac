@@ -6,18 +6,14 @@
 //
 
 import Cocoa
-import Foundation
 
-let HEIGHT      = 30.0
-let TABLE_FONT  = 17.0
-
-class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegate, NSTableViewDataSource {
+class BrantaViewController: NSViewController {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
-    var tableData: Array<[String: String]> = []
+    private var tableData: Array<[String: String]> = []
 
-    let COLUMNS = [
+    private let COLUMNS = [
         "WALLET_NAME"           : 0,
         "STATUS"                : 1,
         "LAST_SCANNED"          : 2,
@@ -46,58 +42,7 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             window.title = ""
          }
     }
-    
-    func numberOfRows(in tableView: NSTableView) -> Int {
-        return tableData.count
-    }
-    
-    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return HEIGHT
-    }
-    
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        guard let columnNumber = tableView.tableColumns.firstIndex(of: tableColumn!) else {
-            return nil
-        }
-        
-        // Force rewrite of the table. Don't care about cache.
-        let textField = NSTextField()
-        textField.identifier = NSUserInterfaceItemIdentifier("TextCell")
-        textField.isEditable = false
-        textField.bezelStyle = .roundedBezel
-        textField.isBezeled = false
-        textField.alignment = .center
-        textField.font = NSFont(name: FONT, size: TABLE_FONT)
-        let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
-         
-        if columnNumber == COLUMNS["WALLET_NAME"] {
-            textField.stringValue = name
-        } else if columnNumber == COLUMNS["STATUS"] {
-            if tableData[row]["match"] == "true" {
-                textField.stringValue   = "✓"
-                textField.textColor     = NSColor(hex: GOLD)
-            }
-            else {
-                textField.stringValue   = "⚠"
-                textField.textColor     = NSColor(hex: RED)
-            }
-            textField.font              = NSFont(name: FONT, size: 20.0)
-            let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
-            textField.addGestureRecognizer(clickGesture)
-        } else if columnNumber == COLUMNS["LAST_SCANNED"] {
-            let currentTime         = Date()
-            let dateFormatter       = DateFormatter()
-            dateFormatter.timeStyle = .medium
-            let formattedTime       = dateFormatter.string(from: currentTime)
-            textField.stringValue   = formattedTime
-        } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
-            textField.stringValue   = "View"
-            textField.font          = NSFont(name: FONT, size: 20.0)
-            let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
-            textField.addGestureRecognizer(clickGesture)
-        }
-        return textField
-    }
+
     
     @objc func viewNetwork(sender: NSClickGestureRecognizer) {
         if let clickedTextField = sender.view as? NSTextField {
@@ -171,7 +116,64 @@ class BrantaViewController: NSViewController, VerifyObserver, NSTableViewDelegat
             alert.beginSheetModal(for: self.view.window!)
         }
     }
+}
 
+
+extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return tableData.count
+    }
+    
+    func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
+        return HEIGHT
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        guard let columnNumber = tableView.tableColumns.firstIndex(of: tableColumn!) else {
+            return nil
+        }
+        
+        // Force rewrite of the table. Don't care about cache.
+        let textField = NSTextField()
+        textField.identifier = NSUserInterfaceItemIdentifier("TextCell")
+        textField.isEditable = false
+        textField.bezelStyle = .roundedBezel
+        textField.isBezeled = false
+        textField.alignment = .center
+        textField.font = NSFont(name: FONT, size: TABLE_FONT)
+        let name = tableData[row]["name"]!.replacingOccurrences(of: ".app", with: "")
+         
+        if columnNumber == COLUMNS["WALLET_NAME"] {
+            textField.stringValue = name
+        } else if columnNumber == COLUMNS["STATUS"] {
+            if tableData[row]["match"] == "true" {
+                textField.stringValue   = "✓"
+                textField.textColor     = NSColor(hex: GOLD)
+            }
+            else {
+                textField.stringValue   = "⚠"
+                textField.textColor     = NSColor(hex: RED)
+            }
+            textField.font              = NSFont(name: FONT, size: 20.0)
+            let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
+            textField.addGestureRecognizer(clickGesture)
+        } else if columnNumber == COLUMNS["LAST_SCANNED"] {
+            let currentTime         = Date()
+            let dateFormatter       = DateFormatter()
+            dateFormatter.timeStyle = .medium
+            let formattedTime       = dateFormatter.string(from: currentTime)
+            textField.stringValue   = formattedTime
+        } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
+            textField.stringValue   = "View"
+            textField.font          = NSFont(name: FONT, size: 20.0)
+            let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
+            textField.addGestureRecognizer(clickGesture)
+        }
+        return textField
+    }
+}
+
+extension BrantaViewController: VerifyObserver {
     // Lets hide this... adds noise to homescreen
     func verifyDidChange(newResults: Array<[String: String]>) {
         if newResults.count == 0 {

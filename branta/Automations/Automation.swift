@@ -5,7 +5,6 @@
 //  Created by Keith Gardner on 12/21/23.
 //
 
-import Cocoa
 import Foundation
 
 class Automation: NSObject {

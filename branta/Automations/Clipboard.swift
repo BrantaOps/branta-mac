@@ -5,19 +5,12 @@
 //  Created by Keith Gardner on 11/20/23.
 //
 
-import Foundation
 import Cocoa
-
-let CLIPBOARD_INTERVAL  = 1.0 // Seconds
-
-let SEED_WORDS_MIN = 10
-let SEED_WORDS_MAX = 26
-
 
 class Clipboard: Automation {
     
-    static var bip39WordSet : Set<String>?
-    static let appDelegate = NSApp.delegate as? AppDelegate
+    private static var bip39WordSet : Set<String>?
+    private static let appDelegate = NSApp.delegate as? AppDelegate
  
     override class func run() {
         // Construct word list, Notifications, etc.

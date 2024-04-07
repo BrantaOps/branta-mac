@@ -6,27 +6,13 @@
 //
 
 import Cocoa
-import Foundation
 
-class NetworkViewController: NSViewController, DataFeedObserver {
+class NetworkViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var walletName: NSTextField!
     
     var walletRuntime: String?
     var tm: TrafficMonitor?
-
-    
-    func dataFeedExecutionStarted(started: Bool) {
-        if !started {
-            if let window = view.window {
-                window.close()
-            }
-        }
-    }
-    
-    func dataFeedCount(count: Int) {
-        walletName.stringValue = "\(walletRuntime!): \(count) Connections"
-    }
         
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -57,5 +43,19 @@ class NetworkViewController: NSViewController, DataFeedObserver {
             window.titlebarAppearsTransparent = true
             window.title = ""
         }
+    }
+}
+
+extension NetworkViewController: DataFeedObserver {
+    func dataFeedExecutionStarted(started: Bool) {
+        if !started {
+            if let window = view.window {
+                window.close()
+            }
+        }
+    }
+    
+    func dataFeedCount(count: Int) {
+        walletName.stringValue = "\(walletRuntime!): \(count) Connections"
     }
 }

@@ -6,18 +6,6 @@
 //
 
 import Cocoa
-import Foundation
-
-let CADENCE_OPTIONS: [(String, Int)] = [
-    ("1 Second", 1),
-    ("5 Seconds", 5),
-    ("10 Seconds", 10),
-    ("30 Seconds", 30),
-    ("60 Seconds", 60),
-    ("5 Minutes", 300),
-    ("10 Minutes", 600),
-    ("30 Minutes", 1800)
-]
 
 class SettingsViewController: NSViewController {
     
@@ -42,7 +30,7 @@ class SettingsViewController: NSViewController {
         super.viewDidAppear()
         configureCadence()
         configureSwitches()
-        print(Settings.readFromDefaults())
+        BrantaLogger.log(s: Settings.readFromDefaults())
         
         if let window = view.window {
             window.minSize = NSSize(width: 400, height: 320)
@@ -131,7 +119,7 @@ class SettingsViewController: NSViewController {
             } else if setting.key == NOTIFY_UPON_STATUS_CHANGE {
                 notifyUponStatusChangeOutlet.state = setting.value as! Bool == true ? .on : .off
             } else if setting.key == SHOW_IN_DOCK {
-                print("settings \(SHOW_IN_DOCK) to \(setting.value)")
+                BrantaLogger.log(s: "settings \(SHOW_IN_DOCK) to \(setting.value)")
                 showInDockOutlet.state = setting.value as! Bool == true ? .on : .off
             }
             

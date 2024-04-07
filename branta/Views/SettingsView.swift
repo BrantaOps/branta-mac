@@ -5,14 +5,12 @@
 //  Created by Keith Gardner on 3/3/24.
 //
 
-import Foundation
-
 import Cocoa
 
 class SettingsView: NSView {
     
-    let minimumHeight: CGFloat = 550
-    let minimumWidth: CGFloat = 500
+    private let minimumHeight: CGFloat = 550
+    private let minimumWidth: CGFloat = 500
 
     override var intrinsicContentSize: NSSize {
         var size = super.intrinsicContentSize

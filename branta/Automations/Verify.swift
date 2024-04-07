@@ -6,11 +6,9 @@
 //
 
 import Cocoa
-import Foundation
-
 
 class Verify: Automation {
-    static var alreadyWarned = [
+    private static var alreadyWarned = [
         Sparrow.name():             false,
         Ledger.name():              false,
         Trezor.name():              false,
@@ -19,7 +17,7 @@ class Verify: Automation {
         Whirlpool.name():           false
     ]
     
-    static let TARGETS = [
+    private static let TARGETS = [
         Sparrow.name():             Sparrow.self,
         Trezor.name():              Trezor.self,
         Ledger.name():              Ledger.self,
@@ -28,11 +26,11 @@ class Verify: Automation {
         Whirlpool.name():           Whirlpool.self
     ]
     
-    static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]
-    static let PATH = "/Applications"
-    static let FM = FileManager.default
+    private static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]
+    private static let PATH = "/Applications"
+    private static let FM = FileManager.default
     private static var observers = [VerifyObserver]()
-    static var signatures: Array<[String: String]> = [] {
+    private static var signatures: Array<[String: String]> = [] {
         didSet {
             notifyObservers()
         }
@@ -43,9 +41,6 @@ class Verify: Automation {
         let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
 
         Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
-            //let currentDate = Date()
-            //let secondsSinceEpoch = currentDate.timeIntervalSince1970
-            //print("running verify():\(secondsSinceEpoch)")
             verify()
         }
     }
@@ -54,7 +49,6 @@ class Verify: Automation {
         let wallets = crawlWallets()
         signatures = matchSignatures(wallets: wallets)
     }
-    
     
     static func verify(wallet: String) -> Bool {
         var exePath = wallet
@@ -167,7 +161,7 @@ class Verify: Automation {
             }
             return ret
         } catch {
-            print("Verify Automation: Caught an error in crawlWallets()")
+            BrantaLogger.log(s: "Verify Automation: Caught an error in crawlWallets()")
         }
         return []
     }

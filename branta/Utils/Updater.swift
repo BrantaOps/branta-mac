@@ -7,8 +7,6 @@
 
 import Foundation
 
-let FETCH_URL = "https://api.github.com/repos/brantaops/branta-mac/releases/latest"
-
 class Updater {
     
     static func checkForUpdates(completion: @escaping (Bool, String) -> Void) {

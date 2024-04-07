@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import Foundation
 
 func openSettingsWindow() {
     let appDelegate = NSApp.delegate as? AppDelegate

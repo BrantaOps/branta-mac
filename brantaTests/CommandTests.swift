@@ -13,7 +13,7 @@ import XCTest
 class CommandTests: XCTestCase {
 
     func testRunCommandWithoutSudo() {
-        let output = Command.runCommand("ls -l")
+        let output = Command.runCommand("ls -l", runAsSU: false)
         XCTAssertNotNil(output)
         XCTAssertFalse(output!.isEmpty)
     }
@@ -25,7 +25,7 @@ class CommandTests: XCTestCase {
     }
 
     func testRunCommandWithOutput() {
-        let output = Command.runCommand("echo 'Hello, World!'")
+        let output = Command.runCommand("echo 'Hello, World!'", runAsSU: false)
         XCTAssertNotNil(output)
         XCTAssertEqual(output!, "Hello, World!\n")
     }
