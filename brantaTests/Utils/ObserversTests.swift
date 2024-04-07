@@ -29,3 +29,41 @@ class VerifyObserverTests: XCTestCase {
         XCTAssertEqual(mockObserver.receivedResults, results)
     }
 }
+
+class MockDataFeedObserver: DataFeedObserver {
+    var executionStartedCalled = false
+    var receivedStartedValue: Bool?
+    var countCalled = false
+    var receivedCountValue: Int?
+    
+    func dataFeedExecutionStarted(started: Bool) {
+        executionStartedCalled = true
+        receivedStartedValue = started
+    }
+    
+    func dataFeedCount(count: Int) {
+        countCalled = true
+        receivedCountValue = count
+    }
+}
+
+class DataFeedObserverTests: XCTestCase {
+    
+    func testDataFeedExecutionStarted() {
+        let mockObserver = MockDataFeedObserver()
+        mockObserver.dataFeedExecutionStarted(started: true)
+        
+        XCTAssertTrue(mockObserver.executionStartedCalled)
+        XCTAssertEqual(mockObserver.receivedStartedValue, true)
+    }
+    
+    func testDataFeedCount() {
+        let mockObserver = MockDataFeedObserver()
+        
+        let count = 10
+        mockObserver.dataFeedCount(count: count)
+        
+        XCTAssertTrue(mockObserver.countCalled)
+        XCTAssertEqual(mockObserver.receivedCountValue, count)
+    }
+}
