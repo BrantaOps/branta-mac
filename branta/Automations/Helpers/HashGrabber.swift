@@ -10,29 +10,20 @@ import Foundation
 
 class HashGrabber {
     
-    private static var runtimeHashes: [String : [String : String]] = loadRuntimeHashes()
-    private static let installer_hashes = loadInstallerHashes()
+    private static let runtimeHashes: [String : [String : String]] = loadRuntimeHashes()
+    private static let installerHashes: [String: [String:String]] = loadInstallerHashes()
 
+    static func getRuntimeHashes() -> [String : [String : String]] {
+        return runtimeHashes
+    }
+    
     static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
-            
-//        let url = URL(string: "https://api.example.com/data")!
-//        API.send(url: url) { result in
-//            switch result {
-//            case .success(let data):
-//                print("Fetched data: \(data)")
-//                0
-//            case .failure(let error):
-//                print("Error: \(error)")
-//                0
-//            }
-//        }
-            
-        if installer_hashes[wallet] != nil {
-            let candidates = installer_hashes[wallet]!.keys
-            return candidates.contains(hash256) || candidates.contains(hash512) || candidates.contains(base64)
-        } else {
-            return false
+        
+        if let candidates = installerHashes[wallet]?.keys {
+            return [hash256, hash512, base64].contains(where: { candidates.contains($0) })
         }
+
+        return false
     }
     
     
@@ -43,10 +34,6 @@ class HashGrabber {
         } else {
             return false
         }
-    }
-
-    static func getRuntimeHashes() -> [String : [String : String]] {
-        return runtimeHashes
     }
     
     private
