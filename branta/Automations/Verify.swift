@@ -80,7 +80,7 @@ class Verify: Automation {
     private
 
     static func matchSignatures(wallets: Array<[String: String]>) -> Array<[String: String]> {
-        let architectureSpecificHashes = HashGrabber.grab()
+        let architectureSpecificHashes = HashGrabber.getRuntimeHashes()
         var ret: Array<[String: String]> = []
         
         // Mark users wallets as "match" if we have a sha.

@@ -10,8 +10,7 @@ import Foundation
 
 class HashGrabber {
     
-    // Memoized cache for hashes.
-    private static var hashes: [String : [String : String]] = [:]
+    private static var runtimeHashes: [String : [String : String]] = loadRuntimeHashes()
     private static let installer_hashes = loadInstallerHashes()
 
     static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
@@ -38,28 +37,16 @@ class HashGrabber {
     
     
     static func runtimeHashMatches(hash: String, wallet: String) -> Bool {
-        if hashes[wallet] != nil {
-            let candidates = hashes[wallet]!.values
+        if runtimeHashes[wallet] != nil {
+            let candidates = runtimeHashes[wallet]!.values
             return candidates.contains(hash)
         } else {
             return false
         }
     }
 
-    static func grab() -> [String : [String : String]] {
-        if hashes != [:] {
-            return hashes
-        }
-        else if Architecture.isArm() {
-            hashes = loadArm()
-            return hashes
-        } else if Architecture.isIntel() {
-            hashes = loadX86()
-            return hashes
-        }
-        else {
-            return [:]
-        }
+    static func getRuntimeHashes() -> [String : [String : String]] {
+        return runtimeHashes
     }
     
     private
@@ -73,6 +60,17 @@ class HashGrabber {
             Wasabi.runtimeName():               Wasabi.installerHashes(),
             Whirlpool.runtimeName():            Whirlpool.installerHashes()
         ]
+    }
+    
+    static func loadRuntimeHashes() -> [String: [String:String]]{
+        if Architecture.isArm() {
+            return loadArm()
+        } else if Architecture.isIntel() {
+            return loadX86()
+        }
+        else {
+            return [:]
+        }
     }
     
     static func loadArm() -> [String: [String:String]] {

@@ -13,6 +13,7 @@
 		ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* BrantaNotify.swift */; };
 		ED1A3C812BC41E8E00895C5A /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C802BC41E8E00895C5A /* APITests.swift */; };
 		ED1A3C842BC42C5A00895C5A /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C832BC42C5A00895C5A /* Architecture.swift */; };
+		ED1A3C862BC4390900895C5A /* ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C852BC4390900895C5A /* ArchitectureTests.swift */; };
 		ED1D573F2BC2DE710001DAD2 /* VersionCompTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */; };
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
@@ -95,6 +96,7 @@
 		ED19A7A42B123F00004375C7 /* BrantaNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaNotify.swift; sourceTree = "<group>"; };
 		ED1A3C802BC41E8E00895C5A /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		ED1A3C832BC42C5A00895C5A /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
+		ED1A3C852BC4390900895C5A /* ArchitectureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureTests.swift; sourceTree = "<group>"; };
 		ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCompTests.swift; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				ED3A961B2BC2F33100262E72 /* ShaTests.swift */,
 				ED3A96192BC2F15C00262E72 /* UpdaterTests.swift */,
 				ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */,
+				ED1A3C852BC4390900895C5A /* ArchitectureTests.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				ED3A961C2BC2F33100262E72 /* ShaTests.swift in Sources */,
 				ED3A961A2BC2F15C00262E72 /* UpdaterTests.swift in Sources */,
 				ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */,
+				ED1A3C862BC4390900895C5A /* ArchitectureTests.swift in Sources */,
 				ED643CDF2B51A00600FEBE36 /* WasabiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
