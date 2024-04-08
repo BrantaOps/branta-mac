@@ -12,13 +12,8 @@ class HashGrabber {
     
     // Memoized cache for hashes.
     private static var hashes: [String : [String : String]] = [:]
-    
-    // TODO - optimize.
-    private static let x86_hashes = loadX86()
-    private static let arm_hashes = loadArm()
     private static let installer_hashes = loadInstallerHashes()
 
-    
     static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
             
 //        let url = URL(string: "https://api.example.com/data")!
@@ -52,15 +47,19 @@ class HashGrabber {
     }
 
     static func grab() -> [String : [String : String]] {
-        if hashes != [:] { return hashes }
-            
-        if Architecture.isArm() {
-            hashes  = arm_hashes
-        } else if Architecture.isIntel() {
-            hashes  = x86_hashes
+        if hashes != [:] {
+            return hashes
         }
-        
-        return hashes
+        else if Architecture.isArm() {
+            hashes = loadArm()
+            return hashes
+        } else if Architecture.isIntel() {
+            hashes = loadX86()
+            return hashes
+        }
+        else {
+            return [:]
+        }
     }
     
     private
