@@ -17,7 +17,7 @@ class Installer: Automation {
         
         for app in APPS {
             // TODO - this needs to be optimized.
-            let match = HashGrabber.installerHashMatches(hash256: hash256, hash512: hash512, base64: base64, wallet: app)
+            let match = Bridge.installerHashMatches(hash256: hash256, hash512: hash512, base64: base64, wallet: app)
             if match {
                 return (true, app)
             }

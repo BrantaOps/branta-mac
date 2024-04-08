@@ -1,5 +1,5 @@
 //
-//  HashGrabber.swift
+//  Bridge.swift
 //  Branta
 //
 //  Created by Keith Gardner on 12/28/23.
@@ -8,7 +8,7 @@
 import Cocoa
 import Foundation
 
-class HashGrabber {
+class Bridge {
     
     private static let runtimeHashes: [String : [String : String]] = loadRuntimeHashes()
     private static let installerHashes: [String: [String:String]] = loadInstallerHashes()
