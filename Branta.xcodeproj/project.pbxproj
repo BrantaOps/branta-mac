@@ -11,6 +11,7 @@
 		ED04D6E72BB1A52F00E5DE59 /* PID.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04D6E62BB1A52F00E5DE59 /* PID.swift */; };
 		ED04D6EA2BB1A8AB00E5DE59 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04D6E92BB1A8AB00E5DE59 /* Command.swift */; };
 		ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* BrantaNotify.swift */; };
+		ED1A3C812BC41E8E00895C5A /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C802BC41E8E00895C5A /* APITests.swift */; };
 		ED1D573F2BC2DE710001DAD2 /* VersionCompTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */; };
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
@@ -32,6 +33,7 @@
 		ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */; };
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
 		ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* BrantaViewController.swift */; };
+		ED611DDB2BC3574200FAE51B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611DDA2BC3574200FAE51B /* API.swift */; };
 		ED643CD32B5168BF00FEBE36 /* VerifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */; };
 		ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */; };
 		ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */; };
@@ -90,6 +92,7 @@
 		ED04D6E62BB1A52F00E5DE59 /* PID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PID.swift; sourceTree = "<group>"; };
 		ED04D6E92BB1A8AB00E5DE59 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		ED19A7A42B123F00004375C7 /* BrantaNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaNotify.swift; sourceTree = "<group>"; };
+		ED1A3C802BC41E8E00895C5A /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCompTests.swift; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wasabi.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
 		ED57437C2B3641AF0001956A /* BrantaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewController.swift; sourceTree = "<group>"; };
+		ED611DDA2BC3574200FAE51B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTests.swift; sourceTree = "<group>"; };
 		ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewControllerTests.swift; sourceTree = "<group>"; };
 		ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationTests.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		ED1D573B2BC2DDDC0001DAD2 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ED1A3C802BC41E8E00895C5A /* APITests.swift */,
 				ED1D573C2BC2DDE30001DAD2 /* Bash */,
 				EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */,
 				ED1D573D2BC2DE2A0001DAD2 /* Extensions */,
@@ -230,6 +235,7 @@
 		ED2C6EF42B0BAF9600EC577C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ED611DDA2BC3574200FAE51B /* API.swift */,
 				ED04D6E82BB1A87900E5DE59 /* Bash */,
 				EDD65EA62BC231D000531800 /* BrantaConstants.swift */,
 				EDD65EA42BC22CF100531800 /* BrantaLogger.swift */,
@@ -486,7 +492,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -575,6 +581,7 @@
 				EDD011862B6D749D0091CAAD /* Settings.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */,
 				ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */,
+				ED611DDB2BC3574200FAE51B /* API.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
 				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
@@ -592,6 +599,7 @@
 				ED3A96202BC307F200262E72 /* HexColorTests.swift in Sources */,
 				EDEAE53F2BB8F162002D7EE1 /* ConnectionTests.swift in Sources */,
 				ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */,
+				ED1A3C812BC41E8E00895C5A /* APITests.swift in Sources */,
 				ED3A96222BC30A2A00262E72 /* PIDUtilTests.swift in Sources */,
 				EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */,
 				ED3A961E2BC2F81900262E72 /* ObserversTests.swift in Sources */,
@@ -908,7 +916,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,

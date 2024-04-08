@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import Foundation
 
 class HashGrabber {
     
@@ -40,6 +41,19 @@ class HashGrabber {
     ]
     
     static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
+            
+        let url = URL(string: "https://api.example.com/data")!
+        API.send(url: url) { result in
+            switch result {
+            case .success(let data):
+                print("Fetched data: \(data)")
+                0
+            case .failure(let error):
+                print("Error: \(error)")
+                0
+            }
+        }
+            
         if installer_HASHES[wallet] != nil {
             let candidates = installer_HASHES[wallet]!.keys
             return candidates.contains(hash256) || candidates.contains(hash512) || candidates.contains(base64)
