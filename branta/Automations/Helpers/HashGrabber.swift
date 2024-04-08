@@ -17,6 +17,10 @@ class HashGrabber {
         return runtimeHashes
     }
     
+    static func getInstallerHashes() -> [String : [String : String]] {
+        return installerHashes
+    }
+    
     static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
         
         if let candidates = installerHashes[wallet]?.keys {
@@ -26,14 +30,8 @@ class HashGrabber {
         return false
     }
     
-    
     static func runtimeHashMatches(hash: String, wallet: String) -> Bool {
-        if runtimeHashes[wallet] != nil {
-            let candidates = runtimeHashes[wallet]!.values
-            return candidates.contains(hash)
-        } else {
-            return false
-        }
+        return runtimeHashes[wallet]?.values.contains(hash) ?? false
     }
     
     private
