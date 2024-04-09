@@ -60,7 +60,7 @@ class Verify: Automation {
         let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
         let hash = Sha.sha256(at: fullPath)
 
-        return HashGrabber.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
+        return Matcher.checkRuntime(hash: hash, wallet: "\(wallet).app")
     }
     
     static func addObserver(_ observer: VerifyObserver) {
@@ -80,7 +80,7 @@ class Verify: Automation {
     private
 
     static func matchSignatures(wallets: Array<[String: String]>) -> Array<[String: String]> {
-        let architectureSpecificHashes = HashGrabber.grab()
+        let architectureSpecificHashes = Bridge.getRuntimeHashes()
         var ret: Array<[String: String]> = []
         
         // Mark users wallets as "match" if we have a sha.

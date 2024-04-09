@@ -56,28 +56,4 @@ class Trezor: Wallet {
             "23.12.1": "62a4bc443f5f04a6dee0cc8039c725da73596bc6cd3aeeaf9721dfd5f6985022",
         ]
     }
-    
-
-    // SHA 512 then Base64 Encoded Binary
-    override class func installerHashes() -> [String:String] {
-        return [
-            "Im/IAqbtSye5SyCE1ffrxV2kaYuOvuw/u3Gm/Nc+mt3oqgglHfV83XrOYPs0zgi+HeE2NAVDXXU/t5bGVMX7YQ==": "Trezor-Suite-24.1.2-win-x64.exe",
-            "MyzTysyWlCRZOYBFAvJXjwW8v5hnbDxXjyG0Tf8d+Ii1a5TjnWw9Q+bnt5rkO6zlEA3ftkZPO5XnpyspvYPPWw==": "Trezor-Suite-24.1.2-mac-x64.zip",
-            "Ueche+SCzgLGPU+kvNkVSlz/d9tX5ZU4wn8HXNOnxXFOHRYueFa4y+T6LsO3IMGFD8yQbxFJTBhZRa+yEpWLxQ==": "Trezor-Suite-24.1.2-mac-arm64.zip",
-            "R188nhklYdnU498O6wKkQjwtDG/BAzfYQqdWRcD0i+MfMTb0o4Ba1haopucqqTayQlCmPqmSqbVA8io07WCRgA==": "Trezor-Suite-24.1.2-mac-x64.dmg",
-            "WsVY05OoY0hshOV2Xsar3ooBAZoVDEKXy2YTWyUDS+DnbZsu2zy2szNEqESrVPPRbdRH1T0OF3A1ypTuOJsbtQ==": "Trezor-Suite-24.1.2-mac-arm64.dmg",
-            "/D3mwyF00YWgDVq0GNDyegc8mLF63cxCOe/vnpGyLz9/Oj5aBl3oG32cj+c8e11+eHYigkKb72nFz5zBoPx8Bw==": "Trezor-Suite-24.1.2-linux-arm64.AppImage",
-            "ehIIOksVzKLGYs6GNZ8w5XvellFRb9sHVORS7MOXmwbbikjgkNX/nlfjwmUKOysxI4PwPzIbqtuX2GYyC9lXHw==": "Trezor-Suite-24.1.2-linux-x86_64.AppImage",
-            
-            "miD4SzLzETW+2cLj2VwRy9ZuL8nTw8kKG1uU9EmLRJPukyhY9Od3yeMmxztEafodqE7wv6TxEx4Fi/XIbyC2lQ==": "Trezor-Suite-23.12.3-linux-arm64.AppImage",
-            "IZZmRaWU0POy+Ufx6Ct4/fLzRy+NbSmI+YqdMZd9uTUh0jhPf3BQ2JLwANlUUFZzM+USSTUCjFl0PQ4QQpjI6Q==": "Trezor-Suite-23.12.3-linux-x86_64.AppImage",
-            "SAMaH+VK/I0puVT3vKVUd/1oYPiShglHiVFE2C4zrBSEvVS9UJsz24nkf5LvnCcFXq/K9Qh7evdCKphFE+iW4Q==": "Trezor-Suite-23.12.3-mac-x64.zip",
-            "+bJAWY9EmC7GLMKWYWRvbgm6oB96/DDgs5MGYqzjm4tp0g/kdm4dwRSikZzNMAHHvKTupFEa16/QVFEiXOgTCA==": "Trezor-Suite-23.12.3-mac-arm64.zip",
-            "Po2aNoZf6Z5bIq7uQRKjcWxhRL3qG8HtSquR4nXIPYeJdk6eahMy/V83T+SQ0kaSqLtdhAPYxDxYvsFSxbhHTQ==": "Trezor-Suite-23.12.3-mac-x64.dmg",
-            "7HQX/iMOS65Y8adkQSoHb5tQxYQqbTGiFfIg0iXsLwi9jD1HiPzFXthtqaSrgd7CCf6nXS9RXmmCtiLJhAiR2A==": "Trezor-Suite-23.12.3-mac-arm64.dmg",
-            "t34O8+KoBdEFyE3gUqOjAmv2D6EugAAO4tDWQQMIc467VYw+/bmp1wJg3Pf+EZZBS7FgIO44B5/KgO47HsWMog==": "Trezor-Suite-23.12.3-win-x64.exe"
-            
-            
-        ]
-    }
 }

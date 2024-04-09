@@ -78,7 +78,7 @@ class BrantaViewController: NSViewController {
             let name            = wallet["name"]!.replacingOccurrences(of: ".app", with: "")
             let version         = wallet["version"]!
             let nameKey         = wallet["name"]!
-            let hashes          = HashGrabber.grab()[nameKey]!
+            let hashes          = Bridge.getRuntimeHashes()[nameKey]!
             let versions        = hashes.keys
             
             alert.messageText   = "\(name) \(version)"

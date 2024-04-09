@@ -94,12 +94,12 @@ class DropView: NSView {
               let path = pasteboard[0] as? String
         else { return false }
 
-        let match = Installer.check(path: path)
         let alert = NSAlert()
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
-        if match.0 {
-            alert.messageText   = "Verified \(match.1) ✓"
+        
+        if Installer.check(path: path) {
+            alert.messageText   = "Verified ✓"
             alert.informativeText = "Branta matched the authors PGP-verified checksum."
         }
         else {
