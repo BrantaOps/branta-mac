@@ -5,14 +5,17 @@
 //  Created by Keith Gardner on 12/28/23.
 //
 
-import Cocoa
 import Foundation
 
 class Bridge {
     
+    // static lets are init'd on boot before AppDelegate finishes.
     private static let runtimeHashes: [String : [String : String]] = loadRuntimeHashes()
     private static let installerHashes: [String: [String:String]] = loadInstallerHashes()
 
+    // It feels like Bridge should only be responsible for GETTING and STORING the data.
+    
+    // The actual "matches" check should be somewhere else.
     static func getRuntimeHashes() -> [String : [String : String]] {
         return runtimeHashes
     }
@@ -21,6 +24,10 @@ class Bridge {
         return installerHashes
     }
     
+    
+    
+    
+    // MOVE OUT
     static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
         
         if let candidates = installerHashes[wallet]?.keys {
@@ -30,6 +37,7 @@ class Bridge {
         return false
     }
     
+    // MOVE OUT
     static func runtimeHashMatches(hash: String, wallet: String) -> Bool {
         return runtimeHashes[wallet]?.values.contains(hash) ?? false
     }
@@ -37,6 +45,9 @@ class Bridge {
     private
     
     static func loadInstallerHashes() -> [String: [String:String]] {
+        // here we need to hit the network.
+        // should the main UI say "loading?"
+        
         return [
             BlockstreamGreen.runtimeName():     BlockstreamGreen.installerHashes(),
             Sparrow.runtimeName():              Sparrow.installerHashes(),

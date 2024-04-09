@@ -1,0 +1,52 @@
+
+455f9f1d5ec5854f25edf47656d849db43d89a87c57ec73f750e67fc2d823808: whirlpool-gui-0.10.4.dmg
+5324474e4f41d53f5cf139f8fa1011bffcb42f0d2bfa1e9f44c6247a5d98586f: whirlpool-gui_Setup_0.10.4.exe
+a04c15fa5acf56c1ce18f2681cb4a83f973294f4cdf0478c9ba2e01d3c015140: whirlpool-gui_0.10.4_amd64.snap
+21d4c8212e2e3142d88d9c7ed4f40d7e91653779119dabeb45007b35da26af7e: whirlpool-gui_0.10.4_amd64.deb
+d714b469883927d3bbf69835e1280c792316fe0ab139398063f7ddfdb0e666a6: whirlpool-gui-0.10.4.x86_64.rpm
+cdd03c92a299d7251fd2e272cec9b0f10c233ca5e0be28af14fcd6ffd9e2c838: whirlpool-gui-0.10.4.AppImage
+
+
+# BlockstreamGreen. Standard SHA 256 from manifest.
+# BlockstreamGreen 1.2.9
+"6c28ed9f08c2bfdd1a9ccb5da26ab27549d3d95ac791e013c3316264a0b7a2eb":  "BlockstreamGreen_Windows_x86_64.zip"
+"1b8589bc997016087ba27ef28f2026626834c91af525ca88bd3841bafcbe4c06":  "BlockstreamGreen_MacOS_x86_64.zip"
+"f7bbc3333012ffd8a3512ede7415169329b4010cfe9f96ae6e1a92268236a52e":  "BlockstreamGreen-x86_64.AppImage"
+"19e24095367acf1eb94818c4d67ccabc9e86f5e128edbb05f586bd6bae844822":  "BlockstreamGreen_Linux_x86_64.tar.gz"
+
+# BlockstreamGreen 1.2.8
+"47d394ef3beaf96b77f2210e796be0a41c70afb9109b3b069655abeacdc485d0": "BlockstreamGreen_Windows_x86_64.zip"
+"9bfee4300aefc6f518f181c83e4af21bbdab7ae8b3fd8e334ea3fbe2c4a3b5ee": "BlockstreamGreen_MacOS_x86_64.zip"
+"52589b48279960057db48e80cdcff9a26966cf76dcf75910cdd72e7e554b49f1": "BlockstreamGreen-x86_64.AppImage"
+"66c354b0d3bd26fc582815c4dfbe14e2232bb5e964277a2f1604a719c2593cc2": "BlockstreamGreen_Linux_x86_64.tar.gz"
+
+# BlockstreamGreen 1.2.7
+"373b459952a8acecb4d13a6958df861df50b7ecec1876220025ecf5fb61adedb": "BlockstreamGreen_Windows_x86_64.zip"
+"692496addde67c052d1db051498c261dc4528ffc4c9e5de35629d645182d7171": "BlockstreamGreen_MacOS_x86_64.zip"
+"7221cb0211d5b31ca73440cada498020823718427296f16c599ea9660276be54": "BlockstreamGreen-x86_64.AppImage"
+"7cb7ce8659a778919327a702f3b4b37d17bec4d9d0dbf4f9c9cae4361e418758": "BlockstreamGreen_Linux_x86_64.tar.gz"
+
+# BlockstreamGreen 1.2.6
+"5b1420b5215334be3ef37bd500deab7c5c00b8ab8007e16c3a344d1aa714cb00": "BlockstreamGreen_Windows_x86_64.zip"
+"9110ba0f1490a3baedbaaaec9c4a7bf8f511bb9c1f2f81655e6be6ee1c71b40b": "BlockstreamGreen_MacOS_x86_64.zip"
+"cf57b16498e8a9e1607b556a107973e39c4bca0222cc16fb1402fd78f16c418d": "BlockstreamGreen-x86_64.AppImage"
+"073ec6a37e26d63c693afdce7aa047d3d1c966519c490b8b4fb45190303faa70": "BlockstreamGreen_Linux_x86_64.tar.gz":
+
+# ledger-live. Standard SHA 512 from manifest (see https://www.ledger.com/ledger-live/lld-signatures).
+# ledger-live 2.75.0
+"2a4e77a8de337e8d5e7bd77888da963f9de3305be7d0c9ef384724445a173e800ef87d8fb6cca02352c280f30f79c9ba8e305cb47544e5bfdf692c092e1e7628": "ledger-live-desktop-2.75.0-linux-x86_64.AppImage"
+"2f8083905223e830302fbacedf24fe75c6cbc40420b21c9befee68dabad04aac5af9ddb572231fcb00675989ea31456a13c185ef60aaf1051bc43744d8e86915": "ledger-live-desktop-2.75.0-mac.dmg"
+"ee2c9c6c40f032e2410e291040deaa1c5fb6b422c7836c9fb6ad58bc3c189ced58185c149966f62e389132f5c63aed97daffeab4ddab682844fdaa34d63d72d1": "ledger-live-desktop-2.75.0-mac.zip"
+"11289b6f800395f9a7945bedc7bd061bfd6df9ba1f6bf5af20b0f97472785a77e38f9b28c2ed6dac2efba7bfcae1b2f794767192a489ab8a1735df212bfe0889": "ledger-live-desktop-2.75.0-win-x64.exe"
+
+# ledger-live 2.73.1
+"849649f9f104d1a66e4705d0b83ab0c6edee553aad19b7ac8f10afecaf93b0f64e360abdad0ce2771c3cf290575ad266a63f2109cb998d3378ef6114abe6d153": "ledger-live-desktop-2.73.1-linux-x86_64.AppImage"
+"0ac6fe27ac26e818e156b805629b8faa79d389cceffff9fe0995a982fbd5509cb9d8313af8f77ee861b29258f68493ca7e18be7717acfb1c3d701b446d968b6d": "ledger-live-desktop-2.73.1-mac.dmg"
+"ca8b29835749ce11d658c564d6e8384cde7d52174c22b20d1bf9c57ae185324a2a9645fda827987840599030afd6dd7afaace63dc0da0d49568a14f0743b3c86": "ledger-live-desktop-2.73.1-mac.zip"
+"b203f25940e1a113d64dad7d3d61a5138d61b5663d56979013a3b15ad3624bd6e1abd43d112e4d880f09e2df47832e2ae58bd09a368d7a7c0155fc2b03be7e97": "ledger-live-desktop-2.73.1-win-x64.exe"
+
+# ledger-live 2.73.0
+"a0581914c44ba7b8dfbc3cff3fa568a7eed9048a0b0f5212a0ac076b85929f4d62e2d92fe636d6bd83139b2333a711f6e373a5b7a42b4a65eb2a9a8f166a7846": "ledger-live-desktop-2.73.0-linux-x86_64.AppImage"
+"cdef29a985edb242f86d2f45b1be0a6054dddfdc9f3b54ab99242714c2c86dfbd7b089ab6b57099d068f205b119a6d456006856a8fbed09f0ccaf78bb4171ce1": "ledger-live-desktop-2.73.0-mac.dmg"
+"c4228605dad20997e2e7536ebfe7a7ed552778d10dfed47b6bcc0b114d3281d3713a86649f824c82b4640e0d15248bbe021f5aeb9d13faec67e359629c24c259": "ledger-live-desktop-2.73.0-mac.zip"
+"ab25a7d4c479e00b49df4683109cbdcec2d56c3635cb7535fbe69e888c8616b954401e115d803393892803f4b1265f3659d9a6775d1ee92c32bee0d08383b773": "ledger-live-desktop-2.73.0-win-x64.exe"
