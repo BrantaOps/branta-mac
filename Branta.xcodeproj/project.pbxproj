@@ -10,6 +10,7 @@
 		ED04D6E52BB1A3C900E5DE59 /* Sudo.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04D6E42BB1A3C900E5DE59 /* Sudo.swift */; };
 		ED04D6E72BB1A52F00E5DE59 /* PID.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04D6E62BB1A52F00E5DE59 /* PID.swift */; };
 		ED04D6EA2BB1A8AB00E5DE59 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED04D6E92BB1A8AB00E5DE59 /* Command.swift */; };
+		ED0DB8092BC5D990009AE5B2 /* BrantaAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0DB8082BC5D990009AE5B2 /* BrantaAnalytics.swift */; };
 		ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19A7A42B123F00004375C7 /* BrantaNotify.swift */; };
 		ED1A3C812BC41E8E00895C5A /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C802BC41E8E00895C5A /* APITests.swift */; };
 		ED1A3C842BC42C5A00895C5A /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C832BC42C5A00895C5A /* Architecture.swift */; };
@@ -97,6 +98,7 @@
 		ED04D6E42BB1A3C900E5DE59 /* Sudo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudo.swift; sourceTree = "<group>"; };
 		ED04D6E62BB1A52F00E5DE59 /* PID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PID.swift; sourceTree = "<group>"; };
 		ED04D6E92BB1A8AB00E5DE59 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		ED0DB8082BC5D990009AE5B2 /* BrantaAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaAnalytics.swift; sourceTree = "<group>"; };
 		ED19A7A42B123F00004375C7 /* BrantaNotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaNotify.swift; sourceTree = "<group>"; };
 		ED1A3C802BC41E8E00895C5A /* APITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
 		ED1A3C832BC42C5A00895C5A /* Architecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Architecture.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				ED611DDA2BC3574200FAE51B /* API.swift */,
 				ED1A3C832BC42C5A00895C5A /* Architecture.swift */,
 				ED04D6E82BB1A87900E5DE59 /* Bash */,
+				ED0DB8082BC5D990009AE5B2 /* BrantaAnalytics.swift */,
 				EDD65EA62BC231D000531800 /* BrantaConstants.swift */,
 				EDD65EA42BC22CF100531800 /* BrantaLogger.swift */,
 				ED19A7A42B123F00004375C7 /* BrantaNotify.swift */,
@@ -577,6 +580,7 @@
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
 				EDB9F70F2BA9D91600F0C005 /* TrafficMonitor.swift in Sources */,
 				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
+				ED0DB8092BC5D990009AE5B2 /* BrantaAnalytics.swift in Sources */,
 				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,
 				ED04D6E52BB1A3C900E5DE59 /* Sudo.swift in Sources */,
 				ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */,

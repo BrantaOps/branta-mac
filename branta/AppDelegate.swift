@@ -6,7 +6,6 @@
 //
 
 import Cocoa
-import Countly
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -105,7 +104,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func start() {
-        startCountly()
+        BrantaAnalytics.start()
                 
         setupMenu(status: ACTIVE)
         if notificationManager == nil {
@@ -132,13 +131,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             NSApp.setActivationPolicy(.accessory)
         }
-    }
-    
-    func startCountly() {
-        let config: CountlyConfig = CountlyConfig()
-        config.appKey = "ccc4eb59a850e5f3bdf640b8d36284c3bce03f12"
-        config.host = "https://branta-0dc12e4ffb389.flex.countly.com"
-        Countly.sharedInstance().start(with: config)
     }
     
     func wipeDefaults() {
