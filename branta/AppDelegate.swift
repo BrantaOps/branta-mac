@@ -9,7 +9,7 @@ import Cocoa
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     private var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
     var settingsWindow: NSWindow?
@@ -43,11 +43,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidBecomeActive(_ notification: Notification) {
         foreground = true
     }
-
+    
     func applicationDidResignActive(_ notification: Notification) {
         foreground = false
     }
-
+    
     @objc func didTapAbout() {
         MenuHelper.openAboutWindow()
     }
@@ -65,7 +65,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
+}
 
+extension AppDelegate {
     private
     
     func setupMenu(status:String) {

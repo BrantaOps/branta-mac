@@ -7,6 +7,11 @@
 
 import Cocoa
 
+// TODO - this name is almost good.
+// Focus is an automation that looks at which app is in the foreground, and if a bitcoin wallet, alerts status without having to leave
+// branta main window open.
+// "Foreground Automation?"
+
 class Focus: Automation {
     
     private static var currentApp = ""
@@ -29,6 +34,7 @@ class Focus: Automation {
             alreadyAlerted = ""
         }
     }
+    
     static func alertFor(app: String) {
         if app != alreadyAlerted {
             let verified = Verify.verify(wallet: app)
@@ -41,6 +47,7 @@ class Focus: Automation {
                     body: "Safe to proceed.",
                     key: NOTIFY_UPON_LAUNCH
                 )
+                // TODO - these clauses need to check the version. see  https://github.com/BrantaOps/branta-mac/issues/53
             } else {
                 appDelegate?.notificationManager?.showNotification(
                     title: "\(app) Unverified.",
