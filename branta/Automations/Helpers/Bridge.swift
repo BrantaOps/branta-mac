@@ -8,38 +8,15 @@
 import Foundation
 
 class Bridge {
+    private static let runtimeHashes = loadRuntimeHashes()
+    private static let installerHashes = loadInstallerHashes()
     
-    // static lets are init'd on boot before AppDelegate finishes.
-    private static let runtimeHashes: [String : [String : String]] = loadRuntimeHashes()
-    private static let installerHashes: [String: [String:String]] = loadInstallerHashes()
-
-    // It feels like Bridge should only be responsible for GETTING and STORING the data.
-    
-    // The actual "matches" check should be somewhere else.
-    static func getRuntimeHashes() -> [String : [String : String]] {
+    static func getRuntimeHashes() -> [String : [String:String]] {
         return runtimeHashes
     }
     
-    static func getInstallerHashes() -> [String : [String : String]] {
+    static func getInstallerHashes() -> [String : [String:String]] {
         return installerHashes
-    }
-    
-    
-    
-    
-    // MOVE OUT
-    static func installerHashMatches(hash256: String, hash512: String, base64: String, wallet: String) -> Bool {
-        
-        if let candidates = installerHashes[wallet]?.keys {
-            return [hash256, hash512, base64].contains(where: { candidates.contains($0) })
-        }
-
-        return false
-    }
-    
-    // MOVE OUT
-    static func runtimeHashMatches(hash: String, wallet: String) -> Bool {
-        return runtimeHashes[wallet]?.values.contains(hash) ?? false
     }
     
     private

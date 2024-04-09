@@ -60,7 +60,7 @@ class Verify: Automation {
         let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
         let hash = Sha.sha256(at: fullPath)
 
-        return Bridge.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
+        return Matcher.runtimeHashMatches(hash: hash, wallet: "\(wallet).app")
     }
     
     static func addObserver(_ observer: VerifyObserver) {
