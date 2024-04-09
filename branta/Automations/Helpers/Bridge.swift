@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Yams
 
 class Bridge {
     private static let runtimeHashes = loadRuntimeHashes()
@@ -15,16 +16,32 @@ class Bridge {
         return runtimeHashes
     }
     
-    static func getInstallerHashes() -> [String : [String:String]] {
+    // TODO - this does not initialize until user drops a file. 
+    static func getInstallerHashes() -> [String:String] {
         return installerHashes
     }
     
     private
     
-    static func loadInstallerHashes() -> [String: [String:String]] {
-        // here we need to hit the network.
-        // should the main UI say "loading?"
-        return [:]
+    static func loadInstallerHashes() -> [String:String] {
+        let path = Bundle.main.path(forResource: "InstallerHashes", ofType: "yaml")
+
+        do {
+            guard let path = path else {
+                return [:]
+            }
+
+            let yamlString = try String(contentsOfFile: path, encoding: .utf8)
+            let yamlData = try Yams.load(yaml: yamlString)
+
+            guard let yamlDictionary = yamlData as? [String: String] else {
+                return [:]
+            }
+
+            return yamlDictionary
+        } catch {
+            return [:]
+        }
     }
     
     static func loadRuntimeHashes() -> [String: [String:String]]{

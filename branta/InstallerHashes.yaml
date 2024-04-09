@@ -21,7 +21,7 @@
 "5b1420b5215334be3ef37bd500deab7c5c00b8ab8007e16c3a344d1aa714cb00": "BlockstreamGreen_Windows_x86_64.zip"
 "9110ba0f1490a3baedbaaaec9c4a7bf8f511bb9c1f2f81655e6be6ee1c71b40b": "BlockstreamGreen_MacOS_x86_64.zip"
 "cf57b16498e8a9e1607b556a107973e39c4bca0222cc16fb1402fd78f16c418d": "BlockstreamGreen-x86_64.AppImage"
-"073ec6a37e26d63c693afdce7aa047d3d1c966519c490b8b4fb45190303faa70": "BlockstreamGreen_Linux_x86_64.tar.gz":
+"073ec6a37e26d63c693afdce7aa047d3d1c966519c490b8b4fb45190303faa70": "BlockstreamGreen_Linux_x86_64.tar.gz"
 
 # ledger-live. Standard SHA 512 from manifest (see https://www.ledger.com/ledger-live/lld-signatures).
 # ledger-live 2.75.0
@@ -73,9 +73,9 @@
 "68bf0bbc32690cbd194c0da8fab449d45e02ba546dc6f678ea67a9546e25a71b": "*sparrow-server-1.8.3-1.aarch64.rpm"
 "c28bf5718d8a82eb1ecb79504c406c39f90dc61081015d13802ebc4295306196": "*sparrow-server-1.8.3-1.x86_64.rpm"
 "432af3b1226f183295cc651b44d14384c0ffde887d3626451b1950a9ed9dda76": "*sparrow-server-1.8.3-aarch64.tar.gz"
-"88ba868d66b83e2151d691c7dfb11d6d169e55d0deaad2b754c641793d496b59": "*sparrow-server-1.8.3
+"88ba868d66b83e2151d691c7dfb11d6d169e55d0deaad2b754c641793d496b59": "*sparrow-server-1.8.3"
 
-# Trezor-Suite. SHA 512 then Base64 Encoded Binary
+# Trezor-Suite. SHA 512 then Base64 Encoded Binary.
 # Trezor-Suite 24.1.2
 "Im/IAqbtSye5SyCE1ffrxV2kaYuOvuw/u3Gm/Nc+mt3oqgglHfV83XrOYPs0zgi+HeE2NAVDXXU/t5bGVMX7YQ==": "Trezor-Suite-24.1.2-win-x64.exe"
 "MyzTysyWlCRZOYBFAvJXjwW8v5hnbDxXjyG0Tf8d+Ii1a5TjnWw9Q+bnt5rkO6zlEA3ftkZPO5XnpyspvYPPWw==": "Trezor-Suite-24.1.2-mac-x64.zip"
