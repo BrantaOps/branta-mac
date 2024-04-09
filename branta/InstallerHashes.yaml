@@ -1,12 +1,3 @@
-
-455f9f1d5ec5854f25edf47656d849db43d89a87c57ec73f750e67fc2d823808: whirlpool-gui-0.10.4.dmg
-5324474e4f41d53f5cf139f8fa1011bffcb42f0d2bfa1e9f44c6247a5d98586f: whirlpool-gui_Setup_0.10.4.exe
-a04c15fa5acf56c1ce18f2681cb4a83f973294f4cdf0478c9ba2e01d3c015140: whirlpool-gui_0.10.4_amd64.snap
-21d4c8212e2e3142d88d9c7ed4f40d7e91653779119dabeb45007b35da26af7e: whirlpool-gui_0.10.4_amd64.deb
-d714b469883927d3bbf69835e1280c792316fe0ab139398063f7ddfdb0e666a6: whirlpool-gui-0.10.4.x86_64.rpm
-cdd03c92a299d7251fd2e272cec9b0f10c233ca5e0be28af14fcd6ffd9e2c838: whirlpool-gui-0.10.4.AppImage
-
-
 # BlockstreamGreen. Standard SHA 256 from manifest.
 # BlockstreamGreen 1.2.9
 "6c28ed9f08c2bfdd1a9ccb5da26ab27549d3d95ac791e013c3316264a0b7a2eb":  "BlockstreamGreen_Windows_x86_64.zip"
@@ -50,3 +41,76 @@ cdd03c92a299d7251fd2e272cec9b0f10c233ca5e0be28af14fcd6ffd9e2c838: whirlpool-gui-
 "cdef29a985edb242f86d2f45b1be0a6054dddfdc9f3b54ab99242714c2c86dfbd7b089ab6b57099d068f205b119a6d456006856a8fbed09f0ccaf78bb4171ce1": "ledger-live-desktop-2.73.0-mac.dmg"
 "c4228605dad20997e2e7536ebfe7a7ed552778d10dfed47b6bcc0b114d3281d3713a86649f824c82b4640e0d15248bbe021f5aeb9d13faec67e359629c24c259": "ledger-live-desktop-2.73.0-mac.zip"
 "ab25a7d4c479e00b49df4683109cbdcec2d56c3635cb7535fbe69e888c8616b954401e115d803393892803f4b1265f3659d9a6775d1ee92c32bee0d08383b773": "ledger-live-desktop-2.73.0-win-x64.exe"
+
+# Sparrow. Standard SHA 256 from manifest.
+# Sparrow 1.8.4
+"76187ef7b52e22a6b45840fd493c7aea6affce42ee6ae6b9399cc99f65e632cb": "*Sparrow-1.8.4-aarch64.dmg"
+"e13a325b66b722d64c563b06b92ac0559e7b9e7927c46b48ab19df1e99317937": "*Sparrow-1.8.4-x86_64.dmg"
+"60c3ac1fe44957baca902d1f4297cbd35a154ffa740dafe271ef553c1c3bb692": "*Sparrow-1.8.4.exe"
+"4464689617842288078df66afbb6dfa994e900b091c6c39a90c0680259a1906b": "*Sparrow-1.8.4.zip"
+"0b8cb74ad81c8c7f29b1cb7816a866b9f03bac154e87a7bfb17e9046dcdf2b1f": "*sparrow-1.8.4-1.aarch64.rpm"
+"a39be262a6437003216759d20c2c9e5a1e3cf22d8156f490810f263662226d9c": "*sparrow-1.8.4-1.x86_64.rpm"
+"6b050131368f639c33e52a88eb6fb03678acc009f8e464eccfbe353e3cac8156": "*sparrow-1.8.4-aarch64.tar.gz"
+"a8ed2e84455747df5cff7870790423e9e20e06662bd5e232be8e5f9d3841df70": "*sparrow-1.8.4-x86_64.tar.gz"
+"456d7f8fce2409f07a3f1850ff2b4343e4d74b45939d780ec6e4586f8f63c3b2": "*sparrow-server-1.8.4-1.aarch64.rpm"
+"8a933394289db6a7a511924ccd23586d7a8e5e6b33206742ecc7d89bbce7af7a": "*sparrow-server-1.8.4-1.x86_64.rpm"
+"e41ee194decef351ac1fe43faf36d5c4afe20146e80ba551e4cd19e9642d49a7": "*sparrow-server-1.8.4-aarch64.tar.gz"
+"e627ed0ba6a2a135c135901dff65f68034d03aa206b1a955a9505b3e36efc760": "*sparrow-server-1.8.4-x86_64.tar.gz"
+"633f8cf81cd3719490f94ce8bebb7e9f30c4a5c73605f1283fa2db41905f5dd1": "*sparrow-server_1.8.4-1_amd64.deb"
+"bf79e57e165da48c789668e6a60e6da4e655c4c01edc05a0eb4a7f8917e0f311": "*sparrow-server_1.8.4-1_arm64.deb"
+"61d6508b41d1b7f233b7d619025acac6dc1816c9871ddf4b3cdb963050427897": "*sparrow_1.8.4-1_amd64.deb"
+"f9a80b54f0e0dc49660df929138910338fa4b9caa8377351e649e6597f83199b": "*sparrow_1.8.4-1_arm64.deb"
+
+# Sparrow 1.8.3
+"83af936cc1e25f0c3e2b3cc7c41cb566604a1c7019cf91d944c4419414502a40": "*Sparrow-1.8.3-aarch64.dmg"
+"5f1eaca64fcacf068af46fc2098ae34e8fcb26a4095965c8014df915c62dafe0": "*Sparrow-1.8.3-x86_64.dmg"
+"415c551cbd29da2661e75873b8c5e10bea8fa931525094fd04bb33a3f6477c74": "*Sparrow-1.8.3.exe"
+"fea8d9002db1c75659f1cd738af76f51834af18124d175a0f3a7c0aaa972e3c8": "*Sparrow-1.8.3.zip"
+"33d8e337940b374c8bf4164173e93f84ddbe392a8b0e303e35da4b05e6573b7a": "*sparrow-1.8.3-1.aarch64.rpm"
+"aa0d151581c8d5e8a9f8828babba2ff7a178f5f67b9564d904043b1077512527": "*sparrow-1.8.3-1.x86_64.rpm"
+"42d29a6782f38cebbc332d9241da712d57fa2a36ffeab97bf6d752907029c27d": "*sparrow-1.8.3-aarch64.tar.gz"
+"50458c741822e11964020ad25971ac55125db4432c1e17230d1ab150bb8a6bbe": "*sparrow-1.8.3-x86_64.tar.gz"
+"68bf0bbc32690cbd194c0da8fab449d45e02ba546dc6f678ea67a9546e25a71b": "*sparrow-server-1.8.3-1.aarch64.rpm"
+"c28bf5718d8a82eb1ecb79504c406c39f90dc61081015d13802ebc4295306196": "*sparrow-server-1.8.3-1.x86_64.rpm"
+"432af3b1226f183295cc651b44d14384c0ffde887d3626451b1950a9ed9dda76": "*sparrow-server-1.8.3-aarch64.tar.gz"
+"88ba868d66b83e2151d691c7dfb11d6d169e55d0deaad2b754c641793d496b59": "*sparrow-server-1.8.3
+
+# Trezor-Suite. SHA 512 then Base64 Encoded Binary
+# Trezor-Suite 24.1.2
+"Im/IAqbtSye5SyCE1ffrxV2kaYuOvuw/u3Gm/Nc+mt3oqgglHfV83XrOYPs0zgi+HeE2NAVDXXU/t5bGVMX7YQ==": "Trezor-Suite-24.1.2-win-x64.exe"
+"MyzTysyWlCRZOYBFAvJXjwW8v5hnbDxXjyG0Tf8d+Ii1a5TjnWw9Q+bnt5rkO6zlEA3ftkZPO5XnpyspvYPPWw==": "Trezor-Suite-24.1.2-mac-x64.zip"
+"Ueche+SCzgLGPU+kvNkVSlz/d9tX5ZU4wn8HXNOnxXFOHRYueFa4y+T6LsO3IMGFD8yQbxFJTBhZRa+yEpWLxQ==": "Trezor-Suite-24.1.2-mac-arm64.zip"
+"R188nhklYdnU498O6wKkQjwtDG/BAzfYQqdWRcD0i+MfMTb0o4Ba1haopucqqTayQlCmPqmSqbVA8io07WCRgA==": "Trezor-Suite-24.1.2-mac-x64.dmg"
+"WsVY05OoY0hshOV2Xsar3ooBAZoVDEKXy2YTWyUDS+DnbZsu2zy2szNEqESrVPPRbdRH1T0OF3A1ypTuOJsbtQ==": "Trezor-Suite-24.1.2-mac-arm64.dmg"
+"/D3mwyF00YWgDVq0GNDyegc8mLF63cxCOe/vnpGyLz9/Oj5aBl3oG32cj+c8e11+eHYigkKb72nFz5zBoPx8Bw==": "Trezor-Suite-24.1.2-linux-arm64.AppImage"
+"ehIIOksVzKLGYs6GNZ8w5XvellFRb9sHVORS7MOXmwbbikjgkNX/nlfjwmUKOysxI4PwPzIbqtuX2GYyC9lXHw==": "Trezor-Suite-24.1.2-linux-x86_64.AppImage"
+
+# Trezor-Suite 24.12.3
+"miD4SzLzETW+2cLj2VwRy9ZuL8nTw8kKG1uU9EmLRJPukyhY9Od3yeMmxztEafodqE7wv6TxEx4Fi/XIbyC2lQ==": "Trezor-Suite-23.12.3-linux-arm64.AppImage"
+"IZZmRaWU0POy+Ufx6Ct4/fLzRy+NbSmI+YqdMZd9uTUh0jhPf3BQ2JLwANlUUFZzM+USSTUCjFl0PQ4QQpjI6Q==": "Trezor-Suite-23.12.3-linux-x86_64.AppImage"
+"SAMaH+VK/I0puVT3vKVUd/1oYPiShglHiVFE2C4zrBSEvVS9UJsz24nkf5LvnCcFXq/K9Qh7evdCKphFE+iW4Q==": "Trezor-Suite-23.12.3-mac-x64.zip"
+"+bJAWY9EmC7GLMKWYWRvbgm6oB96/DDgs5MGYqzjm4tp0g/kdm4dwRSikZzNMAHHvKTupFEa16/QVFEiXOgTCA==": "Trezor-Suite-23.12.3-mac-arm64.zip"
+"Po2aNoZf6Z5bIq7uQRKjcWxhRL3qG8HtSquR4nXIPYeJdk6eahMy/V83T+SQ0kaSqLtdhAPYxDxYvsFSxbhHTQ==": "Trezor-Suite-23.12.3-mac-x64.dmg"
+"7HQX/iMOS65Y8adkQSoHb5tQxYQqbTGiFfIg0iXsLwi9jD1HiPzFXthtqaSrgd7CCf6nXS9RXmmCtiLJhAiR2A==": "Trezor-Suite-23.12.3-mac-arm64.dmg"
+"t34O8+KoBdEFyE3gUqOjAmv2D6EugAAO4tDWQQMIc467VYw+/bmp1wJg3Pf+EZZBS7FgIO44B5/KgO47HsWMog==": "Trezor-Suite-23.12.3-win-x64.exe"
+
+# Wasabi. Standard SHA 256 from manifest.
+# Wasabi 2.0.5
+"8c53b938d616cd6d4d2c621418fe011782352e95a795a80defdc77c45fb0dc77": "Wasabi-2.0.5-arm64.dmg"
+"5a3ab59f78a155ffeddda2af7a03897cf3ed9f27027dbce5ad3a80bffa6d16ef": "Wasabi-2.0.5-linux-x64.zip"
+"b3c4dc96657a8862a9ad4b485a1d301773325d8d71c91a13c57713941be3e982": "Wasabi-2.0.5-macOS-arm64.zip"
+"e7e6de0d4304011e98ad9482404d6dd34e28e4ead3abf48763dcec877a8422cd": "Wasabi-2.0.5-macOS-x64.zip"
+"a2aff94ff2493f91b492298583836104cb03b294ad653ebc1691b9936d73350a": "Wasabi-2.0.5-win7-x64.zip"
+"ac6b3a9095e4a7d3c2407117760cfcf8b0d829fcdd67eee225a90dde784dc776": "Wasabi-2.0.5.deb"
+"67dcaf2a5d6c3e890b04812ea0a92cc3129e2c1f52879aea5487251984c62953": "Wasabi-2.0.5.dmg"
+"ab1a35ed0294340b363fd7d84568bcea8407cb35a45b5c1da8c4f811dfa963bc": "Wasabi-2.0.5.msi"
+"d40817f8a970fc8b114415763353a42c61380cfaaaea15f687bd9137369dd833": "Wasabi-2.0.5.tar.gz"
+
+# Whirlpool. Standard SHA 256 from manifest.
+# Whirlpool 0.10.4
+"455f9f1d5ec5854f25edf47656d849db43d89a87c57ec73f750e67fc2d823808": "whirlpool-gui-0.10.4.dmg"
+"5324474e4f41d53f5cf139f8fa1011bffcb42f0d2bfa1e9f44c6247a5d98586f": "whirlpool-gui_Setup_0.10.4.exe"
+"a04c15fa5acf56c1ce18f2681cb4a83f973294f4cdf0478c9ba2e01d3c015140": "whirlpool-gui_0.10.4_amd64.snap"
+"21d4c8212e2e3142d88d9c7ed4f40d7e91653779119dabeb45007b35da26af7e": "whirlpool-gui_0.10.4_amd64.deb"
+"d714b469883927d3bbf69835e1280c792316fe0ab139398063f7ddfdb0e666a6": "whirlpool-gui-0.10.4.x86_64.rpm"
+"cdd03c92a299d7251fd2e272cec9b0f10c233ca5e0be28af14fcd6ffd9e2c838": "whirlpool-gui-0.10.4.AppImage"

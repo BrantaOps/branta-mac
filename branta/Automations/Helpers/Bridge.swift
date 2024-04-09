@@ -47,15 +47,7 @@ class Bridge {
     static func loadInstallerHashes() -> [String: [String:String]] {
         // here we need to hit the network.
         // should the main UI say "loading?"
-        
-        return [
-            BlockstreamGreen.runtimeName():     BlockstreamGreen.installerHashes(),
-            Sparrow.runtimeName():              Sparrow.installerHashes(),
-            Trezor.runtimeName():               Trezor.installerHashes(),
-            Ledger.runtimeName():               Ledger.installerHashes(),
-            Wasabi.runtimeName():               Wasabi.installerHashes(),
-            Whirlpool.runtimeName():            Whirlpool.installerHashes()
-        ]
+        return [:]
     }
     
     static func loadRuntimeHashes() -> [String: [String:String]]{

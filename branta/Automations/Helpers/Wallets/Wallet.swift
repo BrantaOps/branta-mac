@@ -36,11 +36,6 @@ class Wallet {
         return ""
     }
     
-    // (SHA256 or SHA512):Installer File
-    class func installerHashes() -> [String:String] {
-        return [:]
-    }
-    
     class func singleBinary() -> Bool {
         return false
     }
