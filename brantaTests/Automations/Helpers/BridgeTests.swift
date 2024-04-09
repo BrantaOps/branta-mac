@@ -17,7 +17,7 @@ class BridgeTests: XCTestCase {
     }
     
     func testGetInstallerHashes() {
-        XCTAssertEqual(Bridge.getInstallerHashes().keys.count, 6)
+        XCTAssertTrue(Bridge.getInstallerHashes().keys.count > 10)
     }
     
 }
