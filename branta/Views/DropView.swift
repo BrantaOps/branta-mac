@@ -24,8 +24,8 @@ class DropView: NSView {
     private let LIVE_COLOR = NSColor.darkGray.cgColor
     private let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
     
-    private let minimumHeight: CGFloat = 100
-    private let minimumWidth: CGFloat = 200
+    private let MIN_HEIGHT: CGFloat = 100
+    private let MIN_WIDTH: CGFloat = 200
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -39,8 +39,8 @@ class DropView: NSView {
     
     override var intrinsicContentSize: NSSize {
         var size = super.intrinsicContentSize
-        size.width = max(size.width, minimumWidth)
-        size.height = max(size.height, minimumHeight)
+        size.width = max(size.width, MIN_WIDTH)
+        size.height = max(size.height, MIN_HEIGHT)
         return size
     }
 

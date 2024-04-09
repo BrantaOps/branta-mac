@@ -7,6 +7,7 @@
 
 import Cocoa
 
+// TODO - this class needs clean up.
 class Verify: Automation {
     private static var alreadyWarned = [
         Sparrow.name():             false,
