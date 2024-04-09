@@ -15,6 +15,7 @@
 		ED1A3C842BC42C5A00895C5A /* Architecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C832BC42C5A00895C5A /* Architecture.swift */; };
 		ED1A3C862BC4390900895C5A /* ArchitectureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C852BC4390900895C5A /* ArchitectureTests.swift */; };
 		ED1A3C882BC4401900895C5A /* BridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C872BC4401900895C5A /* BridgeTests.swift */; };
+		ED1A3C8B2BC4D98500895C5A /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = ED1A3C8A2BC4D98500895C5A /* Yams */; };
 		ED1D573F2BC2DE710001DAD2 /* VersionCompTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */; };
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
@@ -165,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED1A3C8B2BC4D98500895C5A /* Yams in Frameworks */,
 				EDC31E0B2B84DBE4005F0C43 /* Countly in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +439,7 @@
 			name = Branta;
 			packageProductDependencies = (
 				EDC31E0A2B84DBE4005F0C43 /* Countly */,
+				ED1A3C8A2BC4D98500895C5A /* Yams */,
 			);
 			productName = branta;
 			productReference = ED73E9552B07D684005742BA /* Branta.app */;
@@ -512,6 +515,7 @@
 			mainGroup = ED73E94C2B07D684005742BA;
 			packageReferences = (
 				EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */,
+				ED1A3C892BC4D98500895C5A /* XCRemoteSwiftPackageReference "Yams" */,
 			);
 			productRefGroup = ED73E9562B07D684005742BA /* Products */;
 			projectDirPath = "";
@@ -967,6 +971,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		ED1A3C892BC4D98500895C5A /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Countly/countly-sdk-ios.git";
@@ -978,6 +990,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		ED1A3C8A2BC4D98500895C5A /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ED1A3C892BC4D98500895C5A /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
 		EDC31E0A2B84DBE4005F0C43 /* Countly */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EDC31E092B84DBE4005F0C43 /* XCRemoteSwiftPackageReference "countly-sdk-ios" */;
