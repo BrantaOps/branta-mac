@@ -9,27 +9,30 @@ import Foundation
 import Yams
 
 class Bridge {
+    private static let url = "https://hash-server-7be6da1b0395.herokuapp.com"
+    private static let endpoint = "/installer_hashes"
+    
     private static var runtimeHashes:[String : [String:String]]?
     private static var installerHashes:[String:String]?
     
     static func fetchLatest() {
         
-        if fetchLatestInstallerHashes() {
-            BrantaLogger.log(s: "Succesfully fetched latest installer hashes.")
-        }
-        else {
-            installerHashes = localInstallerHashes()
-            BrantaLogger.log(s: "Could not fetch latest installer hashes; falling back to local data.")
+        fetchLatestInstallerHashes { success in
+            if success {
+                BrantaLogger.log(s: "Successfully fetched latest installer hashes.")
+            } else {
+                installerHashes = localInstallerHashes()
+                BrantaLogger.log(s: "Could not fetch latest installer hashes; falling back to local data.")
+            }
         }
         
-        
-        
-        if fetchLatestRuntimeHashes() {
-            BrantaLogger.log(s: "Succesfully fetched latest runtime hashes.")
-        }
-        else {
-            runtimeHashes = localRuntimeHashes()
-            BrantaLogger.log(s: "Could not fetch latest runtime hashes; falling back to local data.")
+        fetchLatestRuntimeHashes { success in
+            if success {
+                BrantaLogger.log(s: "Succesfully fetched latest runtime hashes.")
+            } else {
+                runtimeHashes = localRuntimeHashes()
+                BrantaLogger.log(s: "Could not fetch latest runtime hashes; falling back to local data.")
+            }
         }
     }
     
@@ -43,12 +46,36 @@ class Bridge {
     
     private
     
-    static func fetchLatestInstallerHashes() -> Bool {
-        return false
+    static func fetchLatestInstallerHashes(completion: @escaping (Bool) -> Void) {
+        guard let baseURL = URL(string: url) else {
+            // TODO
+            fatalError("Invalid base URL")
+        }
+        let fullURL = baseURL.appendingPathComponent(endpoint)
+        
+        API.send(url: fullURL, method: "GET", body: nil) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    if let yamlString = String(data: data, encoding: .utf8) {
+                        installerHashes = try Yams.load(yaml: yamlString) as? [String: String] ?? [:]
+                        completion(true)
+                    } else{
+                        completion(false)
+                    }
+                } catch {
+                    BrantaLogger.log(s: "fetchLatestInstallerHashes Parsing error.")
+                    completion(false)
+                }
+            case .failure(_):
+                BrantaLogger.log(s: "fetchLatestInstallerHashes API error.")
+                completion(false)
+            }
+        }
     }
     
-    static func fetchLatestRuntimeHashes() -> Bool {
-        return false
+    static func fetchLatestRuntimeHashes(completion: @escaping (Bool) -> Void) {
+        completion(false)
     }
     
     static func localInstallerHashes() -> [String:String] {
