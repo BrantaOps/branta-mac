@@ -9,21 +9,49 @@ import Foundation
 import Yams
 
 class Bridge {
-    private static let runtimeHashes = loadRuntimeHashes()
-    private static let installerHashes = loadInstallerHashes()
+    private static var runtimeHashes:[String : [String:String]]?
+    private static var installerHashes:[String:String]?
     
-    static func getRuntimeHashes() -> [String : [String:String]] {
-        return runtimeHashes
+    static func fetchLatest() {
+        
+        if fetchLatestInstallerHashes() {
+            BrantaLogger.log(s: "Succesfully fetched latest installer hashes.")
+        }
+        else {
+            installerHashes = localInstallerHashes()
+            BrantaLogger.log(s: "Could not fetch latest installer hashes; falling back to local data.")
+        }
+        
+        
+        
+        if fetchLatestRuntimeHashes() {
+            BrantaLogger.log(s: "Succesfully fetched latest runtime hashes.")
+        }
+        else {
+            runtimeHashes = localRuntimeHashes()
+            BrantaLogger.log(s: "Could not fetch latest runtime hashes; falling back to local data.")
+        }
     }
     
-    // TODO - this does not initialize until user drops a file. 
+    static func getRuntimeHashes() -> [String : [String:String]] {
+        return runtimeHashes!
+    }
+    
     static func getInstallerHashes() -> [String:String] {
-        return installerHashes
+        return installerHashes!
     }
     
     private
     
-    static func loadInstallerHashes() -> [String:String] {
+    static func fetchLatestInstallerHashes() -> Bool {
+        return false
+    }
+    
+    static func fetchLatestRuntimeHashes() -> Bool {
+        return false
+    }
+    
+    static func localInstallerHashes() -> [String:String] {
         let path = Bundle.main.path(forResource: "InstallerHashes", ofType: "yaml")
 
         do {
@@ -44,7 +72,7 @@ class Bridge {
         }
     }
     
-    static func loadRuntimeHashes() -> [String: [String:String]]{
+    static func localRuntimeHashes() -> [String: [String:String]]{
         if Architecture.isArm() {
             return loadArm()
         } else if Architecture.isIntel() {
