@@ -1,46 +1,21 @@
-# Note - BlockstreamGreen uses Universal Binary.
-# Checksums are identical on ARM/INTEL.
-blockstreamGreen:
-    "1.2.9":
-        universal:
-          sha256: "6026166039a2722182fb39ea16fafb83cbcf5c0947bc79afc9a2474665820e76"
-          date: 2024-04-10 00:00:00.00
-    "1.2.8":
-        universal:
-          sha256: "a501734a4e2b0258dbae931c18c8255a544bce2f4c5c4bf19e4222df00f839ee"
-          date: 2024-04-10 00:00:00.00
-    "1.2.7":
-        universal:
-          sha256: "043c911fc32fef36ad9468a4d20f77b1bad987d25c8d40142a98065ed4d0984c"
-          date: 2024-04-10 00:00:00.00
-
-
-ledger:
-    "2.77.2":
-      universal:
-        sha256: "fce734f4355cbfdf65523b56b6809ea0f3ae639af52a193e3b779e6ee57e535f"
-        date: 2024-04-10 00:00:00.00
-    "2.73.0":
-      universal:
-        sha256: "6273aba1261d9b51dba036448bef343707e410357d1120de6e8484e276d02d0d"
-        date: 2024-04-10 00:00:00.00
-    "2.71.1":
-      universal:
-        sha256: "9e09610feffb4223aa36184d1bd50ec9e58b262b83ef19db3eca385cea9f7a0c"
-        date: 2024-04-10 00:00:00.00
-    "2.71.0":
-      universal:
-        sha256: "9284b8a84c55a616da1745edbaa185bc7168784e31ead3421847ca6c9b4c34ea"
-        date: 2024-04-10 00:00:00.00
-    "2.69.0":
-      universal:
-        sha256: "f0b5bfc8ad1cde88e60203b7b2c18418d28757d13e17f9a904f4cfe95fe8cd0f"
-        date: 2024-04-10 00:00:00.00
-    "2.68.1":
-      universal:
-        sha256: "b01720c57e26950d14d76db1f7fd094d8d4bffb5390a78877edad0c975e7580f"
-        date: 2024-04-10 00:00:00.00
-    "2.57.0":
-      universal:
-        sha256: "6af34c160c5fca3b89ae04f911be7632dcc9005e46c3bf9fe32ee5eecc0926ff"
-        date: 2024-04-10 00:00:00.00
+sparrow:
+  "1.6.2":
+    x86:
+      sha256: "bdb27bedcf6396e4a007f64122155a2ea92804f88da16ee726b211a4c3d71d7e"
+      date: 2024-04-10 00:00:00.00
+  "1.6.1":
+    x86:
+      sha256: "766a8c08b6610b9d80a6538a3ec78d56c3a19cd59eb01efc5df94daf4c863dcb"
+      date: 2024-04-10 00:00:00.00
+  "1.6.0":
+    x86:
+      sha256: "44c4b5700a44ad20db7bd330262d8f945db05fdacd52f27a7020ea90fa106e92"
+      date: 2024-04-10 00:00:00.00
+  "1.5.6":
+    x86:
+      sha256: "cca2553f37f94df3f349696e73e4f67b06bcdf95f3a9f0ffd441b37b1d035579"
+      date: 2024-04-10 00:00:00.00
+  "1.5.5":
+    x86:
+      sha256: "d1d3caaf73368ca31ff1d15fd40e5439fd9dc2c7c95ab69d46f6e49e92d4e151"
+      date: 2024-04-10 00:00:00.00

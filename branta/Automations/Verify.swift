@@ -10,24 +10,14 @@ import Cocoa
 // TODO - this class needs clean up.
 class Verify: Automation {
     private static var alreadyWarned = [
-        Sparrow.name():             false,
-        Ledger.name():              false,
-        Trezor.name():              false,
-        BlockstreamGreen.name():    false,
-        Wasabi.name():              false,
-        Whirlpool.name():           false
+        Sparrow.name():             false
     ]
     
     private static let TARGETS = [
-        Sparrow.name():             Sparrow.self,
-        Trezor.name():              Trezor.self,
-        Ledger.name():              Ledger.self,
-        BlockstreamGreen.name():    BlockstreamGreen.self,
-        Wasabi.name():              Wasabi.self,
-        Whirlpool.name():           Whirlpool.self
+        Sparrow.name():             Sparrow.self
     ]
     
-    private static let USE_SHORT_VERSION_PATH = [BlockstreamGreen.name()]
+    private static let USE_SHORT_VERSION_PATH: [String] = []
     private static let PATH = "/Applications"
     private static let FM = FileManager.default
     private static var observers = [VerifyObserver]()

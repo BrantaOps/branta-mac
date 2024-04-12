@@ -61,10 +61,4 @@ let ACTIVE                  = "Status: Active ✓"
 let KEYCODE_COMMA           = 43
 
 let APPS = [
-    Sparrow.runtimeName(),
-    Trezor.runtimeName(),
-    Ledger.runtimeName(),
-    BlockstreamGreen.runtimeName(),
-    Wasabi.runtimeName(),
-    Whirlpool.runtimeName()
-]
+    Sparrow.runtimeName()
