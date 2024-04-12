@@ -10,11 +10,14 @@ import Yams
 
 class Bridge {
     private static let url = "https://hash-server-7be6da1b0395.herokuapp.com"
-    private static let endpoint = "/installer_hashes"
-    
+    private static let installerEndpoint = "/installer_hashes"
+    private static let checksumsEndpoint = "/mac/checksums"
+
     private static var runtimeHashes:[String : [String:String]]?
     private static var installerHashes:[String:String]?
     
+    // TODO - look at the threading model & VC creation to kick this off ASAP,
+    // and delay paint until this returns.
     static func fetchLatest() {
         
         fetchLatestInstallerHashes { success in
@@ -51,14 +54,14 @@ class Bridge {
             // TODO
             fatalError("Invalid base URL")
         }
-        let fullURL = baseURL.appendingPathComponent(endpoint)
+        let fullURL = baseURL.appendingPathComponent(installerEndpoint)
         
         API.send(url: fullURL, method: "GET", body: nil) { result in
             switch result {
             case .success(let data):
                 do {
                     if let yamlString = String(data: data, encoding: .utf8) {
-                        installerHashes = try Yams.load(yaml: yamlString) as? [String: String] ?? [:]
+                        installerHashes = try Yams.load(yaml: yamlString) as! [String: String]
                         completion(true)
                     } else{
                         completion(false)
@@ -75,7 +78,31 @@ class Bridge {
     }
     
     static func fetchLatestRuntimeHashes(completion: @escaping (Bool) -> Void) {
-        completion(false)
+        guard let baseURL = URL(string: url) else {
+            // TODO
+            fatalError("Invalid base URL")
+        }
+        let fullURL = baseURL.appendingPathComponent(checksumsEndpoint)
+        
+        API.send(url: fullURL, method: "GET", body: nil) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    if let yamlString = String(data: data, encoding: .utf8) {
+                        runtimeHashes = try Yams.load(yaml: yamlString) as! [String: [String: String]]
+                        completion(true)
+                    } else{
+                        completion(false)
+                    }
+                } catch {
+                    BrantaLogger.log(s: "fetchLatestRuntimeHashes Parsing error.")
+                    completion(false)
+                }
+            case .failure(_):
+                BrantaLogger.log(s: "fetchLatestRuntimeHashes API error.")
+                completion(false)
+            }
+        }
     }
     
     static func localInstallerHashes() -> [String:String] {
