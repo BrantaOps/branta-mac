@@ -22,6 +22,7 @@ class BrantaViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
+        Bridge.fetchLatest()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
     }
     
