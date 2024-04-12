@@ -1,0 +1,25 @@
+# Note - BlockstreamGreen uses Universal Binary.
+# Checksums are identical on ARM/INTEL.
+blockstreamGreen:
+    "1.2.9":
+        arm:
+          sha256: "6026166039a2722182fb39ea16fafb83cbcf5c0947bc79afc9a2474665820e76"
+          date: 2024-04-10 00:00:00.00
+        x86:
+          sha256: "6026166039a2722182fb39ea16fafb83cbcf5c0947bc79afc9a2474665820e76"
+          date: 2024-04-10 00:00:00.00
+    "1.2.8":
+        arm:
+          sha256: "a501734a4e2b0258dbae931c18c8255a544bce2f4c5c4bf19e4222df00f839ee"
+          date: 2024-04-10 00:00:00.00
+        x86:
+          sha256: "a501734a4e2b0258dbae931c18c8255a544bce2f4c5c4bf19e4222df00f839ee"
+          date: 2024-04-10 00:00:00.00
+    "1.2.7":
+        arm:
+          sha256: "043c911fc32fef36ad9468a4d20f77b1bad987d25c8d40142a98065ed4d0984c"
+          date: 2024-04-10 00:00:00.00
+        x86:
+          sha256: "043c911fc32fef36ad9468a4d20f77b1bad987d25c8d40142a98065ed4d0984c"
+          date: 2024-04-10 00:00:00.00
+
