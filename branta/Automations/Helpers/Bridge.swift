@@ -114,7 +114,6 @@ class Bridge {
         return [
             Sparrow.name():               Sparrow.arm(),
             Trezor.name():                Trezor.arm(),
-            Ledger.name():                Ledger.arm(),
             Wasabi.name():                Wasabi.arm(),
             Whirlpool.name():             Whirlpool.arm()
         ]
@@ -124,7 +123,6 @@ class Bridge {
         return [
             Sparrow.name():               Sparrow.x86(),
             Trezor.name():                Trezor.x86(),
-            Ledger.name():                Ledger.x86(),
             Wasabi.name():                Wasabi.x86(),
             Whirlpool.name():             Whirlpool.x86()
         ]

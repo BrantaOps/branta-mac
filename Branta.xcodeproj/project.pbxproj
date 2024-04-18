@@ -33,7 +33,6 @@
 		ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */; };
 		ED4E9F512B3DB64B0000F751 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* Bridge.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
-		ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C72B4ED62F0094D845 /* Ledger.swift */; };
 		ED4FA1CA2B4ED7B60094D845 /* Trezor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1C92B4ED7B60094D845 /* Trezor.swift */; };
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
 		ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */; };
@@ -119,7 +118,6 @@
 		ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
-		ED4FA1C72B4ED62F0094D845 /* Ledger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ledger.swift; sourceTree = "<group>"; };
 		ED4FA1C92B4ED7B60094D845 /* Trezor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trezor.swift; sourceTree = "<group>"; };
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wasabi.swift; sourceTree = "<group>"; };
@@ -399,7 +397,6 @@
 		ED73E9832B08207E005742BA /* Wallets */ = {
 			isa = PBXGroup;
 			children = (
-				ED4FA1C72B4ED62F0094D845 /* Ledger.swift */,
 				ED73E9862B0820C9005742BA /* Sparrow.swift */,
 				ED4FA1C92B4ED7B60094D845 /* Trezor.swift */,
 				ED73E98A2B0820F1005742BA /* Wallet.swift */,
@@ -569,7 +566,6 @@
 			files = (
 				ED4E9F512B3DB64B0000F751 /* Bridge.swift in Sources */,
 				ED3170952B826494003D77D4 /* VersionComp.swift in Sources */,
-				ED4FA1C82B4ED62F0094D845 /* Ledger.swift in Sources */,
 				EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */,
 				EDD65EA52BC22CF100531800 /* BrantaLogger.swift in Sources */,
 				ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */,

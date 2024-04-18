@@ -63,7 +63,6 @@ let KEYCODE_COMMA           = 43
 let APPS = [
     Sparrow.runtimeName(),
     Trezor.runtimeName(),
-    Ledger.runtimeName(),
     Wasabi.runtimeName(),
     Whirlpool.runtimeName()
 ]

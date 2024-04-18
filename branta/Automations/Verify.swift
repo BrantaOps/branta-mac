@@ -11,7 +11,6 @@ import Cocoa
 class Verify: Automation {
     private static var alreadyWarned = [
         Sparrow.name():             false,
-        Ledger.name():              false,
         Trezor.name():              false,
         Wasabi.name():              false,
         Whirlpool.name():           false
@@ -20,7 +19,6 @@ class Verify: Automation {
     private static let TARGETS = [
         Sparrow.name():             Sparrow.self,
         Trezor.name():              Trezor.self,
-        Ledger.name():              Ledger.self,
         Wasabi.name():              Wasabi.self,
         Whirlpool.name():           Whirlpool.self
     ]
