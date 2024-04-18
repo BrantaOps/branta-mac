@@ -102,24 +102,12 @@ class Bridge {
     
     static func localRuntimeHashes() -> [String: [String:String]]{
         if Architecture.isArm() {
-            return loadArm()
+            return [ Sparrow.name(): [:]]
         } else if Architecture.isIntel() {
-            return loadX86()
+            return [ Sparrow.name(): [:]]
         }
         else {
             return [:]
         }
-    }
-    
-    static func loadArm() -> [String: [String:String]] {
-        return [
-            Sparrow.name():               [:],
-        ]
-    }
-    
-    static func loadX86() -> [String : [String : String]]  {
-        return [
-            Sparrow.name():               [:],
-        ]
     }
 }
