@@ -61,6 +61,5 @@ let ACTIVE                  = "Status: Active ✓"
 let KEYCODE_COMMA           = 43
 
 let APPS = [
-    Sparrow.runtimeName(),
-    Whirlpool.runtimeName()
+    Sparrow.runtimeName()
 ]

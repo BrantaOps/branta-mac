@@ -11,12 +11,10 @@ import Cocoa
 class Verify: Automation {
     private static var alreadyWarned = [
         Sparrow.name():             false,
-        Whirlpool.name():           false
     ]
     
     private static let TARGETS = [
         Sparrow.name():             Sparrow.self,
-        Whirlpool.name():           Whirlpool.self
     ]
     
     private static let USE_SHORT_VERSION_PATH: [String] = []

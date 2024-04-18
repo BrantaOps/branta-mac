@@ -113,14 +113,12 @@ class Bridge {
     static func loadArm() -> [String: [String:String]] {
         return [
             Sparrow.name():               Sparrow.arm(),
-            Whirlpool.name():             Whirlpool.arm()
         ]
     }
     
     static func loadX86() -> [String : [String : String]]  {
         return [
             Sparrow.name():               Sparrow.x86(),
-            Whirlpool.name():             Whirlpool.x86()
         ]
     }
 }
