@@ -20,6 +20,7 @@
 		ED1A3C8D2BC4D9DF00895C5A /* InstallerHashes.yaml in Resources */ = {isa = PBXBuildFile; fileRef = ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */; };
 		ED1A3C8F2BC4E04E00895C5A /* Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C8E2BC4E04E00895C5A /* Matcher.swift */; };
 		ED1D573F2BC2DE710001DAD2 /* VersionCompTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */; };
+		ED26BA512BD19A1000F42CD6 /* Mac_CheckSums.yaml in Resources */ = {isa = PBXBuildFile; fileRef = ED26BA502BD19A1000F42CD6 /* Mac_CheckSums.yaml */; };
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED3170952B826494003D77D4 /* VersionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3170942B826494003D77D4 /* VersionComp.swift */; };
@@ -102,6 +103,7 @@
 		ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = InstallerHashes.yaml; sourceTree = "<group>"; };
 		ED1A3C8E2BC4E04E00895C5A /* Matcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
 		ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCompTests.swift; sourceTree = "<group>"; };
+		ED26BA502BD19A1000F42CD6 /* Mac_CheckSums.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = Mac_CheckSums.yaml; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED3170942B826494003D77D4 /* VersionComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionComp.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */,
 				ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */,
+				ED26BA502BD19A1000F42CD6 /* Mac_CheckSums.yaml */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED26BA512BD19A1000F42CD6 /* Mac_CheckSums.yaml in Resources */,
 				ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */,
 				ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */,
 				ED73E9602B07D686005742BA /* Main.storyboard in Resources */,
