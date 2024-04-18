@@ -9,8 +9,9 @@ import Foundation
 import Yams
 
 class Bridge {
-    private static let url = "https://hash-server-7be6da1b0395.herokuapp.com"
-    private static let endpoint = "/installer_hashes"
+    
+    private static let API_URL = "https://api.branta.pro/"
+    private static let INSTALLER_HASHES_ENDPOINT = "v1/installer_hashes"
     
     private static var runtimeHashes:[String : [String:String]]?
     private static var installerHashes:[String:String]?
@@ -47,11 +48,11 @@ class Bridge {
     private
     
     static func fetchLatestInstallerHashes(completion: @escaping (Bool) -> Void) {
-        guard let baseURL = URL(string: url) else {
+        guard let baseURL = URL(string: API_URL) else {
             // TODO
             fatalError("Invalid base URL")
         }
-        let fullURL = baseURL.appendingPathComponent(endpoint)
+        let fullURL = baseURL.appendingPathComponent(INSTALLER_HASHES_ENDPOINT)
         
         API.send(url: fullURL, method: "GET", body: nil) { result in
             switch result {
