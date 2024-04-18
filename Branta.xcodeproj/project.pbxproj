@@ -34,7 +34,6 @@
 		ED4E9F512B3DB64B0000F751 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* Bridge.swift */; };
 		ED4EB6C12B507E200061A3E2 /* Whirlpool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */; };
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
-		ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */; };
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
 		ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* BrantaViewController.swift */; };
 		ED611DDB2BC3574200FAE51B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611DDA2BC3574200FAE51B /* API.swift */; };
@@ -118,7 +117,6 @@
 		ED4E9F502B3DB64B0000F751 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Whirlpool.swift; sourceTree = "<group>"; };
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wasabi.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
 		ED57437C2B3641AF0001956A /* BrantaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewController.swift; sourceTree = "<group>"; };
 		ED611DDA2BC3574200FAE51B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -397,7 +395,6 @@
 			children = (
 				ED73E9862B0820C9005742BA /* Sparrow.swift */,
 				ED73E98A2B0820F1005742BA /* Wallet.swift */,
-				ED4FA1CD2B4F4B9C0094D845 /* Wasabi.swift */,
 				ED4EB6C02B507E200061A3E2 /* Whirlpool.swift */,
 			);
 			path = Wallets;
@@ -572,7 +569,6 @@
 				ED0DB8092BC5D990009AE5B2 /* BrantaAnalytics.swift in Sources */,
 				EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */,
 				ED04D6E52BB1A3C900E5DE59 /* Sudo.swift in Sources */,
-				ED4FA1CE2B4F4B9C0094D845 /* Wasabi.swift in Sources */,
 				EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */,
 				ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */,
 				ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */,
