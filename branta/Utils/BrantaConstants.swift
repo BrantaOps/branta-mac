@@ -64,7 +64,6 @@ let APPS = [
     Sparrow.runtimeName(),
     Trezor.runtimeName(),
     Ledger.runtimeName(),
-    BlockstreamGreen.runtimeName(),
     Wasabi.runtimeName(),
     Whirlpool.runtimeName()
 ]

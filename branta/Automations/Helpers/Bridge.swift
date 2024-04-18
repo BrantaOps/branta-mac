@@ -112,7 +112,6 @@ class Bridge {
     
     static func loadArm() -> [String: [String:String]] {
         return [
-            BlockstreamGreen.name():      BlockstreamGreen.arm(),
             Sparrow.name():               Sparrow.arm(),
             Trezor.name():                Trezor.arm(),
             Ledger.name():                Ledger.arm(),
@@ -123,7 +122,6 @@ class Bridge {
     
     static func loadX86() -> [String : [String : String]]  {
         return [
-            BlockstreamGreen.name():      BlockstreamGreen.x86(),
             Sparrow.name():               Sparrow.x86(),
             Trezor.name():                Trezor.x86(),
             Ledger.name():                Ledger.x86(),
