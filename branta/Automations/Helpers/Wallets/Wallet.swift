@@ -22,16 +22,6 @@ class Wallet {
         return "Implement me.app"
     }
     
-    // Version:SHA256 for Intel Executables
-    class func x86() -> [String:String] {
-        return [:]
-    }
-    
-    // Version:SHA256 for Apple Silicon Executables
-    class func arm() -> [String:String] {
-        return [:]
-    }
-    
     class func CFBundleExecutable() -> String {
         return ""
     }
