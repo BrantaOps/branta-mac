@@ -69,6 +69,9 @@
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDEAE53F2BB8F162002D7EE1 /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */; };
 		EDEAE5412BB8F2E7002D7EE1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */; };
+		EDEBCE4C2BCAEB2C00D4C7EF /* LocalRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEBCE4B2BCAEB2C00D4C7EF /* LocalRuntime.swift */; };
+		EDEBCE4F2BCAEB4900D4C7EF /* LocalInstallers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEBCE4E2BCAEB4900D4C7EF /* LocalInstallers.swift */; };
+		EDEBCE512BCAEDAF00D4C7EF /* CheckSums.yaml in Resources */ = {isa = PBXBuildFile; fileRef = EDEBCE502BCAEDAF00D4C7EF /* CheckSums.yaml */; };
 		EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFFC2BA2B39CF930052D92D /* HexColor.swift */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +157,9 @@
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTests.swift; sourceTree = "<group>"; };
 		EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
+		EDEBCE4B2BCAEB2C00D4C7EF /* LocalRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRuntime.swift; sourceTree = "<group>"; };
+		EDEBCE4E2BCAEB4900D4C7EF /* LocalInstallers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalInstallers.swift; sourceTree = "<group>"; };
+		EDEBCE502BCAEDAF00D4C7EF /* CheckSums.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = CheckSums.yaml; sourceTree = "<group>"; };
 		EDFFC2BA2B39CF930052D92D /* HexColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2C6EF12B0AC59200EC577C /* Addresses */,
-				ED4E9F502B3DB64B0000F751 /* Bridge.swift */,
+				EDEBCE492BCAEB1500D4C7EF /* Bridge */,
 				ED1A3C8E2BC4E04E00895C5A /* Matcher.swift */,
 				ED73E9832B08207E005742BA /* Wallets */,
 			);
@@ -360,6 +366,7 @@
 				ED34ACFF2B1800AF0038CAC5 /* Automations */,
 				ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */,
 				ED73E9612B07D686005742BA /* branta.entitlements */,
+				EDEBCE502BCAEDAF00D4C7EF /* CheckSums.yaml */,
 				ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */,
 				ED73E95E2B07D686005742BA /* Main.storyboard */,
 				ED2C6EF42B0BAF9600EC577C /* Utils */,
@@ -413,6 +420,16 @@
 				ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EDEBCE492BCAEB1500D4C7EF /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				ED4E9F502B3DB64B0000F751 /* Bridge.swift */,
+				EDEBCE4E2BCAEB4900D4C7EF /* LocalInstallers.swift */,
+				EDEBCE4B2BCAEB2C00D4C7EF /* LocalRuntime.swift */,
+			);
+			path = Bridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */,
+				EDEBCE512BCAEDAF00D4C7EF /* CheckSums.yaml in Resources */,
 				ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */,
 				ED73E9602B07D686005742BA /* Main.storyboard in Resources */,
 				ED1A3C8D2BC4D9DF00895C5A /* InstallerHashes.yaml in Resources */,
@@ -567,6 +585,7 @@
 				ED04D6E52BB1A3C900E5DE59 /* Sudo.swift in Sources */,
 				EDC310412B1F7A38005BCBBA /* NostrAddress.swift in Sources */,
 				ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */,
+				EDEBCE4F2BCAEB4900D4C7EF /* LocalInstallers.swift in Sources */,
 				ED19A7A52B123F00004375C7 /* BrantaNotify.swift in Sources */,
 				EDB9F70D2BA9B7E300F0C005 /* NetworkViewController.swift in Sources */,
 				ED04D6E72BB1A52F00E5DE59 /* PID.swift in Sources */,
@@ -587,6 +606,7 @@
 				ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */,
 				EDD011862B6D749D0091CAAD /* Settings.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */,
+				EDEBCE4C2BCAEB2C00D4C7EF /* LocalRuntime.swift in Sources */,
 				ED611DDB2BC3574200FAE51B /* API.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
 				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,

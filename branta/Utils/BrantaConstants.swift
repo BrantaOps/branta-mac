@@ -62,3 +62,4 @@ let KEYCODE_COMMA           = 43
 
 let APPS = [
     Sparrow.runtimeName()
+]
