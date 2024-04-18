@@ -228,6 +228,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ED26BA4F2BD190D100F42CD6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */,
+				ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		ED2C6EF12B0AC59200EC577C /* Addresses */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,9 +367,8 @@
 				ED73E9582B07D684005742BA /* AppDelegate.swift */,
 				ED73E95C2B07D686005742BA /* Assets.xcassets */,
 				ED34ACFF2B1800AF0038CAC5 /* Automations */,
-				ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */,
 				ED73E9612B07D686005742BA /* branta.entitlements */,
-				ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */,
+				ED26BA4F2BD190D100F42CD6 /* Data */,
 				ED73E95E2B07D686005742BA /* Main.storyboard */,
 				ED2C6EF42B0BAF9600EC577C /* Utils */,
 				ED34AD022B182B1C0038CAC5 /* ViewControllers */,
