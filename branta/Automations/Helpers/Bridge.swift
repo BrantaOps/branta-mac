@@ -16,8 +16,14 @@ class Bridge {
     private static var runtimeHashes:[String : [String:String]]?
     private static var installerHashes:[String:String]?
     
-    static func fetchLatest() {
+    
+    static func fetchLatest(completion: @escaping (Bool) -> Void) {
+        var installerSuccess = false
+        var runtimeSuccess = false
         
+        let group = DispatchGroup()
+
+        group.enter()
         fetchLatestInstallerHashes { success in
             if success {
                 BrantaLogger.log(s: "Successfully fetched latest installer hashes.")
@@ -25,8 +31,11 @@ class Bridge {
                 installerHashes = localInstallerHashes()
                 BrantaLogger.log(s: "Could not fetch latest installer hashes; falling back to local data.")
             }
+            installerSuccess = true
+            group.leave()
         }
         
+        group.enter()
         fetchLatestRuntimeHashes { success in
             if success {
                 BrantaLogger.log(s: "Succesfully fetched latest runtime hashes.")
@@ -34,6 +43,12 @@ class Bridge {
                 runtimeHashes = localRuntimeHashes()
                 BrantaLogger.log(s: "Could not fetch latest runtime hashes; falling back to local data.")
             }
+            runtimeSuccess = true
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            completion(installerSuccess && runtimeSuccess)
         }
     }
     

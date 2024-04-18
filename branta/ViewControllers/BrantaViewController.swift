@@ -22,7 +22,6 @@ class BrantaViewController: NSViewController {
     
     override func viewWillAppear() {
         super.viewWillAppear()
-        Bridge.fetchLatest()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
     }
     
@@ -34,8 +33,16 @@ class BrantaViewController: NSViewController {
     
     override func viewDidAppear() {
         super.viewDidAppear()
-        Verify.addObserver(self)
-        Verify.verify()
+        
+        Bridge.fetchLatest { success in
+            if success {
+                Verify.addObserver(self)
+                Verify.verify()
+            } else {
+                BrantaLogger.log(s: "BrantaViewController; could not start `Verify.verify()`.")
+            }
+        }
+
         
         if let window = view.window {
             window.minSize = NSSize(width: 400, height: 320)
