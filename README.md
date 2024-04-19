@@ -12,7 +12,6 @@
  - ⚡️ Focus Automation
    - Verify Wallets automatically upon launch
  - ⚡️ Drag & Drop PGP Verification for Installers
-   - Skip importing authors PGP keys & running SHA256 manually before install (Sparrow, Blockstream)
   
   <img width="873" alt="Screen Shot 2024-02-04 at 10 55 43 AM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/75644c8e-591e-4871-a48c-161a4f9ae209">
 
