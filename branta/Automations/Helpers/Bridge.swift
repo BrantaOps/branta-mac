@@ -66,31 +66,27 @@ extension Bridge {
     private
     
     static func fetchLatestInstallerHashes(completion: @escaping (Bool) -> Void) {
-        completion(false)
-        //        guard let baseURL = URL(string: API_URL) else {
-        //            fatalError("Invalid base URL")
-        //        }
-        //        let fullURL = baseURL.appendingPathComponent(INSTALLER_HASHES_ENDPOINT)
-        //
-        //        API.send(url: fullURL, method: "GET", body: nil) { result in
-        //            switch result {
-        //            case .success(let data):
-        //                do {
-        //                    if let yamlString = String(data: data, encoding: .utf8) {
-        //                        installerHashes = try Yams.load(yaml: yamlString) as? [String: String] ?? [:]
-        //                        completion(true)
-        //                    } else {
-        //                        completion(false)
-        //                    }
-        //                } catch {
-        //                    BrantaLogger.log(s: "fetchLatestInstallerHashes Parsing error.")
-        //                    completion(false)
-        //                }
-        //            case .failure(_):
-        //                BrantaLogger.log(s: "fetchLatestInstallerHashes API error.")
-        //                completion(false)
-        //            }
-        //        }
+        let fullURL = URL(string: API_URL)!.appendingPathComponent(INSTALLER_HASHES_ENDPOINT)
+
+        API.send(url: fullURL, method: "GET", body: nil) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    if let yamlString = String(data: data, encoding: .utf8) {
+                        installerHashes = try Yams.load(yaml: yamlString) as? InstallerHashType
+                        completion(true)
+                    } else{
+                        completion(false)
+                    }
+                } catch {
+                    BrantaLogger.log(s: "fetchLatestInstallerHashes Parsing error.")
+                    completion(false)
+                }
+            case .failure(_):
+                BrantaLogger.log(s: "fetchLatestInstallerHashes API error.")
+                completion(false)
+            }
+        }
     }
     
     static func localInstallerHashes() -> InstallerHashType {
@@ -104,8 +100,7 @@ extension Bridge {
             }
             
             let yamlString = try String(contentsOfFile: path, encoding: .utf8)
-            let yamlDict = try Yams.load(yaml: yamlString) as! [String:String]
-            ret = YAMLParser.parseInstallerYAML(yamlDict: yamlDict)
+            ret = try Yams.load(yaml: yamlString) as! InstallerHashType
         } catch {
         }
         
