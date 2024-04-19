@@ -7,6 +7,9 @@
 
 import Foundation
 
+typealias RuntimeHashType = [String: [String:String]]
+
+
 let HEIGHT      = 30.0
 let TABLE_FONT  = 17.0
 

@@ -62,36 +62,34 @@ class Bridge {
     
     private
     
-    static func fetchLatestInstallerHashes(completion: @escaping (Bool) -> Void) {
-        guard let baseURL = URL(string: API_URL) else {
-            // TODO
-            fatalError("Invalid base URL")
-        }
-        let fullURL = baseURL.appendingPathComponent(INSTALLER_HASHES_ENDPOINT)
-        
-        API.send(url: fullURL, method: "GET", body: nil) { result in
-            switch result {
-            case .success(let data):
-                do {
-                    if let yamlString = String(data: data, encoding: .utf8) {
-                        installerHashes = try Yams.load(yaml: yamlString) as? [String: String] ?? [:]
-                        completion(true)
-                    } else{
-                        completion(false)
-                    }
-                } catch {
-                    BrantaLogger.log(s: "fetchLatestInstallerHashes Parsing error.")
-                    completion(false)
-                }
-            case .failure(_):
-                BrantaLogger.log(s: "fetchLatestInstallerHashes API error.")
-                completion(false)
-            }
-        }
-    }
+    // INSTALLER HASHES ------------------------------------------------------------------------------------------
     
-    static func fetchLatestRuntimeHashes(completion: @escaping (Bool) -> Void) {
+    static func fetchLatestInstallerHashes(completion: @escaping (Bool) -> Void) {
         completion(false)
+//        guard let baseURL = URL(string: API_URL) else {
+//            fatalError("Invalid base URL")
+//        }
+//        let fullURL = baseURL.appendingPathComponent(INSTALLER_HASHES_ENDPOINT)
+//
+//        API.send(url: fullURL, method: "GET", body: nil) { result in
+//            switch result {
+//            case .success(let data):
+//                do {
+//                    if let yamlString = String(data: data, encoding: .utf8) {
+//                        installerHashes = try Yams.load(yaml: yamlString) as? [String: String] ?? [:]
+//                        completion(true)
+//                    } else {
+//                        completion(false)
+//                    }
+//                } catch {
+//                    BrantaLogger.log(s: "fetchLatestInstallerHashes Parsing error.")
+//                    completion(false)
+//                }
+//            case .failure(_):
+//                BrantaLogger.log(s: "fetchLatestInstallerHashes API error.")
+//                completion(false)
+//            }
+//        }
     }
     
     static func localInstallerHashes() -> [String:String] {
@@ -115,14 +113,28 @@ class Bridge {
         }
     }
     
-    static func localRuntimeHashes() -> [String: [String:String]]{
-        if Architecture.isArm() {
-            return [ Sparrow.name(): [:]]
-        } else if Architecture.isIntel() {
-            return [ Sparrow.name(): [:]]
+    // RUNTIME HASHES ------------------------------------------------------------------------------------------
+    
+    static func fetchLatestRuntimeHashes(completion: @escaping (Bool) -> Void) {
+        completion(false)
+    }
+
+    static func localRuntimeHashes() -> RuntimeHashType {
+        let path = Bundle.main.path(forResource: "Mac_CheckSums", ofType: "yaml")
+        var ret: RuntimeHashType = [:]
+
+        do {
+            guard let path = path else {
+                return ret
+            }
+            
+            let yamlString = try String(contentsOfFile: path, encoding: .utf8)
+            let yamlDict = try Yams.load(yaml: yamlString) as! [String: [String: Any]]
+            ret = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
+        } catch {
         }
-        else {
-            return [:]
-        }
+        
+        //BrantaLogger.log(s: "localRuntimeHashes returning: \(ret)", timestamp: true)
+        return ret
     }
 }

@@ -8,8 +8,8 @@
 import Foundation
 
 class BrantaLogger {
-    class func log(s: Any, timed: Bool = false){
-        if timed {
+    class func log(s: Any, timestamp: Bool = false){
+        if timestamp {
             let currentDate = Date()
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
