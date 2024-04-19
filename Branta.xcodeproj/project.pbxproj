@@ -24,6 +24,7 @@
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
 		ED3170952B826494003D77D4 /* VersionComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3170942B826494003D77D4 /* VersionComp.swift */; };
+		ED332B2C2BD2B004000C0EE4 /* YAMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED332B2B2BD2B004000C0EE4 /* YAMLParser.swift */; };
 		ED3A961A2BC2F15C00262E72 /* UpdaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A96192BC2F15C00262E72 /* UpdaterTests.swift */; };
 		ED3A961C2BC2F33100262E72 /* ShaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A961B2BC2F33100262E72 /* ShaTests.swift */; };
 		ED3A961E2BC2F81900262E72 /* ObserversTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3A961D2BC2F81900262E72 /* ObserversTests.swift */; };
@@ -107,6 +108,7 @@
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
 		ED3170942B826494003D77D4 /* VersionComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionComp.swift; sourceTree = "<group>"; };
+		ED332B2B2BD2B004000C0EE4 /* YAMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAMLParser.swift; sourceTree = "<group>"; };
 		ED3A96192BC2F15C00262E72 /* UpdaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdaterTests.swift; sourceTree = "<group>"; };
 		ED3A961B2BC2F33100262E72 /* ShaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaTests.swift; sourceTree = "<group>"; };
 		ED3A961D2BC2F81900262E72 /* ObserversTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserversTests.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				EDD011832B6C56F00091CAAD /* Sha.swift */,
 				ED97B84D2B9F46A3007DD2F5 /* Updater.swift */,
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
+				ED332B2B2BD2B004000C0EE4 /* YAMLParser.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -509,7 +512,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -572,6 +575,7 @@
 				EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */,
 				EDD65EA52BC22CF100531800 /* BrantaLogger.swift in Sources */,
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
+				ED332B2C2BD2B004000C0EE4 /* YAMLParser.swift in Sources */,
 				EDB9F70F2BA9D91600F0C005 /* TrafficMonitor.swift in Sources */,
 				ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */,
 				ED0DB8092BC5D990009AE5B2 /* BrantaAnalytics.swift in Sources */,
@@ -936,7 +940,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,
