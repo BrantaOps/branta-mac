@@ -5,25 +5,21 @@
 </picture>
 
 ## Features
- - ✅ Wallet Verification
+ - ⚡️ Wallet Verification
    - Automatically verifies supported wallets against PGP verified SHA-256 checksums
- - ✅ Clipboard Guardian
+ - ⚡️ Clipboard Guardian
    - Get notified of bitcoin-related activity on your clipboard
- - ✅ Focus Automation
+ - ⚡️ Focus Automation
    - Verify Wallets upon launch & Notify User
- - ✅ Drag & Drop PGP Verification for Installers
+ - ⚡️ Drag & Drop PGP Verification for Installers
    - Skip importing authors PGP keys & running SHA256 manually before install (Sparrow, Blockstream)
   
   <img width="873" alt="Screen Shot 2024-02-04 at 10 55 43 AM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/75644c8e-591e-4871-a48c-161a4f9ae209">
 
 
 #### Supported Wallets
-- ✅ Sparrow
-- ✅ Ledger
-- ✅ Trezor
-- ✅ Wasabi
-- ✅ Blockstream Green
-- ✅ Whirlpool
+- ⚡️ Sparrow
+- More coming soon...
 
 ## Installing
 
