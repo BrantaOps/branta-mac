@@ -75,15 +75,17 @@ extension Bridge {
                     if let yamlString = String(data: data, encoding: .utf8) {
                         installerHashes = try Yams.load(yaml: yamlString) as? InstallerHashType
                         completion(true)
-                    } else {
+                    } else{
+                        completion(false)
                     }
                 } catch {
                     BrantaLogger.log(s: "fetchLatestInstallerHashes Parsing error.")
+                    completion(false)
                 }
             case .failure(_):
                 BrantaLogger.log(s: "fetchLatestInstallerHashes API error.")
+                completion(false)
             }
-            completion(false)
         }
     }
     
