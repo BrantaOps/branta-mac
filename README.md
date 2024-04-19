@@ -29,6 +29,9 @@
 - Allow Notifcations
 <img width="700" alt="Screen Shot 2024-02-10 at 10 01 44 PM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/2d678f46-ffd5-4362-8f59-302b740c5b20">
 
+## Donate
+
+Branta is free open source software. If you can, consider donating on [Geyser](https://geyser.fund/project/branta). All funds go towards improving and automating security for your stack.
 
 ## Known Limitations
 
@@ -38,15 +41,11 @@
 
 
 ## Building
-- XCode 14
+- XCode 14+
 
 ## Feature Requests & Bug Reporting
 
 Open a [new issue](https://github.com/BrantaOps/branta-mac/issues/new) on Github and we'll reply as soon as we can.
-
-## Policy on Altcoins/Altchains
-
-Branta is Bitcoin-only. Enduring Bitcoin products are difficult to build; adding support for the unstable, poorly designed altcoin ecosystem is a lose-lose proposition.
 
 ## Licensing
 
