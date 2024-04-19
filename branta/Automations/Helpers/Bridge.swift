@@ -12,7 +12,8 @@ class Bridge {
     
     private static let API_URL                      = "https://api.branta.pro/"
     private static let INSTALLER_HASHES_ENDPOINT    = "v1/installer_hashes"
-    
+    private static let RUNTIME_HASHES_ENDPOINT      = "v1/checksums"
+
     private static var runtimeHashes:               RuntimeHashType?
     private static var installerHashes:             InstallerHashType?
     
@@ -114,7 +115,36 @@ extension Bridge {
     private
     
     static func fetchLatestRuntimeHashes(completion: @escaping (Bool) -> Void) {
-        completion(false)
+        var components = URLComponents(string: API_URL + RUNTIME_HASHES_ENDPOINT)!
+        components.queryItems = [URLQueryItem(name: "platform", value: "mac")]
+        
+        guard let fullURL = components.url else {
+            completion(false)
+            return
+        }
+        
+        API.send(url: fullURL, method: "GET", body: nil) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    if let yamlString = String(data: data, encoding: .utf8) {
+                        let yamlDict = try Yams.load(yaml: yamlString) as! [String: [String: Any]]
+                        runtimeHashes = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
+                        completion(true)
+                    } else{
+                        completion(false)
+                    }
+                } catch {
+                    BrantaLogger.log(s: "fetchLatestRuntimeHashes Parsing error.")
+                    completion(false)
+                }
+            case .failure(_):
+                BrantaLogger.log(s: "fetchLatestRuntimeHashes API error.")
+                completion(false)
+            }
+        }
+        
+        
     }
 
     static func localRuntimeHashes() -> RuntimeHashType {
