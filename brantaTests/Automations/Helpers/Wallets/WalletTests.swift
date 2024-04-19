@@ -19,14 +19,6 @@ class WalletTests: XCTestCase {
         XCTAssertEqual(Wallet.name(), "Implement me.app", "Name method should return 'Implement me.app'")
     }
     
-    func testX86() {
-        XCTAssertTrue(Wallet.x86().isEmpty, "x86 method should return an empty dictionary")
-    }
-    
-    func testArm() {
-        XCTAssertTrue(Wallet.arm().isEmpty, "arm method should return an empty dictionary")
-    }
-    
     func testCFBundleExecutable() {
          XCTAssertEqual(Wallet.CFBundleExecutable(), "", "CFBundleExecutable method should return an empty string")
      }

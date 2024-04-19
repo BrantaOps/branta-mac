@@ -42,7 +42,7 @@
 		ED643CD52B519C3D00FEBE36 /* BrantaViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */; };
 		ED643CD92B519F0A00FEBE36 /* AutomationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */; };
 		ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CDC2B519F6600FEBE36 /* WalletTests.swift */; };
-		ED643CDF2B51A00600FEBE36 /* WasabiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CDE2B51A00600FEBE36 /* WasabiTests.swift */; };
+		ED643CDF2B51A00600FEBE36 /* SparrowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CDE2B51A00600FEBE36 /* SparrowTests.swift */; };
 		ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */; };
 		ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9582B07D684005742BA /* AppDelegate.swift */; };
 		ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED73E95C2B07D686005742BA /* Assets.xcassets */; };
@@ -126,7 +126,7 @@
 		ED643CD42B519C3D00FEBE36 /* BrantaViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewControllerTests.swift; sourceTree = "<group>"; };
 		ED643CD82B519F0A00FEBE36 /* AutomationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationTests.swift; sourceTree = "<group>"; };
 		ED643CDC2B519F6600FEBE36 /* WalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletTests.swift; sourceTree = "<group>"; };
-		ED643CDE2B51A00600FEBE36 /* WasabiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasabiTests.swift; sourceTree = "<group>"; };
+		ED643CDE2B51A00600FEBE36 /* SparrowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparrowTests.swift; sourceTree = "<group>"; };
 		ED6B0F942B0F8E5700715283 /* bip39wordlist.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bip39wordlist.txt; sourceTree = "<group>"; };
 		ED73E9552B07D684005742BA /* Branta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Branta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED73E9582B07D684005742BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -341,8 +341,8 @@
 		ED643CDB2B519F5500FEBE36 /* Wallets */ = {
 			isa = PBXGroup;
 			children = (
+				ED643CDE2B51A00600FEBE36 /* SparrowTests.swift */,
 				ED643CDC2B519F6600FEBE36 /* WalletTests.swift */,
-				ED643CDE2B51A00600FEBE36 /* WasabiTests.swift */,
 			);
 			path = Wallets;
 			sourceTree = "<group>";
@@ -632,7 +632,7 @@
 				ED3A961A2BC2F15C00262E72 /* UpdaterTests.swift in Sources */,
 				ED643CDD2B519F6600FEBE36 /* WalletTests.swift in Sources */,
 				ED1A3C862BC4390900895C5A /* ArchitectureTests.swift in Sources */,
-				ED643CDF2B51A00600FEBE36 /* WasabiTests.swift in Sources */,
+				ED643CDF2B51A00600FEBE36 /* SparrowTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
