@@ -7,9 +7,12 @@
 
 import Foundation
 
-typealias RuntimeHashType = [String: [String:String]]
+// TYPEALIAS
+typealias RuntimeHashType       = [String: [String:String]]
+typealias InstallerHashType     = [String:String]
 
 
+// CONSTANTS
 let HEIGHT      = 30.0
 let TABLE_FONT  = 17.0
 

@@ -52,11 +52,11 @@ class Bridge {
         }
     }
     
-    static func getRuntimeHashes() -> [String : [String:String]] {
+    static func getRuntimeHashes() -> RuntimeHashType {
         return runtimeHashes!
     }
     
-    static func getInstallerHashes() -> [String:String] {
+    static func getInstallerHashes() -> InstallerHashType {
         return installerHashes!
     }
     
@@ -92,25 +92,23 @@ class Bridge {
 //        }
     }
     
-    static func localInstallerHashes() -> [String:String] {
+    static func localInstallerHashes() -> InstallerHashType {
         let path = Bundle.main.path(forResource: "InstallerHashes", ofType: "yaml")
+        var ret: InstallerHashType = [:]
+
 
         do {
             guard let path = path else {
-                return [:]
+                return ret
             }
 
             let yamlString = try String(contentsOfFile: path, encoding: .utf8)
-            let yamlData = try Yams.load(yaml: yamlString)
-
-            guard let yamlDictionary = yamlData as? [String: String] else {
-                return [:]
-            }
-
-            return yamlDictionary
+            let yamlDict = try Yams.load(yaml: yamlString) as! [String:String]
+            ret = YAMLParser.parseInstallerYAML(yamlDict: yamlDict)
         } catch {
-            return [:]
         }
+        
+        return ret
     }
     
     // RUNTIME HASHES ------------------------------------------------------------------------------------------
@@ -134,7 +132,6 @@ class Bridge {
         } catch {
         }
         
-        //BrantaLogger.log(s: "localRuntimeHashes returning: \(ret)", timestamp: true)
         return ret
     }
 }
