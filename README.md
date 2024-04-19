@@ -10,7 +10,7 @@
  - ⚡️ Clipboard Guardian
    - Get notified of bitcoin-related activity on your clipboard
  - ⚡️ Focus Automation
-   - Verify Wallets upon launch & Notify User
+   - Verify Wallets automatically upon launch
  - ⚡️ Drag & Drop PGP Verification for Installers
    - Skip importing authors PGP keys & running SHA256 manually before install (Sparrow, Blockstream)
   
