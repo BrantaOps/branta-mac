@@ -4,7 +4,7 @@
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
-## Features
+## Improve Security:
  - ⚡️ Wallet Verification
    - Automatically verifies supported wallets against PGP verified SHA-256 checksums
  - ⚡️ Clipboard Guardian
