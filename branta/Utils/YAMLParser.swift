@@ -9,10 +9,6 @@ import Foundation
 
 class YAMLParser {
     
-    static func parseInstallerYAML(yamlDict: [String:String]) -> InstallerHashType {
-        return yamlDict
-    }
-    
     static func parseRuntimeYAML(yamlDict: [String: [String: Any]]) -> RuntimeHashType {
         var ret: RuntimeHashType = [:]
 
