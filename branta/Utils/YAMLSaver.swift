@@ -10,10 +10,15 @@ import Foundation
 class YAMLSaver {
     
     
-    // TODO - write on update. Not on every 200 response. Check TS for this purpose.
-    static func saveYAMLFileToLocal(yamlString: String, filename: String) {
+    // TODO - use timestamp to only write on file diff.
+    // TODO - handle case that the OS, User, etc, deletes this file.
+    //      uncommon, but possible case. In that scenario, fall back
+    //      to the
+    static func saveYAMLToLocal(yamlString: String, filename: String) {
+        
+        // TODO - migrate to ~/Library/Application Support/branta/
         guard let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("Failed to locate documents directory.")
+            BrantaLogger.log(s: "Failed to local Application Support Directory.")
             return
         }
         
@@ -21,30 +26,30 @@ class YAMLSaver {
         
         do {
             try yamlString.write(to: fileURL, atomically: true, encoding: .utf8)
-            print("YAML file saved successfully. \(directoryURL)")
+            BrantaLogger.log(s: "YAML file saved successfully. \(directoryURL)")
         } catch {
-            print("Error saving YAML file: \(error)")
+            BrantaLogger.log(s: "Error saving YAML file: \(error)")
         }
     }
     
     
     
-    static func readYAMLFileFromLocal() -> String? {
-        // Get the URL for the directory where the file is saved
+    static func readYAMLFromLocal(filename: String) -> String? {
+
+        // TODO - migrate to ~/Library/Application Support/branta/
         guard let directoryURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-            print("Failed to locate documents directory.")
+            BrantaLogger.log(s: "Failed to local Application Support Directory.")
             return nil
         }
         
-        // Append the file name to the directory URL
-        let fileURL = directoryURL.appendingPathComponent("data.yaml")
+        let fileURL = directoryURL.appendingPathComponent(filename)
         
         do {
-            // Read the contents of the file as a string
             let yamlString = try String(contentsOf: fileURL, encoding: .utf8)
+            BrantaLogger.log(s: "YAML read from disk successfully. \(directoryURL).")
             return yamlString
         } catch {
-            print("Error reading YAML file: \(error)")
+            BrantaLogger.log(s: "Error reading YAML file: \(error)")
             return nil
         }
     }
