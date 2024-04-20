@@ -33,13 +33,6 @@
 
 Branta is free open source software. If you can, consider donating on [Geyser](https://geyser.fund/project/branta). All funds go towards improving and automating security for your stack.
 
-## Known Limitations
-
-- Spoof Wallets likely install to custom paths. Branta needs to have more flexible path scanning to catch these.
-- Ongoing wallet support - Branta doesn't know about new releases unless we manually input them.
-- "Do not disturb" turns off notifications. This disrupts the alert flow.
-
-
 ## Building
 - XCode 14+
 
