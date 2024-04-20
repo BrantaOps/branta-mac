@@ -75,6 +75,8 @@ extension Bridge {
                 do {
                     if let yamlString = String(data: data, encoding: .utf8) {
                         installerHashes = try Yams.load(yaml: yamlString) as? InstallerHashType
+                        
+                        // TODO - On success case - write to disk.
                         completion(true)
                     } else{
                         completion(false)
@@ -91,6 +93,7 @@ extension Bridge {
     }
     
     static func localInstallerHashes() -> InstallerHashType {
+        // TODO - check if there is a newer YAML on disk. Read from that.
         let path = Bundle.main.path(forResource: "InstallerHashes", ofType: "yaml")
         var ret: InstallerHashType = [:]
         
@@ -130,6 +133,9 @@ extension Bridge {
                     if let yamlString = String(data: data, encoding: .utf8) {
                         let yamlDict = try Yams.load(yaml: yamlString) as! [String: [String: Any]]
                         runtimeHashes = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
+                        
+                        YAMLSaver.saveYAMLFileToLocal(yamlString: yamlString, filename: "branta_runtime.yaml")
+                        // TODO - On success case - write to disk.
                         completion(true)
                     } else{
                         completion(false)
@@ -148,6 +154,7 @@ extension Bridge {
     }
 
     static func localRuntimeHashes() -> RuntimeHashType {
+        // TODO - check if there is a newer YAML on disk. Read from that.
         let path = Bundle.main.path(forResource: "Mac_CheckSums", ofType: "yaml")
         var ret: RuntimeHashType = [:]
 
