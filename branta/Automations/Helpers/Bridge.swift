@@ -84,7 +84,7 @@ extension Bridge {
                 do {
                     if let yamlString = String(data: data, encoding: .utf8) {
                         installerHashes = try Yams.load(yaml: yamlString) as? InstallerHashType
-                        
+                        // TODO - These two lines must be made atomic.
                         YAMLSaver.saveYAMLToLocal(yamlString: yamlString, filename: INSTALLER_DISK_NAME)
                         completion(true)
                     } else{
@@ -103,14 +103,10 @@ extension Bridge {
     
     static func localInstallerHashes() -> InstallerHashType {
         var ret: InstallerHashType = [:]
-
-        
-        
         
         if let yamlStringFromDisk: String = YAMLSaver.readYAMLFromLocal(filename: INSTALLER_DISK_PREFIX) {
             do {
-                let yamlDict = try Yams.load(yaml: yamlStringFromDisk) as! [String: [String: Any]]
-//                ret = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
+                ret = try Yams.load(yaml: yamlStringFromDisk) as! InstallerHashType
                 BrantaLogger.log(s: "Bridge: Using Installer YAML from disk.")
             } catch {
             }
@@ -157,7 +153,7 @@ extension Bridge {
                         let yamlDict = try Yams.load(yaml: yamlString) as! [String: [String: Any]]
                         runtimeHashes = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
                         
-                        // TODO - if this fails, still need to trigger completion(true)
+                        // TODO - These two lines must be made atomic.
                         YAMLSaver.saveYAMLToLocal(yamlString: yamlString, filename: RUNTIME_DISK_NAME)
                         completion(true)
                     } else{
