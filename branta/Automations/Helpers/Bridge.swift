@@ -18,6 +18,9 @@ class Bridge {
     // FILE NAMES ON DISK
     private static let RUNTIME_DISK_NAME            = "branta_runtime.yaml"
     private static let RUNTIME_DISK_PREFIX          = "branta_runtime"
+    
+    private static let INSTALLER_DISK_NAME          = "branta_installer.yaml"
+    private static let INSTALLER_DISK_PREFIX        = "branta_installer"
 
 
     private static var runtimeHashes:               RuntimeHashType?
@@ -82,7 +85,7 @@ extension Bridge {
                     if let yamlString = String(data: data, encoding: .utf8) {
                         installerHashes = try Yams.load(yaml: yamlString) as? InstallerHashType
                         
-                        // TODO - On success case - write to disk.
+                        YAMLSaver.saveYAMLToLocal(yamlString: yamlString, filename: INSTALLER_DISK_NAME)
                         completion(true)
                     } else{
                         completion(false)
@@ -99,24 +102,38 @@ extension Bridge {
     }
     
     static func localInstallerHashes() -> InstallerHashType {
-        // TODO - check if there is a newer YAML on disk. Read from that.
-        let path = Bundle.main.path(forResource: "InstallerHashes", ofType: "yaml")
         var ret: InstallerHashType = [:]
+
         
         
-        do {
-            guard let path = path else {
-                return ret
+        
+        if let yamlStringFromDisk: String = YAMLSaver.readYAMLFromLocal(filename: INSTALLER_DISK_PREFIX) {
+            do {
+                let yamlDict = try Yams.load(yaml: yamlStringFromDisk) as! [String: [String: Any]]
+//                ret = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
+                BrantaLogger.log(s: "Bridge: Using Installer YAML from disk.")
+            } catch {
             }
+        }
+        else {
+            BrantaLogger.log(s: "Bridge: No Runtime YAML on disk. Reading from bundle.")
+
+            let path = Bundle.main.path(forResource: "InstallerHashes", ofType: "yaml")
             
-            let yamlString = try String(contentsOfFile: path, encoding: .utf8)
-            ret = try Yams.load(yaml: yamlString) as! InstallerHashType
-        } catch {
+            
+            do {
+                guard let path = path else {
+                    return ret
+                }
+                
+                let yamlString = try String(contentsOfFile: path, encoding: .utf8)
+                ret = try Yams.load(yaml: yamlString) as! InstallerHashType
+            } catch {
+            }
         }
         
         return ret
     }
-    
 }
 
 // RUNTIME HASHES ------------------------------------------------------------------------------------------
@@ -168,12 +185,12 @@ extension Bridge {
                 let yamlDict = try Yams.load(yaml: yamlStringFromDisk) as! [String: [String: Any]]
                 ret = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
                 print(ret)
-                BrantaLogger.log(s: "Bridge: Using YAML from disk.")
+                BrantaLogger.log(s: "Bridge: Using Runtime YAML from disk.")
             } catch {
             }
         }
         else {
-            BrantaLogger.log(s: "Bridge: No YAML on disk. Reading from bundle.")
+            BrantaLogger.log(s: "Bridge: No Runtime YAML on disk. Reading from bundle.")
             let path = Bundle.main.path(forResource: "Mac_CheckSums", ofType: "yaml")
 
             do {
