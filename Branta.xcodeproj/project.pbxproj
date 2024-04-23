@@ -33,6 +33,7 @@
 		ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */; };
 		ED4535BC2BB60A9C00536491 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BB2BB60A9C00536491 /* String.swift */; };
 		ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */; };
+		ED45421C2BD86E720075E746 /* CrawledWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45421B2BD86E720075E746 /* CrawledWallet.swift */; };
 		ED4E9F512B3DB64B0000F751 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* Bridge.swift */; };
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
 		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
@@ -118,6 +119,7 @@
 		ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHelper.swift; sourceTree = "<group>"; };
 		ED4535BB2BB60A9C00536491 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
+		ED45421B2BD86E720075E746 /* CrawledWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawledWallet.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				EDD65EA42BC22CF100531800 /* BrantaLogger.swift */,
 				ED19A7A42B123F00004375C7 /* BrantaNotify.swift */,
 				EDC6CA752BB8E4D1009C9342 /* Connection.swift */,
+				ED45421B2BD86E720075E746 /* CrawledWallet.swift */,
 				EDC2B8B82BBB558900E3265D /* Extensions */,
 				ED3BE2C82B6E93AC00CEC8FE /* MenuHelper.swift */,
 				EDB5B0C32B3A76D40015515F /* Observers.swift */,
@@ -515,7 +518,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -606,6 +609,7 @@
 				EDE51F3F2BD3F943009D73DC /* YAMLSaver.swift in Sources */,
 				ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */,
 				EDD011862B6D749D0091CAAD /* Settings.swift in Sources */,
+				ED45421C2BD86E720075E746 /* CrawledWallet.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */,
 				ED611DDB2BC3574200FAE51B /* API.swift in Sources */,
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
@@ -944,7 +948,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,

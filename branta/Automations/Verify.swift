@@ -7,15 +7,6 @@
 
 import Cocoa
 
-struct CrawledWallet: Equatable {
-    var name: String
-    var path: String
-    var hash: String
-    var version: String
-    var dirHash: String
-    var match: String // TODO
-}
-
 // TODO - this class needs clean up.
 class Verify: Automation {
     
@@ -90,7 +81,7 @@ extension Verify {
 
             for kv in architectureSpecificHashes[name]! {
                 if kv.value == wallet.hash {
-                    retItem.match = "true"
+                    retItem.match = true
                 }
             }
             ret.append(retItem)
@@ -102,7 +93,7 @@ extension Verify {
         // Branta is in background (don't notify in foreground, nothing happens)
         for wallet in ret {
                 
-            if wallet.match == "false" {
+            if !wallet.match {
                 let name = stripAppSuffix(str: wallet.name)
                 
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
@@ -155,7 +146,7 @@ extension Verify {
                         hash: hash,
                         version: version,
                         dirHash: "",
-                        match: "false" // TODO - type this
+                        match: false
                     )
                     ret.append(crawledWallet)
                 }
