@@ -93,9 +93,9 @@ class BrantaViewController: NSViewController {
             alert.alertStyle = .informational
             alert.addButton(withTitle: "OK")
             
-            if wallet.match == "true" {
+            if wallet.match {
                 alert.informativeText = "Branta verified the validity of \(name)."
-            } else if wallet.match != "true" && hashes[version] != nil {
+            } else if !wallet.match && hashes[version] != nil {
                 alert.informativeText = "Branta could not verify the validity of \(name). You should consider reinstalling the wallet from the publishers website."
             } else {
                 var older = true
@@ -157,7 +157,7 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         if columnNumber == COLUMNS["WALLET_NAME"] {
             textField.stringValue = name
         } else if columnNumber == COLUMNS["STATUS"] {
-            if tableData[row].match == "true" {
+            if tableData[row].match {
                 textField.stringValue   = "✓"
                 textField.textColor     = NSColor(hex: GOLD)
             }
