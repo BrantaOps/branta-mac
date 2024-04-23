@@ -7,8 +7,7 @@
 
 import Cocoa
 
-
-struct CrawledWallet {
+struct CrawledWallet: Equatable {
     var name: String
     var path: String
     var hash: String
@@ -17,7 +16,6 @@ struct CrawledWallet {
     var match: String // TODO
 }
 
-
 // TODO - this class needs clean up.
 class Verify: Automation {
     
@@ -25,7 +23,7 @@ class Verify: Automation {
     private static let TARGETS = [Sparrow.name(): Sparrow.self]
     
     private static let USE_SHORT_VERSION_PATH: [String] = []
-    private static var signatures: [CrawledWallet] = [] {
+    private static var crawledWallets: [CrawledWallet] = [] {
         didSet {
             notifyObservers()
         }
@@ -41,11 +39,8 @@ class Verify: Automation {
     }
     
     static func verify() {
-        
-        // Step one - crawl wallets
-        let wallets = crawlWallets()
-        // step two - match signatures
-        signatures = matchSignatures(wallets: wallets)
+        let wallets = crawl()
+        crawledWallets = matchSignatures(wallets: wallets)
     }
     
     static func verify(wallet: String) -> Bool {
@@ -75,7 +70,7 @@ extension Verify {
     
     static func notifyObservers() {
         for observer in observers {
-            observer.verifyDidChange(newResults: signatures)
+            observer.verifyDidChange(newResults: crawledWallets)
         }
     }
     
@@ -84,11 +79,8 @@ extension Verify {
 extension Verify {
     private
 
-    // Private function that tra
     static func matchSignatures(wallets: [CrawledWallet]) -> [CrawledWallet] {
-        
         let architectureSpecificHashes: RuntimeHashType = Bridge.getRuntimeHashes()
-        
         var ret: [CrawledWallet] = []
         
         // Mark users wallets as "match" if we have a sha.
@@ -111,7 +103,6 @@ extension Verify {
         for wallet in ret {
                 
             if wallet.match == "false" {
-//                let app = wallet["name"]! // wallet.name
                 let name = stripAppSuffix(str: wallet.name)
                 
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
@@ -126,9 +117,6 @@ extension Verify {
                     alreadyWarned[wallet.name] = true
                 }
             }
-                
-                
-                
         }
         
         return ret
@@ -138,10 +126,8 @@ extension Verify {
         return str.replacingOccurrences(of: ".app", with: "")
     }
 
-    
-    static func crawlWallets() -> [CrawledWallet] {
-//        var ret : Array<[String: String]> = []
-        var realRet: [CrawledWallet] = []
+    static func crawl() -> [CrawledWallet] {
+        var ret: [CrawledWallet] = []
 
         do {
             let items = try FileManager.default.contentsOfDirectory(atPath: "/Applications")
@@ -150,6 +136,7 @@ extension Verify {
                 if TARGETS.keys.contains(item) {
                     
                     // Some Wallets use custom unix binary entry points
+                    // This may be irrelevant after we hash entire dir.
                     var exePath = ""
                     if TARGETS[item]!.CFBundleExecutable() != "" {
                         exePath = TARGETS[item]!.CFBundleExecutable()
@@ -170,25 +157,17 @@ extension Verify {
                         dirHash: "",
                         match: "false" // TODO - type this
                     )
-                    realRet.append(crawledWallet)
-                    
-//                    ret.append([
-//                        "name": item,
-//                        "path": fullPath,
-//                        "hash": hash,
-//                        "match": "false",
-//                        "version": version
-//                    ])
+                    ret.append(crawledWallet)
                 }
             }
-            return realRet
-//            return ret
+            return ret
         } catch {
-            BrantaLogger.log(s: "Verify Automation: Caught an error in crawlWallets()")
+            BrantaLogger.log(s: "Verify Automation: Caught an error in crawl().")
         }
         return []
     }
         
+    // TODO - does this belong in Verify() ?
     static func getAppVersion(atPath appPath: String) -> String {
         let infoPlistPath = appPath + "/Contents/Info.plist"
         var key = "CFBundleShortVersionString"

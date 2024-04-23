@@ -186,8 +186,6 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
 
 extension BrantaViewController: VerifyObserver {
     // Lets hide this... adds noise to homescreen
-    
-    
     func verifyDidChange(newResults: [CrawledWallet]) {
         if newResults.count == 0 {
             walletsDetected.isHidden = false
