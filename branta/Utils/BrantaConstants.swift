@@ -69,3 +69,6 @@ let KEYCODE_COMMA           = 43
 let APPS = [
     Sparrow.runtimeName()
 ]
+
+// Blockstream used to use this.
+let USE_SHORT_VERSION_PATH: [String] = []

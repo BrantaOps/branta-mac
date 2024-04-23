@@ -12,8 +12,8 @@ class Verify: Automation {
     
     private static var alreadyWarned = [Sparrow.name(): false]
     private static let TARGETS = [Sparrow.name(): Sparrow.self]
+    private static let appDelegate = NSApp.delegate as? AppDelegate
     
-    private static let USE_SHORT_VERSION_PATH: [String] = []
     private static var crawledWallets: [CrawledWallet] = [] {
         didSet {
             notifyObservers()
@@ -98,7 +98,6 @@ extension Verify {
                 
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
                 // We can let the user decide how noisy Branta is.
-                let appDelegate = NSApp.delegate as? AppDelegate
                 if alreadyWarned[wallet.name] == false && !appDelegate!.foreground {
                     appDelegate?.notificationManager?.showNotification(
                         title: "Could not verify \(name)",
@@ -138,7 +137,7 @@ extension Verify {
                     
                     let fullPath = "/Applications/" + item + "/Contents/MacOS/" + exePath
                     let hash = Sha.sha256(at: fullPath)
-                    let version = getAppVersion(atPath: ("/Applications/" + item))
+                    let version = AppVersion.get(atPath: ("/Applications/" + item))
                     
                     let crawledWallet = CrawledWallet(
                         name: item,
@@ -156,25 +155,5 @@ extension Verify {
             BrantaLogger.log(s: "Verify Automation: Caught an error in crawl().")
         }
         return []
-    }
-        
-    // TODO - does this belong in Verify() ?
-    static func getAppVersion(atPath appPath: String) -> String {
-        let infoPlistPath = appPath + "/Contents/Info.plist"
-        var key = "CFBundleShortVersionString"
-        
-        // A few wallets (Blockstream Green) use CFBundleVersion. Display that to user.
-        for item in USE_SHORT_VERSION_PATH {
-            if appPath.contains(item) {
-                key = "CFBundleVersion"
-            }
-        }
-        
-        guard let infoDict = NSDictionary(contentsOfFile: infoPlistPath),
-              let version = infoDict[key] as? String else {
-            return "nil"
-        }
-        
-        return version
     }
 }
