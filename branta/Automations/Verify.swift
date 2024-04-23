@@ -9,28 +9,21 @@ import Cocoa
 
 // TODO - this class needs clean up.
 class Verify: Automation {
-    private static var alreadyWarned = [
-        Sparrow.name():             false,
-    ]
     
-    private static let TARGETS = [
-        Sparrow.name():             Sparrow.self,
-    ]
+    private static var alreadyWarned = [Sparrow.name(): false]
+    private static let TARGETS = [Sparrow.name(): Sparrow.self]
     
     private static let USE_SHORT_VERSION_PATH: [String] = []
-    private static let PATH = "/Applications"
-    private static let FM = FileManager.default
-    private static var observers = [VerifyObserver]()
     private static var signatures: Array<[String: String]> = [] {
         didSet {
             notifyObservers()
         }
     }
-
+    
     // TODO - update cadence without restart
     override class func run() {
         let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
-
+        
         Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
             verify()
         }
@@ -48,16 +41,20 @@ class Verify: Automation {
             exePath = TARGETS[wallet + ".app"]!.CFBundleExecutable()
         }
         
-        let fullPath = PATH + "/" + wallet + ".app/Contents/MacOS/" + exePath
+        let fullPath = "/Applications/" + wallet + ".app/Contents/MacOS/" + exePath
         let hash = Sha.sha256(at: fullPath)
-
+        
         return Matcher.checkRuntime(hash: hash, wallet: "\(wallet).app")
     }
-    
+}
+
+extension Verify {
+    private static var observers = [VerifyObserver]()
+
     static func addObserver(_ observer: VerifyObserver) {
         observers.append(observer)
     }
-
+    
     static func removeObserver(_ observer: VerifyObserver) {
         observers.removeAll { $0 === observer }
     }
@@ -68,6 +65,9 @@ class Verify: Automation {
         }
     }
     
+}
+
+extension Verify {
     private
 
     static func matchSignatures(wallets: Array<[String: String]>) -> Array<[String: String]> {
@@ -123,7 +123,7 @@ class Verify: Automation {
         var ret : Array<[String: String]> = []
 
         do {
-            let items = try FM.contentsOfDirectory(atPath: PATH)
+            let items = try FileManager.default.contentsOfDirectory(atPath: "/Applications")
 
             for item in items {
                 if TARGETS.keys.contains(item) {
@@ -137,9 +137,9 @@ class Verify: Automation {
                         exePath = String(item.dropLast(4))
                     }
                     
-                    let fullPath = PATH + "/" + item + "/Contents/MacOS/" + exePath
+                    let fullPath = "/Applications/" + item + "/Contents/MacOS/" + exePath
                     let hash = Sha.sha256(at: fullPath)
-                    let version = getAppVersion(atPath: (PATH + "/" + item))
+                    let version = getAppVersion(atPath: ("/Applications/" + item))
                     
                     ret.append([
                         "name": item,
