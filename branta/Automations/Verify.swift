@@ -7,6 +7,17 @@
 
 import Cocoa
 
+
+struct CrawledWallet {
+    var name: String
+    var path: String
+    var hash: String
+    var version: String
+    var dirHash: String
+    var match: String // TODO
+}
+
+
 // TODO - this class needs clean up.
 class Verify: Automation {
     
@@ -14,7 +25,7 @@ class Verify: Automation {
     private static let TARGETS = [Sparrow.name(): Sparrow.self]
     
     private static let USE_SHORT_VERSION_PATH: [String] = []
-    private static var signatures: Array<[String: String]> = [] {
+    private static var signatures: [CrawledWallet] = [] {
         didSet {
             notifyObservers()
         }
@@ -30,7 +41,10 @@ class Verify: Automation {
     }
     
     static func verify() {
+        
+        // Step one - crawl wallets
         let wallets = crawlWallets()
+        // step two - match signatures
         signatures = matchSignatures(wallets: wallets)
     }
     
@@ -70,18 +84,21 @@ extension Verify {
 extension Verify {
     private
 
-    static func matchSignatures(wallets: Array<[String: String]>) -> Array<[String: String]> {
+    // Private function that tra
+    static func matchSignatures(wallets: [CrawledWallet]) -> [CrawledWallet] {
+        
         let architectureSpecificHashes: RuntimeHashType = Bridge.getRuntimeHashes()
-        var ret: Array<[String: String]> = []
+        
+        var ret: [CrawledWallet] = []
         
         // Mark users wallets as "match" if we have a sha.
         for wallet in wallets {
-            let name = wallet["name"]!
+            let name = wallet.name
             var retItem = wallet
 
             for kv in architectureSpecificHashes[name]! {
-                if kv.value == wallet["hash"] {
-                    retItem["match"] = "true"
+                if kv.value == wallet.hash {
+                    retItem.match = "true"
                 }
             }
             ret.append(retItem)
@@ -92,24 +109,26 @@ extension Verify {
         // A wallet has false and has not already sent user alert
         // Branta is in background (don't notify in foreground, nothing happens)
         for wallet in ret {
-            if let match = wallet["match"] {
-                if match == "false" {
-                    let app = wallet["name"]!
-                    let name = stripAppSuffix(str: app)
-                    
-                    // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
-                    // We can let the user decide how noisy Branta is.
-                    let appDelegate = NSApp.delegate as? AppDelegate
-                    if alreadyWarned[app] == false && !appDelegate!.foreground {
-                        appDelegate?.notificationManager?.showNotification(
-                            title: "Could not verify \(name)",
-                            body: "",
-                            key: NOTIFY_UPON_STATUS_CHANGE
-                        )
-                        alreadyWarned[app] = true
-                    }
+                
+            if wallet.match == "false" {
+//                let app = wallet["name"]! // wallet.name
+                let name = stripAppSuffix(str: wallet.name)
+                
+                // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
+                // We can let the user decide how noisy Branta is.
+                let appDelegate = NSApp.delegate as? AppDelegate
+                if alreadyWarned[wallet.name] == false && !appDelegate!.foreground {
+                    appDelegate?.notificationManager?.showNotification(
+                        title: "Could not verify \(name)",
+                        body: "",
+                        key: NOTIFY_UPON_STATUS_CHANGE
+                    )
+                    alreadyWarned[wallet.name] = true
                 }
             }
+                
+                
+                
         }
         
         return ret
@@ -118,9 +137,11 @@ extension Verify {
     static func stripAppSuffix(str: String) -> String {
         return str.replacingOccurrences(of: ".app", with: "")
     }
+
     
-    static func crawlWallets() -> Array<[String: String]> {
-        var ret : Array<[String: String]> = []
+    static func crawlWallets() -> [CrawledWallet] {
+//        var ret : Array<[String: String]> = []
+        var realRet: [CrawledWallet] = []
 
         do {
             let items = try FileManager.default.contentsOfDirectory(atPath: "/Applications")
@@ -141,16 +162,27 @@ extension Verify {
                     let hash = Sha.sha256(at: fullPath)
                     let version = getAppVersion(atPath: ("/Applications/" + item))
                     
-                    ret.append([
-                        "name": item,
-                        "path": fullPath,
-                        "hash": hash,
-                        "match": "false",
-                        "version": version
-                    ])
+                    let crawledWallet = CrawledWallet(
+                        name: item,
+                        path: fullPath,
+                        hash: hash,
+                        version: version,
+                        dirHash: "",
+                        match: "false" // TODO - type this
+                    )
+                    realRet.append(crawledWallet)
+                    
+//                    ret.append([
+//                        "name": item,
+//                        "path": fullPath,
+//                        "hash": hash,
+//                        "match": "false",
+//                        "version": version
+//                    ])
                 }
             }
-            return ret
+            return realRet
+//            return ret
         } catch {
             BrantaLogger.log(s: "Verify Automation: Caught an error in crawlWallets()")
         }
