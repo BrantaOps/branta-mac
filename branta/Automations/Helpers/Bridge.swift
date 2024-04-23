@@ -17,10 +17,8 @@ class Bridge {
     
     // FILE NAMES ON DISK
     private static let RUNTIME_DISK_NAME            = "branta_runtime.yaml"
-    private static let RUNTIME_DISK_PREFIX          = "branta_runtime"
     
     private static let INSTALLER_DISK_NAME          = "branta_installer.yaml"
-    private static let INSTALLER_DISK_PREFIX        = "branta_installer"
 
 
     private static var runtimeHashes:               RuntimeHashType?
@@ -104,7 +102,7 @@ extension Bridge {
     static func localInstallerHashes() -> InstallerHashType {
         var ret: InstallerHashType = [:]
         
-        if let yamlStringFromDisk: String = YAMLSaver.readYAMLFromLocal(filename: INSTALLER_DISK_PREFIX) {
+        if let yamlStringFromDisk: String = YAMLSaver.readYAMLFromLocal(filename: INSTALLER_DISK_NAME) {
             do {
                 ret = try Yams.load(yaml: yamlStringFromDisk) as! InstallerHashType
                 BrantaLogger.log(s: "Bridge: Using Installer YAML from disk.")
@@ -176,7 +174,7 @@ extension Bridge {
         var ret: RuntimeHashType = [:]
         
         
-        if let yamlStringFromDisk: String = YAMLSaver.readYAMLFromLocal(filename: RUNTIME_DISK_PREFIX) {
+        if let yamlStringFromDisk: String = YAMLSaver.readYAMLFromLocal(filename: RUNTIME_DISK_NAME) {
             do {
                 let yamlDict = try Yams.load(yaml: yamlStringFromDisk) as! [String: [String: Any]]
                 ret = YAMLParser.parseRuntimeYAML(yamlDict: yamlDict)
