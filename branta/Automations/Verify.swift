@@ -10,13 +10,8 @@ import Cocoa
 // TODO - this class needs clean up.
 class Verify: Automation {
     
-    private static var alreadyWarned = [
-        Sparrow.name():             false,
-    ]
-    
-    private static let TARGETS = [
-        Sparrow.name():             Sparrow.self,
-    ]
+    private static var alreadyWarned = [ Sparrow.name(): false ]
+    private static let TARGETS = [ Sparrow.name(): Sparrow.self ]
     
     private static let USE_SHORT_VERSION_PATH: [String] = []
     
@@ -124,7 +119,18 @@ extension Verify {
         return str.replacingOccurrences(of: ".app", with: "")
     }
     
+    // TODO - better names
+    struct CrawledWallet {
+        var name: String
+        var path: String
+        var hash: String
+        var version: String
+        var dirHash: String
+    }
+    
+    // TODO - type the return.
     static func crawlWallets() -> Array<[String: String]> {
+        // TODO - type the return
         var ret : Array<[String: String]> = []
 
         do {
@@ -141,18 +147,24 @@ extension Verify {
                     else {
                         exePath = String(item.dropLast(4))
                     }
+                                        
+                    let dir         = "/Applications/" + item
+                    let pathToExe   = dir + "/Contents/MacOS/" + exePath
+                    let exeHash     = Sha.sha256(at: pathToExe)
+                    let dirHash     = Sha.sha256ForDirectory(atPath: dir)
+                    let version     = getAppVersion(atPath: (dir))
                     
-                    let fullPath = "/Applications/" + item + "/Contents/MacOS/" + exePath
-                    let hash = Sha.sha256(at: fullPath)
-                    let version = getAppVersion(atPath: ("/Applications/" + item))
                     
-                    ret.append([
-                        "name": item,
-                        "path": fullPath,
-                        "hash": hash,
-                        "match": "false",
-                        "version": version
-                    ])
+                    // TODO - make this a struct.
+                    let r = [
+                        "name":     item,
+                        "path":     pathToExe,
+                        "hash":     exeHash,
+                        "version":  version,
+                        "dirHash":  dirHash != nil ? dirHash! : "" // TODO - hook here
+                    ]
+                    BrantaLogger.log(s: "Crawled Wallet Hash: \(dirHash!)")
+                    ret.append(r)
                 }
             }
             return ret
