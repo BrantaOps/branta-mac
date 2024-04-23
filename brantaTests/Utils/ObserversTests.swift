@@ -10,9 +10,9 @@ import XCTest
 
 class MockVerifyObserver: VerifyObserver {
     var verifyDidChangeCalled = false
-    var receivedResults: [[String: String]]?
+    var receivedResults: [CrawledWallet]?
     
-    func verifyDidChange(newResults: [[String: String]]) {
+    func verifyDidChange(newResults: [CrawledWallet]) {
         verifyDidChangeCalled = true
         receivedResults = newResults
     }
@@ -22,7 +22,10 @@ class VerifyObserverTests: XCTestCase {
     
     func testVerifyDidChange() {
         let mockObserver = MockVerifyObserver()
-        let results: [[String: String]] = [["key1": "value1"], ["key2": "value2"]]
+        let results: [CrawledWallet] = [
+            CrawledWallet(name: "name1", path: "path1", hash: "hash1", version: "version1", dirHash: "dirHash1", match: "match1"),
+            CrawledWallet(name: "name2", path: "path2", hash: "hash2", version: "version2", dirHash: "dirHash2", match: "match2")
+        ]
         mockObserver.verifyDidChange(newResults: results)
         
         XCTAssertTrue(mockObserver.verifyDidChangeCalled)

@@ -6,7 +6,7 @@
 //
 
 protocol VerifyObserver: AnyObject {
-    func verifyDidChange(newResults: Array<[String: String]>)
+    func verifyDidChange(newResults: [CrawledWallet])
 }
 
 protocol DataFeedObserver: AnyObject {
