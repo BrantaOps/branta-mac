@@ -76,12 +76,12 @@ extension Verify {
         
         // Mark users wallets as "match" if we have a sha.
         for wallet in wallets {
-            let name = wallet.name
+            let name = wallet.fullWalletName
             var retItem = wallet
 
             for kv in architectureSpecificHashes[name]! {
-                if kv.value == wallet.hash {
-                    retItem.match = true
+                if kv.value == wallet.entrySHA256 {
+                    retItem.brantaSignatureMatch = true
                 }
             }
             ret.append(retItem)
@@ -93,18 +93,18 @@ extension Verify {
         // Branta is in background (don't notify in foreground, nothing happens)
         for wallet in ret {
                 
-            if !wallet.match {
-                let name = stripAppSuffix(str: wallet.name)
+            if !wallet.brantaSignatureMatch {
+                let name = stripAppSuffix(str: wallet.fullWalletName)
                 
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
                 // We can let the user decide how noisy Branta is.
-                if alreadyWarned[wallet.name] == false && !appDelegate!.foreground {
+                if alreadyWarned[wallet.fullWalletName] == false && !appDelegate!.foreground {
                     appDelegate?.notificationManager?.showNotification(
                         title: "Could not verify \(name)",
                         body: "",
                         key: NOTIFY_UPON_STATUS_CHANGE
                     )
-                    alreadyWarned[wallet.name] = true
+                    alreadyWarned[wallet.fullWalletName] = true
                 }
             }
         }
@@ -140,12 +140,12 @@ extension Verify {
                     let version = AppVersion.get(atPath: ("/Applications/" + item))
                     
                     let crawledWallet = CrawledWallet(
-                        name: item,
-                        path: fullPath,
-                        hash: hash,
-                        version: version,
-                        dirHash: "",
-                        match: false
+                        fullWalletName: item,
+                        installPath: fullPath,
+                        entrySHA256: hash,
+                        venderVersion: version,
+                        directorySHA256: "",
+                        brantaSignatureMatch: false
                     )
                     ret.append(crawledWallet)
                 }

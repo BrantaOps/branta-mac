@@ -56,7 +56,7 @@ class BrantaViewController: NSViewController {
         if let clickedTextField = sender.view as? NSTextField {
             let appDelegate = NSApp.delegate as? AppDelegate
             let row = tableView.row(for: clickedTextField)
-            let runtimeName = tableData[row].name.replacingOccurrences(of: ".app", with: "")
+            let runtimeName = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
             
             if let existingWindowController = appDelegate?.openedNetworkWindows[runtimeName] {
                 existingWindowController.window?.makeKeyAndOrderFront(nil)
@@ -83,9 +83,9 @@ class BrantaViewController: NSViewController {
             let row             = tableView.row(for: clickedTextField)
             let wallet          = tableData[row]
             let alert           = NSAlert()
-            let name            = wallet.name.replacingOccurrences(of: ".app", with: "")
-            let version         = wallet.version
-            let nameKey         = wallet.name
+            let name            = wallet.fullWalletName.replacingOccurrences(of: ".app", with: "")
+            let version         = wallet.venderVersion
+            let nameKey         = wallet.fullWalletName
             let hashes          = Bridge.getRuntimeHashes()[nameKey]!
             let versions        = hashes.keys
             
@@ -93,9 +93,9 @@ class BrantaViewController: NSViewController {
             alert.alertStyle = .informational
             alert.addButton(withTitle: "OK")
             
-            if wallet.match {
+            if wallet.brantaSignatureMatch {
                 alert.informativeText = "Branta verified the validity of \(name)."
-            } else if !wallet.match && hashes[version] != nil {
+            } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
                 alert.informativeText = "Branta could not verify the validity of \(name). You should consider reinstalling the wallet from the publishers website."
             } else {
                 var older = true
@@ -152,12 +152,12 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         textField.isBezeled = false
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
-        let name = tableData[row].name.replacingOccurrences(of: ".app", with: "")
+        let name = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
          
         if columnNumber == COLUMNS["WALLET_NAME"] {
             textField.stringValue = name
         } else if columnNumber == COLUMNS["STATUS"] {
-            if tableData[row].match {
+            if tableData[row].brantaSignatureMatch {
                 textField.stringValue   = "✓"
                 textField.textColor     = NSColor(hex: GOLD)
             }
