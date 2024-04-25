@@ -80,7 +80,7 @@ extension Verify {
             var retItem = wallet
 
             for kv in architectureSpecificHashes[name]! {
-                if kv.value == wallet.entrySHA256 {
+                if kv.value == wallet.directorySHA256 {
                     retItem.brantaSignatureMatch = true
                 }
             }
@@ -135,16 +135,15 @@ extension Verify {
                         exePath = String(item.dropLast(4))
                     }
                     
-                    let fullPath = "/Applications/" + item + "/Contents/MacOS/" + exePath
-                    let hash = Sha.sha256(at: fullPath)
-                    let version = AppVersion.get(atPath: ("/Applications/" + item))
+                    let installPath         = "/Applications/" + item + "/Contents/MacOS/" + exePath
+                    let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
+                    let directorySHA256     = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
                     
                     let crawledWallet = CrawledWallet(
                         fullWalletName: item,
-                        installPath: fullPath,
-                        entrySHA256: hash,
-                        venderVersion: version,
-                        directorySHA256: "",
+                        installPath: installPath,
+                        venderVersion: venderVersion,
+                        directorySHA256: directorySHA256 ?? "",
                         brantaSignatureMatch: false
                     )
                     ret.append(crawledWallet)
