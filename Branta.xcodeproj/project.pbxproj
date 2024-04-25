@@ -53,7 +53,7 @@
 		ED73E9772B07D686005742BA /* brantaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */; };
 		ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9862B0820C9005742BA /* Sparrow.swift */; };
 		ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E98A2B0820F1005742BA /* Wallet.swift */; };
-		ED7B16B22B556A650003EFEB /* Focus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Focus.swift */; };
+		ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Foreground.swift */; };
 		ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97B84D2B9F46A3007DD2F5 /* Updater.swift */; };
 		ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */; };
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
@@ -144,7 +144,7 @@
 		ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brantaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED73E9862B0820C9005742BA /* Sparrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparrow.swift; sourceTree = "<group>"; };
 		ED73E98A2B0820F1005742BA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
-		ED7B16B12B556A650003EFEB /* Focus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Focus.swift; sourceTree = "<group>"; };
+		ED7B16B12B556A650003EFEB /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
 		ED97B84D2B9F46A3007DD2F5 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
@@ -288,7 +288,7 @@
 			children = (
 				ED57437A2B351E990001956A /* Automation.swift */,
 				ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */,
-				ED7B16B12B556A650003EFEB /* Focus.swift */,
+				ED7B16B12B556A650003EFEB /* Foreground.swift */,
 				ED5743772B3517BD0001956A /* Helpers */,
 				EDD0117E2B6580760091CAAD /* Installer.swift */,
 				EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */,
@@ -619,7 +619,7 @@
 				ED57437B2B351E990001956A /* Automation.swift in Sources */,
 				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
-				ED7B16B22B556A650003EFEB /* Focus.swift in Sources */,
+				ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
