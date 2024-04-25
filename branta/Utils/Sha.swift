@@ -45,16 +45,16 @@ class Sha {
     
     // Bash:
     // find Sparrow.app/ -type f -not -type l -exec shasum -a 256 {} + | sort | cut -d' ' -f1 | tr -d '\n' | shasum -a 256
-    // Skip Symlinks
-    // Sha256, skip symlinks & dirs
-    // remove path, remove whitespace, remove newlines
-    
+    // Skip symlinks
+    // get sha256
+    // Remove path, remove whitespace, remove newlines
+    // sha256 the sorted hashes
     
     // Swift:
-    // 1. Traverse directory, skip symlinks, hash files
-    // 2. SHA256 each node, add to hashes
+    // 1. Traverse directory, skip symlinks
+    // 2. Run sha256, add to `hashes`
     // 3. Sort hashes array
-    // 3. SHA256 the sorted hashes
+    // 3. sha256 the sorted hashes
     class func sha256ForDirectory(atPath path: String) -> String? {
         var hashes: [String] = []
 
@@ -78,10 +78,6 @@ class Sha {
         }
         
         hashes.sort()
-        print("HASHES: ")
-        print(hashes)
-        print("JOINED: \(hashes.joined())")
-
         
         if let data = hashes.joined().data(using: .utf8) {
              let hashed = SHA256.hash(data: data)

@@ -135,20 +135,16 @@ extension Verify {
                         exePath = String(item.dropLast(4))
                     }
                     
-                    
-                    
-                    let fullPath = "/Applications/" + item + "/Contents/MacOS/" + exePath
-                    let hash = Sha.sha256(at: fullPath)
-                    let version = AppVersion.get(atPath: ("/Applications/" + item))
-                    
-                    let directorySHA256 = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
-                    print("directorySHA256 \(directorySHA256)")
+                    let installPath         = "/Applications/" + item + "/Contents/MacOS/" + exePath
+                    let entrySHA256         = Sha.sha256(at: installPath)
+                    let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
+                    let directorySHA256     = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
                     
                     let crawledWallet = CrawledWallet(
                         fullWalletName: item,
-                        installPath: fullPath,
-                        entrySHA256: hash,
-                        venderVersion: version,
+                        installPath: installPath,
+                        entrySHA256: entrySHA256,
+                        venderVersion: venderVersion,
                         directorySHA256: directorySHA256 ?? "",
                         brantaSignatureMatch: false
                     )
