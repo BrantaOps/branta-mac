@@ -41,4 +41,53 @@ class Sha {
             return Data()
         }
     }
+    
+    
+    // Bash:
+    // find Sparrow.app/ -type f -not -type l -exec shasum -a 256 {} + | sort | cut -d' ' -f1 | tr -d '\n' | shasum -a 256
+    // Skip Symlinks
+    // Sha256, skip symlinks & dirs
+    // remove path, remove whitespace, remove newlines
+    
+    
+    // Swift:
+    // 1. Traverse directory, skip symlinks, hash files
+    // 2. SHA256 each node, add to hashes
+    // 3. Sort hashes array
+    // 3. SHA256 the sorted hashes
+    class func sha256ForDirectory(atPath path: String) -> String? {
+        var hashes: [String] = []
+
+        guard let enumerator = FileManager.default.enumerator(atPath: path) else {
+            return nil
+        }
+        
+        for e in enumerator {
+            if let node = e as? String {
+                let fullPath = path + "/" + node
+
+                let isDirectory = (enumerator.fileAttributes?[.type] as? FileAttributeType) == .typeDirectory
+                let isSymLink = (enumerator.fileAttributes?[.type] as? FileAttributeType) == .typeSymbolicLink
+
+                if !isDirectory && !isSymLink {
+                    let hash = sha256(at: fullPath)
+                    print("\(hash) \(fullPath)")
+                    hashes.append(hash)
+                }
+            }
+        }
+        
+        hashes.sort()
+        print("HASHES: ")
+        print(hashes)
+        print("JOINED: \(hashes.joined())")
+
+        
+        if let data = hashes.joined().data(using: .utf8) {
+             let hashed = SHA256.hash(data: data)
+             return hashed.compactMap { String(format: "%02x", $0) }.joined()
+         } else {
+             return nil
+         }
+    }
 }
