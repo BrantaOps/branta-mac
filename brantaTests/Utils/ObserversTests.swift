@@ -23,8 +23,20 @@ class VerifyObserverTests: XCTestCase {
     func testVerifyDidChange() {
         let mockObserver = MockVerifyObserver()
         let results: [CrawledWallet] = [
-            CrawledWallet(name: "name1", path: "path1", hash: "hash1", version: "version1", dirHash: "dirHash1", match: "match1"),
-            CrawledWallet(name: "name2", path: "path2", hash: "hash2", version: "version2", dirHash: "dirHash2", match: "match2")
+            CrawledWallet(
+                fullWalletName: "fullWalletName1",
+                installPath: "installPath1",
+                venderVersion: "venderVersion1",
+                directorySHA256: "directorySHA2561",
+                brantaSignatureMatch: true
+            ),
+            CrawledWallet(
+                fullWalletName: "fullWalletName2",
+                installPath: "installPath2",
+                venderVersion: "venderVersion2",
+                directorySHA256: "directorySHA2562",
+                brantaSignatureMatch: false
+            )
         ]
         mockObserver.verifyDidChange(newResults: results)
         

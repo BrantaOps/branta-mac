@@ -7,19 +7,28 @@
 
 import Foundation
 
+// WALLETS
+let TARGETS = [Sparrow.name()]
+let APPS = [Sparrow.runtimeName()]
+let USE_SHORT_VERSION_PATH: [String] = [] // // Blockstream used to use this.
+
+
 // TYPEALIAS
 typealias RuntimeHashType       = [String: [String:String]]
 typealias InstallerHashType     = [String:String]
 
-
-// CONSTANTS
-let HEIGHT      = 30.0
-let TABLE_FONT  = 17.0
-
-let TEST_FOR_SUDO = "echo 'test for sudo.'"
+// URLS
 
 let FETCH_URL = "https://api.github.com/repos/brantaops/branta-mac/releases/latest"
 
+// UI CONSTANTS
+let HEIGHT      = 30.0
+let TABLE_FONT  = 17.0
+
+
+let TEST_FOR_SUDO = "echo 'test for sudo.'"
+
+// NOTIFICATIONS
 
 let NOTIFY_FOR_BTC_ADDRESS          = "notifyForBTCAddress"
 let NOTIFY_FOR_SEED                 = "notifyForSeed"
@@ -65,10 +74,3 @@ let RED                     = "#944545"
 let GRAY                    = "#333130"
 let ACTIVE                  = "Status: Active ✓"
 let KEYCODE_COMMA           = 43
-
-let APPS = [
-    Sparrow.runtimeName()
-]
-
-// Blockstream used to use this.
-let USE_SHORT_VERSION_PATH: [String] = []

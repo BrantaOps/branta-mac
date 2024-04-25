@@ -7,10 +7,6 @@
 
 import Cocoa
 
-// TODO - this is messy.
-let TARGETS = [Sparrow.name(): Sparrow.self]
-
-
 // TODO - this class needs clean up.
 class Verify: Automation {
     
@@ -113,17 +109,9 @@ extension Verify {
             let items = try FileManager.default.contentsOfDirectory(atPath: "/Applications")
 
             for item in items {
-                if TARGETS.keys.contains(item) {
+                if TARGETS.contains(item) {
                     
-                    // Some Wallets use custom unix binary entry points
-                    // This may be irrelevant after we hash entire dir.
-                    var exePath = ""
-                    if TARGETS[item]!.CFBundleExecutable() != "" {
-                        exePath = TARGETS[item]!.CFBundleExecutable()
-                    }
-                    else {
-                        exePath = String(item.dropLast(4))
-                    }
+                    var exePath = String(item.dropLast(4)) // Strips .app
                     
                     let installPath         = "/Applications/" + item + "/Contents/MacOS/" + exePath
                     let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
