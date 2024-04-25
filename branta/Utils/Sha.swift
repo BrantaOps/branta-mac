@@ -71,7 +71,6 @@ class Sha {
 
                 if !isDirectory && !isSymLink {
                     let hash = sha256(at: fullPath)
-                    print("\(hash) \(fullPath)")
                     hashes.append(hash)
                 }
             }

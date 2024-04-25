@@ -8,7 +8,6 @@
 struct CrawledWallet: Equatable {
     var fullWalletName: String
     var installPath: String
-    var entrySHA256: String
     var venderVersion: String
     var directorySHA256: String
     var brantaSignatureMatch: Bool
