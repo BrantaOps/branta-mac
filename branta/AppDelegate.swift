@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var notificationManager: BrantaNotify?
     var openedNetworkWindows: [String: NSWindowController] = [:]
     
-    private let AUTOMATIONS         = [Clipboard.self, Verify.self, Focus.self]
+    private let AUTOMATIONS         = [Clipboard.self, Verify.self, Foreground.self]
     private let KEY_ABOUT           = "A"
     private let KEY_SETTINGS        = "S"
     private let KEY_QUIT            = "Q"

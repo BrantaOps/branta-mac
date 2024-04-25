@@ -7,11 +7,14 @@
 
 import Cocoa
 
+// TODO - this is messy.
+let TARGETS = [Sparrow.name(): Sparrow.self]
+
+
 // TODO - this class needs clean up.
 class Verify: Automation {
     
     private static var alreadyWarned = [Sparrow.name(): false]
-    private static let TARGETS = [Sparrow.name(): Sparrow.self]
     private static let appDelegate = NSApp.delegate as? AppDelegate
     
     private static var crawledWallets: [CrawledWallet] = [] {
@@ -32,19 +35,6 @@ class Verify: Automation {
     static func verify() {
         let wallets = crawl()
         crawledWallets = matchSignatures(wallets: wallets)
-    }
-    
-    static func verify(wallet: String) -> Bool {
-        var exePath = wallet
-        
-        if TARGETS[wallet + ".app"]!.CFBundleExecutable() != "" {
-            exePath = TARGETS[wallet + ".app"]!.CFBundleExecutable()
-        }
-        
-        let fullPath = "/Applications/" + wallet + ".app/Contents/MacOS/" + exePath
-        let hash = Sha.sha256(at: fullPath)
-        
-        return Matcher.checkRuntime(hash: hash, wallet: "\(wallet).app")
     }
 }
 
@@ -143,7 +133,7 @@ extension Verify {
                         fullWalletName: item,
                         installPath: installPath,
                         venderVersion: venderVersion,
-                        directorySHA256: directorySHA256 ?? "",
+                        directorySHA256: directorySHA256,
                         brantaSignatureMatch: false
                     )
                     ret.append(crawledWallet)

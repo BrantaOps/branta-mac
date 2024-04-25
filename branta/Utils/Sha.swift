@@ -55,11 +55,11 @@ class Sha {
     // 2. Run sha256, add to `hashes`
     // 3. Sort hashes array
     // 3. sha256 the sorted hashes
-    class func sha256ForDirectory(atPath path: String) -> String? {
+    class func sha256ForDirectory(atPath path: String) -> String {
         var hashes: [String] = []
 
         guard let enumerator = FileManager.default.enumerator(atPath: path) else {
-            return nil
+            return ""
         }
         
         for e in enumerator {
@@ -82,7 +82,7 @@ class Sha {
              let hashed = SHA256.hash(data: data)
              return hashed.compactMap { String(format: "%02x", $0) }.joined()
          } else {
-             return nil
+             return ""
          }
     }
 }
