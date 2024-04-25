@@ -1,4 +1,23 @@
 # Sparrow. Standard SHA 256 from manifest.
+
+# Sparrow 1.8.6
+775d1f6cd77deba0f9ea67b495fcd26bc9d666147c4abd93dd71c1df3caf270f: "Sparrow-1.8.6-aarch64.dmg"
+aa6d64dd3ce5d6de280f557b52d32aa6bbdf575ff046593f64e217c8c61cbac9: "Sparrow-1.8.6-x86_64.dmg"
+efb5d5cb819aa04ff6814342688d49ea4e9f365b3cc5a7b8bfce3c0653ded8eb: "Sparrow-1.8.6.exe"
+b1c21e2e6cf3be7b29af90d40b76f08ae16d375642beed6d82686d43aa16d0c8: "Sparrow-1.8.6.zip"
+a66985bd1448856abbc407aa61cd13c34bf44ecb70ff84c366f18be1ab056f44: "sparrow-1.8.6-1.aarch64.rpm"
+c9b43a0e6ec2e92934e5222b6d8ce8509d0cee2355ea36151eeb9d0ac5d3034d: "sparrow-1.8.6-1.x86_64.rpm"
+de364f25bac0f37181f68151c973740e999cd150f747e7630b1b1ca87f34f3f8: "sparrow-1.8.6-aarch64.tar.gz"
+ba7f4568aa1c43b1ab10aec86eff3a79cfdf40d3f173924d4f02196e51407a78: "sparrow-1.8.6-x86_64.tar.gz"
+608fc5fd8a8f14e860efbbe625abe664522aa96d864d1d7511c33e9a512165c0: "sparrow-server-1.8.6-1.aarch64.rpm"
+138200c21365db128752cc88f67ec9418b496b2a469361b2761c7f10e92ed207: "sparrow-server-1.8.6-1.x86_64.rpm"
+5f57a0e6b29f676ac9df6f27a7a6918c5466a62ef3becc186364d92c99c481db: "sparrow-server-1.8.6-aarch64.tar.gz"
+ec8e8ae0d2de8fb37c8f72e63d0627d9e3af4b9dc7c1b56d3c86ba6408afc4a8: "sparrow-server-1.8.6-x86_64.tar.gz"
+1e219d5751b71502e77abf7908091bafbe46e2671a1ca033f07e6a8b76474d31: "sparrow-server_1.8.6-1_amd64.deb"
+747609060cbf8cb474ad948f286ac54526ff4707d7d2ac4a40fcf3ec2334a5bb: "sparrow-server_1.8.6-1_arm64.deb"
+b88ac5b56d12f0fa6148defe46696fc41d2e65c6d7420e90357eb4c98f41e9ae: "sparrow_1.8.6-1_amd64.deb"
+4bb85b2ab65f5760c6f52bda119076499ce377e13675dd94da31217e017d7605: "sparrow_1.8.6-1_arm64.deb"
+
 # Sparrow 1.8.5
 "f4f9d9cf2982649a6d7d1030e8db389f5f2a898a576e4f965f0859d1f0047c9c": "Sparrow-1.8.5-aarch64.dmg"
 "cef6963b5fdb52c8fd724ee1f1fd7a64729c92ed202f359b79a71f8f788079ed": "Sparrow-1.8.5-x86_64.dmg"
