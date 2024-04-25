@@ -22,10 +22,6 @@ class Wallet {
         return "Implement me.app"
     }
     
-    class func CFBundleExecutable() -> String {
-        return ""
-    }
-    
     class func singleBinary() -> Bool {
         return false
     }

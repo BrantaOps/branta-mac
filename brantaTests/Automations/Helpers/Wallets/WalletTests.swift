@@ -18,8 +18,4 @@ class WalletTests: XCTestCase {
     func testName() {
         XCTAssertEqual(Wallet.name(), "Implement me.app", "Name method should return 'Implement me.app'")
     }
-    
-    func testCFBundleExecutable() {
-         XCTAssertEqual(Wallet.CFBundleExecutable(), "", "CFBundleExecutable method should return an empty string")
-     }
 }
