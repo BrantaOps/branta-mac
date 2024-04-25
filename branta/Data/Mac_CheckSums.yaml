@@ -1,4 +1,10 @@
 Sparrow.app:
+  "1.8.6":
+    date: 2024-04-25 00:00:00.00
+    x86:
+      sha256: "89d8efc62aadd0dd7564b741887a928fb1cea91ae97fae5af25c70b5c89edc75"
+    arm:
+      sha256: "f327e7eaeb412f2b722714ddf992cd17c3b09c2c699219d3cfb31f21ad1d63d8"
   "1.8.5":
     date: 2024-04-22 00:00:00.00
     x86:
