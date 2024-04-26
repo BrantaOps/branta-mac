@@ -1,5 +1,5 @@
 {
-  "title": "Branta 1.11.0",
+  "title": "Branta 2.0-beta",
   "background": "./branta/Assets.xcassets/background.imageset/background.jpg",
   "contents": [
     { "x": 630, "y": 338, "type": "link", "path": "/Applications" },

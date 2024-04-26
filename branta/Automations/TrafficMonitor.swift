@@ -10,6 +10,12 @@ import Cocoa
 class TrafficMonitor: Automation {
     
     private var tableView: NSTableView
+    // TODO - there is a bug here. If this PID gets killed, and wallet restarts.
+    /*
+    ps -p 4937
+    PID TTY           TIME CMD
+    4937 ??         0:18.97 /Applications/Sparrow.app/Contents/MacOS/Sparrow
+    */
     private var parentPID: Int?
     private var pids: Array<Int>                = []
     private var connections: Array<Connection>  = []
@@ -51,6 +57,22 @@ class TrafficMonitor: Automation {
     }
 
     private
+    
+//    func findProcessID(processIdentifier: Int) -> Int? {
+//        // Get all running applications
+//        let runningApps = NSWorkspace.shared.runningApplications
+//        
+//        // Iterate through running applications
+//        for app in runningApps {
+//            // Check if the processIdentifier matches
+//            if app.processIdentifier == processIdentifier {
+//                return Int(app.processIdentifier)
+//            }
+//        }
+//        
+//        // If no matching process found, return nil
+//        return nil
+//    }
     
     func foundProcess() -> Bool {
         return self.parentPID != nil && self.parentPID != -1
