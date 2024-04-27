@@ -49,8 +49,6 @@
 		ED73E9592B07D684005742BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9582B07D684005742BA /* AppDelegate.swift */; };
 		ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED73E95C2B07D686005742BA /* Assets.xcassets */; };
 		ED73E9602B07D686005742BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED73E95E2B07D686005742BA /* Main.storyboard */; };
-		ED73E9752B07D686005742BA /* brantaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9742B07D686005742BA /* brantaUITests.swift */; };
-		ED73E9772B07D686005742BA /* brantaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */; };
 		ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E9862B0820C9005742BA /* Sparrow.swift */; };
 		ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E98A2B0820F1005742BA /* Wallet.swift */; };
 		ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Foreground.swift */; };
@@ -79,13 +77,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		ED73E9672B07D686005742BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED73E94D2B07D684005742BA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED73E9542B07D684005742BA;
-			remoteInfo = branta;
-		};
-		ED73E9712B07D686005742BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED73E94D2B07D684005742BA /* Project object */;
 			proxyType = 1;
@@ -139,9 +130,6 @@
 		ED73E95F2B07D686005742BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED73E9612B07D686005742BA /* branta.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = branta.entitlements; sourceTree = "<group>"; };
 		ED73E9662B07D686005742BA /* BrantaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrantaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED73E9702B07D686005742BA /* BrantaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrantaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED73E9742B07D686005742BA /* brantaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brantaUITests.swift; sourceTree = "<group>"; };
-		ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = brantaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ED73E9862B0820C9005742BA /* Sparrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparrow.swift; sourceTree = "<group>"; };
 		ED73E98A2B0820F1005742BA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		ED7B16B12B556A650003EFEB /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
@@ -178,13 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ED73E9632B07D686005742BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED73E96D2B07D686005742BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -361,7 +342,6 @@
 			children = (
 				ED73E9572B07D684005742BA /* branta */,
 				ED73E9692B07D686005742BA /* brantaTests */,
-				ED73E9732B07D686005742BA /* brantaUITests */,
 				ED73E9562B07D684005742BA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -371,7 +351,6 @@
 			children = (
 				ED73E9552B07D684005742BA /* Branta.app */,
 				ED73E9662B07D686005742BA /* BrantaTests.xctest */,
-				ED73E9702B07D686005742BA /* BrantaUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,15 +379,6 @@
 				ED643CD62B519EDF00FEBE36 /* ViewControllers */,
 			);
 			path = brantaTests;
-			sourceTree = "<group>";
-		};
-		ED73E9732B07D686005742BA /* brantaUITests */ = {
-			isa = PBXGroup;
-			children = (
-				ED73E9742B07D686005742BA /* brantaUITests.swift */,
-				ED73E9762B07D686005742BA /* brantaUITestsLaunchTests.swift */,
-			);
-			path = brantaUITests;
 			sourceTree = "<group>";
 		};
 		ED73E9832B08207E005742BA /* Wallets */ = {
@@ -480,24 +450,6 @@
 			productReference = ED73E9662B07D686005742BA /* BrantaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ED73E96F2B07D686005742BA /* BrantaUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED73E9802B07D686005742BA /* Build configuration list for PBXNativeTarget "BrantaUITests" */;
-			buildPhases = (
-				ED73E96C2B07D686005742BA /* Sources */,
-				ED73E96D2B07D686005742BA /* Frameworks */,
-				ED73E96E2B07D686005742BA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ED73E9722B07D686005742BA /* PBXTargetDependency */,
-			);
-			name = BrantaUITests;
-			productName = brantaUITests;
-			productReference = ED73E9702B07D686005742BA /* BrantaUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -515,13 +467,9 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = ED73E9542B07D684005742BA;
 					};
-					ED73E96F2B07D686005742BA = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = ED73E9542B07D684005742BA;
-					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -540,7 +488,6 @@
 			targets = (
 				ED73E9542B07D684005742BA /* Branta */,
 				ED73E9652B07D686005742BA /* BrantaTests */,
-				ED73E96F2B07D686005742BA /* BrantaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -559,13 +506,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ED73E9642B07D686005742BA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED73E96E2B07D686005742BA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -648,15 +588,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED73E96C2B07D686005742BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED73E9772B07D686005742BA /* brantaUITestsLaunchTests.swift in Sources */,
-				ED73E9752B07D686005742BA /* brantaUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -664,11 +595,6 @@
 			isa = PBXTargetDependency;
 			target = ED73E9542B07D684005742BA /* Branta */;
 			targetProxy = ED73E9672B07D686005742BA /* PBXContainerItemProxy */;
-		};
-		ED73E9722B07D686005742BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ED73E9542B07D684005742BA /* Branta */;
-			targetProxy = ED73E9712B07D686005742BA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -805,12 +731,10 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = branta/branta.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.beta;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Branta;
@@ -840,12 +764,10 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = branta/branta.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.beta;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Branta;
@@ -873,11 +795,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = 5Q5VTGZNGV;
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
@@ -896,11 +816,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=macosx*]" = 5Q5VTGZNGV;
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
@@ -913,46 +831,10 @@
 			};
 			name = Release;
 		};
-		ED73E9812B07D686005742BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = branta;
-			};
-			name = Debug;
-		};
-		ED73E9822B07D686005742BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = branta;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,
@@ -975,15 +857,6 @@
 			buildConfigurations = (
 				ED73E97E2B07D686005742BA /* Debug */,
 				ED73E97F2B07D686005742BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ED73E9802B07D686005742BA /* Build configuration list for PBXNativeTarget "BrantaUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED73E9812B07D686005742BA /* Debug */,
-				ED73E9822B07D686005742BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
