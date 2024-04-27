@@ -39,17 +39,6 @@
                ReferencedContainer = "container:branta.xcodeproj">
             </BuildableReference>
          </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED73E96F2B07D686005742BA"
-               BuildableName = "BrantaUITests.xctest"
-               BlueprintName = "BrantaUITests"
-               ReferencedContainer = "container:branta.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
