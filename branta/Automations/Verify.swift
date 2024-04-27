@@ -110,10 +110,8 @@ extension Verify {
 
             for item in items {
                 if TARGETS.contains(item) {
-                    
-                    var exePath = String(item.dropLast(4)) // Strips .app
-                    
-                    let installPath         = "/Applications/" + item + "/Contents/MacOS/" + exePath
+                                        
+                    let installPath         = "/Applications/" + item + "/Contents/MacOS/" + String(item.dropLast(4))
                     let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
                     let directorySHA256     = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
                     
