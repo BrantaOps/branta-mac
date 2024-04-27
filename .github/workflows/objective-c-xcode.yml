@@ -24,5 +24,4 @@ jobs:
         env:
           scheme: ${{ 'default' }}
         run: |
-          file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
-          xcodebuild -project branta.xcodeproj -scheme branta | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild clean build analyze -project branta.xcodeproj -scheme branta
