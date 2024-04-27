@@ -749,7 +749,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = "2.0-beta";
+				MARKETING_VERSION = "2.0.0-beta";
 				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -784,7 +784,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = "2.0-beta";
+				MARKETING_VERSION = "2.0.0-beta";
 				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
