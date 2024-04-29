@@ -95,7 +95,11 @@ extension AppDelegate {
             } else {
                 // TODO. For now, let the user know branta is up to date.
                 // But we should mention something about the manifest/runtime hashes later.
-                let updateItem = NSMenuItem(title: "Latest Version", action: nil, keyEquivalent: "")
+                var strValue = "Latest Version"
+                if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+                    strValue = "Latest Version: \(version)."
+                }
+                let updateItem = NSMenuItem(title: strValue, action: nil, keyEquivalent: "")
                 menu.addItem(updateItem)
             }
         }
