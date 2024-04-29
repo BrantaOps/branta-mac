@@ -89,6 +89,8 @@ class TrafficMonitor: Automation {
         timer = Timer.scheduledTimer(withTimeInterval: CADENCE, repeats: true) { _ in
             // Processing should be done NOT on main thread
             timerQueue.async {
+                self.findProcess() // NSWorkspace.shared.runningApplications is performant, refresh PID on timer.
+
                 if self.foundProcess() {
                     self.pids = PIDUtil.getChildPIDs(parentPID: self.parentPID!)
                     self.getConnections()
@@ -98,8 +100,6 @@ class TrafficMonitor: Automation {
                         self.tableView.reloadData()
                         self.observer?.dataFeedCount(count: self.connections.count)
                     }
-                } else {
-                    self.findProcess()
                 }
             }
         }
