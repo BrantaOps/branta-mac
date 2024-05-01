@@ -25,3 +25,6 @@ jobs:
           scheme: ${{ 'default' }}
         run: |
           xcodebuild clean build analyze -project branta.xcodeproj -scheme branta
+      - name: Test
+        run: |
+          xcodebuild test -scheme branta
