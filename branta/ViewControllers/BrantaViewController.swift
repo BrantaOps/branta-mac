@@ -7,68 +7,10 @@
 
 import Cocoa
 
-
-class CustomAlertWindow: NSWindow {
-    convenience init(wallet: String, status: WalletStatus) {
-        let windowSize = NSSize(width: 400, height: 200)
-        let contentRect = NSRect(origin: .zero, size: windowSize)
-        
-        self.init(contentRect: contentRect, styleMask: [.titled, .closable], backing: .buffered, defer: false)
-        self.title = wallet
-        self.isReleasedWhenClosed = true
-        self.center()
-        
-        let contentView = NSView(frame: contentRect)
-        self.contentView = contentView
-
-        var txt = ""
-        switch status {
-        case .TooNew:
-            txt = "A newer version of \(wallet) was detected than Branta knows about."
-        case .TooOld:
-            txt = "An outdated version of \(wallet) was detected. Branta can verify \(wallet) once you update the wallet."
-        case .UnknownVersion:
-            txt = "An unknown version of \(wallet) was detected."
-        case .SignatureMatch:
-            txt = "Branta verified the validity of \(wallet)."
-        case .SignatureMismatch:
-            txt =
-            """
-            No match found. Don't panic, this could be for a few reasons:
-            
-            - The wallet is older/newer than Branta knows about
-            - Branta is sensitive. Changing a single byte in the entire /Applications/Sparrow.app folder will trigger a mismatch
-            """
-            //
-            //                // In Mac, if you re-install from the sparrow website, the software will pickup your wallet data again.
-            //                // So its safe to update to the latest version.
-            //                // Drag and drop the PGP installer before this.
-            //
-        }
-
-        let label = NSTextField(labelWithString: txt)
-        label.frame = contentView.bounds
-        label.maximumNumberOfLines = 0
-        label.lineBreakMode = .byWordWrapping
-        contentView.addSubview(label)
-    }
-}
-
-
-
-// Dial this in - 100%
-enum WalletStatus {
-    case TooOld
-    case TooNew
-    case UnknownVersion
-    case SignatureMatch
-    case SignatureMismatch
-}
-
 class BrantaViewController: NSViewController {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
-    
+        
     private var tableData: [CrawledWallet] = []
 
     private let COLUMNS = [
@@ -139,24 +81,34 @@ class BrantaViewController: NSViewController {
             return
         }
         
+        let appDelegate         = NSApp.delegate as? AppDelegate
+        if appDelegate?.walletWindow != nil {
+            appDelegate?.walletWindow?.makeKeyAndOrderFront(nil)
+            appDelegate?.walletWindow?.center()
+            return
+        }
+        
         let wallet              = tableData[tableView.row(for: clickedTextField)]
         let name                = wallet.fullWalletName.replacingOccurrences(of: ".app", with: "")
         let version             = wallet.venderVersion
         let nameKey             = wallet.fullWalletName
         let hashes              = Bridge.getRuntimeHashes()[nameKey]!
         let versions            = hashes.keys
-        var customAlertWindow: CustomAlertWindow?
+
+        
+        
+        let storyboard          = NSStoryboard(name: "Main", bundle: nil)
+        let viewController      = storyboard.instantiateController(withIdentifier: "wallet") as! WalletViewController
+        viewController.name     = name
+        let window              = NSWindow(contentViewController: viewController)
+        window.title            = "foobar"
+
+                
         
         if wallet.brantaSignatureMatch {
-            customAlertWindow = CustomAlertWindow(
-                wallet: name,
-                status: WalletStatus.SignatureMatch
-            )
+            viewController.status = WalletStatus.SignatureMatch
         } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
-            customAlertWindow = CustomAlertWindow(
-                wallet: name,
-                status: WalletStatus.SignatureMismatch
-            )
+            viewController.status = WalletStatus.SignatureMismatch
         } else {
             var older = true
             var newer = true
@@ -174,26 +126,19 @@ class BrantaViewController: NSViewController {
             }
             
             if newer {
-                customAlertWindow = CustomAlertWindow(
-                    wallet: name,
-                    status: WalletStatus.TooNew
-                )
+                viewController.status = WalletStatus.TooNew
             }
             else if older {
-                customAlertWindow = CustomAlertWindow(
-                    wallet: name,
-                    status: WalletStatus.TooOld
-                )
+                viewController.status = WalletStatus.TooOld
             }
             else {
-                customAlertWindow = CustomAlertWindow(
-                    wallet: name,
-                    status: WalletStatus.TooOld
-                )
+                viewController.status = WalletStatus.UnknownVersion
             }
         }
         
-        customAlertWindow?.makeKeyAndOrderFront(nil)
+        appDelegate?.walletWindow = window
+        window.makeKeyAndOrderFront(nil)
+        window.center()
     }
 }
 

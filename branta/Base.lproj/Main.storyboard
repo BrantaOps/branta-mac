@@ -788,11 +788,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="288" y="0.0" width="288.5" height="30"/>
+                                                                    <rect key="frame" x="288" y="0.0" width="289" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
-                                                                            <rect key="frame" x="0.0" y="7" width="288" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="289" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="Zg4-TZ-M1M">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -820,7 +820,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="593.5" y="0.0" width="149.5" height="30"/>
+                                                                    <rect key="frame" x="594" y="0.0" width="150" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -1314,11 +1314,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="6ez-Zm-3U6">
-                                                                    <rect key="frame" x="8" y="0.0" width="364" height="58"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="365" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
-                                                                            <rect key="frame" x="0.0" y="21" width="364" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="365" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -1346,7 +1346,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="X02-cg-kP0">
-                                                                    <rect key="frame" x="389" y="0.0" width="363" height="58"/>
+                                                                    <rect key="frame" x="390" y="0.0" width="363" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">
@@ -1422,6 +1422,56 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="51.5" y="1758.5"/>
+        </scene>
+        <!--Wallet Status-->
+        <scene sceneID="rpa-yu-jYZ">
+            <objects>
+                <customObject id="9dN-1q-Ev1" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController title="Wallet Status" storyboardIdentifier="wallet" showSeguePresentationStyle="single" id="0fa-av-4bj" customClass="WalletViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" appearanceType="darkAqua" id="0ef-pb-sQp">
+                        <rect key="frame" x="0.0" y="0.0" width="777" height="694"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Rb-5e-Ydq">
+                                <rect key="frame" x="220" y="619" width="338" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="338" id="Wfp-qV-0Rd"/>
+                                    <constraint firstAttribute="height" constant="75" id="rHa-oy-7LI"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="v3g-1K-JiS"/>
+                            </imageView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="IOL-VD-464" customClass="SettingsView" customModule="Branta" customModuleProvider="target">
+                                <rect key="frame" x="15" y="15" width="747" height="604"/>
+                                <subviews>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ypj-cp-WzJ">
+                                        <rect key="frame" x="35" y="556" width="677" height="23"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Clipboard Notifications" id="BQ5-SL-WxF">
+                                            <font key="font" size="17" name="Avenir-Heavy"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ypj-cp-WzJ" firstAttribute="centerX" secondItem="IOL-VD-464" secondAttribute="centerX" id="0x1-vz-WCk"/>
+                                    <constraint firstItem="Ypj-cp-WzJ" firstAttribute="width" secondItem="IOL-VD-464" secondAttribute="width" multiplier="0.9" id="1hC-hn-lQs"/>
+                                    <constraint firstItem="Ypj-cp-WzJ" firstAttribute="top" secondItem="IOL-VD-464" secondAttribute="top" constant="25" id="wrm-ht-WPo"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="IOL-VD-464" secondAttribute="bottom" constant="15" id="4rv-Es-kPJ"/>
+                            <constraint firstItem="6Rb-5e-Ydq" firstAttribute="centerX" secondItem="0ef-pb-sQp" secondAttribute="centerX" id="6rS-Pw-rzS"/>
+                            <constraint firstItem="IOL-VD-464" firstAttribute="top" secondItem="6Rb-5e-Ydq" secondAttribute="bottom" id="C3P-rU-82s"/>
+                            <constraint firstAttribute="trailing" secondItem="IOL-VD-464" secondAttribute="trailing" constant="15" id="Dpz-mM-jzD"/>
+                            <constraint firstItem="6Rb-5e-Ydq" firstAttribute="top" secondItem="0ef-pb-sQp" secondAttribute="top" id="ave-eJ-yKM"/>
+                            <constraint firstItem="IOL-VD-464" firstAttribute="leading" secondItem="0ef-pb-sQp" secondAttribute="leading" constant="15" id="lj0-oX-7iq"/>
+                            <constraint firstItem="IOL-VD-464" firstAttribute="centerX" secondItem="0ef-pb-sQp" secondAttribute="centerX" id="sbS-4U-CGi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-764.5" y="922"/>
         </scene>
     </scenes>
     <resources>

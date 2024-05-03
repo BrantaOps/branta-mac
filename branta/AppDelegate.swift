@@ -13,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var statusItem: NSStatusItem?
     var mainWindowController: NSWindowController?
     var settingsWindow: NSWindow?
+    var walletWindow: NSWindow?
     var foreground: Bool = true
     var notificationManager: BrantaNotify?
     var openedNetworkWindows: [String: NSWindowController] = [:]
