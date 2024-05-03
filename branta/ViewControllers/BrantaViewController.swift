@@ -7,6 +7,64 @@
 
 import Cocoa
 
+
+class CustomAlertWindow: NSWindow {
+    convenience init(wallet: String, status: WalletStatus) {
+        let windowSize = NSSize(width: 400, height: 200)
+        let contentRect = NSRect(origin: .zero, size: windowSize)
+        
+        self.init(contentRect: contentRect, styleMask: [.titled, .closable], backing: .buffered, defer: false)
+        self.title = wallet
+        self.isReleasedWhenClosed = true
+        self.center()
+        
+        let contentView = NSView(frame: contentRect)
+        self.contentView = contentView
+
+        var txt = ""
+        switch status {
+        case .TooNew:
+            txt = "A newer version of \(wallet) was detected than Branta knows about."
+        case .TooOld:
+            txt = "An outdated version of \(wallet) was detected. Branta can verify \(wallet) once you update the wallet."
+        case .UnknownVersion:
+            txt = "An unknown version of \(wallet) was detected."
+        case .SignatureMatch:
+            txt = "Branta verified the validity of \(wallet)."
+        case .SignatureMismatch:
+            txt =
+            """
+            No match found. Don't panic, this could be for a few reasons:
+            
+            - The wallet is older/newer than Branta knows about
+            - Branta is sensitive. Changing a single byte in the entire /Applications/Sparrow.app folder will trigger a mismatch
+            """
+            //
+            //                // In Mac, if you re-install from the sparrow website, the software will pickup your wallet data again.
+            //                // So its safe to update to the latest version.
+            //                // Drag and drop the PGP installer before this.
+            //
+        }
+
+        let label = NSTextField(labelWithString: txt)
+        label.frame = contentView.bounds
+        label.maximumNumberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        contentView.addSubview(label)
+    }
+}
+
+
+
+// Dial this in - 100%
+enum WalletStatus {
+    case TooOld
+    case TooNew
+    case UnknownVersion
+    case SignatureMatch
+    case SignatureMismatch
+}
+
 class BrantaViewController: NSViewController {
     @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
@@ -15,9 +73,8 @@ class BrantaViewController: NSViewController {
 
     private let COLUMNS = [
         "WALLET_NAME"           : 0,
-        "STATUS"                : 1,
-        "LAST_SCANNED"          : 2,
-        "NETWORK_ACTIVITY"      : 3,
+        "LAST_SCANNED"          : 1,
+        "NETWORK_ACTIVITY"      : 2,
     ]
     
     override func viewWillAppear() {
@@ -78,54 +135,65 @@ class BrantaViewController: NSViewController {
     }
     
     @objc func showDetails(sender: NSClickGestureRecognizer) {
+        guard let clickedTextField = sender.view as? NSTextField else {
+            return
+        }
         
-        if let clickedTextField = sender.view as? NSTextField {
-            let row             = tableView.row(for: clickedTextField)
-            let wallet          = tableData[row]
-            let alert           = NSAlert()
-            let name            = wallet.fullWalletName.replacingOccurrences(of: ".app", with: "")
-            let version         = wallet.venderVersion
-            let nameKey         = wallet.fullWalletName
-            let hashes          = Bridge.getRuntimeHashes()[nameKey]!
-            let versions        = hashes.keys
-            
-            alert.messageText   = "\(name) \(version)"
-            alert.alertStyle = .informational
-            alert.addButton(withTitle: "OK")
-            
-            if wallet.brantaSignatureMatch {
-                alert.informativeText = "Branta verified the validity of \(name)."
-            } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
-                alert.informativeText = "Branta could not verify the validity of \(name). You should consider reinstalling the wallet from the publishers website."
-            } else {
-                var older = true
-                var newer = true
-                var comparisonResult: ComparisonResult
-            
-                // Pass through. All versions will be older OR newer.
-                for brantaVersion in versions {
-                    do {
-                        comparisonResult = try VersionComp.compare(version, brantaVersion)
-                        if comparisonResult == .orderedAscending { newer = false }
-                        else if comparisonResult == .orderedDescending { older = false }
-                    } catch {
-                        BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
-                    }
-                }
-                
-                if newer {
-                    alert.informativeText = "A newer version of \(name) was detected than Branta knows about."
-                }
-                else if older {
-                    alert.informativeText = "An outdated version of \(name) was detected. Branta can verify \(name) once you update the wallet."
-                }
-                else {
-                    alert.informativeText = "An unknown version of \(name) was detected."
+        let wallet              = tableData[tableView.row(for: clickedTextField)]
+        let name                = wallet.fullWalletName.replacingOccurrences(of: ".app", with: "")
+        let version             = wallet.venderVersion
+        let nameKey             = wallet.fullWalletName
+        let hashes              = Bridge.getRuntimeHashes()[nameKey]!
+        let versions            = hashes.keys
+        var customAlertWindow: CustomAlertWindow?
+        
+        if wallet.brantaSignatureMatch {
+            customAlertWindow = CustomAlertWindow(
+                wallet: name,
+                status: WalletStatus.SignatureMatch
+            )
+        } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
+            customAlertWindow = CustomAlertWindow(
+                wallet: name,
+                status: WalletStatus.SignatureMismatch
+            )
+        } else {
+            var older = true
+            var newer = true
+            var comparisonResult: ComparisonResult
+        
+            // Pass through. All versions will be older OR newer.
+            for brantaVersion in versions {
+                do {
+                    comparisonResult = try VersionComp.compare(version, brantaVersion)
+                    if comparisonResult == .orderedAscending { newer = false }
+                    else if comparisonResult == .orderedDescending { older = false }
+                } catch {
+                    BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
                 }
             }
             
-            alert.beginSheetModal(for: self.view.window!)
+            if newer {
+                customAlertWindow = CustomAlertWindow(
+                    wallet: name,
+                    status: WalletStatus.TooNew
+                )
+            }
+            else if older {
+                customAlertWindow = CustomAlertWindow(
+                    wallet: name,
+                    status: WalletStatus.TooOld
+                )
+            }
+            else {
+                customAlertWindow = CustomAlertWindow(
+                    wallet: name,
+                    status: WalletStatus.TooOld
+                )
+            }
         }
+        
+        customAlertWindow?.makeKeyAndOrderFront(nil)
     }
 }
 
@@ -155,17 +223,15 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         let name = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
          
         if columnNumber == COLUMNS["WALLET_NAME"] {
-            textField.stringValue = name
-        } else if columnNumber == COLUMNS["STATUS"] {
+
             if tableData[row].brantaSignatureMatch {
-                textField.stringValue   = "✓"
-                textField.textColor     = NSColor(hex: GOLD)
+                textField.stringValue   = "\(name): Verified ✓"
             }
             else {
-                textField.stringValue   = "⚠"
-                textField.textColor     = NSColor(hex: RED)
+                textField.stringValue   = "\(name): No Match Found ⚠"
             }
-            textField.font              = NSFont(name: FONT, size: 20.0)
+            
+
             let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
@@ -174,9 +240,11 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
             dateFormatter.timeStyle = .medium
             let formattedTime       = dateFormatter.string(from: currentTime)
             textField.stringValue   = formattedTime
+            
+            let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
+            textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
             textField.stringValue   = "View"
-            textField.font          = NSFont(name: FONT, size: 20.0)
             let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
             textField.addGestureRecognizer(clickGesture)
         }
