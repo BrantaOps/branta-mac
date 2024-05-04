@@ -165,7 +165,6 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
                 textField.stringValue   = "⚠"
                 textField.textColor     = NSColor(hex: RED)
             }
-            textField.font              = NSFont(name: FONT, size: 20.0)
             let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
@@ -176,7 +175,7 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
             textField.stringValue   = formattedTime
         } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
             textField.stringValue   = "View"
-            textField.font          = NSFont(name: FONT, size: 20.0)
+
             let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
             textField.addGestureRecognizer(clickGesture)
         }
