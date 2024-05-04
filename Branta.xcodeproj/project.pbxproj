@@ -242,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				ED611DDA2BC3574200FAE51B /* API.swift */,
+				ED45421D2BD874460075E746 /* AppVersion.swift */,
 				ED1A3C832BC42C5A00895C5A /* Architecture.swift */,
 				ED04D6E82BB1A87900E5DE59 /* Bash */,
 				ED0DB8082BC5D990009AE5B2 /* BrantaAnalytics.swift */,
@@ -259,7 +260,6 @@
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
 				ED332B2B2BD2B004000C0EE4 /* YAMLParser.swift */,
 				EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */,
-				ED45421D2BD874460075E746 /* AppVersion.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

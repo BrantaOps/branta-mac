@@ -8,8 +8,9 @@
 import Cocoa
 
 class BrantaViewController: NSViewController {
-    @IBOutlet weak var walletsDetected: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
+    
+    @IBOutlet weak var spinner: NSProgressIndicator!
     
     private var tableData: [CrawledWallet] = []
 
@@ -22,6 +23,8 @@ class BrantaViewController: NSViewController {
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
+        
+        spinner.startAnimation(nil)
     }
     
     override func viewDidLoad() {
@@ -182,20 +185,10 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
 }
 
 extension BrantaViewController: VerifyObserver {
-    // Lets hide this... adds noise to homescreen
+    
     func verifyDidChange(newResults: [CrawledWallet]) {
-        if newResults.count == 0 {
-            walletsDetected.isHidden = false
-            walletsDetected.stringValue = "0 Wallets Detected."
-        }
-        if newResults.count == 1 {
-            walletsDetected.isHidden = true
-            walletsDetected.stringValue = "1 Wallet Detected."
-        }
-        else {
-            walletsDetected.isHidden = true
-            walletsDetected.stringValue = "\(newResults.count) Wallets Detected."
-        }
+        spinner.isHidden = true
+        
         tableData = newResults
         DispatchQueue.main.async {
             self.tableView.reloadData()
