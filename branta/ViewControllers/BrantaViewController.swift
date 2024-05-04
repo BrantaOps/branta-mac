@@ -15,9 +15,8 @@ class BrantaViewController: NSViewController {
 
     private let COLUMNS = [
         "WALLET_NAME"           : 0,
-        "STATUS"                : 1,
-        "LAST_SCANNED"          : 2,
-        "NETWORK_ACTIVITY"      : 3,
+        "LAST_SCANNED"          : 1,
+        "NETWORK_ACTIVITY"      : 2,
     ]
     
     override func viewWillAppear() {
@@ -155,16 +154,13 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         let name = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
          
         if columnNumber == COLUMNS["WALLET_NAME"] {
-            textField.stringValue = name
-        } else if columnNumber == COLUMNS["STATUS"] {
             if tableData[row].brantaSignatureMatch {
-                textField.stringValue   = "✓"
-                textField.textColor     = NSColor(hex: GOLD)
+                textField.stringValue   = "\(name): Verified ✓"
             }
             else {
-                textField.stringValue   = "⚠"
-                textField.textColor     = NSColor(hex: RED)
+                textField.stringValue   = "\(name): No Match Found ⚠"
             }
+            
             let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["LAST_SCANNED"] {
@@ -173,6 +169,8 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
             dateFormatter.timeStyle = .medium
             let formattedTime       = dateFormatter.string(from: currentTime)
             textField.stringValue   = formattedTime
+            let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
+            textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
             textField.stringValue   = "View"
 
