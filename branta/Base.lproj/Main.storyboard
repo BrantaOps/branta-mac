@@ -748,11 +748,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="8Dp-CS-tBS">
-                                                                    <rect key="frame" x="8" y="0.0" width="265" height="30"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="264" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
-                                                                            <rect key="frame" x="0.0" y="7" width="265" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="264" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="blah blah blah" id="Jay-Mb-UVI">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -780,7 +780,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="290" y="0.0" width="172" height="30"/>
+                                                                    <rect key="frame" x="289.5" y="0.0" width="172" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
@@ -812,11 +812,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="479" y="0.0" width="272" height="30"/>
+                                                                    <rect key="frame" x="478.5" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
-                                                                            <rect key="frame" x="0.0" y="7" width="272" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="273" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="lQa-CN-seB">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -869,10 +869,10 @@
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="zbK-gp-Ps7" customClass="DropView" customModule="Branta" customModuleProvider="target">
-                                <rect key="frame" x="19" y="45" width="723" height="277"/>
+                                <rect key="frame" x="19" y="45" width="723" height="159"/>
                                 <subviews>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-zn-yx3">
-                                        <rect key="frame" x="190" y="103" width="344" height="71"/>
+                                        <rect key="frame" x="190" y="44" width="344" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="340" id="BOi-ZY-qM0"/>
                                             <constraint firstAttribute="height" constant="71" id="n62-sX-heD"/>
@@ -892,17 +892,42 @@
                             <progressIndicator maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-un-MKx">
                                 <rect key="frame" x="365" y="610" width="32" height="32"/>
                             </progressIndicator>
+                            <customView appearanceType="aqua" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-Rf-egX" customClass="ClipboardGuardianView" customModule="Branta" customModuleProvider="target">
+                                <rect key="frame" x="228" y="232" width="305" height="100"/>
+                                <subviews>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IhE-QU-pKO">
+                                        <rect key="frame" x="-19" y="70" width="344" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="340" id="OCe-b3-2yj"/>
+                                            <constraint firstAttribute="height" constant="20" id="adc-0s-GGW"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" alignment="center" title="Clipboard Guardian" id="dA7-6l-Zqf">
+                                            <font key="font" size="17" name="Avenir-Book"/>
+                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="IhE-QU-pKO" firstAttribute="centerX" secondItem="q2p-Rf-egX" secondAttribute="centerX" id="CT7-et-lvB"/>
+                                    <constraint firstAttribute="height" constant="100" id="M7b-1i-FVP"/>
+                                    <constraint firstItem="IhE-QU-pKO" firstAttribute="top" secondItem="q2p-Rf-egX" secondAttribute="top" constant="10" id="MEg-XI-o88"/>
+                                </constraints>
+                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Bmh-7S-pcq" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="8aq-P8-toY"/>
                             <constraint firstItem="Wcb-un-MKx" firstAttribute="top" secondItem="IA0-be-bwR" secondAttribute="bottom" constant="-8" id="9Wi-Ed-Pwh"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="9YZ-m8-hiM"/>
-                            <constraint firstItem="zbK-gp-Ps7" firstAttribute="top" secondItem="f7n-2h-iou" secondAttribute="bottom" constant="45" id="COf-0o-ktC"/>
+                            <constraint firstItem="q2p-Rf-egX" firstAttribute="centerX" secondItem="IA0-be-bwR" secondAttribute="centerX" id="D96-9C-6UV"/>
                             <constraint firstItem="IA0-be-bwR" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="Dsu-de-1mR"/>
+                            <constraint firstItem="q2p-Rf-egX" firstAttribute="top" secondItem="f7n-2h-iou" secondAttribute="bottom" constant="35" id="JTP-pc-xs1"/>
+                            <constraint firstItem="zbK-gp-Ps7" firstAttribute="top" secondItem="q2p-Rf-egX" secondAttribute="bottom" constant="28" id="Mnb-ow-bqI"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="baseline" secondItem="IA0-be-bwR" secondAttribute="firstBaseline" constant="-31" id="Z7l-ZG-DHA"/>
                             <constraint firstItem="zbK-gp-Ps7" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="dBW-Dc-sj3"/>
                             <constraint firstItem="Wcb-un-MKx" firstAttribute="centerX" secondItem="IA0-be-bwR" secondAttribute="centerX" id="gyT-RX-Nex"/>
                             <constraint firstAttribute="bottom" secondItem="Bmh-7S-pcq" secondAttribute="bottom" constant="15" id="hOS-DH-VgO"/>
+                            <constraint firstItem="q2p-Rf-egX" firstAttribute="width" secondItem="tzc-5B-fCa" secondAttribute="width" multiplier="0.4" id="jKA-Xb-v1G"/>
                             <constraint firstItem="zbK-gp-Ps7" firstAttribute="width" secondItem="tzc-5B-fCa" secondAttribute="width" multiplier="0.95" id="pyp-Oe-APd"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="width" secondItem="tzc-5B-fCa" secondAttribute="width" id="sqC-aa-gy4"/>
                             <constraint firstItem="Bmh-7S-pcq" firstAttribute="top" secondItem="zbK-gp-Ps7" secondAttribute="bottom" constant="10" id="tS5-Eu-Euy"/>
@@ -1309,11 +1334,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="6ez-Zm-3U6">
-                                                                    <rect key="frame" x="8" y="0.0" width="365" height="58"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="364" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
-                                                                            <rect key="frame" x="0.0" y="21" width="365" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="364" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -1341,7 +1366,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="X02-cg-kP0">
-                                                                    <rect key="frame" x="390" y="0.0" width="363" height="58"/>
+                                                                    <rect key="frame" x="389" y="0.0" width="363" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">

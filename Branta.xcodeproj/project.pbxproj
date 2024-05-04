@@ -69,6 +69,7 @@
 		EDD65EA52BC22CF100531800 /* BrantaLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD65EA42BC22CF100531800 /* BrantaLogger.swift */; };
 		EDD65EA72BC231D000531800 /* BrantaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD65EA62BC231D000531800 /* BrantaConstants.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
+		EDE1BF992BE67A75004A210C /* ClipboardGuardianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */; };
 		EDE51F3F2BD3F943009D73DC /* YAMLSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */; };
 		EDEAE53F2BB8F162002D7EE1 /* ConnectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */; };
 		EDEAE5412BB8F2E7002D7EE1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */; };
@@ -149,6 +150,7 @@
 		EDD65EA42BC22CF100531800 /* BrantaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaLogger.swift; sourceTree = "<group>"; };
 		EDD65EA62BC231D000531800 /* BrantaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaConstants.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
+		EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardGuardianView.swift; sourceTree = "<group>"; };
 		EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAMLSaver.swift; sourceTree = "<group>"; };
 		EDEAE53E2BB8F162002D7EE1 /* ConnectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionTests.swift; sourceTree = "<group>"; };
 		EDEAE5402BB8F2E7002D7EE1 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 		EDD011802B67F5750091CAAD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */,
 				EDD011812B67F5890091CAAD /* DropView.swift */,
 				ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */,
 			);
@@ -523,6 +526,7 @@
 				ED3170952B826494003D77D4 /* VersionComp.swift in Sources */,
 				ED45421E2BD874460075E746 /* AppVersion.swift in Sources */,
 				EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */,
+				EDE1BF992BE67A75004A210C /* ClipboardGuardianView.swift in Sources */,
 				EDD65EA52BC22CF100531800 /* BrantaLogger.swift in Sources */,
 				EDFFC2BB2B39CF930052D92D /* HexColor.swift in Sources */,
 				ED332B2C2BD2B004000C0EE4 /* YAMLParser.swift in Sources */,
