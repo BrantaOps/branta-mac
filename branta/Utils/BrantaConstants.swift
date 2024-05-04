@@ -23,7 +23,7 @@ let FETCH_URL = "https://api.github.com/repos/brantaops/branta-mac/releases/late
 
 // UI CONSTANTS
 let HEIGHT      = 30.0
-let TABLE_FONT  = 17.0
+let TABLE_FONT  = 20.0
 
 
 let TEST_FOR_SUDO = "echo 'test for sudo.'"
