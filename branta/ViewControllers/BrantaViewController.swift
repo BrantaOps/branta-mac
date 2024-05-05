@@ -8,12 +8,15 @@
 import Cocoa
 
 class BrantaViewController: NSViewController {
-    @IBOutlet weak var tableView: NSTableView!
     
+    @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var spinner: NSProgressIndicator!
     
     private var tableData: [CrawledWallet] = []
-
+    
+    
+    @IBOutlet weak var clipboardContents: NSTextField!
+    
     private let COLUMNS = [
         "WALLET_NAME"           : 0,
         "LAST_SCANNED"          : 1,
@@ -37,6 +40,8 @@ class BrantaViewController: NSViewController {
         super.viewDidAppear()
         
         Bridge.fetchLatest { success in
+            
+            // TODO - clean this up.
             if success {
                 Verify.addObserver(self)
                 Verify.verify()

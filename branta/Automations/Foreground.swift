@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class Foreground: Automation {
+class Foreground: BackgroundAutomation {
     
     private static var currentApp = ""
     private static var alreadyAlerted = ""

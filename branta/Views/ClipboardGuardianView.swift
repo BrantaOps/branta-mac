@@ -10,9 +10,7 @@ import Foundation
 
 class ClipboardGuardianView: NSView {
 
-
-    private let LIVE_COLOR = NSColor.darkGray.cgColor
-    private let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
+    private let IDLE_COLOR = NSColor(hex: BLACK)?.cgColor
     
     private let MIN_HEIGHT: CGFloat = 100
     private let MIN_WIDTH: CGFloat = 200

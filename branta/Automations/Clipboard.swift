@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class Clipboard: Automation {
+class Clipboard: BackgroundAutomation {
     
     private static var bip39WordSet : Set<String>?
     private static let appDelegate = NSApp.delegate as? AppDelegate
@@ -27,6 +27,10 @@ class Clipboard: Automation {
             if (content != lastContent && content != nil) {
                 
                 // TODO - order these and exit if one returns TRUE
+                // Okay... lets just refactor this.
+                //
+                
+                
                 
                 // Addresses                ----------------------------------------------
                 checkForAddressesInClipBoard(content: content!)

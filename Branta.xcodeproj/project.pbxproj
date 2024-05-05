@@ -37,7 +37,7 @@
 		ED45421E2BD874460075E746 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45421D2BD874460075E746 /* AppVersion.swift */; };
 		ED4E9F512B3DB64B0000F751 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* Bridge.swift */; };
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
-		ED57437B2B351E990001956A /* Automation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* Automation.swift */; };
+		ED57437B2B351E990001956A /* BackgroundAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* BackgroundAutomation.swift */; };
 		ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437C2B3641AF0001956A /* BrantaViewController.swift */; };
 		ED611DDB2BC3574200FAE51B /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED611DDA2BC3574200FAE51B /* API.swift */; };
 		ED643CD32B5168BF00FEBE36 /* VerifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */; };
@@ -54,6 +54,7 @@
 		ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Foreground.swift */; };
 		ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97B84D2B9F46A3007DD2F5 /* Updater.swift */; };
 		ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */; };
+		ED9D53BE2BE724E50085CD96 /* InteractiveAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */; };
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
 		EDB5B0C42B3A76D40015515F /* Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB5B0C32B3A76D40015515F /* Observers.swift */; };
 		EDB9F70D2BA9B7E300F0C005 /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */; };
@@ -116,7 +117,7 @@
 		ED45421D2BD874460075E746 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
-		ED57437A2B351E990001956A /* Automation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation.swift; sourceTree = "<group>"; };
+		ED57437A2B351E990001956A /* BackgroundAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAutomation.swift; sourceTree = "<group>"; };
 		ED57437C2B3641AF0001956A /* BrantaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaViewController.swift; sourceTree = "<group>"; };
 		ED611DDA2BC3574200FAE51B /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		ED643CD22B5168BF00FEBE36 /* VerifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyTests.swift; sourceTree = "<group>"; };
@@ -136,6 +137,7 @@
 		ED7B16B12B556A650003EFEB /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
 		ED97B84D2B9F46A3007DD2F5 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAutomation.swift; sourceTree = "<group>"; };
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
 		EDB5B0C32B3A76D40015515F /* Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observers.swift; sourceTree = "<group>"; };
 		EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
@@ -269,11 +271,12 @@
 		ED34ACFF2B1800AF0038CAC5 /* Automations */ = {
 			isa = PBXGroup;
 			children = (
-				ED57437A2B351E990001956A /* Automation.swift */,
+				ED57437A2B351E990001956A /* BackgroundAutomation.swift */,
 				ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */,
 				ED7B16B12B556A650003EFEB /* Foreground.swift */,
 				ED5743772B3517BD0001956A /* Helpers */,
 				EDD0117E2B6580760091CAAD /* Installer.swift */,
+				ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */,
 				EDB9F70E2BA9D91600F0C005 /* TrafficMonitor.swift */,
 				EDD915262B0C3C8000A288FE /* Verify.swift */,
 			);
@@ -560,10 +563,11 @@
 				ED45421C2BD86E720075E746 /* CrawledWallet.swift in Sources */,
 				ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */,
 				ED611DDB2BC3574200FAE51B /* API.swift in Sources */,
-				ED57437B2B351E990001956A /* Automation.swift in Sources */,
+				ED57437B2B351E990001956A /* BackgroundAutomation.swift in Sources */,
 				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
 				ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */,
+				ED9D53BE2BE724E50085CD96 /* InteractiveAutomation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

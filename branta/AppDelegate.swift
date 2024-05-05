@@ -17,6 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var notificationManager: BrantaNotify?
     var openedNetworkWindows: [String: NSWindowController] = [:]
     
+    // TODO .... lets rework this piping a bit.
+    // Foreground, clipboard make sense to kickoff.
+    // Verify does 0 but the table hits a different API?
     private let AUTOMATIONS         = [Clipboard.self, Verify.self, Foreground.self]
     private let KEY_ABOUT           = "A"
     private let KEY_SETTINGS        = "S"
@@ -118,6 +121,7 @@ extension AppDelegate {
             notificationManager?.requestAuthorization()
         }
         
+        // Start a new, infinitely running thread per automation.
         for automation in AUTOMATIONS {
             automation.run()
         }

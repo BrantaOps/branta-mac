@@ -72,5 +72,6 @@ let FONT                    = "Avenir"
 let GOLD                    = "#B1914A"
 let RED                     = "#944545"
 let GRAY                    = "#333130"
+let BLACK                   = "#000000"
 let ACTIVE                  = "Status: Active ✓"
 let KEYCODE_COMMA           = 43

@@ -8,7 +8,7 @@
 import Cocoa
 
 // TODO - this class needs clean up.
-class Verify: Automation {
+class Verify: BackgroundAutomation {
     
     private static var alreadyWarned = [Sparrow.name(): false]
     private static let appDelegate = NSApp.delegate as? AppDelegate
