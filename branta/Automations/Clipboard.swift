@@ -11,50 +11,37 @@ class Clipboard: BackgroundAutomation {
     
     private static var bip39WordSet : Set<String>?
     private static let appDelegate = NSApp.delegate as? AppDelegate
+    private static var lastContent: String = ""
     
-    private static var lastContent: String = "" {
+    
+    private static var guardianText: String = "" {
         didSet {
             notifyObservers()
         }
     }
     
     override class func run() {
-        // Construct word list, Notifications, etc.
         setup()
         
-        // Keep trailing clipboard item.
-        
-        // Driver for clipboard related tasks
         Timer.scheduledTimer(withTimeInterval: CLIPBOARD_INTERVAL, repeats: true) { _ in
-            let clipboardString = NSPasteboard.general.string
-            let content = clipboardString(NSPasteboard.PasteboardType.string)
+            guard let clipboardString = NSPasteboard.general.string(forType: .string),
+                  clipboardString != lastContent else {
+                return
+            }
             
-            if (content != lastContent && content != nil) {
-                
-                // TODO - order these and exit if one returns TRUE
-                // Okay... lets just refactor this.
-                //
-                
-                
-                
-                // Addresses                ----------------------------------------------
-                checkForAddressesInClipBoard(content: content!)
-                
-                // Seed Phrases             ----------------------------------------------
-                
-                checkForSeedPhraseInClipBoard(content: content!)
-                
-                // Public & Private Keys    ----------------------------------------------
-                
-                //Bitcoin
-                checkForXPUBInClipBoard(content: content!)
-                checkForXPRVInClipBoard(content: content!)
-                
-                //NOSTR
-                checkForNPUBInClipBoard(content: content!)
-                checkForNSECInClipBoard(content: content!)
-                
-                lastContent = content!
+            lastContent = clipboardString
+            
+            if checkForAddressesInClipBoard(content: clipboardString) ||
+               checkForSeedPhraseInClipBoard(content: clipboardString) ||
+               checkForXPUBInClipBoard(content: clipboardString) ||
+               checkForXPRVInClipBoard(content: clipboardString) ||
+               checkForNPUBInClipBoard(content: clipboardString) ||
+               checkForNSECInClipBoard(content: clipboardString) {
+                guardianText = clipboardString // Trigger Observer
+            }
+            // TODO - clause for XPRV, SEED, NSEC - which should be hidden.
+            else {
+                guardianText = ""
             }
         }
     }
@@ -73,7 +60,7 @@ extension Clipboard {
     
     static func notifyObservers() {
         for observer in observers {
-            observer.contentDidChange(content: lastContent)
+            observer.contentDidChange(content: guardianText)
         }
     }
 }
@@ -83,58 +70,69 @@ extension Clipboard {
     private
     
     static func setup() {
-        
         let path = Bundle.main.path(forResource: "bip39wordlist", ofType: "txt")
         let words = try? String(contentsOfFile: path!)
         bip39WordSet = Set(words!.components(separatedBy: "\n"))
     }
     
-    static func checkForXPUBInClipBoard(content: String) {
+    static func checkForXPUBInClipBoard(content: String) -> Bool {
         if BitcoinAddress.isValidXPUB(str: content) {
             appDelegate?.notificationManager?.showNotification(
                 title: "Bitcoin Extended Public Key in Clipboard.",
                 body: "Sharing your XPUB can lead to loss of privacy.",
                 key: NOTIFY_FOR_XPUB
             )
+            return true
         }
+        
+        return false
     }
     
-    static func checkForXPRVInClipBoard(content: String) {
+    static func checkForXPRVInClipBoard(content: String) -> Bool {
         if BitcoinAddress.isValidXPRV(str: content) {
             appDelegate?.notificationManager?.showNotification(
                 title: "Bitcoin Private Key in Clipboard.",
                 body: "Never share your private key with others.",
                 key: NOTIFY_FOR_XPRV
             )
+            return true
         }
+        
+        return false
     }
     
-    static func checkForNPUBInClipBoard(content: String) {
+    static func checkForNPUBInClipBoard(content: String) -> Bool {
         if NostrAddress.isValidNPUB(str: content) {
             appDelegate?.notificationManager?.showNotification(
                 title: "New Nostr Public Key in Clipboard.",
                 body: "",
                 key: NOTIFY_FOR_NPUB
             )
+            return true
+            
         }
+        return false
     }
     
-    static func checkForNSECInClipBoard(content: String) {
+    static func checkForNSECInClipBoard(content: String) -> Bool {
         if NostrAddress.isValidNSEC(str: content) {
             appDelegate?.notificationManager?.showNotification(
                 title: "New Nostr Private Key in Clipboard.",
                 body: "Never share your private key with others.",
                 key: NOTIFY_FOR_NSEC
             )
+            return true
         }
+        
+        return false
     }
     
-    static func checkForSeedPhraseInClipBoard(content:String) {
+    static func checkForSeedPhraseInClipBoard(content:String) -> Bool {
         let hasWhitespace = content.rangeOfCharacter(from: .whitespacesAndNewlines)
 
         // Must have space or newlines between seed words
         if hasWhitespace == nil {
-            return
+            return false
         }
         
         // Naive, but check that each item is a BIP39.
@@ -155,7 +153,7 @@ extension Clipboard {
         
         // Check quantity
         if (userSeedWords.count < SEED_WORDS_MIN || userSeedWords.count > SEED_WORDS_MAX) {
-            return
+            return false
         }
         
         if (userSeedWords.isSubset(of: bip39WordSet!)) {
@@ -164,9 +162,11 @@ extension Clipboard {
                 body: "Never share your seed phrase with anyone. Your seed phrase IS your money.",
                 key: NOTIFY_FOR_SEED
             )
+            return true
         }
+        return false
     }
-    static func checkForAddressesInClipBoard(content:String) {
+    static func checkForAddressesInClipBoard(content:String) -> Bool {
         
         let ret = self.validateAddress(content: content)
         
@@ -176,7 +176,9 @@ extension Clipboard {
                 body: ret.msg,
                 key: NOTIFY_FOR_BTC_ADDRESS
             )
+            return true
         }
+        return false
     }
     
     static func validateAddress(content: String?) -> (valid: Bool, msg: String) {

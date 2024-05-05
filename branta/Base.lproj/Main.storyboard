@@ -712,7 +712,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IA0-be-bwR">
-                                <rect key="frame" x="212" y="634" width="338" height="75"/>
+                                <rect key="frame" x="213" y="634" width="338" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="PCX-Sz-FkZ"/>
                                     <constraint firstAttribute="width" constant="338" id="WdT-ul-4xw"/>
@@ -780,7 +780,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="291" y="0.0" width="173" height="30"/>
+                                                                    <rect key="frame" x="290.5" y="0.0" width="173" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
@@ -812,7 +812,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="481" y="0.0" width="273" height="30"/>
+                                                                    <rect key="frame" x="480.5" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -859,7 +859,7 @@
                                 </constraints>
                             </customView>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-7S-pcq">
-                                <rect key="frame" x="368" y="11" width="25" height="25"/>
+                                <rect key="frame" x="369" y="11" width="25" height="25"/>
                                 <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="68b-lW-Bkn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -869,10 +869,10 @@
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="zbK-gp-Ps7" customClass="DropView" customModule="Branta" customModuleProvider="target">
-                                <rect key="frame" x="19" y="45" width="724" height="159"/>
+                                <rect key="frame" x="19" y="45" width="725" height="159"/>
                                 <subviews>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-zn-yx3">
-                                        <rect key="frame" x="190" y="44" width="344" height="71"/>
+                                        <rect key="frame" x="191" y="44" width="344" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="340" id="BOi-ZY-qM0"/>
                                             <constraint firstAttribute="height" constant="71" id="n62-sX-heD"/>
@@ -890,43 +890,28 @@
                                 </constraints>
                             </customView>
                             <progressIndicator maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="Wcb-un-MKx">
-                                <rect key="frame" x="365" y="610" width="32" height="32"/>
+                                <rect key="frame" x="366" y="610" width="32" height="32"/>
                             </progressIndicator>
                             <customView appearanceType="aqua" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-Rf-egX" customClass="ClipboardGuardianView" customModule="Branta" customModuleProvider="target">
                                 <rect key="frame" x="229" y="232" width="305" height="100"/>
                                 <subviews>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IhE-QU-pKO">
-                                        <rect key="frame" x="-20" y="70" width="344" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IhE-QU-pKO" userLabel="Clipboard">
+                                        <rect key="frame" x="-19" y="57" width="344" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="340" id="OCe-b3-2yj"/>
-                                            <constraint firstAttribute="height" constant="20" id="adc-0s-GGW"/>
+                                            <constraint firstAttribute="height" constant="25" id="adc-0s-GGW"/>
                                         </constraints>
-                                        <textFieldCell key="cell" alignment="center" title="Clipboard Guardian" id="dA7-6l-Zqf">
-                                            <font key="font" size="17" name="Avenir-Book"/>
-                                            <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
-                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q8K-Yl-WM3">
-                                        <rect key="frame" x="-20" y="34" width="344" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="Abc-Uz-jhO"/>
-                                            <constraint firstAttribute="width" constant="340" id="loY-f1-Sth"/>
-                                        </constraints>
-                                        <textFieldCell key="cell" alignment="center" title="contents" id="MQ8-Xn-h3d">
-                                            <font key="font" size="17" name="Avenir-Book"/>
+                                        <textFieldCell key="cell" alignment="center" title="Clipboard" id="dA7-6l-Zqf">
+                                            <font key="font" size="20" name="Avenir-Book"/>
                                             <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Q8K-Yl-WM3" firstAttribute="centerX" secondItem="IhE-QU-pKO" secondAttribute="centerX" id="AdM-Z6-jHy"/>
                                     <constraint firstItem="IhE-QU-pKO" firstAttribute="centerX" secondItem="q2p-Rf-egX" secondAttribute="centerX" id="CT7-et-lvB"/>
-                                    <constraint firstItem="Q8K-Yl-WM3" firstAttribute="width" secondItem="q2p-Rf-egX" secondAttribute="width" multiplier="1.11475" id="D68-6o-V5I"/>
                                     <constraint firstAttribute="height" constant="100" id="M7b-1i-FVP"/>
                                     <constraint firstItem="IhE-QU-pKO" firstAttribute="top" secondItem="q2p-Rf-egX" secondAttribute="top" constant="10" id="MEg-XI-o88"/>
-                                    <constraint firstItem="Q8K-Yl-WM3" firstAttribute="top" secondItem="IhE-QU-pKO" secondAttribute="bottom" constant="16" id="MZE-Yy-tyK"/>
                                 </constraints>
                             </customView>
                         </subviews>

@@ -203,6 +203,8 @@ extension BrantaViewController: VerifyObserver {
 
 extension BrantaViewController: ClipboardObserver {
     func contentDidChange(content: Any?) {
-        clipboardGuardian.fooBar(str: content as! String)
+        if let contentStr = content as? String {
+            clipboardGuardian.updateLabel(str: contentStr)
+        }
     }
 }
