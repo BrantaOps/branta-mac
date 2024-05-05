@@ -47,6 +47,8 @@ let DEFAULT_SCAN_CADENCE_WORDING    = "30 Seconds"
 
 let SHOW_IN_DOCK                    = "showInDock"
 
+let XPUBS                           = "xpubs"
+
 
 let PREFS_KEY = "Branta_Prefs"
 
@@ -72,5 +74,6 @@ let FONT                    = "Avenir"
 let GOLD                    = "#B1914A"
 let RED                     = "#944545"
 let GRAY                    = "#333130"
+let BLACK                   = "#000000"
 let ACTIVE                  = "Status: Active ✓"
 let KEYCODE_COMMA           = 43

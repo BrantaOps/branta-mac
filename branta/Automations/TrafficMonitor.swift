@@ -7,7 +7,7 @@
 
 import Cocoa
 
-class TrafficMonitor: Automation {
+class TrafficMonitor: BackgroundAutomation {
     
     private var tableView: NSTableView
     // TODO - there is a bug here. If this PID gets killed, and wallet restarts.

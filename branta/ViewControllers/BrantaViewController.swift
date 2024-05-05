@@ -8,12 +8,14 @@
 import Cocoa
 
 class BrantaViewController: NSViewController {
-    @IBOutlet weak var tableView: NSTableView!
     
+    @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var spinner: NSProgressIndicator!
     
     private var tableData: [CrawledWallet] = []
-
+        
+    @IBOutlet weak var clipboardGuardian: ClipboardGuardianView!
+    
     private let COLUMNS = [
         "WALLET_NAME"           : 0,
         "LAST_SCANNED"          : 1,
@@ -31,12 +33,15 @@ class BrantaViewController: NSViewController {
         super.viewDidLoad()
         tableView.delegate      = self
         tableView.dataSource    = self
+        Clipboard.addObserver(self)
     }
     
     override func viewDidAppear() {
         super.viewDidAppear()
         
         Bridge.fetchLatest { success in
+            
+            // TODO - clean this up.
             if success {
                 Verify.addObserver(self)
                 Verify.verify()
@@ -192,6 +197,14 @@ extension BrantaViewController: VerifyObserver {
         tableData = newResults
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+}
+
+extension BrantaViewController: ClipboardObserver {
+    func contentDidChange(content: Any?) {
+        if let contentStr = content as? String {
+            clipboardGuardian.updateLabel(str: contentStr)
         }
     }
 }

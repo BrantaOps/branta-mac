@@ -12,7 +12,7 @@ import XCTest
 
 class AutomationTests: XCTestCase {
     func testAutomationInterface() {
-        XCTAssertNoThrow(try Automation.run(), "run method should be present")
-        XCTAssertNoThrow(try Automation.disable(), "disable method should be present")
+        XCTAssertNoThrow(try BackgroundAutomation.run(), "run method should be present")
+        XCTAssertNoThrow(try BackgroundAutomation.disable(), "disable method should be present")
     }
 }

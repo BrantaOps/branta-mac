@@ -98,7 +98,9 @@ class DropView: NSView {
         alert.alertStyle = .informational
         alert.addButton(withTitle: "OK")
         
-        if Installer.check(path: path) {
+        let match = Installer.trigger(arg: path) as! Bool
+        
+        if match {
             alert.messageText   = "Verified ✓"
             alert.informativeText = "Branta matched the authors PGP-verified checksum."
         }

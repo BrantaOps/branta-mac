@@ -12,7 +12,7 @@ import XCTest
 
 class VerifyTests: XCTestCase {
     func testVerifyIsSubclassOfAutomation() {
-        let isSubclass = Verify.self is Automation.Type
+        let isSubclass = Verify.self is BackgroundAutomation.Type
         XCTAssertTrue(isSubclass, "Verify should be a subclass of Automation")
     }
     
