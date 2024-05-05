@@ -12,13 +12,7 @@ class Clipboard: BackgroundAutomation {
     private static var bip39WordSet : Set<String>?
     private static let appDelegate = NSApp.delegate as? AppDelegate
     private static var lastContent: String = ""
-    
-    
-    private static var guardianText: String = "" {
-        didSet {
-            notifyObservers()
-        }
-    }
+    private static var guardianText: String = "" { didSet { notifyObservers() } }
     
     override class func run() {
         setup()
