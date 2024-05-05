@@ -13,3 +13,7 @@ protocol DataFeedObserver: AnyObject {
     func dataFeedExecutionStarted(started: Bool)
     func dataFeedCount(count: Int)
 }
+
+protocol ClipboardObserver: AnyObject {
+    func contentDidChange(content: Any?)
+}

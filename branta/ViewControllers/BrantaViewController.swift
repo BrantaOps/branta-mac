@@ -13,9 +13,8 @@ class BrantaViewController: NSViewController {
     @IBOutlet weak var spinner: NSProgressIndicator!
     
     private var tableData: [CrawledWallet] = []
-    
-    
-    @IBOutlet weak var clipboardContents: NSTextField!
+        
+    @IBOutlet weak var clipboardGuardian: ClipboardGuardianView!
     
     private let COLUMNS = [
         "WALLET_NAME"           : 0,
@@ -34,6 +33,7 @@ class BrantaViewController: NSViewController {
         super.viewDidLoad()
         tableView.delegate      = self
         tableView.dataSource    = self
+        Clipboard.addObserver(self)
     }
     
     override func viewDidAppear() {
@@ -198,5 +198,11 @@ extension BrantaViewController: VerifyObserver {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+}
+
+extension BrantaViewController: ClipboardObserver {
+    func contentDidChange(content: Any?) {
+        clipboardGuardian.fooBar(str: content as! String)
     }
 }

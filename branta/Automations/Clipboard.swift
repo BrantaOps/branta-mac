@@ -11,13 +11,18 @@ class Clipboard: BackgroundAutomation {
     
     private static var bip39WordSet : Set<String>?
     private static let appDelegate = NSApp.delegate as? AppDelegate
- 
+    
+    private static var lastContent: String = "" {
+        didSet {
+            notifyObservers()
+        }
+    }
+    
     override class func run() {
         // Construct word list, Notifications, etc.
         setup()
         
         // Keep trailing clipboard item.
-        var lastContent = ""
         
         // Driver for clipboard related tasks
         Timer.scheduledTimer(withTimeInterval: CLIPBOARD_INTERVAL, repeats: true) { _ in
@@ -48,11 +53,32 @@ class Clipboard: BackgroundAutomation {
                 //NOSTR
                 checkForNPUBInClipBoard(content: content!)
                 checkForNSECInClipBoard(content: content!)
-                                
+                
                 lastContent = content!
             }
         }
     }
+}
+
+extension Clipboard {
+    private static var observers = [ClipboardObserver]()
+
+    static func addObserver(_ observer: ClipboardObserver) {
+        observers.append(observer)
+    }
+    
+    static func removeObserver(_ observer: ClipboardObserver) {
+        observers.removeAll { $0 === observer }
+    }
+    
+    static func notifyObservers() {
+        for observer in observers {
+            observer.contentDidChange(content: lastContent)
+        }
+    }
+}
+
+extension Clipboard {
     
     private
     

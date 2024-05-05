@@ -33,4 +33,8 @@ class ClipboardGuardianView: NSView {
         
         return size
     }
+    
+    func fooBar(str: String) {
+        print("ClipboardGuardianView changed \(str)")
+    }
 }

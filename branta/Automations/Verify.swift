@@ -50,7 +50,6 @@ extension Verify {
             observer.verifyDidChange(newResults: crawledWallets)
         }
     }
-    
 }
 
 extension Verify {
