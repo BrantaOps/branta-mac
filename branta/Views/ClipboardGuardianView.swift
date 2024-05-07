@@ -24,6 +24,7 @@ class ClipboardGuardianView: NSView {
         contentsLabel.alignment = .center
         contentsLabel.textColor = .white
         contentsLabel.translatesAutoresizingMaskIntoConstraints = false
+        contentsLabel.font = NSFont(name: FONT, size: TABLE_FONT)
 
         contentsLabel.lineBreakMode = .byWordWrapping // Wrap to new line when needed
         contentsLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal) // Allow horizontal compression

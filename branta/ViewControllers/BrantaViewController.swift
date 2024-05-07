@@ -50,9 +50,8 @@ class BrantaViewController: NSViewController {
             }
         }
 
-        
         if let window = view.window {
-            window.minSize = NSSize(width: 400, height: 320)
+            window.minSize = NSSize(width: 550, height: 320)
             window.titlebarAppearsTransparent = true
             window.title = ""
          }
