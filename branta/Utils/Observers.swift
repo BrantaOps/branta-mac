@@ -15,5 +15,5 @@ protocol DataFeedObserver: AnyObject {
 }
 
 protocol ClipboardObserver: AnyObject {
-    func contentDidChange(content: Any?)
+    func contentDidChange(content: Any?, labelText: String)
 }

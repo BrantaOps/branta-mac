@@ -13,6 +13,8 @@ class Clipboard: BackgroundAutomation {
     private static let appDelegate = NSApp.delegate as? AppDelegate
     private static var lastContent: String = ""
     private static var guardianText: String = "" { didSet { notifyObservers() } }
+    private static var labelText: String = "" { didSet { notifyObservers() } }
+
     
     override class func run() {
         setup()
@@ -25,23 +27,33 @@ class Clipboard: BackgroundAutomation {
             
             lastContent = clipboardString
             
-            if checkForAddressesInClipBoard(content: clipboardString) ||
-               checkForXPUBInClipBoard(content: clipboardString) ||
-                checkForNPUBInClipBoard(content: clipboardString) {
-                // TODO - label "Clipboard: Single use Bitcoin Address detected."
-                guardianText = clipboardString // Trigger Observer
+            if checkForAddressesInClipBoard(content: clipboardString) {
+                labelText = "Clipboard: Single use Bitcoin Address detected."
+                guardianText = clipboardString
+            }
+            else if checkForXPUBInClipBoard(content: clipboardString) {
+                labelText = "Clipboard: Extended Public Key Detected."
+                guardianText = clipboardString
+            }
+            else if checkForNPUBInClipBoard(content: clipboardString) {
+                labelText = "Clipboard: Nostr Public Key Detected."
+                guardianText = clipboardString
             }
             else if checkForNSECInClipBoard(content: clipboardString) {
-                guardianText = "NSEC Detected."
+                labelText = "Clipboard: Nostr Private Key Detected."
+                guardianText = ""
             }
             else if checkForSeedPhraseInClipBoard(content: clipboardString) {
-                guardianText = "Seed Phrase Detected."
+                labelText = "Clipboard: Seed Phrase Detected."
+                guardianText = ""
             }
             else if checkForXPRVInClipBoard(content: clipboardString) {
-                guardianText = "Private Key Detected."
+                labelText = "Clipboard: Bitcoin Private Key Detected."
+                guardianText = ""
             }
             else {
-                guardianText = ""
+                labelText = "Clipboard"
+                guardianText = "No Bitcoin/Nostr content detected."
             }
         }
     }
@@ -60,7 +72,7 @@ extension Clipboard {
     
     static func notifyObservers() {
         for observer in observers {
-            observer.contentDidChange(content: guardianText)
+            observer.contentDidChange(content: guardianText, labelText: labelText)
         }
     }
 }

@@ -780,7 +780,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="290.5" y="0.0" width="173" height="30"/>
+                                                                    <rect key="frame" x="291" y="0.0" width="173" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
@@ -812,7 +812,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="480.5" y="0.0" width="273" height="30"/>
+                                                                    <rect key="frame" x="481" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -935,6 +935,7 @@
                     </view>
                     <connections>
                         <outlet property="clipboardGuardian" destination="q2p-Rf-egX" id="Vxw-F2-HSa"/>
+                        <outlet property="clipboardLabel" destination="IhE-QU-pKO" id="xi4-oI-WKw"/>
                         <outlet property="spinner" destination="Wcb-un-MKx" id="crz-Je-daT"/>
                         <outlet property="tableView" destination="f7n-2h-iou" id="AZn-N9-JPK"/>
                         <segue destination="I6m-3y-YzM" kind="show" identifier="network" id="OMd-e0-F5R"/>

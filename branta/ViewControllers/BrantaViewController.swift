@@ -15,6 +15,7 @@ class BrantaViewController: NSViewController {
     private var tableData: [CrawledWallet] = []
         
     @IBOutlet weak var clipboardGuardian: ClipboardGuardianView!
+    @IBOutlet weak var clipboardLabel: NSTextField!
     
     private let COLUMNS = [
         "WALLET_NAME"           : 0,
@@ -201,9 +202,10 @@ extension BrantaViewController: VerifyObserver {
 }
 
 extension BrantaViewController: ClipboardObserver {
-    func contentDidChange(content: Any?) {
+    func contentDidChange(content: Any?, labelText: String) {
         if let contentStr = content as? String {
             clipboardGuardian.updateLabel(str: contentStr)
+            clipboardLabel.stringValue = labelText
         }
     }
 }
