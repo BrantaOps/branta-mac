@@ -26,14 +26,20 @@ class Clipboard: BackgroundAutomation {
             lastContent = clipboardString
             
             if checkForAddressesInClipBoard(content: clipboardString) ||
-               checkForSeedPhraseInClipBoard(content: clipboardString) ||
                checkForXPUBInClipBoard(content: clipboardString) ||
-               checkForXPRVInClipBoard(content: clipboardString) ||
-               checkForNPUBInClipBoard(content: clipboardString) ||
-               checkForNSECInClipBoard(content: clipboardString) {
+                checkForNPUBInClipBoard(content: clipboardString) {
+                // TODO - label "Clipboard: Single use Bitcoin Address detected."
                 guardianText = clipboardString // Trigger Observer
             }
-            // TODO - clause for XPRV, SEED, NSEC - which should be hidden.
+            else if checkForNSECInClipBoard(content: clipboardString) {
+                guardianText = "NSEC Detected."
+            }
+            else if checkForSeedPhraseInClipBoard(content: clipboardString) {
+                guardianText = "Seed Phrase Detected."
+            }
+            else if checkForXPRVInClipBoard(content: clipboardString) {
+                guardianText = "Private Key Detected."
+            }
             else {
                 guardianText = ""
             }
