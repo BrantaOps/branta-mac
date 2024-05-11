@@ -24,9 +24,9 @@ class ClipboardGuardianView: NSView {
         contentsLabel.alignment = .center
         contentsLabel.textColor = .white
         contentsLabel.translatesAutoresizingMaskIntoConstraints = false
-        contentsLabel.font = NSFont(name: FONT, size: TABLE_FONT)
+        contentsLabel.font = NSFont(name: FONT, size: TABLE_FONT - 3)
 
-        contentsLabel.lineBreakMode = .byWordWrapping // Wrap to new line when needed
+        contentsLabel.lineBreakMode = .byCharWrapping
         contentsLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal) // Allow horizontal compression
         contentsLabel.setContentHuggingPriority(.defaultLow, for: .horizontal) // Allow horizontal expansion
         
@@ -37,7 +37,9 @@ class ClipboardGuardianView: NSView {
             contentsLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 50), // Add top padding
             contentsLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4), // Add leading padding
             contentsLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -4), // Add trailing padding
-            contentsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4) // Add bottom padding
+            contentsLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -70), // Add bottom padding
+            contentsLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: 150),
+            self.heightAnchor.constraint(greaterThanOrEqualToConstant: 150) // Set minimum height
         ])
     }
 
