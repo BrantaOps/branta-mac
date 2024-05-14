@@ -22,7 +22,7 @@ class Settings {
         SCAN_CADENCE_WORDING: DEFAULT_SCAN_CADENCE_WORDING,
         NOTIFY_UPON_LAUNCH: true,
         NOTIFY_UPON_STATUS_CHANGE: true,
-        SHOW_IN_DOCK: false,
+        SHOW_IN_DOCK: true,
         LAST_SYNC: "-",
         // XPUBS
         XPUBS: [] // TODO.
