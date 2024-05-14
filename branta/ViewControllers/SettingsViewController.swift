@@ -20,6 +20,7 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
     @IBOutlet weak var showInDockOutlet: NSSwitch!
+    @IBOutlet weak var lastSyncLabel: NSTextField!
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -33,7 +34,6 @@ class SettingsViewController: NSViewController {
         BrantaLogger.log(s: Settings.readFromDefaults())
         
         if let window = view.window {
-            window.minSize = NSSize(width: 400, height: 320)
             window.titlebarAppearsTransparent = true
             window.title = ""
         }
