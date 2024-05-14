@@ -81,9 +81,13 @@ extension Bridge {
     }
     
     static func notifyObservers() {
+        let l = lastSyncTimeString()
+        
         for observer in observers {
-            observer.bridgeDidFetch(content: lastSyncTimeString())
+            observer.bridgeDidFetch(content: l)
         }
+        
+        Settings.set(key: LAST_SYNC, value: l)
     }
     
     private static func lastSyncTimeString() -> String {

@@ -20,13 +20,17 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
     @IBOutlet weak var showInDockOutlet: NSSwitch!
-    
-    // This is good on rolling basis, but not entry. Store in prefs.
     @IBOutlet weak var lastSyncLabel: NSTextField!
     
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
+        
+        let pref = Settings.readFromDefaults()
+        let lastSyncPref = pref[LAST_SYNC] as? String
+        if lastSyncPref != nil {
+            lastSyncLabel.stringValue = lastSyncPref!
+        }
     }
     
     override func viewDidAppear() {

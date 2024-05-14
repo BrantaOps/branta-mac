@@ -23,6 +23,7 @@ class Settings {
         NOTIFY_UPON_LAUNCH: true,
         NOTIFY_UPON_STATUS_CHANGE: true,
         SHOW_IN_DOCK: false,
+        LAST_SYNC: "-",
         // XPUBS
         XPUBS: [] // TODO.
     ]
