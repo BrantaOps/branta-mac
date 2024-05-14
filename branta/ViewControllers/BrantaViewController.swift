@@ -104,8 +104,7 @@ class BrantaViewController: NSViewController {
                 alert.informativeText = "Branta verified the validity of \(name)."
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
                 alert.informativeText = """
-Branta could not identify \(name).
-Don't Panic - read more at:
+No Match Found. Don't Panic - read more at:
 
 https://www.branta.pro/docs#wallet_status
 """
@@ -141,7 +140,6 @@ https://www.branta.pro/docs#wallet_status
     }
 }
 
-
 extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return tableData.count
@@ -157,7 +155,7 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         }
         
         // Force rewrite of the table. Don't care about cache.
-        let textField = NSTextField()
+        let textField = TextFieldWithHover()
         textField.identifier = NSUserInterfaceItemIdentifier("TextCell")
         textField.isEditable = false
         textField.bezelStyle = .roundedBezel
