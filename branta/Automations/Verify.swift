@@ -23,6 +23,10 @@ class Verify: BackgroundAutomation {
     override class func run() {
         let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
         
+        Timer.scheduledTimer(withTimeInterval: API_CADENCE, repeats: true) { _ in
+            Bridge.fetchLatest { _ in }
+        }
+        
         Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
             verify()
         }

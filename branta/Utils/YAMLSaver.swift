@@ -9,7 +9,12 @@ import Foundation
 
 class YAMLSaver {
     static func saveYAMLToLocal(yamlString: String, filename: String) {
-        BrantaLogger.log(s: "Attempting to save local yaml... \(filename)")
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let currentTime = formatter.string(from: currentDate)
+        
+        BrantaLogger.log(s: "Attempting to save local yaml... \(filename) \(currentTime)")
         
         if let appSupportDir: URL = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first {
             let brantaURL: URL = appSupportDir.appendingPathComponent("Branta")
