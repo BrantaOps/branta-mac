@@ -88,6 +88,11 @@ class SettingsViewController: NSViewController {
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
+    @IBAction func refresh(_ sender: Any) {
+        BrantaLogger.log(s: "SettingsViewController#refresh.")
+        Bridge.fetchLatest { success in }
+    }
+    
     private
     
     func setFor(s: NSSwitch, key: String) {

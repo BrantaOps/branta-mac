@@ -1223,6 +1223,9 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="13" name="Avenir-Book"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="refresh:" target="u9i-7b-3R3" id="xfB-hq-DTE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
