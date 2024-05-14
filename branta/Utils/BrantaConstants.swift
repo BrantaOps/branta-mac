@@ -17,6 +17,8 @@ let USE_SHORT_VERSION_PATH: [String] = [] // // Blockstream used to use this.
 typealias RuntimeHashType       = [String: [String:String]]
 typealias InstallerHashType     = [String:String]
 
+let API_CADENCE = 15.0
+
 // URLS
 
 let FETCH_URL = "https://api.github.com/repos/brantaops/branta-mac/releases/latest"
