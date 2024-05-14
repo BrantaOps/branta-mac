@@ -18,5 +18,4 @@ class SettingsView: NSView {
         size.height = max(size.height, minimumHeight)
         return size
     }
-    
 }

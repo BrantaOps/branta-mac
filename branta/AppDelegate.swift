@@ -22,7 +22,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private let KEY_SETTINGS        = "S"
     private let KEY_QUIT            = "Q"
     private let KEY_UPDATE          = "U"
-    
+    private let KEY_HELP            = "H"
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         //wipeDefaults() // For dev use
         start()
@@ -56,6 +57,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         MenuHelper.openSettingsWindow()
     }
     
+    @objc func didTapHelp() {
+        MenuHelper.openHelp()
+    }
+    
     @objc func getUpdate(_ sender: NSMenuItem) {
         if let tag = sender.representedObject {
             BrantaLogger.log(s: "Fetching tag: \(tag)")
@@ -78,7 +83,7 @@ extension AppDelegate {
         
         let menu = NSMenu()
         
-        let aboutItem = NSMenuItem(title: "About", action: #selector(didTapAbout), keyEquivalent: KEY_ABOUT)
+        let aboutItem = NSMenuItem(title: "Show Branta", action: #selector(didTapAbout), keyEquivalent: KEY_ABOUT)
         menu.addItem(aboutItem)
         
         let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: "")
@@ -86,6 +91,9 @@ extension AppDelegate {
         
         let settingsItem = NSMenuItem(title: "Settings", action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
         menu.addItem(settingsItem)
+        
+        let helpItem = NSMenuItem(title: "Help", action: #selector(didTapHelp), keyEquivalent: KEY_HELP)
+        menu.addItem(helpItem)
         
         Updater.checkForUpdates { updatesAvailable, tag in
             if updatesAvailable {
