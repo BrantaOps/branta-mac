@@ -35,6 +35,7 @@
 		ED4535C02BB60B7700536491 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */; };
 		ED45421C2BD86E720075E746 /* CrawledWallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45421B2BD86E720075E746 /* CrawledWallet.swift */; };
 		ED45421E2BD874460075E746 /* AppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45421D2BD874460075E746 /* AppVersion.swift */; };
+		ED45CC662BF2F66D00B4137E /* TextFieldWithHover.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED45CC652BF2F66D00B4137E /* TextFieldWithHover.swift */; };
 		ED4E9F512B3DB64B0000F751 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4E9F502B3DB64B0000F751 /* Bridge.swift */; };
 		ED4FA1CC2B4F0C360094D845 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */; };
 		ED57437B2B351E990001956A /* BackgroundAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED57437A2B351E990001956A /* BackgroundAutomation.swift */; };
@@ -115,6 +116,7 @@
 		ED4535BE2BB60B2000536491 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		ED45421B2BD86E720075E746 /* CrawledWallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawledWallet.swift; sourceTree = "<group>"; };
 		ED45421D2BD874460075E746 /* AppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersion.swift; sourceTree = "<group>"; };
+		ED45CC652BF2F66D00B4137E /* TextFieldWithHover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithHover.swift; sourceTree = "<group>"; };
 		ED4E9F502B3DB64B0000F751 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		ED4FA1CB2B4F0C360094D845 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		ED57437A2B351E990001956A /* BackgroundAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundAutomation.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				EDB5B0C32B3A76D40015515F /* Observers.swift */,
 				EDD011852B6D749D0091CAAD /* Settings.swift */,
 				EDD011832B6C56F00091CAAD /* Sha.swift */,
+				ED45CC642BF2F64E00B4137E /* Subclasses */,
 				ED97B84D2B9F46A3007DD2F5 /* Updater.swift */,
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
 				ED332B2B2BD2B004000C0EE4 /* YAMLParser.swift */,
@@ -292,6 +295,14 @@
 				EDD011872B6D80040091CAAD /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ED45CC642BF2F64E00B4137E /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				ED45CC652BF2F66D00B4137E /* TextFieldWithHover.swift */,
+			);
+			path = Subclasses;
 			sourceTree = "<group>";
 		};
 		ED5743772B3517BD0001956A /* Helpers */ = {
@@ -553,6 +564,7 @@
 				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,
 				ED1A3C8F2BC4E04E00895C5A /* Matcher.swift in Sources */,
 				ED57437D2B3641AF0001956A /* BrantaViewController.swift in Sources */,
+				ED45CC662BF2F66D00B4137E /* TextFieldWithHover.swift in Sources */,
 				ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */,
 				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
