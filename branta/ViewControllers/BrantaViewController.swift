@@ -103,7 +103,12 @@ class BrantaViewController: NSViewController {
             if wallet.brantaSignatureMatch {
                 alert.informativeText = "Branta verified the validity of \(name)."
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
-                alert.informativeText = "Branta could not verify the validity of \(name). You should consider reinstalling the wallet from the publishers website."
+                alert.informativeText = """
+Branta could not identify \(name).
+Don't Panic - read more at:
+
+https://www.branta.pro/docs#wallet_status
+"""
             } else {
                 var older = true
                 var newer = true
@@ -166,7 +171,7 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
                 textField.stringValue   = "\(name): Verified ✓"
             }
             else {
-                textField.stringValue   = "\(name): No Match Found ⚠"
+                textField.stringValue   = "\(name): No Match Found"
             }
             
             let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
