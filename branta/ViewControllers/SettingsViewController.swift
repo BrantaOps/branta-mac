@@ -20,6 +20,8 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
     @IBOutlet weak var showInDockOutlet: NSSwitch!
+    
+    // This is good on rolling basis, but not entry. Store in prefs.
     @IBOutlet weak var lastSyncLabel: NSTextField!
     
     override func viewWillAppear() {
@@ -37,6 +39,14 @@ class SettingsViewController: NSViewController {
             window.titlebarAppearsTransparent = true
             window.title = ""
         }
+        
+        // TODO - the other observers need to remove themselves.
+        Bridge.addObserver(self)
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        Bridge.removeObserver(self)
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
@@ -97,7 +107,15 @@ class SettingsViewController: NSViewController {
         let url = URL(string: "https://www.branta.pro/docs")!
         NSWorkspace.shared.open(url)
     }
-    
+}
+
+extension SettingsViewController: BridgeObserver {
+    func bridgeDidFetch(content: String) {
+        lastSyncLabel.stringValue = content
+    }
+}
+
+extension SettingsViewController {
     private
     
     func setFor(s: NSSwitch, key: String) {

@@ -17,3 +17,7 @@ protocol DataFeedObserver: AnyObject {
 protocol ClipboardObserver: AnyObject {
     func contentDidChange(content: Any?, labelText: String)
 }
+
+protocol BridgeObserver: AnyObject {
+    func bridgeDidFetch(content: String)
+}
