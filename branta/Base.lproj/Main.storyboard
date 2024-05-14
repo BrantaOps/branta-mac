@@ -780,7 +780,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="291" y="0.0" width="173" height="30"/>
+                                                                    <rect key="frame" x="290.5" y="0.0" width="173" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
@@ -812,7 +812,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="481" y="0.0" width="273" height="30"/>
+                                                                    <rect key="frame" x="480.5" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -1252,6 +1252,7 @@
                                     <constraint firstItem="ptA-92-eZt" firstAttribute="leading" secondItem="2KU-bm-So7" secondAttribute="leading" id="OWk-20-K7h"/>
                                     <constraint firstItem="e2E-aN-7KR" firstAttribute="centerY" secondItem="IXb-Bx-scV" secondAttribute="centerY" id="Obo-0U-1VV"/>
                                     <constraint firstItem="aQP-x2-dRL" firstAttribute="top" secondItem="IXb-Bx-scV" secondAttribute="bottom" constant="35" id="Q2t-x2-mhr"/>
+                                    <constraint firstItem="e2E-aN-7KR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IXb-Bx-scV" secondAttribute="trailing" constant="8" symbolic="YES" id="Q4j-OC-Psa"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J6E-kH-n70" secondAttribute="trailing" constant="20" symbolic="YES" id="QPf-Ca-zaA"/>
                                     <constraint firstItem="6B2-wv-5n3" firstAttribute="leading" secondItem="uhi-g9-GpC" secondAttribute="leading" id="Qn2-np-zcT"/>
                                     <constraint firstAttribute="trailing" secondItem="N5F-kY-kRe" secondAttribute="trailing" constant="38" id="Rkw-3L-mzT"/>
@@ -1260,9 +1261,11 @@
                                     <constraint firstItem="Ggi-ae-6Wd" firstAttribute="top" secondItem="SME-vv-0Ca" secondAttribute="bottom" constant="15" id="Sb9-PT-UH1"/>
                                     <constraint firstItem="bq5-ux-PVg" firstAttribute="centerX" secondItem="yAP-Ez-rfw" secondAttribute="centerX" id="Tx1-Tr-S5G"/>
                                     <constraint firstItem="NlF-sB-xXw" firstAttribute="leading" secondItem="GMP-f8-Zul" secondAttribute="leading" id="U6m-v1-InV"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NlF-sB-xXw" secondAttribute="trailing" constant="20" symbolic="YES" id="VOe-UU-n3Z"/>
                                     <constraint firstItem="dDY-UW-CaB" firstAttribute="top" secondItem="GMP-f8-Zul" secondAttribute="bottom" constant="-20" id="Ya8-jF-vGk"/>
                                     <constraint firstItem="LUU-vL-0Nh" firstAttribute="top" secondItem="aQP-x2-dRL" secondAttribute="bottom" constant="15" id="aBd-NX-Vl4"/>
                                     <constraint firstItem="2KU-bm-So7" firstAttribute="top" secondItem="HbO-1Z-NaM" secondAttribute="bottom" constant="15" id="aWy-Tj-3ZN"/>
+                                    <constraint firstItem="NzB-9A-gJw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LUU-vL-0Nh" secondAttribute="trailing" constant="8" symbolic="YES" id="bwV-2M-NEs"/>
                                     <constraint firstItem="rXG-2E-ttD" firstAttribute="centerX" secondItem="axO-Yq-AKu" secondAttribute="centerX" id="cb7-4d-N5K"/>
                                     <constraint firstItem="rXG-2E-ttD" firstAttribute="centerY" secondItem="6B2-wv-5n3" secondAttribute="centerY" id="cfI-fd-LqP"/>
                                     <constraint firstItem="dDY-UW-CaB" firstAttribute="centerX" secondItem="rXG-2E-ttD" secondAttribute="centerX" id="dRv-4K-W11"/>
@@ -1274,6 +1277,7 @@
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="centerX" secondItem="xvm-7k-eFa" secondAttribute="centerX" id="nd5-qi-iXa"/>
                                     <constraint firstItem="NzB-9A-gJw" firstAttribute="centerY" secondItem="LUU-vL-0Nh" secondAttribute="centerY" id="o17-y8-xhp"/>
                                     <constraint firstItem="HT5-Gz-LSQ" firstAttribute="top" secondItem="IlJ-0C-gBa" secondAttribute="top" constant="25" id="oR8-bQ-yUE"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aQP-x2-dRL" secondAttribute="trailing" constant="20" symbolic="YES" id="pNu-M0-ZAy"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GMP-f8-Zul" secondAttribute="trailing" constant="20" symbolic="YES" id="pc3-Ul-8cg"/>
                                     <constraint firstItem="xvm-7k-eFa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HbO-1Z-NaM" secondAttribute="trailing" constant="8" symbolic="YES" id="pvO-Ek-pgi"/>
                                     <constraint firstItem="xV9-JF-wnR" firstAttribute="centerY" secondItem="uhi-g9-GpC" secondAttribute="centerY" id="qVA-yr-cuQ"/>
@@ -1398,7 +1402,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="X02-cg-kP0">
-                                                                    <rect key="frame" x="390" y="0.0" width="362" height="58"/>
+                                                                    <rect key="frame" x="389.5" y="0.0" width="362" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">
