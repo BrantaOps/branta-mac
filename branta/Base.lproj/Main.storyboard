@@ -1175,7 +1175,7 @@
                                         <rect key="frame" x="674" y="399" width="39" height="25"/>
                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="oQs-hc-Zcm">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="menu"/>
+                                            <font key="font" size="13" name="Avenir-Book"/>
                                             <menu key="menu" id="ueb-QO-Kgn"/>
                                         </popUpButtonCell>
                                     </popUpButton>
@@ -1218,10 +1218,10 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NzB-9A-gJw">
-                                        <rect key="frame" x="604" y="140" width="112" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Refresh Now" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Nkq-aI-5Ef">
+                                        <rect key="frame" x="608" y="140" width="108" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Refresh Now" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="Nkq-aI-5Ef">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
+                                            <font key="font" size="13" name="Avenir-Book"/>
                                         </buttonCell>
                                     </button>
                                 </subviews>
