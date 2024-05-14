@@ -93,6 +93,11 @@ class SettingsViewController: NSViewController {
         Bridge.fetchLatest { success in }
     }
     
+    @IBAction func help(_ sender: Any) {
+        let url = URL(string: "https://www.branta.pro/docs")!
+        NSWorkspace.shared.open(url)
+    }
+    
     private
     
     func setFor(s: NSSwitch, key: String) {

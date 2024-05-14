@@ -748,11 +748,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="8Dp-CS-tBS">
-                                                                    <rect key="frame" x="8" y="0.0" width="266" height="30"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="265" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
-                                                                            <rect key="frame" x="0.0" y="7" width="266" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="265" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="blah blah blah" id="Jay-Mb-UVI">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -780,7 +780,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="290.5" y="0.0" width="173" height="30"/>
+                                                                    <rect key="frame" x="290" y="0.0" width="173" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
@@ -812,7 +812,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="480.5" y="0.0" width="273" height="30"/>
+                                                                    <rect key="frame" x="480" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -1033,10 +1033,10 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="PuU-fv-DVF"/>
                             </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-0C-gBa" customClass="SettingsView" customModule="Branta" customModuleProvider="target">
-                                <rect key="frame" x="15" y="15" width="747" height="756"/>
+                                <rect key="frame" x="15" y="5" width="747" height="766"/>
                                 <subviews>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
-                                        <rect key="frame" x="36" y="708" width="189" height="23"/>
+                                        <rect key="frame" x="36" y="718" width="189" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Clipboard Notifications" id="8wh-v7-xyP">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1044,7 +1044,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
-                                        <rect key="frame" x="36" y="673" width="124" height="20"/>
+                                        <rect key="frame" x="36" y="683" width="124" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Bitcoin Addresses" id="0j4-Za-GCk">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1052,7 +1052,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
-                                        <rect key="frame" x="36" y="638" width="87" height="20"/>
+                                        <rect key="frame" x="36" y="648" width="87" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Seed Phrase" id="cNC-Pb-fk6">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1060,7 +1060,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
-                                        <rect key="frame" x="36" y="603" width="143" height="20"/>
+                                        <rect key="frame" x="36" y="613" width="143" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Extended Public Key" id="Wq5-Eq-RZd">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1068,7 +1068,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
-                                        <rect key="frame" x="36" y="566" width="79" height="20"/>
+                                        <rect key="frame" x="36" y="576" width="79" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Private Key" id="8NY-Fe-mCW">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1076,7 +1076,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
-                                        <rect key="frame" x="36" y="531" width="128" height="20"/>
+                                        <rect key="frame" x="36" y="541" width="128" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="NOSTR Public Key" id="FFw-O2-bTy">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1084,7 +1084,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
-                                        <rect key="frame" x="36" y="496" width="133" height="20"/>
+                                        <rect key="frame" x="36" y="506" width="133" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="NOSTR Private Key" id="kLP-uR-FAa">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1092,7 +1092,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
-                                        <rect key="frame" x="36" y="438" width="150" height="23"/>
+                                        <rect key="frame" x="36" y="448" width="150" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Wallet Verification" id="3j8-jx-rMW">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1100,7 +1100,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
-                                        <rect key="frame" x="36" y="403" width="100" height="20"/>
+                                        <rect key="frame" x="36" y="413" width="100" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Scan Cadence" id="9gz-jq-Tbn">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1108,7 +1108,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
-                                        <rect key="frame" x="36" y="368" width="250" height="20"/>
+                                        <rect key="frame" x="36" y="378" width="250" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Launching Wallet" id="xOB-Dm-6pr">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1116,7 +1116,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
-                                        <rect key="frame" x="36" y="333" width="233" height="20"/>
+                                        <rect key="frame" x="36" y="343" width="233" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Status Change" id="hk9-gG-KE2">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1124,55 +1124,55 @@
                                         </textFieldCell>
                                     </textField>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe">
-                                        <rect key="frame" x="669" y="670" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="680" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForBTCAddress:" target="u9i-7b-3R3" id="Sx2-jp-GTO"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw">
-                                        <rect key="frame" x="669" y="635" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="645" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForSeed:" target="u9i-7b-3R3" id="e0H-Xn-6FV"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg">
-                                        <rect key="frame" x="669" y="600" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="610" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPub:" target="u9i-7b-3R3" id="9E8-K5-cH5"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q">
-                                        <rect key="frame" x="669" y="563" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="573" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPrv:" target="u9i-7b-3R3" id="Hws-QN-Eym"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa">
-                                        <rect key="frame" x="669" y="528" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="538" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNPub:" target="u9i-7b-3R3" id="tXk-2L-gA2"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu">
-                                        <rect key="frame" x="669" y="493" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="503" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNSec:" target="u9i-7b-3R3" id="iuc-u1-Rhn"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD">
-                                        <rect key="frame" x="669" y="365" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="375" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponLaunch:" target="u9i-7b-3R3" id="yWz-G4-nQA"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB">
-                                        <rect key="frame" x="669" y="329" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="339" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponStatusChange:" target="u9i-7b-3R3" id="Ksv-n9-VuF"/>
                                         </connections>
                                     </switch>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-JF-wnR">
-                                        <rect key="frame" x="674" y="399" width="39" height="25"/>
+                                        <rect key="frame" x="674" y="409" width="39" height="25"/>
                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="oQs-hc-Zcm">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="13" name="Avenir-Book"/>
@@ -1180,7 +1180,7 @@
                                         </popUpButtonCell>
                                     </popUpButton>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-sB-xXw">
-                                        <rect key="frame" x="36" y="275" width="83" height="23"/>
+                                        <rect key="frame" x="36" y="285" width="83" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Dock Icon" id="fCd-qG-nM8">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1188,7 +1188,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-Bx-scV">
-                                        <rect key="frame" x="36" y="240" width="169" height="20"/>
+                                        <rect key="frame" x="36" y="250" width="169" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Show Branta in the Dock" id="myP-IY-Hbq">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1196,13 +1196,13 @@
                                         </textFieldCell>
                                     </textField>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="e2E-aN-7KR">
-                                        <rect key="frame" x="669" y="237" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="247" width="42" height="25"/>
                                         <connections>
                                             <action selector="setShowInDock:" target="u9i-7b-3R3" id="eFN-9g-wk6"/>
                                         </connections>
                                     </switch>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-x2-dRL">
-                                        <rect key="frame" x="36" y="182" width="78" height="23"/>
+                                        <rect key="frame" x="36" y="192" width="78" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Last Sync" id="7LL-ed-QUX">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1210,7 +1210,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LUU-vL-0Nh">
-                                        <rect key="frame" x="36" y="147" width="117" height="20"/>
+                                        <rect key="frame" x="36" y="157" width="117" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Monday, 3:00pm" id="xMQ-pD-FpQ">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1218,13 +1218,23 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NzB-9A-gJw">
-                                        <rect key="frame" x="608" y="140" width="108" height="32"/>
+                                        <rect key="frame" x="608" y="150" width="108" height="32"/>
                                         <buttonCell key="cell" type="push" title="Refresh Now" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="Nkq-aI-5Ef">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="13" name="Avenir-Book"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="refresh:" target="u9i-7b-3R3" id="xfB-hq-DTE"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="uTd-4K-Kav">
+                                        <rect key="frame" x="356" y="5" width="36" height="20"/>
+                                        <buttonCell key="cell" type="smallSquare" title="Help" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="0CA-X7-mGy">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="15" name="Avenir-Book"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="help:" target="u9i-7b-3R3" id="EKJ-KW-xmr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1277,6 +1287,7 @@
                                     <constraint firstItem="6B2-wv-5n3" firstAttribute="top" secondItem="uhi-g9-GpC" secondAttribute="bottom" constant="15" id="iok-Sr-b9u"/>
                                     <constraint firstItem="N5F-kY-kRe" firstAttribute="centerY" secondItem="J6E-kH-n70" secondAttribute="centerY" id="ip2-qU-Fco"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SME-vv-0Ca" secondAttribute="trailing" constant="20" symbolic="YES" id="lMg-tb-JQB"/>
+                                    <constraint firstItem="uTd-4K-Kav" firstAttribute="centerX" secondItem="IlJ-0C-gBa" secondAttribute="centerX" id="lbt-8R-rOj"/>
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="centerX" secondItem="xvm-7k-eFa" secondAttribute="centerX" id="nd5-qi-iXa"/>
                                     <constraint firstItem="NzB-9A-gJw" firstAttribute="centerY" secondItem="LUU-vL-0Nh" secondAttribute="centerY" id="o17-y8-xhp"/>
                                     <constraint firstItem="HT5-Gz-LSQ" firstAttribute="top" secondItem="IlJ-0C-gBa" secondAttribute="top" constant="25" id="oR8-bQ-yUE"/>
@@ -1294,6 +1305,7 @@
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2KU-bm-So7" secondAttribute="trailing" constant="8" symbolic="YES" id="uQk-uf-bKc"/>
                                     <constraint firstItem="7hV-pY-YW0" firstAttribute="leading" secondItem="Ggi-ae-6Wd" secondAttribute="leading" id="uyI-iu-ZZZ"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7hV-pY-YW0" secondAttribute="trailing" constant="20" symbolic="YES" id="vGI-D9-qXQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="uTd-4K-Kav" secondAttribute="bottom" constant="5" id="veL-bn-5bb"/>
                                     <constraint firstItem="NlF-sB-xXw" firstAttribute="top" secondItem="GMP-f8-Zul" secondAttribute="bottom" constant="35" id="wTh-TC-iOq"/>
                                     <constraint firstItem="xV9-JF-wnR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="uhi-g9-GpC" secondAttribute="trailing" constant="8" symbolic="YES" id="xFZ-z5-qMw"/>
                                     <constraint firstItem="xvm-7k-eFa" firstAttribute="centerY" secondItem="HbO-1Z-NaM" secondAttribute="centerY" id="zis-pC-yE4"/>
@@ -1304,7 +1316,7 @@
                             <constraint firstItem="IlJ-0C-gBa" firstAttribute="leading" secondItem="Act-sp-HVM" secondAttribute="leading" constant="15" id="8ad-ji-yJL"/>
                             <constraint firstItem="ToP-t6-a0X" firstAttribute="centerX" secondItem="Act-sp-HVM" secondAttribute="centerX" id="Ffl-xG-fWY"/>
                             <constraint firstItem="ToP-t6-a0X" firstAttribute="top" secondItem="Act-sp-HVM" secondAttribute="top" id="XgU-nY-l20"/>
-                            <constraint firstAttribute="bottom" secondItem="IlJ-0C-gBa" secondAttribute="bottom" constant="15" id="gIp-eU-2Qz"/>
+                            <constraint firstAttribute="bottom" secondItem="IlJ-0C-gBa" secondAttribute="bottom" constant="5" id="gIp-eU-2Qz"/>
                             <constraint firstAttribute="trailing" secondItem="IlJ-0C-gBa" secondAttribute="trailing" constant="15" id="heh-gB-M0W"/>
                             <constraint firstItem="IlJ-0C-gBa" firstAttribute="centerX" secondItem="Act-sp-HVM" secondAttribute="centerX" id="o8B-1z-6kV"/>
                             <constraint firstItem="IlJ-0C-gBa" firstAttribute="top" secondItem="ToP-t6-a0X" secondAttribute="bottom" id="yYj-Vj-lyT"/>
@@ -1373,11 +1385,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="6ez-Zm-3U6">
-                                                                    <rect key="frame" x="8" y="0.0" width="365" height="58"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="364" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
-                                                                            <rect key="frame" x="0.0" y="21" width="365" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="364" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -1405,7 +1417,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="X02-cg-kP0">
-                                                                    <rect key="frame" x="389.5" y="0.0" width="362" height="58"/>
+                                                                    <rect key="frame" x="389" y="0.0" width="362" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">

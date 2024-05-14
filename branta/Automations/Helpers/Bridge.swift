@@ -55,6 +55,7 @@ class Bridge {
         }
         
         group.notify(queue: .main) {
+            // TODO - call back here.
             completion(installerSuccess && runtimeSuccess)
         }
     }
