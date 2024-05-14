@@ -17,9 +17,7 @@ class Bridge {
     
     // FILE NAMES ON DISK
     private static let RUNTIME_DISK_NAME            = "branta_runtime.yaml"
-    
     private static let INSTALLER_DISK_NAME          = "branta_installer.yaml"
-
 
     private static var runtimeHashes:               RuntimeHashType?
     private static var installerHashes:             InstallerHashType?
@@ -55,6 +53,7 @@ class Bridge {
         }
         
         group.notify(queue: .main) {
+            notifyObservers()
             completion(installerSuccess && runtimeSuccess)
         }
     }
@@ -66,8 +65,42 @@ class Bridge {
     static func getInstallerHashes() -> InstallerHashType {
         return installerHashes!
     }
-    
 }
+
+
+// OBSERVER ------------------------------------------------------------------------------------------
+extension Bridge {
+    private static var observers = [BridgeObserver]()
+
+    static func addObserver(_ observer: BridgeObserver) {
+        observers.append(observer)
+    }
+    
+    static func removeObserver(_ observer: BridgeObserver) {
+        observers.removeAll { $0 === observer }
+    }
+    
+    static func notifyObservers() {
+        let l = lastSyncTimeString()
+        
+        for observer in observers {
+            observer.bridgeDidFetch(content: l)
+        }
+        
+        Settings.set(key: LAST_SYNC, value: l)
+    }
+    
+    private static func lastSyncTimeString() -> String {
+        let dateFormatter           = DateFormatter()
+        dateFormatter.dateStyle     = .short
+        dateFormatter.timeStyle     = .short
+        dateFormatter.locale        = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone      = TimeZone.current
+
+        return dateFormatter.string(from: Date())
+    }
+}
+
     
 // INSTALLER HASHES ------------------------------------------------------------------------------------------
 extension Bridge {

@@ -9,8 +9,8 @@ import Cocoa
 
 class SettingsView: NSView {
     
-    private let minimumHeight: CGFloat = 550
-    private let minimumWidth: CGFloat = 500
+    private let minimumHeight: CGFloat = 650
+    private let minimumWidth: CGFloat = 400
 
     override var intrinsicContentSize: NSSize {
         var size = super.intrinsicContentSize
@@ -18,5 +18,4 @@ class SettingsView: NSView {
         size.height = max(size.height, minimumHeight)
         return size
     }
-    
 }

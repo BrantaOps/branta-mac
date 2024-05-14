@@ -8,6 +8,11 @@
 import Cocoa
 
 class MenuHelper {
+    class func openHelp(){
+        let url = URL(string: "https://www.branta.pro/docs")!
+        NSWorkspace.shared.open(url)
+    }
+    
     class func openSettingsWindow() {
         let appDelegate = NSApp.delegate as? AppDelegate
         

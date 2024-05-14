@@ -20,10 +20,17 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyUponLaunchOutlet: NSSwitch!
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
     @IBOutlet weak var showInDockOutlet: NSSwitch!
+    @IBOutlet weak var lastSyncLabel: NSTextField!
     
     override func viewWillAppear() {
         super.viewWillAppear()
         self.view.window?.appearance = NSAppearance(named: .darkAqua)
+        
+        let pref = Settings.readFromDefaults()
+        let lastSyncPref = pref[LAST_SYNC] as? String
+        if lastSyncPref != nil {
+            lastSyncLabel.stringValue = lastSyncPref!
+        }
     }
     
     override func viewDidAppear() {
@@ -33,10 +40,17 @@ class SettingsViewController: NSViewController {
         BrantaLogger.log(s: Settings.readFromDefaults())
         
         if let window = view.window {
-            window.minSize = NSSize(width: 400, height: 320)
             window.titlebarAppearsTransparent = true
             window.title = ""
         }
+        
+        // TODO - the other observers need to remove themselves.
+        Bridge.addObserver(self)
+    }
+    
+    override func viewWillDisappear() {
+        super.viewWillDisappear()
+        Bridge.removeObserver(self)
     }
     
     @objc func setCadence(sender: NSPopUpButton) {
@@ -88,6 +102,24 @@ class SettingsViewController: NSViewController {
         NSApplication.shared.activate(ignoringOtherApps: true)
     }
     
+    @IBAction func refresh(_ sender: Any) {
+        BrantaLogger.log(s: "SettingsViewController#refresh.")
+        Bridge.fetchLatest { success in }
+    }
+    
+    @IBAction func help(_ sender: Any) {
+        let url = URL(string: "https://www.branta.pro/docs")!
+        NSWorkspace.shared.open(url)
+    }
+}
+
+extension SettingsViewController: BridgeObserver {
+    func bridgeDidFetch(content: String) {
+        lastSyncLabel.stringValue = content
+    }
+}
+
+extension SettingsViewController {
     private
     
     func setFor(s: NSSwitch, key: String) {

@@ -50,7 +50,7 @@ let DEFAULT_SCAN_CADENCE_WORDING    = "30 Seconds"
 let SHOW_IN_DOCK                    = "showInDock"
 
 let XPUBS                           = "xpubs"
-
+let LAST_SYNC                       = "lastSync"
 
 let PREFS_KEY = "Branta_Prefs"
 
