@@ -89,8 +89,8 @@ extension Verify {
                 // We can let the user decide how noisy Branta is.
                 if alreadyWarned[wallet.fullWalletName] == false && !appDelegate!.foreground {
                     appDelegate?.notificationManager?.showNotification(
-                        title: "Could not verify \(name)",
-                        body: "",
+                        title: "No Match Found For \(name)",
+                        body: "This could be for a number of reasons. Read more.",
                         key: NOTIFY_UPON_STATUS_CHANGE
                     )
                     alreadyWarned[wallet.fullWalletName] = true

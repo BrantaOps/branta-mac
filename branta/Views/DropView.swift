@@ -105,8 +105,13 @@ class DropView: NSView {
             alert.informativeText = "Branta matched the authors PGP-verified checksum."
         }
         else {
-            alert.messageText   = "Could Not Verify ⚠"
-            alert.informativeText = "The file did not match any checksums known to Branta."
+            alert.messageText   = "Could Not Verify"
+            alert.informativeText =
+            """
+The file did not match any checksums known to Branta. Read more:
+
+https://www.branta.pro/docs#todo
+"""
         }
         
         alert.beginSheetModal(for: window!)
