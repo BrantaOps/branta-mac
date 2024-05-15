@@ -44,13 +44,13 @@ class Foreground: BackgroundAutomation {
         if checkStatus(wallet: app) {
             appDelegate?.notificationManager?.showNotification(
                 title: "\(app) Verified.",
-                body: "Safe to proceed.",
+                body: "",
                 key: NOTIFY_UPON_LAUNCH
             )
         } else {
             appDelegate?.notificationManager?.showNotification(
-                title: "\(app) Unverified.",
-                body: "Check Branta for details.",
+                title: "\(app) - No Match Found",
+                body: "This could be for a number of reasons. Read more.",
                 key: NOTIFY_UPON_LAUNCH
             )
         }
