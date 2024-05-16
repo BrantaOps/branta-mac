@@ -12,6 +12,8 @@ class Bridge {
     
     // API ENDPOINTS
     private static let API_URL                      = "https://api.branta.pro/"
+    // Default Rails IP/PORT for local api testing.
+    // private static let API_URL                   = "http://127.0.0.1:3000/"
     private static let INSTALLER_HASHES_ENDPOINT    = "v1/installer_hashes"
     private static let RUNTIME_HASHES_ENDPOINT      = "v1/checksums"
     
@@ -23,8 +25,14 @@ class Bridge {
     private static var installerHashes:             InstallerHashType?
     
     static func fetchLatest(completion: @escaping (Bool) -> Void) {
+        // Loaded, not necessarily updated.
         var installerSuccess = false
         var runtimeSuccess = false
+        
+        // Updated.
+        var installersResynced = false
+        var runtimeResynced = false
+        
         
         let group = DispatchGroup()
         
@@ -32,6 +40,7 @@ class Bridge {
         fetchLatestInstallerHashes { success in
             if success {
                 BrantaLogger.log(s: "Successfully fetched installer hashes.")
+                installersResynced = true
             } else {
                 installerHashes = localInstallerHashes()
                 BrantaLogger.log(s: "Could not fetch installer hashes; falling back to local data.")
@@ -44,6 +53,7 @@ class Bridge {
         fetchLatestRuntimeHashes { success in
             if success {
                 BrantaLogger.log(s: "Succesfully fetched runtime hashes.")
+                runtimeResynced = true
             } else {
                 runtimeHashes = localRuntimeHashes()
                 BrantaLogger.log(s: "Could not fetch runtime hashes; falling back to local data.")
@@ -53,7 +63,12 @@ class Bridge {
         }
         
         group.notify(queue: .main) {
-            notifyObservers()
+            // Only update last sync time if servers were hit.
+            if (installersResynced && runtimeResynced) {
+                notifyObservers()
+            }
+            
+            // Completion means any hashes were loaded, whether current or not.
             completion(installerSuccess && runtimeSuccess)
         }
     }
