@@ -84,6 +84,11 @@ class BrantaViewController: NSViewController {
         }
     }
     
+    @IBAction func help(_ sender: Any) {
+        let url = URL(string: "https://www.branta.pro/docs")!
+        NSWorkspace.shared.open(url)
+    }
+    
     @objc func showDetails(sender: NSClickGestureRecognizer) {
         
         if let clickedTextField = sender.view as? NSTextField {
