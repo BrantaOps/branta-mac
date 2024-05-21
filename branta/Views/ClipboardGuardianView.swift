@@ -22,7 +22,7 @@ class ClipboardGuardianView: NSView {
         
         contentsLabel = NSTextField(labelWithString: "")
         contentsLabel.alignment = .center
-        contentsLabel.textColor = .white
+        contentsLabel.textColor = NSColor(hex: GRAY_FONT)
         contentsLabel.translatesAutoresizingMaskIntoConstraints = false
         contentsLabel.font = NSFont(name: FONT, size: TABLE_FONT - 3)
 
