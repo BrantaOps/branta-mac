@@ -17,7 +17,7 @@ let USE_SHORT_VERSION_PATH: [String] = [] // // Blockstream used to use this.
 typealias RuntimeHashType       = [String: [String:String]]
 typealias InstallerHashType     = [String:String]
 
-let API_CADENCE = 30.0
+let API_CADENCE = 1800.00
 
 // URLS
 
