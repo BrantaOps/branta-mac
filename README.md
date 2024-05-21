@@ -18,7 +18,6 @@
 
 #### Supported Wallets
 - ⚡️ Sparrow
-- More coming soon...
 
 ## Installing
 
