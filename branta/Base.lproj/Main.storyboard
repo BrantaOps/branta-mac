@@ -748,11 +748,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="8Dp-CS-tBS">
-                                                                    <rect key="frame" x="8" y="0.0" width="265" height="30"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="266" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
-                                                                            <rect key="frame" x="0.0" y="7" width="265" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="7" width="266" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="blah blah blah" id="Jay-Mb-UVI">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -780,7 +780,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="oE5-nP-ilZ">
-                                                                    <rect key="frame" x="290" y="0.0" width="173" height="30"/>
+                                                                    <rect key="frame" x="290.5" y="0.0" width="173" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
@@ -812,7 +812,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="C2p-dZ-kSL">
-                                                                    <rect key="frame" x="480" y="0.0" width="273" height="30"/>
+                                                                    <rect key="frame" x="480.5" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
@@ -858,14 +858,14 @@
                                     <constraint firstItem="7tX-Gd-jCG" firstAttribute="centerY" secondItem="3dG-rX-kRE" secondAttribute="centerY" id="pIg-pn-3pV"/>
                                 </constraints>
                             </customView>
-                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-7S-pcq">
-                                <rect key="frame" x="369" y="11" width="25" height="25"/>
-                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="68b-lW-Bkn">
+                            <button horizontalCompressionResistancePriority="500" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="Bmh-7S-pcq">
+                                <rect key="frame" x="364" y="15" width="36" height="20"/>
+                                <buttonCell key="cell" type="smallSquare" title="Help" bezelStyle="smallSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="68b-lW-Bkn">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="15" name="Avenir-Book"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="M4r-hz-0UN" kind="popover" popoverAnchorView="Bmh-7S-pcq" popoverBehavior="t" preferredEdge="maxY" id="YSo-f2-0Mf"/>
+                                    <action selector="help:" target="Il1-c8-cba" id="lRo-MC-tRI"/>
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="zbK-gp-Ps7" customClass="DropView" customModule="Branta" customModuleProvider="target">
@@ -922,14 +922,14 @@
                             <constraint firstItem="IA0-be-bwR" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="Dsu-de-1mR"/>
                             <constraint firstItem="q2p-Rf-egX" firstAttribute="top" secondItem="f7n-2h-iou" secondAttribute="bottom" constant="35" id="JTP-pc-xs1"/>
                             <constraint firstItem="zbK-gp-Ps7" firstAttribute="top" secondItem="q2p-Rf-egX" secondAttribute="bottom" constant="28" id="Mnb-ow-bqI"/>
+                            <constraint firstAttribute="bottom" secondItem="Bmh-7S-pcq" secondAttribute="bottom" constant="15" id="Oc5-pr-d8D"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="baseline" secondItem="IA0-be-bwR" secondAttribute="firstBaseline" constant="-31" id="Z7l-ZG-DHA"/>
                             <constraint firstItem="zbK-gp-Ps7" firstAttribute="centerX" secondItem="tzc-5B-fCa" secondAttribute="centerX" id="dBW-Dc-sj3"/>
                             <constraint firstItem="Wcb-un-MKx" firstAttribute="centerX" secondItem="IA0-be-bwR" secondAttribute="centerX" id="gyT-RX-Nex"/>
-                            <constraint firstAttribute="bottom" secondItem="Bmh-7S-pcq" secondAttribute="bottom" constant="15" id="hOS-DH-VgO"/>
                             <constraint firstItem="q2p-Rf-egX" firstAttribute="width" secondItem="tzc-5B-fCa" secondAttribute="width" multiplier="0.75" id="jKA-Xb-v1G"/>
+                            <constraint firstItem="Bmh-7S-pcq" firstAttribute="top" secondItem="zbK-gp-Ps7" secondAttribute="bottom" constant="10" id="jOM-Ai-fsd"/>
                             <constraint firstItem="zbK-gp-Ps7" firstAttribute="width" secondItem="tzc-5B-fCa" secondAttribute="width" multiplier="0.95" id="pyp-Oe-APd"/>
                             <constraint firstItem="3dG-rX-kRE" firstAttribute="width" secondItem="tzc-5B-fCa" secondAttribute="width" id="sqC-aa-gy4"/>
-                            <constraint firstItem="Bmh-7S-pcq" firstAttribute="top" secondItem="zbK-gp-Ps7" secondAttribute="bottom" constant="10" id="tS5-Eu-Euy"/>
                             <constraint firstItem="IA0-be-bwR" firstAttribute="top" secondItem="tzc-5B-fCa" secondAttribute="top" id="xhS-cq-16w"/>
                         </constraints>
                     </view>
@@ -943,77 +943,6 @@
                 </viewController>
             </objects>
             <point key="canvasLocation" x="51.5" y="929.5"/>
-        </scene>
-        <!--Help View Controller-->
-        <scene sceneID="mJq-rN-ude">
-            <objects>
-                <customObject id="EEW-V6-kgb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController showSeguePresentationStyle="single" id="M4r-hz-0UN" customClass="HelpViewController" customModule="Branta" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" appearanceType="darkAqua" id="kei-Ce-OKF">
-                        <rect key="frame" x="0.0" y="0.0" width="715" height="439"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mN5-Fi-zTl">
-                                <rect key="frame" x="189" y="364" width="338" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="338" id="rxd-A1-jgk"/>
-                                    <constraint firstAttribute="height" constant="75" id="u5N-GO-aKJ"/>
-                                </constraints>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="goldwhitecropped" id="mqJ-ea-1Q6"/>
-                            </imageView>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANG-lM-4Mk">
-                                <rect key="frame" x="169" y="275" width="379" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="How does Branta verify my wallets?" id="JiV-qn-emf">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7eA-l6-MYJ">
-                                <rect key="frame" x="117" y="190" width="481" height="101"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" alignment="center" id="kam-pB-fl9">
-                                    <font key="font" metaFont="system"/>
-                                    <string key="title">Branta runs the SHA-256 algorithm on your wallet, then matches against the PGP verified SHA-256. If the hashes match, its very likely you have an authentic wallet. If they do not match, you should consider reinstalling the wallet from the developers website.</string>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwN-Th-cnE">
-                                <rect key="frame" x="117" y="20" width="481" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" alignment="center" id="4Ym-9L-UNn">
-                                    <font key="font" metaFont="system"/>
-                                    <string key="title">Unless you are intentionally using a custom install path, or running a plain executable, this is a bad sign. Branta-supported wallets will appear by default. Consider reinstalling the wallet from the developers website or reaching out on NOSTR or X for help. </string>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-a4-qXq">
-                                <rect key="frame" x="77" y="93" width="561" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Don't see your wallet?" id="fvQ-ek-gCg">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="mN5-Fi-zTl" firstAttribute="top" secondItem="kei-Ce-OKF" secondAttribute="top" id="Ke1-wJ-Hu7"/>
-                            <constraint firstItem="mN5-Fi-zTl" firstAttribute="centerX" secondItem="kei-Ce-OKF" secondAttribute="centerX" id="hhk-1H-hDE"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="a1" destination="7eA-l6-MYJ" id="ACx-xg-jU3"/>
-                        <outlet property="a2" destination="HwN-Th-cnE" id="s8N-58-Qav"/>
-                        <outlet property="q1" destination="ANG-lM-4Mk" id="7BG-cA-eRh"/>
-                        <outlet property="q2" destination="jCG-a4-qXq" id="0td-0B-5cY"/>
-                    </connections>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="839.5" y="794.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="8rM-ej-CfU">
@@ -1337,7 +1266,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="822.5" y="53"/>
+            <point key="canvasLocation" x="849" y="998"/>
         </scene>
         <!--Network View Controller-->
         <scene sceneID="H8j-wd-sLS">
@@ -1385,11 +1314,11 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView identifier="foo" id="6ez-Zm-3U6">
-                                                                    <rect key="frame" x="8" y="0.0" width="364" height="58"/>
+                                                                    <rect key="frame" x="8" y="0.0" width="365" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
-                                                                            <rect key="frame" x="0.0" y="21" width="364" height="16"/>
+                                                                            <rect key="frame" x="0.0" y="21" width="365" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
                                                                                 <font key="font" usesAppearanceFont="YES"/>
@@ -1417,7 +1346,7 @@
                                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                             <prototypeCellViews>
                                                                 <tableCellView id="X02-cg-kP0">
-                                                                    <rect key="frame" x="389" y="0.0" width="362" height="58"/>
+                                                                    <rect key="frame" x="389.5" y="0.0" width="362" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">
