@@ -174,6 +174,9 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
             if tableData[row].brantaSignatureMatch {
                 textField.stringValue   = "\(name): Verified ✓"
             }
+            else if tableData[row].notFound {
+                textField.stringValue   = "\(name): Not Found"
+            }
             else {
                 textField.stringValue   = "\(name): No Match Found"
             }

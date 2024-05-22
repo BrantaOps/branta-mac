@@ -123,11 +123,29 @@ extension Verify {
                         installPath: installPath,
                         venderVersion: venderVersion,
                         directorySHA256: directorySHA256,
-                        brantaSignatureMatch: false
+                        brantaSignatureMatch: false,
+                        notFound: false
                     )
                     ret.append(crawledWallet)
                 }
             }
+            
+            // Add "Not Found" Row when Sparrow isn't installed.
+            for target in TARGETS {
+                
+                if !(ret.contains { $0.fullWalletName == target }) {
+                    let crawledWallet = CrawledWallet(
+                        fullWalletName: target,
+                        installPath: "",
+                        venderVersion: "",
+                        directorySHA256: "",
+                        brantaSignatureMatch: false,
+                        notFound: true
+                    )
+                    ret.append(crawledWallet)
+                }
+            }
+            
             return ret
         } catch {
             BrantaLogger.log(s: "Verify Automation: Caught an error in crawl().")
