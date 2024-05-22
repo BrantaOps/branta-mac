@@ -88,12 +88,16 @@ extension Verify {
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
                 // We can let the user decide how noisy Branta is.
                 if alreadyWarned[wallet.fullWalletName] == false && !appDelegate!.foreground {
-                    appDelegate?.notificationManager?.showNotification(
-                        title: "No Match Found For \(name)",
-                        body: "This could be for a number of reasons. Read more.",
-                        key: NOTIFY_UPON_STATUS_CHANGE
-                    )
-                    alreadyWarned[wallet.fullWalletName] = true
+                    
+                    // Don't alert user for wallets they don't have installed.
+                    if !(wallet.notFound) {
+                        appDelegate?.notificationManager?.showNotification(
+                            title: "No Match Found For \(name)",
+                            body: "This could be for a number of reasons. Read more.",
+                            key: NOTIFY_UPON_STATUS_CHANGE
+                        )
+                        alreadyWarned[wallet.fullWalletName] = true
+                    }
                 }
             }
         }
@@ -134,6 +138,7 @@ extension Verify {
             for target in TARGETS {
                 
                 if !(ret.contains { $0.fullWalletName == target }) {
+                    // Inject blank crawledWallet
                     let crawledWallet = CrawledWallet(
                         fullWalletName: target,
                         installPath: "",

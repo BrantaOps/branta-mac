@@ -105,7 +105,9 @@ class BrantaViewController: NSViewController {
             alert.alertStyle = .informational
             alert.addButton(withTitle: "OK")
             
-            if wallet.brantaSignatureMatch {
+            if wallet.notFound {
+                alert.informativeText = "\(name) not found."
+            } else if wallet.brantaSignatureMatch {
                 alert.informativeText = "Branta verified the validity of \(name)."
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
                 alert.informativeText =
