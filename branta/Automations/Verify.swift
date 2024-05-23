@@ -88,12 +88,16 @@ extension Verify {
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
                 // We can let the user decide how noisy Branta is.
                 if alreadyWarned[wallet.fullWalletName] == false && !appDelegate!.foreground {
-                    appDelegate?.notificationManager?.showNotification(
-                        title: "No Match Found For \(name)",
-                        body: "This could be for a number of reasons. Read more.",
-                        key: NOTIFY_UPON_STATUS_CHANGE
-                    )
-                    alreadyWarned[wallet.fullWalletName] = true
+                    
+                    // Don't alert user for wallets they don't have installed.
+                    if !(wallet.notFound) {
+                        appDelegate?.notificationManager?.showNotification(
+                            title: "No Match Found For \(name)",
+                            body: "This could be for a number of reasons. Read more.",
+                            key: NOTIFY_UPON_STATUS_CHANGE
+                        )
+                        alreadyWarned[wallet.fullWalletName] = true
+                    }
                 }
             }
         }
@@ -123,11 +127,30 @@ extension Verify {
                         installPath: installPath,
                         venderVersion: venderVersion,
                         directorySHA256: directorySHA256,
-                        brantaSignatureMatch: false
+                        brantaSignatureMatch: false,
+                        notFound: false
                     )
                     ret.append(crawledWallet)
                 }
             }
+            
+            // Add "Not Found" Row when Sparrow isn't installed.
+            for target in TARGETS {
+                
+                if !(ret.contains { $0.fullWalletName == target }) {
+                    // Inject blank crawledWallet
+                    let crawledWallet = CrawledWallet(
+                        fullWalletName: target,
+                        installPath: "",
+                        venderVersion: "",
+                        directorySHA256: "",
+                        brantaSignatureMatch: false,
+                        notFound: true
+                    )
+                    ret.append(crawledWallet)
+                }
+            }
+            
             return ret
         } catch {
             BrantaLogger.log(s: "Verify Automation: Caught an error in crawl().")

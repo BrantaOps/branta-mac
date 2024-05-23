@@ -11,4 +11,5 @@ struct CrawledWallet: Equatable {
     var venderVersion: String
     var directorySHA256: String
     var brantaSignatureMatch: Bool
+    var notFound: Bool
 }
