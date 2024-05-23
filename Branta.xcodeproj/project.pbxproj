@@ -53,6 +53,7 @@
 		ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E98A2B0820F1005742BA /* Wallet.swift */; };
 		ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Foreground.swift */; };
 		ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97B84D2B9F46A3007DD2F5 /* Updater.swift */; };
+		ED98C2F62BFECDAC009E0D16 /* WalletStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */; };
 		ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */; };
 		ED9D53BE2BE724E50085CD96 /* InteractiveAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */; };
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
@@ -136,6 +137,7 @@
 		ED73E98A2B0820F1005742BA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		ED7B16B12B556A650003EFEB /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
 		ED97B84D2B9F46A3007DD2F5 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
+		ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletStatus.swift; sourceTree = "<group>"; };
 		ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAutomation.swift; sourceTree = "<group>"; };
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				ED45CC642BF2F64E00B4137E /* Subclasses */,
 				ED97B84D2B9F46A3007DD2F5 /* Updater.swift */,
 				ED3170942B826494003D77D4 /* VersionComp.swift */,
+				ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */,
 				ED332B2B2BD2B004000C0EE4 /* YAMLParser.swift */,
 				EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */,
 			);
@@ -483,7 +486,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -563,6 +566,7 @@
 				ED45CC662BF2F66D00B4137E /* TextFieldWithHover.swift in Sources */,
 				ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */,
 				EDD011842B6C56F00091CAAD /* Sha.swift in Sources */,
+				ED98C2F62BFECDAC009E0D16 /* WalletStatus.swift in Sources */,
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				EDE51F3F2BD3F943009D73DC /* YAMLSaver.swift in Sources */,
@@ -854,7 +858,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,
