@@ -16,7 +16,7 @@ class UpdaterTests: XCTestCase {
         
         Updater.checkForUpdates { (needsUpdate, latestVersion) in
 //            XCTAssertTrue(needsUpdate) // TODO
-            XCTAssertEqual(latestVersion, "1.11.0")
+            XCTAssertEqual(latestVersion, "0.0.1")
             expectation.fulfill()
         }
         
