@@ -91,9 +91,16 @@ extension Verify {
                     
                     // Don't alert user for wallets they don't have installed.
                     if !(wallet.notFound) {
+                        
+                        let localizedString = NSLocalizedString("NotificationNoMatch", comment: "")
+                        let titleString = String(format: localizedString, name)
+                        
+                        let bodyString = NSLocalizedString("NotificationNoMatchMessage", comment: "")
+                        
+                        
                         appDelegate?.notificationManager?.showNotification(
-                            title: "No Match Found For \(name)",
-                            body: "This could be for a number of reasons. Read more.",
+                            title: titleString,
+                            body: bodyString,
                             key: NOTIFY_UPON_STATUS_CHANGE
                         )
                         alreadyWarned[wallet.fullWalletName] = true

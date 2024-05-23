@@ -1,0 +1,265 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Help" : {
+
+    },
+    "MenuHelp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help"
+          }
+        }
+      }
+    },
+    "MenuSettings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "NotificationNoMatch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Match Found For %@"
+          }
+        }
+      }
+    },
+    "NotificationNoMatchMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This could be for a number of reasons. Read more."
+          }
+        }
+      }
+    },
+    "RowNoMatch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: No Match Found"
+          }
+        }
+      }
+    },
+    "RowNotFound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: Not Found"
+          }
+        }
+      }
+    },
+    "RowVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: Verified ✓"
+          }
+        }
+      }
+    },
+    "Settings" : {
+
+    },
+    "TableBrantaError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runtime Error"
+          }
+        }
+      }
+    },
+    "TableBrantaErrorMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An Exception was thrown during wallet verification."
+          }
+        }
+      }
+    },
+    "TableInstalling" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installing"
+          }
+        }
+      }
+    },
+    "TableInstallingMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branta will verify the wallet after installation completes."
+          }
+        }
+      }
+    },
+    "TableNotFound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Found"
+          }
+        }
+      }
+    },
+    "TableNotFoundMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ not found."
+          }
+        }
+      }
+    },
+    "TableNotVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Verified"
+          }
+        }
+      }
+    },
+    "TableNotVerifiedMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://www.branta.pro/docs#todo"
+          }
+        }
+      }
+    },
+    "TableVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verified"
+          }
+        }
+      }
+    },
+    "TableVerifiedMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branta verified the validity of %@."
+          }
+        }
+      }
+    },
+    "TableVersionNotSupported" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version Not Supported"
+          }
+        }
+      }
+    },
+    "TableVersionNotSupportedMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version not supported."
+          }
+        }
+      }
+    },
+    "TableVersionTooNew" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version Too New"
+          }
+        }
+      }
+    },
+    "TableVersionTooNewMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed version is too new. Try Refreshing the Hashes from Last Sync in the settings screen."
+          }
+        }
+      }
+    },
+    "TableVersionTooOld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version Too Old"
+          }
+        }
+      }
+    },
+    "TableVersionTooOldMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installed version is too old. Please update you wallet to the latest version."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

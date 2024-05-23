@@ -89,10 +89,10 @@ extension AppDelegate {
         let authItem = NSMenuItem(title: status, action: nil, keyEquivalent: "")
         menu.addItem(authItem)
         
-        let settingsItem = NSMenuItem(title: "Settings", action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
+        let settingsItem = NSMenuItem(title: NSLocalizedString("Settings", comment: ""), action: #selector(didTapSettings), keyEquivalent: KEY_SETTINGS)
         menu.addItem(settingsItem)
         
-        let helpItem = NSMenuItem(title: "Help", action: #selector(didTapHelp), keyEquivalent: KEY_HELP)
+        let helpItem = NSMenuItem(title: NSLocalizedString("Help", comment: ""), action: #selector(didTapHelp), keyEquivalent: KEY_HELP)
         menu.addItem(helpItem)
         
         Updater.checkForUpdates { updatesAvailable, tag in
