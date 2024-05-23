@@ -26,6 +26,28 @@
         }
       }
     },
+    "NotificationNoMatch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Match Found For %@"
+          }
+        }
+      }
+    },
+    "NotificationNoMatchMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This could be for a number of reasons. Read more."
+          }
+        }
+      }
+    },
     "RowNoMatch" : {
       "extractionState" : "manual",
       "localizations" : {
