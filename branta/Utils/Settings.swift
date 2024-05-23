@@ -57,6 +57,11 @@ class Settings {
         BrantaLogger.log(s: "Preferences.swift setting \(key):\(value)")
         prefHash[key] = value
         saveToDefaults()
+        
+        // Reset ongoing automations
+        if key == SCAN_CADENCE {
+            Verify.updateTimer()
+        }
     }
     
     private
