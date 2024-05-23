@@ -54,6 +54,7 @@
 		ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Foreground.swift */; };
 		ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97B84D2B9F46A3007DD2F5 /* Updater.swift */; };
 		ED98C2F62BFECDAC009E0D16 /* WalletStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */; };
+		ED98C2F82BFED04E009E0D16 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ED98C2F72BFED04E009E0D16 /* Localizable.xcstrings */; };
 		ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */; };
 		ED9D53BE2BE724E50085CD96 /* InteractiveAutomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */; };
 		EDB075DB2B2F5815002C45A0 /* ClipboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */; };
@@ -138,6 +139,7 @@
 		ED7B16B12B556A650003EFEB /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
 		ED97B84D2B9F46A3007DD2F5 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletStatus.swift; sourceTree = "<group>"; };
+		ED98C2F72BFED04E009E0D16 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		ED9B39B02B94C8AC00F0BA86 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		ED9D53BD2BE724E50085CD96 /* InteractiveAutomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAutomation.swift; sourceTree = "<group>"; };
 		EDB075DA2B2F5815002C45A0 /* ClipboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipboardTests.swift; sourceTree = "<group>"; };
@@ -379,6 +381,7 @@
 				ED34ACFF2B1800AF0038CAC5 /* Automations */,
 				ED73E9612B07D686005742BA /* branta.entitlements */,
 				ED26BA4F2BD190D100F42CD6 /* Data */,
+				ED98C2F72BFED04E009E0D16 /* Localizable.xcstrings */,
 				ED73E95E2B07D686005742BA /* Main.storyboard */,
 				ED2C6EF42B0BAF9600EC577C /* Utils */,
 				ED34AD022B182B1C0038CAC5 /* ViewControllers */,
@@ -516,6 +519,7 @@
 			files = (
 				ED26BA512BD19A1000F42CD6 /* Mac_CheckSums.yaml in Resources */,
 				ED73E95D2B07D686005742BA /* Assets.xcassets in Resources */,
+				ED98C2F82BFED04E009E0D16 /* Localizable.xcstrings in Resources */,
 				ED6B0F952B0F8E5700715283 /* bip39wordlist.txt in Resources */,
 				ED73E9602B07D686005742BA /* Main.storyboard in Resources */,
 				ED1A3C8D2BC4D9DF00895C5A /* InstallerHashes.yaml in Resources */,

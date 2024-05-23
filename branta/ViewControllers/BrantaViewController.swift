@@ -110,12 +110,7 @@ class BrantaViewController: NSViewController {
             } else if wallet.brantaSignatureMatch {
                 alert.informativeText = "Branta verified the validity of \(name)."
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
-                alert.informativeText =
-"""
-No Match Found. This could be for a number of reasons. Read more below.
-
-https://www.branta.pro/docs#todo
-"""
+                alert.informativeText = NSLocalizedString("NotVerifiedMessage", comment: "")
             } else {
                 var older = true
                 var newer = true
