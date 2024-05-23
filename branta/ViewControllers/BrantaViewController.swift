@@ -106,9 +106,11 @@ class BrantaViewController: NSViewController {
             alert.addButton(withTitle: "OK")
             
             if wallet.notFound {
-                alert.informativeText = NSLocalizedString("TableNotFoundMessage", comment: "")
+                let localizedString = NSLocalizedString("TableNotFoundMessage", comment: "")
+                alert.informativeText = String(format: localizedString, name)
             } else if wallet.brantaSignatureMatch {
-                alert.informativeText = NSLocalizedString("TableVerifiedMessage", comment: "")
+                let localizedString = NSLocalizedString("TableVerifiedMessage", comment: "")
+                alert.informativeText = String(format: localizedString, name)
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
                 alert.informativeText = NSLocalizedString("TableNotVerifiedMessage", comment: "")
             } else {
@@ -168,7 +170,7 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         let name = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
         
         if columnNumber == COLUMNS["WALLET_NAME"] {
-            if tableData[row].brantaSignatureMatch {                
+            if tableData[row].brantaSignatureMatch {
                 let localizedString = NSLocalizedString("RowVerified", comment: "")
                 textField.stringValue = String(format: localizedString, name)
             }

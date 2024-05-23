@@ -123,7 +123,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Branta could not locate {0} installation._NL_Either the wallet is not installed, or is installed in a different directory unknown to Branta."
+            "value" : "%@ not found."
           }
         }
       }
@@ -167,7 +167,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Branta verified {0}."
+            "value" : "Branta verified the validity of %@."
           }
         }
       }
