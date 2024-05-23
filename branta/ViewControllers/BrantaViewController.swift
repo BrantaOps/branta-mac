@@ -106,11 +106,11 @@ class BrantaViewController: NSViewController {
             alert.addButton(withTitle: "OK")
             
             if wallet.notFound {
-                alert.informativeText = "\(name) not found."
+                alert.informativeText = NSLocalizedString("TableNotFoundMessage", comment: "")
             } else if wallet.brantaSignatureMatch {
-                alert.informativeText = "Branta verified the validity of \(name)."
+                alert.informativeText = NSLocalizedString("TableVerifiedMessage", comment: "")
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
-                alert.informativeText = NSLocalizedString("NotVerifiedMessage", comment: "")
+                alert.informativeText = NSLocalizedString("TableNotVerifiedMessage", comment: "")
             } else {
                 var older = true
                 var newer = true
@@ -128,13 +128,13 @@ class BrantaViewController: NSViewController {
                 }
                 
                 if newer {
-                    alert.informativeText = "A newer version of \(name) was detected than Branta knows about."
+                    alert.informativeText = NSLocalizedString("TableVersionTooNewMessage", comment: "")
                 }
                 else if older {
-                    alert.informativeText = "An outdated version of \(name) was detected. Branta can verify \(name) once you update the wallet."
+                    alert.informativeText = NSLocalizedString("TableVersionTooOldMessage", comment: "")
                 }
                 else {
-                    alert.informativeText = "An unknown version of \(name) was detected."
+                    alert.informativeText = NSLocalizedString("TableVersionNotSupportedMessage", comment: "")
                 }
             }
             
@@ -166,16 +166,19 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         textField.alignment = .center
         textField.font = NSFont(name: FONT, size: TABLE_FONT)
         let name = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
-         
+        
         if columnNumber == COLUMNS["WALLET_NAME"] {
-            if tableData[row].brantaSignatureMatch {
-                textField.stringValue   = "\(name): Verified ✓"
+            if tableData[row].brantaSignatureMatch {                
+                let localizedString = NSLocalizedString("RowVerified", comment: "")
+                textField.stringValue = String(format: localizedString, name)
             }
             else if tableData[row].notFound {
-                textField.stringValue   = "\(name): Not Found"
+                let localizedString = NSLocalizedString("RowNotFound", comment: "")
+                textField.stringValue = String(format: localizedString, name)
             }
             else {
-                textField.stringValue   = "\(name): No Match Found"
+                let localizedString = NSLocalizedString("RowNoMatch", comment: "")
+                textField.stringValue = String(format: localizedString, name)
             }
             
             let clickGesture            = NSClickGestureRecognizer(target: self, action: #selector(showDetails))

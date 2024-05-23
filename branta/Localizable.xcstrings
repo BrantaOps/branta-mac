@@ -1,29 +1,10 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "BrantaError" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Runtime Error"
-          }
-        }
-      }
-    },
-    "BrantaErrorMessage" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "An Exception was thrown during wallet verification."
-          }
-        }
-      }
-    },
     "Help" : {
+
+    },
+    "MenuHelp" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -34,73 +15,7 @@
         }
       }
     },
-    "Installing" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Installing"
-          }
-        }
-      }
-    },
-    "InstallingMessage" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Branta will verify the wallet after installation completes."
-          }
-        }
-      }
-    },
-    "NotFound" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not Found"
-          }
-        }
-      }
-    },
-    "NotFoundMessage" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Branta could not locate {0} installation._NL_Either the wallet is not installed, or is installed in a different directory unknown to Branta."
-          }
-        }
-      }
-    },
-    "NotVerified" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Not Verified"
-          }
-        }
-      }
-    },
-    "NotVerifiedMessage" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://www.branta.pro/docs#todo"
-          }
-        }
-      }
-    },
-    "Settings" : {
+    "MenuSettings" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -111,7 +26,131 @@
         }
       }
     },
-    "Verified" : {
+    "RowNoMatch" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: No Match Found"
+          }
+        }
+      }
+    },
+    "RowNotFound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: Not Found"
+          }
+        }
+      }
+    },
+    "RowVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@: Verified ✓"
+          }
+        }
+      }
+    },
+    "Settings" : {
+
+    },
+    "TableBrantaError" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runtime Error"
+          }
+        }
+      }
+    },
+    "TableBrantaErrorMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "An Exception was thrown during wallet verification."
+          }
+        }
+      }
+    },
+    "TableInstalling" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Installing"
+          }
+        }
+      }
+    },
+    "TableInstallingMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branta will verify the wallet after installation completes."
+          }
+        }
+      }
+    },
+    "TableNotFound" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Found"
+          }
+        }
+      }
+    },
+    "TableNotFoundMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branta could not locate {0} installation._NL_Either the wallet is not installed, or is installed in a different directory unknown to Branta."
+          }
+        }
+      }
+    },
+    "TableNotVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Verified"
+          }
+        }
+      }
+    },
+    "TableNotVerifiedMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://www.branta.pro/docs#todo"
+          }
+        }
+      }
+    },
+    "TableVerified" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -122,7 +161,7 @@
         }
       }
     },
-    "VerifiedMessage" : {
+    "TableVerifiedMessage" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -133,7 +172,7 @@
         }
       }
     },
-    "VersionNotSupported" : {
+    "TableVersionNotSupported" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -144,7 +183,7 @@
         }
       }
     },
-    "VersionNotSupportedMessage" : {
+    "TableVersionNotSupportedMessage" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -155,7 +194,7 @@
         }
       }
     },
-    "VersionTooNew" : {
+    "TableVersionTooNew" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -166,7 +205,7 @@
         }
       }
     },
-    "VersionTooNewMessage" : {
+    "TableVersionTooNewMessage" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -177,7 +216,7 @@
         }
       }
     },
-    "VersionTooOld" : {
+    "TableVersionTooOld" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
@@ -188,7 +227,7 @@
         }
       }
     },
-    "VersionTooOldMessage" : {
+    "TableVersionTooOldMessage" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
