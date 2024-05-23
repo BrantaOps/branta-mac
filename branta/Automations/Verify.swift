@@ -12,6 +12,7 @@ class Verify: BackgroundAutomation {
     
     private static var alreadyWarned = [Sparrow.name(): false]
     private static let appDelegate = NSApp.delegate as? AppDelegate
+    private static var timer: Timer?
     
     private static var crawledWallets: [CrawledWallet] = [] {
         didSet {
@@ -19,15 +20,23 @@ class Verify: BackgroundAutomation {
         }
     }
     
-    // TODO - update cadence without restart
     override class func run() {
-        let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
         
         Timer.scheduledTimer(withTimeInterval: API_CADENCE, repeats: true) { _ in
             Bridge.fetchLatest { _ in }
         }
         
-        Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
+        timer?.invalidate()
+        let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
+        timer = Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
+            verify()
+        }
+    }
+    
+    static func updateTimer() {
+        timer?.invalidate()
+        let cadence = Settings.readFromDefaults()[SCAN_CADENCE] as! Double
+        timer = Timer.scheduledTimer(withTimeInterval: cadence, repeats: true) { _ in
             verify()
         }
     }
