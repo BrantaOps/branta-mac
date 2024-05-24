@@ -1,8 +1,55 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "DragDropNotVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Could Not Verify"
+          }
+        }
+      }
+    },
+    "DragDropNotVerifiedMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The file did not match any checksums known to Branta. Read more:\n\nhttps://www.branta.pro/docs#todo"
+          }
+        }
+      }
+    },
+    "DragDropVerified" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verified ✓"
+          }
+        }
+      }
+    },
+    "DragDropVerifiedMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Branta matched the authors PGP-verified checksum."
+          }
+        }
+      }
+    },
     "Help" : {
 
+    },
+    "Key" : {
+      "extractionState" : "manual"
     },
     "MenuHelp" : {
       "extractionState" : "manual",
@@ -167,7 +214,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://www.branta.pro/docs#todo"
+            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://www.branta.pro/docs"
           }
         }
       }

@@ -101,17 +101,12 @@ class DropView: NSView {
         let match = Installer.trigger(arg: path) as! Bool
         
         if match {
-            alert.messageText   = "Verified ✓"
-            alert.informativeText = "Branta matched the authors PGP-verified checksum."
+            alert.messageText   = NSLocalizedString("DragDropVerified", comment: "")
+            alert.informativeText = NSLocalizedString("DragDropVerifiedMessage", comment: "")
         }
         else {
-            alert.messageText   = "Could Not Verify"
-            alert.informativeText =
-            """
-The file did not match any checksums known to Branta. Read more:
-
-https://www.branta.pro/docs#todo
-"""
+            alert.messageText   = NSLocalizedString("DragDropNotVerified", comment: "")
+            alert.informativeText = NSLocalizedString("DragDropNotVerifiedMessage", comment: "")
         }
         
         alert.beginSheetModal(for: window!)
