@@ -133,7 +133,8 @@ class BrantaViewController: NSViewController {
                     alert.informativeText = NSLocalizedString("TableVersionTooNewMessage", comment: "")
                 }
                 else if older {
-                    alert.informativeText = NSLocalizedString("TableVersionTooOldMessage", comment: "")
+                    let localizedString = NSLocalizedString("TableVersionTooOldMessage", comment: "")
+                    alert.informativeText = String(format: localizedString, name, name)
                 }
                 else {
                     alert.informativeText = NSLocalizedString("TableVersionNotSupportedMessage", comment: "")
