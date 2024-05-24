@@ -95,6 +95,50 @@
         }
       }
     },
+    "NotificationTooNew" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "blah"
+          }
+        }
+      }
+    },
+    "NotificationTooNewMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "foo"
+          }
+        }
+      }
+    },
+    "NotificationTooOld" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "old"
+          }
+        }
+      }
+    },
+    "NotificationTooOldMessage" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "oldmsg"
+          }
+        }
+      }
+    },
     "RowNoMatch" : {
       "extractionState" : "manual",
       "localizations" : {
