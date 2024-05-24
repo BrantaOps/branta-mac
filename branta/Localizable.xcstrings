@@ -302,7 +302,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Installed version is too old. Please update you wallet to the latest version."
+            "value" : "An outdated version of %@ was detected. Branta can verify %@ once you update the wallet."
           }
         }
       }

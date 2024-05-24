@@ -97,15 +97,13 @@ extension Verify {
                 // Rudimentary.... we only alert user once per app start up that their wallet is not verified.
                 // We can let the user decide how noisy Branta is.
                 if alreadyWarned[wallet.fullWalletName] == false && !appDelegate!.foreground {
-                    
                     // Don't alert user for wallets they don't have installed.
                     if !(wallet.notFound) {
                         
+                        // TODO - out of date status.
                         let localizedString = NSLocalizedString("NotificationNoMatch", comment: "")
                         let titleString = String(format: localizedString, name)
-                        
                         let bodyString = NSLocalizedString("NotificationNoMatchMessage", comment: "")
-                        
                         
                         appDelegate?.notificationManager?.showNotification(
                             title: titleString,
