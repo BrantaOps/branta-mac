@@ -115,9 +115,9 @@ extension Verify {
                             localizedString = NSLocalizedString("TableVersionTooOldMessage", comment: "")
                             bodyString = String(format: localizedString, name, name)
                         } else {
-                            localizedString = NSLocalizedString("TableNoMatch", comment: "")
+                            localizedString = NSLocalizedString("NotificationNoMatch", comment: "")
                             titleString = String(format: localizedString, name)
-                            bodyString = NSLocalizedString("TableNoMatchMessage", comment: "")
+                            bodyString = NSLocalizedString("NotificationNoMatchMessage", comment: "")
                         }
                         
                         // TODO - singleton queue for notifications. This should not be a one time alert.
