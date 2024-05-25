@@ -100,17 +100,34 @@ extension Verify {
                     // Don't alert user for wallets they don't have installed.
                     if !(wallet.notFound) {
                         
-                        // TODO - out of date status.
-                        let localizedString = NSLocalizedString("NotificationNoMatch", comment: "")
-                        let titleString = String(format: localizedString, name)
-                        let bodyString = NSLocalizedString("NotificationNoMatchMessage", comment: "")
+                        var localizedString = ""
+                        var titleString = ""
+                        var bodyString = ""
                         
+                        if wallet.tooNew {
+                            // Reuse Table string.
+                            titleString = NSLocalizedString("TableVersionTooNew", comment: "")
+                            localizedString = NSLocalizedString("TableVersionTooNewMessage", comment: "")
+                            bodyString = String(format: localizedString, name, name)
+                        } else if wallet.tooOld {
+                            // Reuse Table string.
+                            titleString = NSLocalizedString("TableVersionTooOld", comment: "")
+                            localizedString = NSLocalizedString("TableVersionTooOldMessage", comment: "")
+                            bodyString = String(format: localizedString, name, name)
+                        } else {
+                            localizedString = NSLocalizedString("NotificationNoMatch", comment: "")
+                            titleString = String(format: localizedString, name)
+                            bodyString = NSLocalizedString("NotificationNoMatchMessage", comment: "")
+                        }
+                        
+                        // TODO - singleton queue for notifications. This should not be a one time alert.
                         appDelegate?.notificationManager?.showNotification(
                             title: titleString,
                             body: bodyString,
                             key: NOTIFY_UPON_STATUS_CHANGE
                         )
                         alreadyWarned[wallet.fullWalletName] = true
+
                     }
                 }
             }
@@ -135,14 +152,35 @@ extension Verify {
                     let installPath         = "/Applications/" + item + "/Contents/MacOS/" + String(item.dropLast(4))
                     let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
                     let directorySHA256     = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
+                    let hashes              = Bridge.getRuntimeHashes()[item]!
+                    let versions            = hashes.keys
+                    var older               = true
+                    var newer               = true
+                    var comparisonResult: ComparisonResult
                     
+                    for brantaVersion in versions {
+                        do {
+                            comparisonResult = try VersionComp.compare(venderVersion, brantaVersion)
+                            if comparisonResult == .orderedAscending { newer = false }
+                            else if comparisonResult == .orderedDescending { older = false }
+                            else if comparisonResult == .orderedSame {
+                                newer = false
+                                older = false
+                            }
+                        } catch {
+                            BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
+                        }
+                    }
+                                        
                     let crawledWallet = CrawledWallet(
                         fullWalletName: item,
                         installPath: installPath,
                         venderVersion: venderVersion,
                         directorySHA256: directorySHA256,
                         brantaSignatureMatch: false,
-                        notFound: false
+                        notFound: false,
+                        tooNew: newer,
+                        tooOld: older
                     )
                     ret.append(crawledWallet)
                 }
@@ -159,7 +197,9 @@ extension Verify {
                         venderVersion: "",
                         directorySHA256: "",
                         brantaSignatureMatch: false,
-                        notFound: true
+                        notFound: true,
+                        tooNew: false, // TODO
+                        tooOld: false // TODO
                     )
                     ret.append(crawledWallet)
                 }

@@ -99,7 +99,6 @@ class BrantaViewController: NSViewController {
             let version         = wallet.venderVersion
             let nameKey         = wallet.fullWalletName
             let hashes          = Bridge.getRuntimeHashes()[nameKey]!
-            let versions        = hashes.keys
             
             alert.messageText   = "\(name) \(version)"
             alert.alertStyle = .informational
@@ -114,25 +113,10 @@ class BrantaViewController: NSViewController {
             } else if !wallet.brantaSignatureMatch && hashes[version] != nil {
                 alert.informativeText = NSLocalizedString("TableNotVerifiedMessage", comment: "")
             } else {
-                var older = true
-                var newer = true
-                var comparisonResult: ComparisonResult
-            
-                // Pass through. All versions will be older OR newer.
-                for brantaVersion in versions {
-                    do {
-                        comparisonResult = try VersionComp.compare(version, brantaVersion)
-                        if comparisonResult == .orderedAscending { newer = false }
-                        else if comparisonResult == .orderedDescending { older = false }
-                    } catch {
-                        BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
-                    }
-                }
-                
-                if newer {
+                if wallet.tooNew {
                     alert.informativeText = NSLocalizedString("TableVersionTooNewMessage", comment: "")
                 }
-                else if older {
+                else if wallet.tooOld {
                     let localizedString = NSLocalizedString("TableVersionTooOldMessage", comment: "")
                     alert.informativeText = String(format: localizedString, name, name)
                 }
@@ -171,6 +155,7 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
         let name = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
         
         if columnNumber == COLUMNS["WALLET_NAME"] {
+            // TODO - this should show "Out of Date" without requiring clicks.
             if tableData[row].brantaSignatureMatch {
                 let localizedString = NSLocalizedString("RowVerified", comment: "")
                 textField.stringValue = String(format: localizedString, name)

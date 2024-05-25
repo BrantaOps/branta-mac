@@ -29,7 +29,9 @@ class VerifyObserverTests: XCTestCase {
                 venderVersion: "venderVersion1",
                 directorySHA256: "directorySHA2561",
                 brantaSignatureMatch: true,
-                notFound: false
+                notFound: false,
+                tooNew: false,
+                tooOld: false
             ),
             CrawledWallet(
                 fullWalletName: "fullWalletName2",
@@ -37,7 +39,9 @@ class VerifyObserverTests: XCTestCase {
                 venderVersion: "venderVersion2",
                 directorySHA256: "directorySHA2562",
                 brantaSignatureMatch: false,
-                notFound: false
+                notFound: false,
+                tooNew: false,
+                tooOld: false
             )
         ]
         mockObserver.verifyDidChange(newResults: results)
