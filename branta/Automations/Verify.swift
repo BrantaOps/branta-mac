@@ -163,6 +163,10 @@ extension Verify {
                             comparisonResult = try VersionComp.compare(venderVersion, brantaVersion)
                             if comparisonResult == .orderedAscending { newer = false }
                             else if comparisonResult == .orderedDescending { older = false }
+                            else if comparisonResult == .orderedSame {
+                                newer = false
+                                older = false
+                            }
                         } catch {
                             BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
                         }
