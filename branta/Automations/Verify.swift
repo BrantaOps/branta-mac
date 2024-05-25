@@ -105,11 +105,13 @@ extension Verify {
                         var bodyString = ""
                         
                         if wallet.tooNew {
-                            localizedString = NSLocalizedString("NotificationTooNew", comment: "")
-                            titleString = String(format: localizedString, name)
-                            bodyString = NSLocalizedString("NotificationTooNewMessage", comment: "")
+                            // Reuse Table string.
+                            titleString = NSLocalizedString("TableVersionTooNew", comment: "")
+                            localizedString = NSLocalizedString("TableVersionTooNewMessage", comment: "")
+                            bodyString = String(format: localizedString, name, name)
                         } else if wallet.tooOld {
-                            titleString = NSLocalizedString("TableVersionTooOld", comment: "") // Sparrow out of date
+                            // Reuse Table string.
+                            titleString = NSLocalizedString("TableVersionTooOld", comment: "")
                             localizedString = NSLocalizedString("TableVersionTooOldMessage", comment: "")
                             bodyString = String(format: localizedString, name, name)
                         } else {
@@ -117,6 +119,8 @@ extension Verify {
                             titleString = String(format: localizedString, name)
                             bodyString = NSLocalizedString("NotificationNoMatchMessage", comment: "")
                         }
+                        
+                        // TODO - singleton queue for notifications. This should not be a one time alert.
                         appDelegate?.notificationManager?.showNotification(
                             title: titleString,
                             body: bodyString,

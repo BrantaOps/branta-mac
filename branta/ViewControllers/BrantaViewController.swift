@@ -89,8 +89,6 @@ class BrantaViewController: NSViewController {
         NSWorkspace.shared.open(url)
     }
     
-    
-    // REFACTOR REQUIRED.... the CRAWLED WALLET SHOULD INTEGRATE TOO old or new
     @objc func showDetails(sender: NSClickGestureRecognizer) {
         
         if let clickedTextField = sender.view as? NSTextField {
@@ -101,7 +99,6 @@ class BrantaViewController: NSViewController {
             let version         = wallet.venderVersion
             let nameKey         = wallet.fullWalletName
             let hashes          = Bridge.getRuntimeHashes()[nameKey]!
-            let versions        = hashes.keys
             
             alert.messageText   = "\(name) \(version)"
             alert.alertStyle = .informational
