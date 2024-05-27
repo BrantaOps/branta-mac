@@ -11,9 +11,18 @@ import Foundation
 class BrantaAnalytics {
     
     class func start() {
-        let config: CountlyConfig = CountlyConfig()
-        config.appKey = "ccc4eb59a850e5f3bdf640b8d36284c3bce03f12"
-        config.host = "https://branta-0dc12e4ffb389.flex.countly.com"
-        Countly.sharedInstance().start(with: config)
+        
+        if let env = Env.loadEnv() {
+            if let apiKey = env["API_KEY"], let host = env["HOST"] {
+                // BrantaLogger.log(s: "API_KEY: \(apiKey)")
+                // BrantaLogger.log(s: "HOST: \(host)")
+                
+                let config: CountlyConfig = CountlyConfig()
+                config.appKey = apiKey
+                config.host = host
+                Countly.sharedInstance().start(with: config)
+
+            }
+        }
     }
 }
