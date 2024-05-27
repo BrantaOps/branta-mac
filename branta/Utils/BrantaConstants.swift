@@ -55,7 +55,7 @@ let LAST_SYNC                       = "lastSync"
 let PREFS_KEY = "Branta_Prefs"
 
 
-let CLIPBOARD_INTERVAL  = 1.0 // Seconds
+let CLIPBOARD_INTERVAL  = 0.5 // Seconds
 
 let SEED_WORDS_MIN = 10
 let SEED_WORDS_MAX = 26
