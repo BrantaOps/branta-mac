@@ -73,6 +73,7 @@
 		EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011872B6D80040091CAAD /* SettingsViewController.swift */; };
 		EDD65EA52BC22CF100531800 /* BrantaLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD65EA42BC22CF100531800 /* BrantaLogger.swift */; };
 		EDD65EA72BC231D000531800 /* BrantaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD65EA62BC231D000531800 /* BrantaConstants.swift */; };
+		EDD7E2AD2C0667E80025FB40 /* BitcoinCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7E2AC2C0667E80025FB40 /* BitcoinCore.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDE1BF992BE67A75004A210C /* ClipboardGuardianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */; };
 		EDE51F3F2BD3F943009D73DC /* YAMLSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */; };
@@ -159,6 +160,7 @@
 		EDD011872B6D80040091CAAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EDD65EA42BC22CF100531800 /* BrantaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaLogger.swift; sourceTree = "<group>"; };
 		EDD65EA62BC231D000531800 /* BrantaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaConstants.swift; sourceTree = "<group>"; };
+		EDD7E2AC2C0667E80025FB40 /* BitcoinCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCore.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardGuardianView.swift; sourceTree = "<group>"; };
 		EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAMLSaver.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 		ED73E9832B08207E005742BA /* Wallets */ = {
 			isa = PBXGroup;
 			children = (
+				EDD7E2AC2C0667E80025FB40 /* BitcoinCore.swift */,
 				ED73E9862B0820C9005742BA /* Sparrow.swift */,
 				ED73E98A2B0820F1005742BA /* Wallet.swift */,
 			);
@@ -495,7 +498,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */;
+			buildConfigurationList = ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -590,6 +593,7 @@
 				ED57437B2B351E990001956A /* BackgroundAutomation.swift in Sources */,
 				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
+				EDD7E2AD2C0667E80025FB40 /* BitcoinCore.swift in Sources */,
 				ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */,
 				ED9D53BE2BE724E50085CD96 /* InteractiveAutomation.swift in Sources */,
 			);
@@ -870,7 +874,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "Branta" */ = {
+		ED73E9502B07D684005742BA /* Build configuration list for PBXProject "branta" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED73E9782B07D686005742BA /* Debug */,

@@ -10,7 +10,10 @@ import Cocoa
 // TODO - this class needs clean up.
 class Verify: BackgroundAutomation {
     
-    private static var alreadyWarned = [Sparrow.name(): false]
+    private static var alreadyWarned = [
+        Sparrow.name(): false,
+        BitcoinCore.name(): false
+    ]
     private static let appDelegate = NSApp.delegate as? AppDelegate
     private static var timer: Timer?
     
