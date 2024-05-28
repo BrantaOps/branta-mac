@@ -10,7 +10,7 @@ import Foundation
 class BitcoinCore: Wallet {
     
     override class func runtimeName() -> String {
-        return "Bitcoin Core"
+        return "Bitcoin-Qt.app"
     }
     
     override class func name() -> String {

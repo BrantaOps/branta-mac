@@ -155,6 +155,7 @@ extension Verify {
                     let installPath         = "/Applications/" + item + "/Contents/MacOS/" + String(item.dropLast(4))
                     let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
                     let directorySHA256     = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
+                    
                     let hashes              = Bridge.getRuntimeHashes()[item]!
                     let versions            = hashes.keys
                     var older               = true
@@ -174,7 +175,7 @@ extension Verify {
                             BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
                         }
                     }
-                                        
+                                                            
                     let crawledWallet = CrawledWallet(
                         fullWalletName: item,
                         installPath: installPath,
