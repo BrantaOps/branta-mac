@@ -34,4 +34,15 @@ class Wallet: Equatable {
     class func localizedName() -> String {
         return name()
     }
+    
+    class func getCls(forStr: String) -> Wallet {
+        if forStr == Sparrow.name() {
+            return Sparrow()
+        }
+        else if forStr == BitcoinCore.name() {
+            return BitcoinCore()
+        }
+        
+        return Wallet()
+    }
 }

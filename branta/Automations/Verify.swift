@@ -79,13 +79,12 @@ extension Verify {
         for wallet in wallets {
             let name = wallet.fullWalletName
             var retItem = wallet
-            
+
             for kv in architectureSpecificHashes[name]! {
                 if kv.value == wallet.directorySHA256 {
                     retItem.brantaSignatureMatch = true
                 }
             }
-
             ret.append(retItem)
         }
                 
@@ -156,7 +155,6 @@ extension Verify {
                     let installPath         = "/Applications/" + item + "/Contents/MacOS/" + String(item.dropLast(4))
                     let venderVersion       = AppVersion.get(atPath: ("/Applications/" + item))
                     let directorySHA256     = Sha.sha256ForDirectory(atPath: "/Applications/" + item)
-                    
                     let hashes              = Bridge.getRuntimeHashes()[item]!
                     let versions            = hashes.keys
                     var older               = true
@@ -176,12 +174,9 @@ extension Verify {
                             BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
                         }
                     }
-                    
-                    // TODO
-                    var cls = BitcoinCore()
-                                                            
+
                     let crawledWallet = CrawledWallet(
-                        cls: cls,
+                        cls: Wallet.getCls(forStr: item),
                         fullWalletName: item,
                         installPath: installPath,
                         venderVersion: venderVersion,
@@ -195,7 +190,7 @@ extension Verify {
                 }
             }
             
-            // Add "Not Found" Row when Sparrow isn't installed.
+            // Add "Not Found" Row when Wallets aren't installed.
             for target in TARGETS {
                 
                 if !(ret.contains { $0.fullWalletName == target }) {
@@ -212,8 +207,8 @@ extension Verify {
                         directorySHA256: "",
                         brantaSignatureMatch: false,
                         notFound: true,
-                        tooNew: false, // TODO
-                        tooOld: false // TODO
+                        tooNew: false,
+                        tooOld: false
                     )
                     ret.append(crawledWallet)
                 }
