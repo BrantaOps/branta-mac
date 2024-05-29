@@ -24,6 +24,7 @@ class VerifyObserverTests: XCTestCase {
         let mockObserver = MockVerifyObserver()
         let results: [CrawledWallet] = [
             CrawledWallet(
+                cls: Wallet(),
                 fullWalletName: "fullWalletName1",
                 installPath: "installPath1",
                 venderVersion: "venderVersion1",
@@ -34,6 +35,7 @@ class VerifyObserverTests: XCTestCase {
                 tooOld: false
             ),
             CrawledWallet(
+                cls: Wallet(),
                 fullWalletName: "fullWalletName2",
                 installPath: "installPath2",
                 venderVersion: "venderVersion2",

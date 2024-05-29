@@ -1,4 +1,18 @@
+Bitcoin-Qt.app:
+  "27.0.0":
+    date: 2024-05-28 00:00:00.00
+    x86:
+      sha256: "0cf8814d0bb258845169c2d225be1747c1ae0ec7dcbb5fe1d4a4a791561d451c"
+    arm:
+      sha256: "3e13ab5824945c74f191b0f77bceabf64e6a698587f656c1354eb9c8b829a5f3"
+      
 Sparrow.app:
+  "1.9.1":
+    date: 2024-05-14 00:00:00.00
+    x86:
+      sha256: "58c8e22694d5105466875572936cf9679c053143e71b10c85d26c69a5c8ad64f"
+    arm:
+      sha256: "ef593f87b8c0717b7b5afd4df8402af498a031566c2d67fa9b0c0118fb7d7083"
   "1.9.0":
     date: 2024-04-26 00:00:00.00
     x86:

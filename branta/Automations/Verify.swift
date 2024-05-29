@@ -10,7 +10,10 @@ import Cocoa
 // TODO - this class needs clean up.
 class Verify: BackgroundAutomation {
     
-    private static var alreadyWarned = [Sparrow.name(): false]
+    private static var alreadyWarned = [
+        Sparrow.name(): false,
+        BitcoinCore.name(): false
+    ]
     private static let appDelegate = NSApp.delegate as? AppDelegate
     private static var timer: Timer?
     
@@ -171,8 +174,9 @@ extension Verify {
                             BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
                         }
                     }
-                                        
+
                     let crawledWallet = CrawledWallet(
+                        cls: Wallet.getCls(forStr: item),
                         fullWalletName: item,
                         installPath: installPath,
                         venderVersion: venderVersion,
@@ -186,20 +190,22 @@ extension Verify {
                 }
             }
             
-            // Add "Not Found" Row when Sparrow isn't installed.
+            // Add "Not Found" Row when Wallets aren't installed.
             for target in TARGETS {
                 
                 if !(ret.contains { $0.fullWalletName == target }) {
+                                        
                     // Inject blank crawledWallet
                     let crawledWallet = CrawledWallet(
+                        cls: Wallet(),
                         fullWalletName: target,
                         installPath: "",
                         venderVersion: "",
                         directorySHA256: "",
                         brantaSignatureMatch: false,
                         notFound: true,
-                        tooNew: false, // TODO
-                        tooOld: false // TODO
+                        tooNew: false,
+                        tooOld: false
                     )
                     ret.append(crawledWallet)
                 }

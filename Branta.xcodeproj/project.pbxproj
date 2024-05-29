@@ -73,6 +73,7 @@
 		EDD011882B6D80040091CAAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD011872B6D80040091CAAD /* SettingsViewController.swift */; };
 		EDD65EA52BC22CF100531800 /* BrantaLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD65EA42BC22CF100531800 /* BrantaLogger.swift */; };
 		EDD65EA72BC231D000531800 /* BrantaConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD65EA62BC231D000531800 /* BrantaConstants.swift */; };
+		EDD7E2AD2C0667E80025FB40 /* BitcoinCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD7E2AC2C0667E80025FB40 /* BitcoinCore.swift */; };
 		EDD915272B0C3C8000A288FE /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD915262B0C3C8000A288FE /* Verify.swift */; };
 		EDE1BF992BE67A75004A210C /* ClipboardGuardianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */; };
 		EDE51F3F2BD3F943009D73DC /* YAMLSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */; };
@@ -159,6 +160,7 @@
 		EDD011872B6D80040091CAAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EDD65EA42BC22CF100531800 /* BrantaLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaLogger.swift; sourceTree = "<group>"; };
 		EDD65EA62BC231D000531800 /* BrantaConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrantaConstants.swift; sourceTree = "<group>"; };
+		EDD7E2AC2C0667E80025FB40 /* BitcoinCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinCore.swift; sourceTree = "<group>"; };
 		EDD915262B0C3C8000A288FE /* Verify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verify.swift; sourceTree = "<group>"; };
 		EDE1BF982BE67A75004A210C /* ClipboardGuardianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardGuardianView.swift; sourceTree = "<group>"; };
 		EDE51F3E2BD3F943009D73DC /* YAMLSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAMLSaver.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 		ED73E9832B08207E005742BA /* Wallets */ = {
 			isa = PBXGroup;
 			children = (
+				EDD7E2AC2C0667E80025FB40 /* BitcoinCore.swift */,
 				ED73E9862B0820C9005742BA /* Sparrow.swift */,
 				ED73E98A2B0820F1005742BA /* Wallet.swift */,
 			);
@@ -590,6 +593,7 @@
 				ED57437B2B351E990001956A /* BackgroundAutomation.swift in Sources */,
 				ED4535BC2BB60A9C00536491 /* String.swift in Sources */,
 				ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */,
+				EDD7E2AD2C0667E80025FB40 /* BitcoinCore.swift in Sources */,
 				ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */,
 				ED9D53BE2BE724E50085CD96 /* InteractiveAutomation.swift in Sources */,
 			);
@@ -763,11 +767,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = branta/branta.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Branta;
@@ -780,8 +784,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
+				MARKETING_VERSION = 0.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = branta.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -797,11 +801,11 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = branta/branta.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Branta;
@@ -814,8 +818,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = keith.branta;
+				MARKETING_VERSION = 0.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = branta.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -829,14 +833,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = brantaTests.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
@@ -851,14 +855,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
-				CODE_SIGN_STYLE = Manual;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 5Q5VTGZNGV;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = keith.brantaTests;
+				PRODUCT_BUNDLE_IDENTIFIER = brantaTests.core;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;

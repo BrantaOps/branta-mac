@@ -61,9 +61,11 @@ class BrantaViewController: NSViewController {
     
     @objc func viewNetwork(sender: NSClickGestureRecognizer) {
         if let clickedTextField = sender.view as? NSTextField {
-            let appDelegate = NSApp.delegate as? AppDelegate
-            let row = tableView.row(for: clickedTextField)
-            let runtimeName = tableData[row].fullWalletName.replacingOccurrences(of: ".app", with: "")
+            let appDelegate         = NSApp.delegate as? AppDelegate
+            let row                 = tableView.row(for: clickedTextField)
+            let crawledWallet       = tableData[row]
+            let runtimeName         = crawledWallet.fullWalletName.replacingOccurrences(of: ".app", with: "")
+            let localizedName       = type(of: crawledWallet.cls).localizedName()
             
             if let existingWindowController = appDelegate?.openedNetworkWindows[runtimeName] {
                 existingWindowController.window?.makeKeyAndOrderFront(nil)
@@ -72,8 +74,8 @@ class BrantaViewController: NSViewController {
                 guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
                     fatalError("Unable to instantiate new view controller")
                 }
-                
-                newViewController.walletRuntime = runtimeName
+
+                newViewController.walletRuntime = localizedName
                 
                 let newWindowController = NSWindowController(window: NSWindow(contentViewController: newViewController))
                 newWindowController.showWindow(nil)
@@ -180,10 +182,13 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
             let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
-            textField.stringValue   = "View"
-
-            let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
-            textField.addGestureRecognizer(clickGesture)
+            if tableData[row].notFound {
+                textField.stringValue   = ""
+            } else {
+                textField.stringValue   = "View"
+                let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
+                textField.addGestureRecognizer(clickGesture)
+            }
         }
         return textField
     }

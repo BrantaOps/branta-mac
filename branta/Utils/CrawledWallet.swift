@@ -6,6 +6,7 @@
 //
 
 struct CrawledWallet: Equatable {
+    var cls: Wallet
     var fullWalletName: String
     var installPath: String
     var venderVersion: String

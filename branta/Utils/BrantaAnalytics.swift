@@ -21,7 +21,6 @@ class BrantaAnalytics {
                 config.appKey = apiKey
                 config.host = host
                 Countly.sharedInstance().start(with: config)
-
             }
         }
     }

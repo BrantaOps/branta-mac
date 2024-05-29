@@ -8,8 +8,8 @@
 import Foundation
 
 // WALLETS
-let TARGETS = [Sparrow.name()]
-let APPS = [Sparrow.runtimeName()]
+let TARGETS = [Sparrow.name(), BitcoinCore.name()]
+let APPS = [Sparrow.runtimeName(), BitcoinCore.runtimeName()]
 let USE_SHORT_VERSION_PATH: [String] = [] // // Blockstream used to use this.
 
 
