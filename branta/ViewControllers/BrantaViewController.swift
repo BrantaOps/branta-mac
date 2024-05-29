@@ -74,9 +74,7 @@ class BrantaViewController: NSViewController {
                 guard let newViewController = storyboard.instantiateController(withIdentifier: "networkVC") as? NetworkViewController else {
                     fatalError("Unable to instantiate new view controller")
                 }
-                
-                // TODO - localized name
-//                newViewController.walletRuntime = runtimeName
+
                 newViewController.walletRuntime = localizedName
                 
                 let newWindowController = NSWindowController(window: NSWindow(contentViewController: newViewController))

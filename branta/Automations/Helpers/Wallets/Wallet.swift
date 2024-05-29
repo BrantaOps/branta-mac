@@ -32,7 +32,7 @@ class Wallet: Equatable {
     
     // For network tab. This is the string that shows in the dock.
     class func localizedName() -> String {
-        return name()
+        return runtimeName()
     }
     
     class func getCls(forStr: String) -> Wallet {

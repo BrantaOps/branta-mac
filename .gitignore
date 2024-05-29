@@ -9,3 +9,5 @@ xcuserdata/
 /*.swiftpm
 
 .env
+
+Branta.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved

@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Countly/countly-sdk-ios.git",
       "state" : {
-        "revision" : "5bd619c77df5770a0e2ad65f92e98a464f692b7c",
-        "version" : "24.4.2"
+        "revision" : "e85b2ae20e6c76facf553d5630044b85f006c99a",
+        "version" : "24.1.0"
       }
     },
     {
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jpsim/Yams.git",
       "state" : {
-        "revision" : "9234124cff5e22e178988c18d8b95a8ae8007f76",
-        "version" : "5.1.2"
+        "revision" : "23b6264b9a822b961f480dfa31a1a0ee9114c052",
+        "version" : "5.1.1"
       }
     }
   ],
