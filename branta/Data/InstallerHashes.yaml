@@ -1,4 +1,51 @@
+# Bitcoin Core
+dcd49a8e3711d867c4ad5d7ffbc1ff20f66c82cc8bf660b5f6964eeaa289a739: bitcoin-27.0-aarch64-linux-gnu-debug.tar.gz
+cb35e250ae9d0328aa90e7aad0b877ed692597420a1092e8ab1a5dd756209722: bitcoin-27.0-aarch64-linux-gnu.tar.gz
+61e1225d9c00b50c2e1712e722b285b6e4de1f1dd9da969596511b8a8986c1f0: bitcoin-27.0-arm-linux-gnueabihf-debug.tar.gz
+9d4c28e7620d03bf346ebea388f222e4d6d2b996d7eb32fab72707b8320d5249: bitcoin-27.0-arm-linux-gnueabihf.tar.gz
+7f060f2cd07746ff9d09b000b4195fee88dfca8444ab7a73f0c76aff4225227c: bitcoin-27.0-arm64-apple-darwin.zip
+d1ddb2855a6c76ab4d2cc31315303cba77ef44fdd877b01ffd5918e548b07cae: bitcoin-27.0-arm64-apple-darwin-unsigned.tar.gz
+48d47cf0944034d7ef288f24ce73a6e2f85a9b6199dad5425464dd589ecf96e9: bitcoin-27.0-arm64-apple-darwin-unsigned.zip
+1d9d9b837297a73fc7a3b1cfed376644e3fa25c4e1672fbc143d5946cb52431d: bitcoin-27.0-arm64-apple-darwin.tar.gz
+d22f0f8b2d9eb8eac0819d5ebc4b3c4c5f5984cf6e0acefa81ebc6e914938293: bitcoin-27.0-codesignatures-27.0.tar.gz
+9c1ee651d3b157baccc3388be28b8cf3bfcefcd2493b943725ad6040ca6b146b: bitcoin-27.0.tar.gz
+837c72fea5ceca69b3d06870dd4926c011dec7924f3f8f3428b2153945bbbb4a: bitcoin-27.0-powerpc64-linux-gnu-debug.tar.gz
+6ceaedb59ca33b751387b15f2c8da7f2f7cd2739c6464fc6cbef440852869b92: bitcoin-27.0-powerpc64-linux-gnu.tar.gz
+81102572b0aee8627b162680699ce1d2828908cc4dd317e34697404ac04220fa: bitcoin-27.0-powerpc64le-linux-gnu-debug.tar.gz
+3c00f81a7c67b4cf3e382fae7eaa2c7facea2dfdf39f4c281512237c06b71960: bitcoin-27.0-powerpc64le-linux-gnu.tar.gz
+7274aedbfc363adc28d3b19340e4578b983cfbd617f328313fb5b95e24864799: bitcoin-27.0-riscv64-linux-gnu-debug.tar.gz
+371e53b21c3ba29a90e69c30b7213d75c165d084bde50ae6d73ee0e1ef179e68: bitcoin-27.0-riscv64-linux-gnu.tar.gz
+8c94d3a7e34b59effdcf283263d5e84f2b009e601076282e9697ab4244bef3e8: bitcoin-27.0-x86_64-apple-darwin.zip
+8cdabb19c0b2464ec21306615e0429362b6de9b73d5e796dc4dbc82437e76ddd: bitcoin-27.0-x86_64-apple-darwin-unsigned.tar.gz
+0b347bd2474eab483ee24e1751a2de3e37260826bf71340eaad233f6017af306: bitcoin-27.0-x86_64-apple-darwin-unsigned.zip
+e1efd8c4605b2aabc876da93b6eee2bedd868ce7d1f02b0220c1001f903b3e2c: bitcoin-27.0-x86_64-apple-darwin.tar.gz
+3d9ed703ceaeba9d234d05bf7ae20dde48fb52287eae236e8c2b2021a8db0fbc: bitcoin-27.0-x86_64-linux-gnu-debug.tar.gz
+2a6974c5486f528793c79d42694b5987401e4a43c97f62b1383abf35bcee44a8: bitcoin-27.0-x86_64-linux-gnu.tar.gz
+a2aa3db390a768383e8556878250a44f3eb3b7a6e91e94e47fa35c06b6e8d09f: bitcoin-27.0-win64-setup.exe
+33fadef48835acf9b2dfda42b2d2015f30403608dc8af7a3f3dd2b9ec224e56e: bitcoin-27.0-win64-debug.zip
+e8114ed85a976ff439bd78cbf026e3f9bfafdf40d0fe75121e73bd4b7af347a4: bitcoin-27.0-win64-setup-unsigned.exe
+1578aa2b88427086336e6990e4ce9b752d3d83b34b38ecc29f6325abb6ad3694: bitcoin-27.0-win64-unsigned.tar.gz
+ca75babeaa3fb75f5a166f544adaa93fd7c1f06cf20d4e2c8c2a8b010f4c7603: bitcoin-27.0-win64.zip
+
 # Sparrow. Standard SHA 256 from manifest.
+
+# Sparrow 1.9.1
+5798d12a297e8b05d108a189b2adaf100986cf3d1e3f20155d760e3fc0fc523e: Sparrow-1.9.1-aarch64.dmg
+577a2be42dd36d8da39b1b1c84b060f7280cace5d1be81a4cd585ab357ed751b: Sparrow-1.9.1-x86_64.dmg
+9a05072e5a5b03ec79b4459f87176859d4286dd5050c34bd16bb9469500a951f: Sparrow-1.9.1.exe
+e498944e31d69befd8f13a1455ab00e2e0246f5ca69ca782edde7742685fdd4e: Sparrow-1.9.1.zip
+a2da5fa66269cf79e140e0c8442f696d9b112f20744d25ed7de07367d492139e: sparrow-1.9.1-1.aarch64.rpm
+2f24b5869f85ae42b22ee58b7693bdd9d5dedbb87eb53986c1030ea568246c71: sparrow-1.9.1-1.x86_64.rpm
+a85963df358008fc6d5d5d75318ddff6b0904fa92d82028c96f1fedd6593fc02: sparrow-1.9.1-aarch64.tar.gz
+6f53888b348c4ceb4b337fd11620493d26e48ff0b4774b39820714c2309d041a: sparrow-1.9.1-x86_64.tar.gz
+cd519c339b2faf57290717477c1a8469b11be5ffce128a53ae95ba6b509871f6: sparrow-server-1.9.1-1.aarch64.rpm
+efd2da97a06cc23e9ad177cab6cf24c431f0b56a4ee7aa5f32b9f30f5b2192d7: sparrow-server-1.9.1-1.x86_64.rpm
+6cabf61ae9704af1419e78fb090a5ab65f210b5417cfe95a15bf51bcc639bd66: sparrow-server-1.9.1-aarch64.tar.gz
+a59960aa44c245b9d45f0b25b9d97b9963c82995c2418bf51fd207be4ab2d90d: sparrow-server-1.9.1-x86_64.tar.gz
+c7041ef50d701900e82538ee50782d53631adcd180bf04c8cdeb4c0909d2040f: sparrow-server_1.9.1-1_amd64.deb
+ef5a76f79f5522267df24e40827f3817d5755f17040ad6677eb10399d2dc8cbf: sparrow-server_1.9.1-1_arm64.deb
+87bd7851e4c9a138c14f8fb7545fb145ba7ca328da12f0de6e74137c764dffe9: sparrow_1.9.1-1_amd64.deb
+d0fa6769f65f3e019bfdb0653085f15084f5b40ef4c835df87b2790e04b54432: sparrow_1.9.1-1_arm64.deb
 
 # Sparrow 1.9.0
 fc33ff80de0fed12fb76b2f9d8ea9f10420e7edfdf65e589f95bc7fb274c8181: "Sparrow-1.9.0-aarch64.dmg"
@@ -53,3 +100,9 @@ b88ac5b56d12f0fa6148defe46696fc41d2e65c6d7420e90357eb4c98f41e9ae: "sparrow_1.8.6
 "1a6e29dd34fad11cd6357a642aef7f5101be2dd0a95ba892ca5879e1cf8182ac": "sparrow-server_1.8.5-1_arm64.deb"
 "ab011fdd9488a9f326a602120f33770d2007e6578819b2a302dd91f0825efdea": "sparrow_1.8.5-1_amd64.deb"
 "9e401c2bd11cae1916f8f2a935b590a69c0ba4e18e7c7f93bf8d0468894fafce": "sparrow_1.8.5-1_arm64.deb"
+
+
+# Branta
+"bf473714e169dbb413f9a9e5581fc7d746251f330c8e39a62fe6746752dbdb87": "Branta-2.0.2-beta.msi"
+"21c45fe603fc923d5f4ac028cf1d88480b8da871c2fc2c810008670462153034": "Branta-2.0.1-beta.dmg"
+"a7ce532f7d3ffd59ded19ccd7d2e9cba0d10a30bfe4ff2d2b120fa59e6a3ae08": "Branta-2.0.1-beta.dmg.zip"
