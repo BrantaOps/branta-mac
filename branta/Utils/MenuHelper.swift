@@ -9,7 +9,7 @@ import Cocoa
 
 class MenuHelper {
     class func openHelp(){
-        let url = URL(string: "https://www.branta.pro/docs")!
+        let url = URL(string: "https://docs.branta.pro/")!
         NSWorkspace.shared.open(url)
     }
     

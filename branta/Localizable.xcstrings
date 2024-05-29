@@ -18,7 +18,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "The file did not match any checksums known to Branta. Read more:\n\nhttps://www.branta.pro/docs#todo"
+            "value" : "The file did not match any checksums known to Branta. Read more:\n\nhttps://docs.branta.pro/"
           }
         }
       }
@@ -214,7 +214,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://www.branta.pro/docs"
+            "value" : "No Match Found. This could be for a number of reasons. Read more below.\n\nhttps://docs.branta.pro/"
           }
         }
       }
