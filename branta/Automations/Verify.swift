@@ -194,13 +194,10 @@ extension Verify {
             for target in TARGETS {
                 
                 if !(ret.contains { $0.fullWalletName == target }) {
-                    
-                    // TODO
-                    var cls = BitcoinCore()
-                    
+                                        
                     // Inject blank crawledWallet
                     let crawledWallet = CrawledWallet(
-                        cls: cls,
+                        cls: Wallet(),
                         fullWalletName: target,
                         installPath: "",
                         venderVersion: "",
