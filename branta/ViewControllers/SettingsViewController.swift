@@ -108,7 +108,7 @@ class SettingsViewController: NSViewController {
     }
     
     @IBAction func help(_ sender: Any) {
-        let url = URL(string: "https://www.branta.pro/docs")!
+        let url = URL(string: "https://docs.branta.pro/")!
         NSWorkspace.shared.open(url)
     }
 }
