@@ -10,10 +10,14 @@ import Foundation
 class BitcoinCore: Wallet {
     
     override class func runtimeName() -> String {
-        return "Bitcoin-Qt.app"
+        return "Bitcoin-Qt"
     }
     
     override class func name() -> String {
         return "Bitcoin-Qt.app"
+    }
+    
+    override class func localizedName() -> String {
+        return "Bitcoin Core"
     }
 }

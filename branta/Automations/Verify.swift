@@ -79,12 +79,13 @@ extension Verify {
         for wallet in wallets {
             let name = wallet.fullWalletName
             var retItem = wallet
-
+            
             for kv in architectureSpecificHashes[name]! {
                 if kv.value == wallet.directorySHA256 {
                     retItem.brantaSignatureMatch = true
                 }
             }
+
             ret.append(retItem)
         }
                 
@@ -175,8 +176,12 @@ extension Verify {
                             BrantaLogger.log(s: "BrantaViewController#showDetails error: \(error)")
                         }
                     }
+                    
+                    // TODO
+                    var cls = BitcoinCore()
                                                             
                     let crawledWallet = CrawledWallet(
+                        cls: cls,
                         fullWalletName: item,
                         installPath: installPath,
                         venderVersion: venderVersion,
@@ -194,8 +199,13 @@ extension Verify {
             for target in TARGETS {
                 
                 if !(ret.contains { $0.fullWalletName == target }) {
+                    
+                    // TODO
+                    var cls = BitcoinCore()
+                    
                     // Inject blank crawledWallet
                     let crawledWallet = CrawledWallet(
+                        cls: cls,
                         fullWalletName: target,
                         installPath: "",
                         venderVersion: "",

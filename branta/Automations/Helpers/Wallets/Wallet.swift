@@ -8,7 +8,11 @@
 
 import Foundation
 
-class Wallet {
+class Wallet: Equatable {
+    
+    static func == (lhs: Wallet, rhs: Wallet) -> Bool {
+        return false
+    }
     
     // Name in motion
     // (Grep all PIDs by this string to find child PIDS)
@@ -24,5 +28,10 @@ class Wallet {
     
     class func singleBinary() -> Bool {
         return false
+    }
+    
+    // For network tab. This is the string that shows in the dock.
+    class func localizedName() -> String {
+        return name()
     }
 }
