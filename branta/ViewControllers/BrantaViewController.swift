@@ -182,13 +182,13 @@ extension BrantaViewController: NSTableViewDelegate, NSTableViewDataSource {
             let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(showDetails))
             textField.addGestureRecognizer(clickGesture)
         } else if columnNumber == COLUMNS["NETWORK_ACTIVITY"] {
-//            if tableData[row].notFound {
-//                textField.stringValue   = ""
-//            } else {
-//                textField.stringValue   = "View"
-//                let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
-//                textField.addGestureRecognizer(clickGesture)
-//            }
+            if tableData[row].notFound {
+                textField.stringValue   = ""
+            } else {
+                textField.stringValue   = "View"
+                let clickGesture        = NSClickGestureRecognizer(target: self, action: #selector(viewNetwork))
+                textField.addGestureRecognizer(clickGesture)
+            }
         }
         return textField
     }
