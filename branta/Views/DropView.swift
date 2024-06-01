@@ -19,7 +19,8 @@ class DropView: NSView {
         "exe",
         "appimage",
         "msi",
-        "snap"
+        "snap",
+        "apk"
     ]
     private let LIVE_COLOR = NSColor.darkGray.cgColor
     private let IDLE_COLOR = NSColor(hex: GRAY)?.cgColor
