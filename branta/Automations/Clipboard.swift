@@ -170,8 +170,8 @@ extension Clipboard {
         
         if (userSeedWords.isSubset(of: bip39WordSet!)) {
             appDelegate?.notificationManager?.showNotification(
-                title: "Seed Phrase in clipboard detected.",
-                body: "Never share your seed phrase with anyone. Your seed phrase IS your money.",
+                title: "Seed phrase words detected in clipboard.",
+                body: "Never share your seed phrase with anyone.",
                 key: NOTIFY_FOR_SEED
             )
             return true
