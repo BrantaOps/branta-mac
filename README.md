@@ -4,20 +4,12 @@
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
-## Security for your Custody
- - ⚡️ Wallet Verification
-   - Automatically verifies supported wallets against PGP verified SHA-256 checksums
- - ⚡️ Clipboard Guardian
-   - Get notified of bitcoin-related activity on your clipboard
- - ⚡️ Focus Automation
-   - Verify Wallets automatically upon launch
- - ⚡️ Drag & Drop PGP Verification for Installers
-  
-  <img width="873" alt="Screen Shot 2024-02-04 at 10 55 43 AM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/75644c8e-591e-4871-a48c-161a4f9ae209">
+<img width="1440" alt="branta screenshot" src="https://github.com/BrantaOps/branta-mac/assets/74844722/5206d7a4-7380-4fec-8a8e-d0ac7b69643f">
 
 
-#### Supported Wallets
-- ⚡️ Sparrow
+
+## Docs
+https://docs.branta.pro/
 
 ## Installing
 
