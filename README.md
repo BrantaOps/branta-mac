@@ -24,9 +24,6 @@ https://docs.branta.pro/
 
 Branta is free open source software. If you can, consider donating on [Geyser](https://geyser.fund/project/branta). All funds go towards improving and automating security for your stack.
 
-## Building
-- XCode 14+
-
 ## Feature Requests & Bug Reporting
 
 Open a [new issue](https://github.com/BrantaOps/branta-mac/issues/new) on Github and we'll reply as soon as we can.
