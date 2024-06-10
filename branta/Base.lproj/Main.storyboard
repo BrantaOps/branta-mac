@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -751,7 +751,7 @@
                                                                     <rect key="frame" x="8" y="0.0" width="266" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PO4-RB-BF4">
                                                                             <rect key="frame" x="0.0" y="7" width="266" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="blah blah blah" id="Jay-Mb-UVI">
@@ -783,7 +783,7 @@
                                                                     <rect key="frame" x="291" y="0.0" width="173" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm2-XT-qi8">
                                                                             <rect key="frame" x="0.0" y="7" width="173" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="Zg4-TZ-M1M">
@@ -815,7 +815,7 @@
                                                                     <rect key="frame" x="481" y="0.0" width="273" height="30"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHa-Lr-h6F">
                                                                             <rect key="frame" x="0.0" y="7" width="273" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="baz" id="lQa-CN-seB">
@@ -871,7 +871,7 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="zbK-gp-Ps7" customClass="DropView" customModule="Branta" customModuleProvider="target">
                                 <rect key="frame" x="19" y="45" width="725" height="159"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-zn-yx3">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ndi-zn-yx3">
                                         <rect key="frame" x="191" y="44" width="344" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="340" id="BOi-ZY-qM0"/>
@@ -895,7 +895,7 @@
                             <customView appearanceType="aqua" translatesAutoresizingMaskIntoConstraints="NO" id="q2p-Rf-egX" customClass="ClipboardGuardianView" customModule="Branta" customModuleProvider="target">
                                 <rect key="frame" x="95" y="232" width="573" height="100"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IhE-QU-pKO" userLabel="Clipboard">
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IhE-QU-pKO" userLabel="Clipboard">
                                         <rect key="frame" x="238" y="65" width="97" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="adc-0s-GGW"/>
@@ -964,88 +964,88 @@
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-0C-gBa" customClass="SettingsView" customModule="Branta" customModuleProvider="target">
                                 <rect key="frame" x="15" y="5" width="747" height="766"/>
                                 <subviews>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
-                                        <rect key="frame" x="36" y="718" width="189" height="23"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HT5-Gz-LSQ">
+                                        <rect key="frame" x="36" y="673" width="189" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Clipboard Notifications" id="8wh-v7-xyP">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
-                                        <rect key="frame" x="36" y="683" width="124" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-kH-n70">
+                                        <rect key="frame" x="36" y="638" width="124" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Bitcoin Addresses" id="0j4-Za-GCk">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
-                                        <rect key="frame" x="36" y="648" width="87" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SME-vv-0Ca">
+                                        <rect key="frame" x="36" y="603" width="87" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Seed Phrase" id="cNC-Pb-fk6">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
-                                        <rect key="frame" x="36" y="613" width="143" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ggi-ae-6Wd">
+                                        <rect key="frame" x="36" y="568" width="143" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Extended Public Key" id="Wq5-Eq-RZd">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
-                                        <rect key="frame" x="36" y="576" width="79" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7hV-pY-YW0">
+                                        <rect key="frame" x="36" y="531" width="79" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Private Key" id="8NY-Fe-mCW">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
-                                        <rect key="frame" x="36" y="541" width="128" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HbO-1Z-NaM">
+                                        <rect key="frame" x="36" y="496" width="128" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="NOSTR Public Key" id="FFw-O2-bTy">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
-                                        <rect key="frame" x="36" y="506" width="133" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2KU-bm-So7">
+                                        <rect key="frame" x="36" y="461" width="133" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="NOSTR Private Key" id="kLP-uR-FAa">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
-                                        <rect key="frame" x="36" y="448" width="150" height="23"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ptA-92-eZt">
+                                        <rect key="frame" x="36" y="403" width="150" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Wallet Verification" id="3j8-jx-rMW">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
-                                        <rect key="frame" x="36" y="413" width="100" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uhi-g9-GpC">
+                                        <rect key="frame" x="36" y="368" width="100" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Scan Cadence" id="9gz-jq-Tbn">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
-                                        <rect key="frame" x="36" y="378" width="250" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6B2-wv-5n3">
+                                        <rect key="frame" x="36" y="333" width="250" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Launching Wallet" id="xOB-Dm-6pr">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
-                                        <rect key="frame" x="36" y="343" width="233" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-f8-Zul">
+                                        <rect key="frame" x="36" y="298" width="233" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Notify Status Upon Status Change" id="hk9-gG-KE2">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1053,71 +1053,71 @@
                                         </textFieldCell>
                                     </textField>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-kY-kRe">
-                                        <rect key="frame" x="669" y="680" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="635" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForBTCAddress:" target="u9i-7b-3R3" id="Sx2-jp-GTO"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-Ez-rfw">
-                                        <rect key="frame" x="669" y="645" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="600" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForSeed:" target="u9i-7b-3R3" id="e0H-Xn-6FV"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="bq5-ux-PVg">
-                                        <rect key="frame" x="669" y="610" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="565" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPub:" target="u9i-7b-3R3" id="9E8-K5-cH5"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="fj2-Xa-f2q">
-                                        <rect key="frame" x="669" y="573" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="528" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForXPrv:" target="u9i-7b-3R3" id="Hws-QN-Eym"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="xvm-7k-eFa">
-                                        <rect key="frame" x="669" y="538" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="493" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNPub:" target="u9i-7b-3R3" id="tXk-2L-gA2"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="axO-Yq-AKu">
-                                        <rect key="frame" x="669" y="503" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="458" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyForNSec:" target="u9i-7b-3R3" id="iuc-u1-Rhn"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-2E-ttD">
-                                        <rect key="frame" x="669" y="375" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="330" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponLaunch:" target="u9i-7b-3R3" id="yWz-G4-nQA"/>
                                         </connections>
                                     </switch>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-UW-CaB">
-                                        <rect key="frame" x="669" y="339" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="294" width="42" height="25"/>
                                         <connections>
                                             <action selector="setNotifyUponStatusChange:" target="u9i-7b-3R3" id="Ksv-n9-VuF"/>
                                         </connections>
                                     </switch>
                                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xV9-JF-wnR">
-                                        <rect key="frame" x="674" y="409" width="39" height="25"/>
+                                        <rect key="frame" x="674" y="364" width="39" height="25"/>
                                         <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="oQs-hc-Zcm">
                                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="13" name="Avenir-Book"/>
                                             <menu key="menu" id="ueb-QO-Kgn"/>
                                         </popUpButtonCell>
                                     </popUpButton>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-sB-xXw">
-                                        <rect key="frame" x="36" y="285" width="83" height="23"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NlF-sB-xXw">
+                                        <rect key="frame" x="36" y="240" width="83" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Dock Icon" id="fCd-qG-nM8">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-Bx-scV">
-                                        <rect key="frame" x="36" y="250" width="169" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IXb-Bx-scV">
+                                        <rect key="frame" x="36" y="205" width="169" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Show Branta in the Dock" id="myP-IY-Hbq">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1125,21 +1125,21 @@
                                         </textFieldCell>
                                     </textField>
                                     <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="e2E-aN-7KR">
-                                        <rect key="frame" x="669" y="247" width="42" height="25"/>
+                                        <rect key="frame" x="669" y="202" width="42" height="25"/>
                                         <connections>
                                             <action selector="setShowInDock:" target="u9i-7b-3R3" id="eFN-9g-wk6"/>
                                         </connections>
                                     </switch>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-x2-dRL">
-                                        <rect key="frame" x="36" y="192" width="78" height="23"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-x2-dRL">
+                                        <rect key="frame" x="36" y="147" width="78" height="23"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Last Sync" id="7LL-ed-QUX">
                                             <font key="font" size="17" name="Avenir-Heavy"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LUU-vL-0Nh">
-                                        <rect key="frame" x="36" y="157" width="117" height="20"/>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LUU-vL-0Nh">
+                                        <rect key="frame" x="36" y="112" width="117" height="20"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Monday, 3:00pm" id="xMQ-pD-FpQ">
                                             <font key="font" size="15" name="Avenir-Book"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1147,7 +1147,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="NzB-9A-gJw">
-                                        <rect key="frame" x="608" y="150" width="108" height="32"/>
+                                        <rect key="frame" x="608" y="105" width="108" height="32"/>
                                         <buttonCell key="cell" type="push" title="Refresh Now" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="Nkq-aI-5Ef">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" size="13" name="Avenir-Book"/>
@@ -1166,6 +1166,20 @@
                                             <action selector="help:" target="u9i-7b-3R3" id="EKJ-KW-xmr"/>
                                         </connections>
                                     </button>
+                                    <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="co2-rw-8g2">
+                                        <rect key="frame" x="36" y="728" width="131" height="23"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Checkout Mode" id="nco-gE-qD8">
+                                            <font key="font" size="17" name="Avenir-Heavy"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="72M-Zf-tUf">
+                                        <rect key="frame" x="669" y="727" width="42" height="25"/>
+                                        <connections>
+                                            <action selector="toggleCheckoutMode:" target="u9i-7b-3R3" id="hqH-tB-7tZ"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="NzB-9A-gJw" firstAttribute="trailing" secondItem="e2E-aN-7KR" secondAttribute="trailing" id="2BS-pQ-JpH"/>
@@ -1190,9 +1204,11 @@
                                     <constraint firstItem="uhi-g9-GpC" firstAttribute="top" secondItem="ptA-92-eZt" secondAttribute="bottom" constant="15" id="Gke-vF-Y4o"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ggi-ae-6Wd" secondAttribute="trailing" constant="20" symbolic="YES" id="HTN-J1-4A5"/>
                                     <constraint firstItem="ptA-92-eZt" firstAttribute="top" secondItem="2KU-bm-So7" secondAttribute="bottom" constant="35" id="Iym-K8-I8a"/>
+                                    <constraint firstItem="72M-Zf-tUf" firstAttribute="centerX" secondItem="N5F-kY-kRe" secondAttribute="centerX" id="MCI-eR-JBH"/>
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="centerY" secondItem="2KU-bm-So7" secondAttribute="centerY" id="OKF-3W-Pnh"/>
                                     <constraint firstItem="ptA-92-eZt" firstAttribute="leading" secondItem="2KU-bm-So7" secondAttribute="leading" id="OWk-20-K7h"/>
                                     <constraint firstItem="e2E-aN-7KR" firstAttribute="centerY" secondItem="IXb-Bx-scV" secondAttribute="centerY" id="Obo-0U-1VV"/>
+                                    <constraint firstItem="72M-Zf-tUf" firstAttribute="centerY" secondItem="co2-rw-8g2" secondAttribute="centerY" id="Ox5-xZ-Ail"/>
                                     <constraint firstItem="aQP-x2-dRL" firstAttribute="top" secondItem="IXb-Bx-scV" secondAttribute="bottom" constant="35" id="Q2t-x2-mhr"/>
                                     <constraint firstItem="e2E-aN-7KR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="IXb-Bx-scV" secondAttribute="trailing" constant="8" symbolic="YES" id="Q4j-OC-Psa"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J6E-kH-n70" secondAttribute="trailing" constant="20" symbolic="YES" id="QPf-Ca-zaA"/>
@@ -1212,14 +1228,16 @@
                                     <constraint firstItem="rXG-2E-ttD" firstAttribute="centerY" secondItem="6B2-wv-5n3" secondAttribute="centerY" id="cfI-fd-LqP"/>
                                     <constraint firstItem="dDY-UW-CaB" firstAttribute="centerX" secondItem="rXG-2E-ttD" secondAttribute="centerX" id="dRv-4K-W11"/>
                                     <constraint firstItem="J6E-kH-n70" firstAttribute="leading" secondItem="HT5-Gz-LSQ" secondAttribute="leading" id="eP0-dP-c6t"/>
+                                    <constraint firstItem="co2-rw-8g2" firstAttribute="leading" secondItem="IlJ-0C-gBa" secondAttribute="leading" constant="38" id="fV8-pr-Ade"/>
                                     <constraint firstItem="HbO-1Z-NaM" firstAttribute="leading" secondItem="7hV-pY-YW0" secondAttribute="leading" id="hXY-Ym-N3d"/>
                                     <constraint firstItem="6B2-wv-5n3" firstAttribute="top" secondItem="uhi-g9-GpC" secondAttribute="bottom" constant="15" id="iok-Sr-b9u"/>
                                     <constraint firstItem="N5F-kY-kRe" firstAttribute="centerY" secondItem="J6E-kH-n70" secondAttribute="centerY" id="ip2-qU-Fco"/>
+                                    <constraint firstItem="co2-rw-8g2" firstAttribute="top" secondItem="IlJ-0C-gBa" secondAttribute="top" constant="15" id="kdA-AV-7YY"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SME-vv-0Ca" secondAttribute="trailing" constant="20" symbolic="YES" id="lMg-tb-JQB"/>
                                     <constraint firstItem="uTd-4K-Kav" firstAttribute="centerX" secondItem="IlJ-0C-gBa" secondAttribute="centerX" id="lbt-8R-rOj"/>
                                     <constraint firstItem="axO-Yq-AKu" firstAttribute="centerX" secondItem="xvm-7k-eFa" secondAttribute="centerX" id="nd5-qi-iXa"/>
                                     <constraint firstItem="NzB-9A-gJw" firstAttribute="centerY" secondItem="LUU-vL-0Nh" secondAttribute="centerY" id="o17-y8-xhp"/>
-                                    <constraint firstItem="HT5-Gz-LSQ" firstAttribute="top" secondItem="IlJ-0C-gBa" secondAttribute="top" constant="25" id="oR8-bQ-yUE"/>
+                                    <constraint firstItem="HT5-Gz-LSQ" firstAttribute="top" secondItem="IlJ-0C-gBa" secondAttribute="top" constant="70" id="oR8-bQ-yUE"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="aQP-x2-dRL" secondAttribute="trailing" constant="20" symbolic="YES" id="pNu-M0-ZAy"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GMP-f8-Zul" secondAttribute="trailing" constant="20" symbolic="YES" id="pc3-Ul-8cg"/>
                                     <constraint firstItem="xvm-7k-eFa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HbO-1Z-NaM" secondAttribute="trailing" constant="8" symbolic="YES" id="pvO-Ek-pgi"/>
@@ -1253,6 +1271,7 @@
                     </view>
                     <connections>
                         <outlet property="cadenceSelector" destination="xV9-JF-wnR" id="kGj-Hr-F2B"/>
+                        <outlet property="checkoutMode" destination="72M-Zf-tUf" id="Dib-uO-Yzo"/>
                         <outlet property="lastSyncLabel" destination="LUU-vL-0Nh" id="Nh3-fU-UeM"/>
                         <outlet property="notifyForBTCAddressOutlet" destination="N5F-kY-kRe" id="GIl-vc-1am"/>
                         <outlet property="notifyForNPubOutlet" destination="xvm-7k-eFa" id="eoC-bu-JW0"/>
@@ -1266,7 +1285,7 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="849" y="998"/>
+            <point key="canvasLocation" x="848.5" y="998"/>
         </scene>
         <!--Network View Controller-->
         <scene sceneID="H8j-wd-sLS">
@@ -1317,7 +1336,7 @@
                                                                     <rect key="frame" x="8" y="0.0" width="365" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ttA-Tj-JHT">
                                                                             <rect key="frame" x="0.0" y="21" width="365" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="123" id="O4L-kX-bKz">
@@ -1349,7 +1368,7 @@
                                                                     <rect key="frame" x="390" y="0.0" width="362" height="58"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
-                                                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">
+                                                                        <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H8N-6T-WVY">
                                                                             <rect key="frame" x="0.0" y="21" width="362" height="16"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="vps-93-95-231-89.1984.is" id="oTk-fV-Ctm">
@@ -1391,7 +1410,7 @@
                                     <constraint firstItem="7XZ-0V-KvV" firstAttribute="centerY" secondItem="wf0-K0-YIB" secondAttribute="centerY" id="tUO-eA-P7l"/>
                                 </constraints>
                             </customView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w8t-9M-MUx">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w8t-9M-MUx">
                                 <rect key="frame" x="-2" y="618" width="765" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hf1-1Z-bas"/>

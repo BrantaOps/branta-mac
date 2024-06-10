@@ -21,6 +21,7 @@ class SettingsViewController: NSViewController {
     @IBOutlet weak var notifyUponStatusChangeOutlet: NSSwitch!
     @IBOutlet weak var showInDockOutlet: NSSwitch!
     @IBOutlet weak var lastSyncLabel: NSTextField!
+    @IBOutlet weak var checkoutMode: NSSwitch!
     
     override func viewWillAppear() {
         super.viewWillAppear()
@@ -88,6 +89,10 @@ class SettingsViewController: NSViewController {
     
     @IBAction func setNotifyUponStatusChange(_ sender: Any) {
         setFor(s: sender as! NSSwitch, key: NOTIFY_UPON_STATUS_CHANGE)
+    }
+    
+    @IBAction func toggleCheckoutMode(_ sender: Any) {
+        setFor(s: sender as! NSSwitch, key: CHECKOUT_MODE)
     }
     
     @IBAction func setShowInDock(_ sender: Any) {

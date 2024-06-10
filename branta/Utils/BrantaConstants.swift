@@ -40,6 +40,8 @@ let NOTIFY_FOR_NPUB                 = "notifyForNPub"
 let NOTIFY_FOR_NSEC                 = "notifyForNSec"
 let NOTIFY_UPON_LAUNCH              = "notifyUponLaunch"
 let NOTIFY_UPON_STATUS_CHANGE       = "notifyUponStatusChange"
+let CHECKOUT_MODE                   = "checkoutMode"
+
 
 let SCAN_CADENCE                    = "scanCadence"
 let SCAN_CADENCE_WORDING            = "scanCadenceWording"
