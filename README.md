@@ -10,7 +10,3 @@
 
 ## Docs
 https://docs.branta.pro/
-
-## Feature Requests & Bug Reporting
-
-Open a [new issue](https://github.com/BrantaOps/branta-mac/issues/new) on Github and we'll reply as soon as we can.
