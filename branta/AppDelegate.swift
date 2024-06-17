@@ -63,10 +63,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func getUpdate(_ sender: NSMenuItem) {
         if let tag = sender.representedObject {
-            BrantaLogger.log(s: "Fetching tag: \(tag)")
-            let github = "https://github.com/BrantaOps/branta-mac/releases/download/\(tag)/Branta-\(tag).dmg.zip"
-            if let url = URL(string: github) {
-                NSWorkspace.shared.open(url)
+            
+            // TODO - route to either App Store, or downloads.
+            if true {
+                BrantaLogger.log(s: "Opening App Store: \(tag)")
+                if let url = URL(string: "https://apps.apple.com/us/app/branta/id6473867474") {
+                    NSWorkspace.shared.open(url)
+                }
+            } else {
+                BrantaLogger.log(s: "Fetching tag: \(tag)")
+                let github = "https://github.com/BrantaOps/branta-mac/releases/download/\(tag)/Branta-\(tag).dmg.zip"
+                if let url = URL(string: github) {
+                    NSWorkspace.shared.open(url)
+                }
             }
         }
     }
