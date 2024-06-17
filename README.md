@@ -4,7 +4,7 @@
   <img alt="Branta" src="Branta/Assets/goldblackcropped.jpg">
 </picture>
 
-<img width="1440" alt="branta screenshot" src="https://github.com/BrantaOps/branta-mac/assets/74844722/5206d7a4-7380-4fec-8a8e-d0ac7b69643f">
+<img width="1200" alt="Screenshot 2024-06-17 at 1 53 58 PM" src="https://github.com/BrantaOps/branta-mac/assets/74844722/e35a9b5b-7f6b-4289-848f-3a3967e5a0a5">
 
 
 
