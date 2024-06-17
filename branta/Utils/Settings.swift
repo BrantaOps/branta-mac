@@ -25,7 +25,8 @@ class Settings {
         SHOW_IN_DOCK: true,
         LAST_SYNC: "-",
         // XPUBS
-        XPUBS: [] // TODO.
+        XPUBS: [], // TODO.
+        CHECKOUT_MODE: false
     ]
     
     static func readFromDefaults() -> [String: Any] {

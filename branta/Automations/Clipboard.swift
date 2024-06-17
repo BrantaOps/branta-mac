@@ -28,6 +28,15 @@ class Clipboard: BackgroundAutomation {
             lastContent = clipboardString
             
             if checkForAddressesInClipBoard(content: clipboardString) {
+                // TODO -
+                let checkoutMode = Settings.readFromDefaults()[CHECKOUT_MODE] as! Bool
+                if checkoutMode {
+                    BrantaLogger.log(s: "In checkout mode")
+                }
+                else {
+                    BrantaLogger.log(s: "Not in checkout mode")
+                }
+                
                 labelText = "Clipboard: Single use Bitcoin Address detected."
                 guardianText = clipboardString
             }
