@@ -20,6 +20,7 @@
 		ED1A3C8D2BC4D9DF00895C5A /* InstallerHashes.yaml in Resources */ = {isa = PBXBuildFile; fileRef = ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */; };
 		ED1A3C8F2BC4E04E00895C5A /* Matcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A3C8E2BC4E04E00895C5A /* Matcher.swift */; };
 		ED1D573F2BC2DE710001DAD2 /* VersionCompTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */; };
+		ED25A9892C2A4ACA00942913 /* NewKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED25A9882C2A4ACA00942913 /* NewKeyViewController.swift */; };
 		ED26BA512BD19A1000F42CD6 /* Mac_CheckSums.yaml in Resources */ = {isa = PBXBuildFile; fileRef = ED26BA502BD19A1000F42CD6 /* Mac_CheckSums.yaml */; };
 		ED2C6EF32B0AC5AA00EC577C /* BitcoinAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */; };
 		ED2C6EF62B0BAFA200EC577C /* Clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */; };
@@ -54,6 +55,7 @@
 		ED73E98B2B0820F1005742BA /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED73E98A2B0820F1005742BA /* Wallet.swift */; };
 		ED787BB62C04EDA400EA15FE /* .env in Resources */ = {isa = PBXBuildFile; fileRef = ED787BB52C04EDA400EA15FE /* .env */; };
 		ED7B16B22B556A650003EFEB /* Foreground.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B16B12B556A650003EFEB /* Foreground.swift */; };
+		ED8DA30B2C299DEE000E8D64 /* MyKeyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8DA30A2C299DEE000E8D64 /* MyKeyViewController.swift */; };
 		ED97B84E2B9F46A3007DD2F5 /* Updater.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED97B84D2B9F46A3007DD2F5 /* Updater.swift */; };
 		ED98C2F62BFECDAC009E0D16 /* WalletStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */; };
 		ED98C2F82BFED04E009E0D16 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ED98C2F72BFED04E009E0D16 /* Localizable.xcstrings */; };
@@ -105,6 +107,7 @@
 		ED1A3C8C2BC4D9DF00895C5A /* InstallerHashes.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = InstallerHashes.yaml; sourceTree = "<group>"; };
 		ED1A3C8E2BC4E04E00895C5A /* Matcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matcher.swift; sourceTree = "<group>"; };
 		ED1D573E2BC2DE710001DAD2 /* VersionCompTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionCompTests.swift; sourceTree = "<group>"; };
+		ED25A9882C2A4ACA00942913 /* NewKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKeyViewController.swift; sourceTree = "<group>"; };
 		ED26BA502BD19A1000F42CD6 /* Mac_CheckSums.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = Mac_CheckSums.yaml; sourceTree = "<group>"; };
 		ED2C6EF22B0AC5AA00EC577C /* BitcoinAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinAddress.swift; sourceTree = "<group>"; };
 		ED2C6EF52B0BAFA200EC577C /* Clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clipboard.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 		ED73E98A2B0820F1005742BA /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		ED787BB52C04EDA400EA15FE /* .env */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .env; sourceTree = "<group>"; };
 		ED7B16B12B556A650003EFEB /* Foreground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foreground.swift; sourceTree = "<group>"; };
+		ED8DA30A2C299DEE000E8D64 /* MyKeyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyKeyViewController.swift; sourceTree = "<group>"; };
 		ED97B84D2B9F46A3007DD2F5 /* Updater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updater.swift; sourceTree = "<group>"; };
 		ED98C2F52BFECDAC009E0D16 /* WalletStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletStatus.swift; sourceTree = "<group>"; };
 		ED98C2F72BFED04E009E0D16 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
@@ -300,7 +304,9 @@
 			isa = PBXGroup;
 			children = (
 				ED57437C2B3641AF0001956A /* BrantaViewController.swift */,
+				ED8DA30A2C299DEE000E8D64 /* MyKeyViewController.swift */,
 				EDB9F70C2BA9B7E300F0C005 /* NetworkViewController.swift */,
+				ED25A9882C2A4ACA00942913 /* NewKeyViewController.swift */,
 				EDD011872B6D80040091CAAD /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -573,6 +579,7 @@
 				EDC6CA762BB8E4D1009C9342 /* Connection.swift in Sources */,
 				ED73E9872B0820C9005742BA /* Sparrow.swift in Sources */,
 				EDD65EA72BC231D000531800 /* BrantaConstants.swift in Sources */,
+				ED25A9892C2A4ACA00942913 /* NewKeyViewController.swift in Sources */,
 				ED1A3C842BC42C5A00895C5A /* Architecture.swift in Sources */,
 				ED3BE2C92B6E93AC00CEC8FE /* MenuHelper.swift in Sources */,
 				ED1A3C8F2BC4E04E00895C5A /* Matcher.swift in Sources */,
@@ -585,6 +592,7 @@
 				EDD011822B67F5890091CAAD /* DropView.swift in Sources */,
 				EDD0117F2B6580760091CAAD /* Installer.swift in Sources */,
 				EDE51F3F2BD3F943009D73DC /* YAMLSaver.swift in Sources */,
+				ED8DA30B2C299DEE000E8D64 /* MyKeyViewController.swift in Sources */,
 				ED9B39B12B94C8AC00F0BA86 /* SettingsView.swift in Sources */,
 				EDD011862B6D749D0091CAAD /* Settings.swift in Sources */,
 				ED45421C2BD86E720075E746 /* CrawledWallet.swift in Sources */,

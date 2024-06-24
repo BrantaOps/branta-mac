@@ -21,3 +21,7 @@ protocol ClipboardObserver: AnyObject {
 protocol BridgeObserver: AnyObject {
     func bridgeDidFetch(content: String)
 }
+
+protocol KeysObserver: AnyObject {
+    func contentDidUpdate()
+}
